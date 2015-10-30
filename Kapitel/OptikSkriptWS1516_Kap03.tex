@@ -1,9 +1,9 @@
 %%-----------------------------------------
-%%
+
 %% Vorlesungsmitschrift (Kapitel 3)
-%% Optik im WS2015/16
+
 %% an der Uni Regensburg, gelesen von Christian Back
-%%
+
 %%-----------------------------------------
 
 \chapter{Dispersion von Licht}
@@ -14,9 +14,34 @@ Grenzflächen.
 
 \section{Die Frequenzabhängigkeit der Dielekrizitätskonstante $\eps$}
 I.A. ist $\eps$ ein Tensor mit $\omega$-Abhängigkeit. Vergleicht man
-den statischen Dielektrizitätskonstante bzw. den Brechungsindex
+die statische Dielektrizitätskonstante bzw. den Brechungsindex
 $n_0=\sqrt{\eps(\omega=0)}$ mit $
-n=\sqrt{\eps(\omega=\SI{589}{\nano\meter})}$, ist ein Unterschied zu erkennen!
+n=\sqrt{\eps(\omega=\SI{589}{\nano\meter})}$, ist ein Unterschied zu erkennen! Typischerweise zeigt $\eps$ die Resonanzen an. Die Ursache ist mikroskopisch, da die Elektronenwolke gegenüber dem Atomkern durch das $\vecE$-Feld ausgelenkt wird.
+\paragraph{einfaches Modell:}
+\begin{itemize}
+	\item$\infty$-schwerer Kern
+	\item negativ geladenes Elektron
+\end{itemize}
+\textit{Model:}harmonischer Oszilator\\
+\textit{Idee:} Berechne $x(t)$ der Elektronenwolke und daraus das Dipolmomentbzw. die Polarisation $\vecP$. es folgt $\epsilon(\omega)$ über $\vecP=(\epsilon-1)\epso \vecE$ mit der treibenden Kraft $\vecF(t)=-e\vecE(t)=-e\vecE_0 \exp(i\omega t)$, wobei $\vecE\|\vecx$ und $\vecE_0$ reell ist.
+Daraus erhält man die Bewegungsgleichung für einen 1-dim. harmonischen Oszillator mit schwacher Dämpfung.
+\begin{align*}
+	\ddot{x}+\gamma\dot{x}+\omegao x&=\fracone{m}F(t)=\frac{-e}{m}E_0\exp(i\omega t)\\
+	\text{mit der Lösung:}\quad x(t)&=\frac{-e}{m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}E(t)
+\end{align*}
+Wenn man nun noch die Teilchendichte N (Teilchen pro Volumen) dazunimmt, erhält man:
+\begin{align*}
+	P(t)&=-ex(t)N=\frac{eN^2}{m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}E(t)=(\eps(\omega)-1)\epso E(t)\\
+\end{align*}
+Daraus erhält man die frequenzabhängige Dielektrizitätskonstante:
+\begin{align*}
+	 \eps(\omega)&=1+\frac{e^2N}{\epso m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}
+\end{align*}
+Bei einem Medium mit verschiedenen Atomen/Molekülen summiert man über die Dielektrizitätskonstanten und man erhält folgendes:
+\begin{align*}
+	 \eps(\omega)&=1+\frac{e^2}{\epso m}\sum_{j}\frac{N_j}{(\omegao^2-\omega^2)+i\gamma\omega}
+\end{align*}
+
 
 \section{Der Brechungsindex}
 Am einfachsten ist die Betrachtung eines verdünnten Mediums,
@@ -240,9 +265,23 @@ Daher kommen die Terme
 \end{gather*}
 wobei das $\vecE$-Feld über die Maxwell-Gleichungen beschrieben wird.
 
-%-------------------------
-% bis 23.10.
-% Hier ein Kommentar
+\minisec{Ergebnisse im Fernfeld}
+\begin{itemize}
+	\item $\vecE$ und $\vecB$ sind Pulse
+	\item $E=cB$ (für elektromagnetische Wellen)
+	\item das $\vecB$-Feld beschreibt konzentrische Kreise um die Diolachse, $\vecE\bot\vecB$
+	\item im großen Abstand sind $\vecB$ und $\vecE$ linear polarisierte ebene Wellen
+	\item das abgestrahlte Feld ist proportional zur Dipolbeschleunigung und die Amplitude nimmt wie $\fracone{r}$ ab.
+\end{itemize}
+\begin{align*}
+	\vert \vecE\vert&\propto\vert\vecB\vert\propto\frac{\dot{\vecp}(\vecr,t)}{r}\\
+	\vert\vecE\vert&=\fracone{4\pi\epso c^2}\frac{p_0\omega^2}{r}\sin\theta\sin(\omega t-\veck\vecr)
+\end{align*}
+Die Intensität ist dabei $\propto\sin^2\theta$. Die gesamte vom Dipol abgestrahlte zeitlich gemittelte Leistung dabei beträgt:
+\begin{align*}
+	\langle P_{em}\rangle=\frac{q^2\omega^4 d_0^2}{12\pi\epso c^3}\propto\omega^4
+\end{align*}
+
 
 %%% Local Variables:
 %%% mode: latex
