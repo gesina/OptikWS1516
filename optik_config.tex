@@ -1,0 +1,49 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{makeidx}
+\makeindex
+% Nomenklatur, d.h. Symbolverzeichnis
+% Eintrag wird erstellt durch:
+% \nomenclature[<prefix for sorting>]{<symbol>}{<description>}
+% !! keine neuen Zeilen im Befehl und alle außen herum auskommentieren !!
+%
+% Ausgabe mit:
+% \printnomenclature
+% 
+% Erzeugt .nlo Datei mit dem Programmaufruf (Terminal):
+% makeindex OptikSkriptWS1516.nlo -s nomencl.ist -o OptikSkriptWS1516.nls
+\usepackage[intoc]{nomencl}
+\makenomenclature
+\usepackage[backend=biber]{biblatex}
+\bibliography{optik.bib}
+
+\usepackage{color}
+\newcommand*{\red}[1]{\textcolor{red}{#1}}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{siunitx}
+
+\usepackage[%
+pdftitle={Experimentalphysik III (Wellen und Quanten)},
+pdfauthor={Hedwig Werner}]%
+{hyperref}
+\usepackage{tabularx}
+
+\subject{Vorlesungsmitschrift}
+\title{Experimentalphysik III\\ (Wellen und Quanten)}
+\subtitle{im WS2015/16 bei Prof. Dr. Christian Back}
+\date{Stand: \today}
+\author{gesetzt von Hedwig Werner}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "OptikSkriptWS1516"
+%%% End:
