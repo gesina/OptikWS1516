@@ -282,7 +282,56 @@ Die Intensität ist dabei $\propto\sin^2\theta$. Die gesamte vom Dipol abgestrah
 	\langle P_{em}\rangle=\frac{q^2\omega^4 d_0^2}{12\pi\epso c^3}\propto\omega^4
 \end{align*}
 
+\section{Die Dispersion von dichten Medien}
+Bisher lagen die Werte für  $n$ bzw. $\eps$ nahe bei 1. Jetzt betrachten wir $\eps>1$ und mehrere Resonanzen ( beispielsweise bei verschiedenen Molekülsorten). Bei mehreren Atomen im System erhält man folgende Gleichung:
+\begin{align*}
+	n^2(\omega)=\eps(\omega)=1+\frac{e^2}{\epso m}\sum_{j}\frac{f_jN_j}{\omegao^2-\omega^2+i\gamma_j\omega}
+\end{align*} 
+wobei $f_j$ die Oszillatorstärke ist. Zur Berechnung des Brechungsindex verwendet man oft die Sellmeier-Beziehung:
+\begin{align*}
+	n^2(\lambda)=A+\sum_{i=1}^{N}\frac{B_j}{\lambda^2-C_j^2}
+\end{align*}
+$A, B_j, C_j$ werden aus Messungen von $n(\lambda)$ bestimmt. Oft genügt der erste Term (z.B. beim sichtbaren Bereich, für nicht absorbierende Materialien).
+\begin{itemize}
+	\item im sichtbaren (z.B. Gläser) nimmt $n(\omega)$ über weite Bereiche mit $\omega$ zu. Diese nennt man die \glqq positive oder normale Dispersion\grqq mit $\frac{\dd n}{\dd \omega}>0$ und $\ddif[\omega]{\lambda}$
+	\item nahe bei den Resonanzen findet man $\ddif[n]{\lambda}>0$ und $\ddif[n]{\omega}<0$. Diese nennt man die \glqq negative oder annormale Dispersion\grqq. Der Imaginärteil ist hier wesentich von nulll verschieden, deshalb absorbiert das Material.
+\end{itemize}
 
+\paragraph{Transparente Materialien} Dispersion im sichtbaren Bereich ist dominiert  von einer elektronischen Resonanz im UV-Bereich. Die Dispersion bei transparenten Materialien ist ähnlich.
+
+\section{Brechungsindex und Absorption von Metallen}
+Metalle sind in erster Linie ein freies Elektronengas. Ein See von Leitungselektronen führt zu hoher Leitfähigkeit. Eine charakteristische Größe ist die Streuzeit $\tau$ bzw. die Stoßfrequenz $\fracone{\tau}$.
+\begin{align*}
+	\tau=\frac{\sigma_0m_e}{N e^2}
+\end{align*}
+Die Streuzeit liegt in einer Größenordnung von ca. $10^{-14}-10^{-15}$. Für Frequenzen der elektromagnetischen Wellen $\omega>>\fracone{\tau}$ kann man im einfachsten Modell schreiben:
+\begin{align}
+	\eps&=1-\frac{\omega_p^2}{\omega^2} \label{Perm}\\
+	\text{mit Plasmafrequenz:}\quad\omega_p^2&=\frac{e^2N}{\epso m}\nonumber
+\end{align}
+\begin{tabular}{c|c|c}
+	$0<\fracone{\tau}$&$\fracone{\tau}<\omega_p$&$\omega_p<\omega$\\
+	\midrule
+	normaler Skineffekt&annormaler Skineffekt&normale Wellenausbreitung
+\end{tabular}
+\\
+Aus der Gleichung \ref{Perm} folgt:
+\begin{itemize}
+	\item für große Frequenzen, also $\omega>\omega_p$, ist die Dielektrizitätskonstante positiv und somit der Brechungsindex reell. Daher gibt es keine Absorption.
+	\item für kleine Frequenzen, also$\omega<\omega_p$, ist die Dielektrizitätskonstante negativ und somit der Brechungsindex rein imaginär. Also es gibt Absorption.
+\end{itemize}
+Wenn man nun aber realistischeres Metall betrachtet, also ein Medium mit Dämpfung, erhält man folgende Gleichungen:
+\begin{align*}
+	\sigma&=\frac{Ne^2}{m}\tau=\frac{Ne^2}{\gamma m}&\text{mit}\quad \tau=\fracone{\gamma}\\
+	\sigma&=\epso\omega_p^2\tau=\frac{\epso\omega_p^2}{\gamma}\\
+	\eps(\omega)&=1+\frac{e^2N}{\epso m}\fracone{-\omega^2+i\gamma\omega}=1-\frac{\omega_p^2}{\omega^2-i\gamma\omega}
+\end{align*}
+\begin{tabular}{c|c|c}
+	$0<\fracone{\tau}$&$\fracone{\tau}<\omega_p$&$\omega_p<\omega$\\
+	\midrule
+	normaler Skineffekt&annormaler Skineffekt&normale Wellenausbreitung\\
+	\parbox{.3\linewidth}{Eindringtiefe fällt mit wachsender Frequenz proportional zu $\sqrt{\omega}$ ab.}& \parbox{.3\linewidth}{Eindringtiefe ist konstant mit $\fracone{a}=\frac{c}{2\omega_p}$.}& \parbox{.3\linewidth}{Das Material ist transparent.}
+\end{tabular}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../OptikSkriptWS1516"
