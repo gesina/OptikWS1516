@@ -24,7 +24,9 @@ Welle).
 %
 %% Skizze zu Reflexion
 %
-Der Winkel $\alpha$ liegt zwischen $\veck_e$ und $\vece_y$ bzw. zwischen $\veck_t$ und $\vece_y$. Wir nehmen an, dass es eine fest vorgegebene einlaufende Welle ist.
+Der Winkel $\alpha$ liegt zwischen $\veck_e$ und $\vece_y$
+bzw. zwischen $\veck_t$ und $\vece_y$. Wir nehmen an, dass es eine
+fest vorgegebene einlaufende Welle ist.
 \begin{align*}
   \vecE_e &= \vecE_{0,e}\cos(\omega_et-\veck_e\vecr)
             =\vecE_{0,e}(\phi_e(\vecr,t))\\
@@ -45,3 +47,229 @@ $\varphi_r$, $\varphi_t$%
 \nomenclature{$\varphi_t$}{Phasenfaktor der transmittierten Welle;
   bestimmt Phasenverschiebung zur einlaufenden Welle} 
 bestimmen die Phasenlage relativ zur einlaufenden Welle.
+
+%-------------------
+
+\section{Reflexions- und Brechungsgesetz}
+Die Stetigkeit der Tangentialkomponente des elektrischen Feldes an der
+Grenzfläche ist wichtig für den Wellenverlauf.
+Daher muss man die Randbedingung annehmen, dass die $x$- und die
+$z$-Komponente von $\vecE$ und $\vecH$ stetig sein müssen.
+Z.\,B. ist für
+\begin{align*}
+  E_{0_{e_x}} \cos(\phi_e(\vecr,t)) 
+  +  E_{0_{r_x}} \cos(\phi_r(\vecr,t)) 
+  &=   E_{0_{t_x}} \cos(\phi_t(\vecr,t)) \\
+  E_{0_{e_z}} \cos(\phi_e(\vecr,t)) 
+  +  E_{0_{r_z}} \cos(\phi_r(\vecr,t)) 
+  &=   E_{0_{t_z}} \cos(\phi_t(\vecr,t)) \\
+\end{align*}
+die notwendige Bedingung, dass für alle $t$ und alle $\vecr$
+mit $y=0$ gilt
+\begin{gather*}
+  \phi_e(\vecr, t) = \phi_r(\vecr,t) = \phi_t(\vecr, t) 
+  \qquad\text{bzw.}\\
+  \omega_et- \veck_e\vecr = \omega_rt- \veck_r\vecr = \omega_tt- \veck_t\vecr
+\end{gather*}
+Diese ist nur erfüllbar, wenn folgendes gilt
+\begin{itemize}
+\item $\omega_e=\omega_r=\omega_t$.\\
+  \red{Achtung:} Es ist eine Wellenlängenänderung möglich.
+\item Die Ebenengleichungen
+  \begin{align*}
+    \veck_e\vecr &= \veck_r\vecr \quad\text{bzw.} \quad(\veck_e-\veck_r)\vecr=0\\
+    \veck_e\vecr &= \veck_t\vecr \quad\text{bzw.} \quad(\veck_e-\veck_t)\vecr=0
+  \end{align*}
+  D.\,h. die Vektoren $(\veck_e-\veck_r)$
+  und $(\veck_e-\veck_t)$ müssen senkrecht auf der Ebene $y=0$ stehen.
+\end{itemize}
+Daraus folgt, dass die Komponenten $\veck_e$ und $\veck_r$ parallel
+zur Grenzfläche gleich sein müssen:
+\begin{gather*}
+  \veck_e = \veck_r
+\end{gather*}
+Setzt man hier nun die Dispersionsrelation 
+$\veck^2 = \frac{n^2\omega^2}{c^2}$ ein, erhält man
+$k_{e_G} = \frac{\omega n_e}{c}\sin\alpha = k_{r_G} 
+= \frac{\omega n_e}{c}\sin\alpha'$, umgeschrieben das
+\emph{Reflexionsgesetz}\index{Reflexionsgesetz}
+\begin{gather*}
+  \sin\alpha = \sin\alpha'
+\end{gather*}
+Die Oberflächennormalen $\vece_y$ und $\veck_e$ spannen die
+Einfallsebene auf, in der auch $\veck_r$ liegen muss (d.\,h. keine
+Seitwärtsreflexion).
+
+\paragraph{Transmittierter Strahl} Für den transmittierten Strahl
+erhält man analog $\veck_{e_r} = \veck_{t_G}$ und daraus wieder mit
+der Dispersionsrelation
+$k_{e_G} = \frac{\omega n_e}{c}\sin\alpha 
+= k_{t_G} =  \frac{\omega n_t}{c}\sin\beta$, also das sog.
+\emph{Snellins'sche  Brechungsgesetz}%
+\index{Brechungsgesetz!Snellins'sches Brechungsgesetz}
+\begin{gather}
+  n_e\sin\alpha = n_t\sin\beta
+  \label{brechungsgesetz}
+\end{gather}
+%% IMAGE MISSING
+
+Es gilt anschaulich
+\begin{description}
+\item[$n_e<n_t$] zum Lot hin gebrochen
+\item[$n_e>n_t$] vom Lot weg gebrochen
+\end{description}
+und mit relativem Brechungsindex $n_{et}=\frac{n_e}{n_t}$ lässt sich
+\eqref{brechungsgesetz} umformen zu
+\begin{gather*}
+  \sin\alpha = n_{et} \sin\beta
+\end{gather*}
+
+%---------------
+
+\section{Die Fresnel'schen Formeln}
+Die in diesem Kapitel behandelten 
+\emph{Fresnel'schen Formeln}\index{Fresnel'sche Formeln}
+beschreiben den Reflexionsgrad einer Grenzfläche.
+Dieser hängt von der \emph{Polarisation} ab.
+
+\subsection{Linear Polarisiertes Licht}%
+\index{Polarisation!linear polarisiertes Licht}
+Es sei $\vecE\bot\vecB$ und $\vecE,\vecB\bot\veck$.
+Definiere $\veck= (0,0,k_z)$, dann liegt $\vecE$ in der $x$-$y$-Ebene
+mit
+\begin{gather*}
+  \vecE = \vecE_x + \vecE_y 
+  =\begin{pmatrix}
+    E_{x,0} \cos(k_z z - \omega t)\phantom{~+ \varphi}\\
+    E_{y,0} \cos(k_z z - \omega t + \varphi)\\
+    0
+  \end{pmatrix}
+\end{gather*}
+Man sieht, dass eine Phasendifferenz zwischen $E_x$ und $E_y$
+möglich ist. Für $\phi=0$ bzw. $\phi=\pm m\pi$ ($m\in\mathds{N}$) gilt
+\begin{gather*}
+  \vecE = \begin{pmatrix} E_{x,0}\\E_{y,0}\\0 \end{pmatrix}
+  \cos(k_zz - \omega t)
+  = \vecE_0  \cos(k_zz - \omega t)
+\end{gather*}
+Die Richtung von $\vecE_0$ ist nicht zeitabhängig.
+
+%---
+
+\subsection{Zirkular polarisiertes Licht}%
+\index{Polarisation!zirkular polarisiertes Licht}
+Zirkular polarisiertes Licht ist der Spezialfall $E_{x,0} = E_{y,0} = E_0$
+und $\varphi = \frac{\pi}{2} + m\pi$ (wieder $m\in\mathds{N}$), in
+Formel
+\begin{gather*}
+\vecE = E_0\begin{pmatrix} 
+  \cos(k_zz - \omega t)\phantom{~+ \frac{\pi}{2} + m\pi}\\
+  \cos(k_zz - \omega t + \frac{\pi}{2} + m\pi)\\
+  0 
+\end{pmatrix}
+= E_0\begin{pmatrix} 
+  \phantom{\pm}\cos(k_zz - \omega t)\\
+  \pm\sin(k_zz - \omega t)\\
+  0 
+\end{pmatrix}
+\end{gather*}
+Hier ist der Betrag der Feldstärke zeitlich konstant und der
+$\vecE$-Vektor beschreibt eine Helixbahn (s. Folien), während $m$ den
+Drehsinn bestimmt. Die Unterscheidung zwischen rechts und links zirkular ist:
+\begin{description}
+\item[rechts zirkulares Licht] Blick zur Lichtquelle,
+  $\vecE$ rotiert im Uhrzeigersinn
+\item[links zirkulares Licht] Blick zur Lichtquelle,
+  $\vecE$ rotiert gegen den Uhrzeigersinn
+\end{description}
+
+%---
+
+\subsection{Elliptisch polarisiertes Licht}%
+\index{Polarisation!elliptisch polarisiertes Licht}
+Hier gilt $E_{x,0} \neq E_{y,0}$ und $\varphi$ ist beliebig.
+Dann Beschreibt der $\vecE$-Vektor eine Ellipse in $x$-$y$-Richtung.
+
+\subsection{Fresnel'sche Formeln}
+Bisher wurden nur die Phase und damit die Ausbreitungsvektoren
+betrachtet.
+Jetzt betrachten wir die Amplituden.
+Dazu spaltet man die Felder in Komponenten parallel und senkrecht zur
+Einfallsebene auf:
+\begin{description}
+\item[$E_s$ bzw. $E_\bot$] Feldvektor schwingt senkrecht zur
+  Einfallsebene; $E_s$ ist automatisch tangential zur Grenzfläche
+\item[$E_p$ bzw. $E_\parallel$] Feldvektor schwingt in der Einfallsebene
+\end{description}
+
+%---
+
+\subsection{Senkrechter Lichteinfall}
+Wir nehmen für senkrechten Lichteinfall folgende Randbedingungen für
+das elektrische und magnetische Feld an
+\begin{align}
+  \vecE_{0_e} + \vecE_{0_r} = \vecE_{0_t} \label{randbed1}\\
+  \vecH_{0_e} + \vecH_{0_r} = \vecH_{0_t} \label{randbed2}
+\end{align}
+Verwendet man die MWGl
+$\vecna\times\vecE = -\dif[\vecB]{t} = -\muo\mu\dif[\vecH]{t}$
+und setzt alles in die ebene Welle ein, erhält man
+\begin{gather*}
+  \vecE(\vecr,t) = \vecE_0 e^{i(\veck\vecr-\omega t)} 
+  \qquad{und}\qquad
+  \vecB(\vecr,t) = \vecB_0 e^{i(\veck\vecr-\omega t)} 
+\end{gather*}
+sowie
+\begin{align*}
+  \begin{pmatrix}
+    \dif[E_{0,z}e^{i(\veck\vecr-\omega t)}]{y}
+    - \dif[E_{0,y}e^{i(\veck\vecr-\omega t)}]{z}\\
+    \dif[E_{0,x}e^{i(\veck\vecr-\omega t)}]{z}
+    - \dif[E_{0,z}e^{i(\veck\vecr-\omega t)}]{x}\\
+    \dif[E_{0,y}e^{i(\veck\vecr-\omega t)}]{x}
+    - \dif[E_{0,x}e^{i(\veck\vecr-\omega t)}]{y}\\
+  \end{pmatrix}
+  &= - \dif[\vecB_0e^{i(\veck\vecr-\omega t)}]{t}\\
+  \Longleftrightarrow
+  \begin{pmatrix}
+    E_{0,z}\cdot ik_y - E_{0,y} \cdot ik_z\\
+    E_{0,x}\cdot ik_z - E_{0,z} \cdot ik_x\\
+    E_{0,y}\cdot ik_x - E_{0,x} \cdot ik_y
+  \end{pmatrix}
+  & = -\vecB_0\cdot (-i\omega)
+\end{align*}
+Also
+\begin{align}\nonumber
+  \veck\times\vecE_0 &= \omega\vecB \qquad\qquad\text{bzw.}\\
+  \vecB_0 &= \frac{1}{\omega}(\veck\times\vecE_0) \label{randbed3}
+\end{align}
+Setze \eqref{randbed3} in \eqref{randbed2} ein und erhalte
+\begin{gather*}
+  \frac{1}{\omega}(\veck_e\times\vecE_{0,e}) 
+  +   \frac{1}{\omega}(\veck_r\times\vecE_{0,r})
+  = \frac{1}{\omega}(\veck_t\times\vecE_{0,t}) 
+\end{gather*}
+da $\veck\bot\vecE$ und $\veck_e = -\veck_r$, 
+$\veck_t = \frac{n_t}{n_e}\veck_e$. Daraus erhält man
+\begin{gather*}
+  n_e\vecE_{0,e} -   n_r\vecE_{0,r} =   n_t\vecE_{0,t}
+\end{gather*}
+Eliminiere $\vecE_{0,t}$ durch Einsetzen von \eqref{randbed1}
+\begin{align*}
+  \vecE_{0,r} &= \frac{n_e-n_t}{n_e+n_t} \vecE_{0,e} = r\vecE_{0,e}
+  &r &= \frac{n_e-n_t}{n_e+n_t} 
+  &&\text{(Reflexionskoeffizient)}\\
+  \vecE_{0,t} &= \frac{2n_e}{n_e+n_t} \vecE_{0,e} = t\vecE_{0,e}
+  &r &= \frac{2n_e}{n_e+n_t} 
+  &&\text{(Transmissionskoeffizient)}
+\end{align*}%
+\index{Reflexionskoeffizient}%
+\nomenclature{$r$}{Reflexionskoeffizient;
+  $r=\frac{n_e-n_t}{n_e+n_t}$}%
+\index{Transmissionskoeffizient}%
+\nomenclature{$t$}{Transmissionskoeffizient; $t=\frac{2n_e}{n_e+n_t}$}%
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../OptikSkriptWS1516"
+%%% End:
