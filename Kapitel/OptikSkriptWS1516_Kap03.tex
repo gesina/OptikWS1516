@@ -1,9 +1,9 @@
 %%-----------------------------------------
-%%
+
 %% Vorlesungsmitschrift (Kapitel 3)
-%% Optik im WS2015/16
+
 %% an der Uni Regensburg, gelesen von Christian Back
-%%
+
 %%-----------------------------------------
 
 \chapter{Dispersion von Licht}
@@ -14,9 +14,34 @@ Grenzflächen.
 
 \section{Die Frequenzabhängigkeit der Dielekrizitätskonstante $\eps$}
 I.A. ist $\eps$ ein Tensor mit $\omega$-Abhängigkeit. Vergleicht man
-den statischen Dielektrizitätskonstante bzw. den Brechungsindex
+die statische Dielektrizitätskonstante bzw. den Brechungsindex
 $n_0=\sqrt{\eps(\omega=0)}$ mit $
-n=\sqrt{\eps(\omega=\SI{589}{\nano\meter})}$, ist ein Unterschied zu erkennen!
+n=\sqrt{\eps(\omega=\SI{589}{\nano\meter})}$, ist ein Unterschied zu erkennen! Typischerweise zeigt $\eps$ die Resonanzen an. Die Ursache ist mikroskopisch, da die Elektronenwolke gegenüber dem Atomkern durch das $\vecE$-Feld ausgelenkt wird.
+\paragraph{einfaches Modell:}
+\begin{itemize}
+	\item$\infty$-schwerer Kern
+	\item negativ geladenes Elektron
+\end{itemize}
+\textit{Model:}harmonischer Oszilator\\
+\textit{Idee:} Berechne $x(t)$ der Elektronenwolke und daraus das Dipolmomentbzw. die Polarisation $\vecP$. es folgt $\epsilon(\omega)$ über $\vecP=(\epsilon-1)\epso \vecE$ mit der treibenden Kraft $\vecF(t)=-e\vecE(t)=-e\vecE_0 \exp(i\omega t)$, wobei $\vecE\|\vecx$ und $\vecE_0$ reell ist.
+Daraus erhält man die Bewegungsgleichung für einen 1-dim. harmonischen Oszillator mit schwacher Dämpfung.
+\begin{align*}
+	\ddot{x}+\gamma\dot{x}+\omegao x&=\fracone{m}F(t)=\frac{-e}{m}E_0\exp(i\omega t)\\
+	\text{mit der Lösung:}\quad x(t)&=\frac{-e}{m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}E(t)
+\end{align*}
+Wenn man nun noch die Teilchendichte N (Teilchen pro Volumen) dazunimmt, erhält man:
+\begin{align*}
+	P(t)&=-ex(t)N=\frac{eN^2}{m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}E(t)=(\eps(\omega)-1)\epso E(t)\\
+\end{align*}
+Daraus erhält man die frequenzabhängige Dielektrizitätskonstante:
+\begin{align*}
+	 \eps(\omega)&=1+\frac{e^2N}{\epso m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}
+\end{align*}
+Bei einem Medium mit verschiedenen Atomen/Molekülen summiert man über die Dielektrizitätskonstanten und man erhält folgendes:
+\begin{align*}
+	 \eps(\omega)&=1+\frac{e^2}{\epso m}\sum_{j}\frac{N_j}{(\omegao^2-\omega^2)+i\gamma\omega}
+\end{align*}
+
 
 \section{Der Brechungsindex}
 Am einfachsten ist die Betrachtung eines verdünnten Mediums,
@@ -113,11 +138,14 @@ genannt:
 \end{gather*}
 Diese Relation ist wichtig für die optische Spektroskopie.
 
+%----------------
 
 \section[Detailbetrachtung]{Wie sieht das im Detail aus?}
 Die zu erzwungenen Schwingungen angeregten Atome (Elektronenwolken) im
 Medium strahlen mit der Anregungsfrequenz, aber mit \emph{verzögerter
   Phase} ab (s. Mechanik)
+
+%----------------
 
 \section{Das elektromagnetische Feld eines oszillierenden Dipols}
 %% Image Missing!!
@@ -128,7 +156,7 @@ strahlenden Dipols berechnet.
 Wir werden im Folgenden das $\vecB$-Feld betrachten (das $\vecE$-Feld
 wird von den Maxwell-Gleichungen beschrieben).
 
-Es gilt für das Vektorpotential $\vecB=\vecna\times\vecA$ wobei
+Es gilt für das Vektorpotential $\vecB=\vecna\times\vecA$, wobei
 \begin{gather*}
   \vecA (\vech) = \frac{\muo}{4\pi} \int 
   \frac{\vecj(\vecr_2)\dd V_2}{|\vecr_{12}|}
@@ -197,16 +225,20 @@ Das heißt, das $\vecB$-Feld liegt in der $x$-$y$-Ebene.
 Die genaue Formel für $B_x$ ist
 \begin{gather*}
   B_x = \frac{\muo}{4\pi}\left[
-    \dot{p}\left(t-\frac{r_{12}}{c}\right)\dif{y}\cdot\frac{1}{r}
-      + \frac{1}{r}\left(\dot{p}\left(t-\frac{r_{12}}{c}\right)\right)
-    \right]
+    \dot{p}\left( t-\frac{r_{12}}{c} \right)\dif{y} \cdot \frac{1}{r}
+    + \frac{1}{r}
+    \left( 
+      \dot{p}\left(t-\frac{r_{12}}{c}\right)
+    \right)
+  \right]
 \end{gather*}
 Definiere zur Vereinfachung $u=t-\frac{r_{12}}{c}$, dann ist
 $\dot{p} = \dif[p]{u}\cdot\dif[u]{t} = \dif[p]{u}$
 und $\dif[u]{r} = -\frac{1}{c}$.
 Außerdem gilt $\dif[r]{y}=\frac{y}{r}$, d.h.
 \begin{gather*}
-  \dif[\dot{p}]{y} = \dif[\dot{p}]{u}\cdot\dif[u]{r}\cdot\dif[r]{y}
+  \dif[\dot{p}]{y} 
+  = \dif[\dot{p}]{u}\cdot\dif[u]{r}\cdot\dif[r]{y}
   = -\ddot{p}\frac{1}{c}\frac{y}{r}
 \end{gather*}
 Damit gilt dann
@@ -224,9 +256,9 @@ $B_y$ analog. Insgesamt
     + \frac{r}{c}\ddot{\vecp}\times\vecr
   \right]
 \end{gather*}
-Wegen $\vecp\parallel\dot{\vecp}\parallel\ddot{\vecp}$
-gilt $\vecB \bot \vecp_{\text{Dipol}}$ und
-$\vecB \bot$Ausbreitungsrichtung.
+Wegen $\vecp\,\parallel\,\dot{\vecp}\,\parallel\,\ddot{\vecp}$
+gilt $\vecB\,\bot\,\vecp_{\text{Dipol}}$ und
+$\vecB\,\bot$ Ausbreitungsrichtung.
 Damit folgen zwei Terme für $\vecB$:
 \begin{enumerate}
 \item Nahfeld $\propto \dot\vecp \propto \frac{1}{r^2}$
@@ -240,9 +272,159 @@ Daher kommen die Terme
 \end{gather*}
 wobei das $\vecE$-Feld über die Maxwell-Gleichungen beschrieben wird.
 
-%-------------------------
-% bis 23.10.
-% Hier ein Kommentar
+\paragraph{Ergebnisse im Fernfeld}
+\begin{itemize}
+	\item $\vecE$ und $\vecB$ sind Pulse.
+	\item $E=cB$ (für elektromagnetische Wellen)
+	\item Das $\vecB$-Feld beschreibt konzentrische Kreise um die
+      Dipolachse, $\vecE\bot\vecB$.
+	\item Im großen Abstand sind $\vecB$ und $\vecE$ linear
+      polarisierte ebene Wellen.
+	\item Das abgestrahlte Feld ist proportional zur
+      Dipolbeschleunigung und die Amplitude nimmt proportional zu
+      $\fracone{r}$ ab.
+\end{itemize}
+Zusammengefasst haben wir folgende Formeln:
+\begin{align*}
+  \vert \vecE\vert
+  &\propto\vert\vecB\vert\propto\frac{\dot{\vecp}(\vecr,t)}{r}\\
+  \vert\vecE\vert
+  &=\fracone{4\pi\epso c^2} \frac{p_0\omega^2}{r}
+    \sin\theta \sin(\omega t-\veck\vecr)
+\end{align*}
+Die Intensität ist dabei $\propto\sin^2\theta$. Die gesamte vom Dipol
+abgestrahlte zeitlich gemittelte Leistung dabei beträgt: 
+\begin{align*}
+	\langle P_{em}\rangle
+  =\frac{q^2\omega^4 d_0^2}{12\pi\epso c^3}
+  \propto\omega^4 
+\end{align*}
+
+%----------------
+
+\section{Die Dispersion von dichten Medien}
+Bisher lagen die Werte für  $n$ bzw. $\eps$ nahe bei 1. Jetzt
+betrachten wir $\eps>1$ und mehrere Resonanzen (beispielsweise bei
+verschiedenen Molekülsorten). Bei mehreren Atomen im System erhält man
+folgende Gleichung
+\begin{gather}
+  n^2(\omega)
+  = \eps(\omega)
+  = 1 + \frac{e^2}{\epso m_e}\sum_{j}
+  \frac{f_jN_j}{\omegao^2-\omega^2+i\gamma_j\omega}
+  \label{brechungsindexallg}
+\end{gather} 
+wobei $f_j$\nomenclature{$f_j$}{Oszillatorstärke;
+  $\eps(\omega)
+  = 1 + \frac{e^2}{\epso m_e}\sum_{j}
+  \frac{f_jN_j}{\omegao^2-\omega^2+i\gamma_j\omega}$}
+die Oszillatorstärke\index{Oszillatorstärke},
+$\gamma_j$\nomenclature{$\gamma_j$}{Dämpfung; 
+  $\eps(\omega)
+  = 1 + \frac{e^2}{\epso m_e}\sum_{j}
+  \frac{f_jN_j}{\omegao^2-\omega^2+i\gamma_j\omega}$} die
+Dämpfungskonstante,
+$e$\nomenclature{$e$}{Elementarladung} die Elementarladung und
+$m_e$\nomenclature{$m_e$}{Elektronenmasse} die Elektronenmasse ist.
+Zur Berechnung des Brechungsindex verwendet man oft die 
+\emph{Sellmeier-Beziehung}%
+\index{Sellmeier-Beziehung}:
+\begin{align*}
+	n^2(\lambda)= A + \sum_{i=1}^{N}\frac{B_j}{\lambda^2-C_j^2}
+\end{align*}
+$A$, $B_j$, $C_j$ werden aus Messungen von $n(\lambda)$ bestimmt. Oft
+genügt der erste Term (z.\,B. beim sichtbaren Bereich, für nicht
+absorbierende Materialien).
+\begin{itemize}
+	\item Im sichtbaren (z.\,B. Gläser) nimmt $n(\omega)$ über weite
+      Bereiche mit $\omega$ zu. Diese nennt man die 
+      \enquote{\emph{positive} oder \emph{normale Dispersion}}%
+      \index{Dispersion!positiv}\index{Dispersion!normal}
+      mit $\frac{\dd n}{\dd \omega}>0$
+      und $\frac{\dd n}{\dd \omega}>\ddif[\omega]{\lambda}$.
+	\item Nahe bei den Resonanzen findet man $\ddif[n]{\lambda}>0$ und
+      $\ddif[n]{\omega}<0$. Diese nennt man die 
+      \enquote{\emph{negative} oder \emph{annormale Dispersion}}. 
+      Der Imaginärteil ist hier wesentlich
+      von nulll verschieden, deshalb absorbiert das Material. 
+\end{itemize}
+
+\paragraph{Transparente Materialien} Dispersion im sichtbaren Bereich
+ist dominiert  von einer elektronischen Resonanz im UV-Bereich. Die
+Dispersion bei transparenten Materialien ist ähnlich.
+
+\section{Brechungsindex und Absorption von Metallen}
+Metalle sind in erster Linie ein freies Elektronengas. Ein See von
+Leitungselektronen führt zu hoher Leitfähigkeit. Eine
+charakteristische Größe ist die 
+Streuzeit $\tau$%
+\nomenclature{$\tau$}{Streuzeit}%
+\index{Streuzeit}
+bzw. 
+die Stoßfrequenz $\fracone{\tau}$%
+\nomenclature{$\frac{1}{\tau}$}{Stoßfrequenz bei Streuzeit $\tau$;
+  $\gamma\coloneqq \frac{1}{\tau}$}%
+\index{Streuzeit} 
+Für diese gilt
+\begin{align*}
+	\tau=\frac{\sigma_0m_e}{N e^2}
+\end{align*}
+wobei 
+$N$\nomenclature{$N$}{Teilchenzahldichte} die Teilchenzahldichte ist.
+Die Streuzeit liegt in einer Größenordnung von
+ca. $10^{-14}$ bis $10^{-15}$. Für Frequenzen der elektromagnetischen Wellen
+$\omega\gg\fracone{\tau}$ (Dämpfung vernachlässigbar) kann man im
+einfachsten Modell schreiben
+\begin{gather}
+  \eps = 1 - \frac{\omega_p^2}{\omega^2} \label{Perm}
+\end{gather}
+mit \emph{Plasmafrequenz}
+$\omega_p^2=\frac{e^2N}{\epso m_e}$%
+\nomenclature{$\omega_p$}{Plasmafrequenz;
+  $\omega_p^2=\frac{e^2N}{\epso m_e}$ im nahezu ungedämpften Fall}%
+\index{Plasmafrequenz}.
+Es gilt
+\begin{description}
+\item[$0 < \fracone{\tau}$] normaler Skineffekt
+\item[$\fracone{\tau} < \omega_p$] annormaler Skineffekt
+\item[$\omega_p < \omega$] normale Wellenausbreitung
+\end{description}
+
+Aus der Gleichung \ref{Perm} folgt für
+\begin{description}
+	\item[große Frequenzen ($\omega>\omega_p$):] Hier ist die
+      Dielektrizitätskonstante positiv und somit der Brechungsindex
+      reell. Daher gibt es keine Absorption. 
+	\item[kleine Frequenzen ($\omega<\omega_p$):] Hier ist die
+      Dielektrizitätskonstante negativ und somit der Brechungsindex
+      rein imaginär. Also es gibt Absorption. 
+\end{description}
+Wenn man nun aber ein realistischeres Metall betrachtet, also ein Medium
+mit Dämpfung, erhält man folgende Gleichungen
+\begin{align*}
+  \sigma
+  &= \frac{Ne^2}{m_e}\tau
+    = \epso\omega_p^2 \tau
+    = \frac{\epso\omega_p^2}{\gamma}
+  &\text{mit}\quad \tau=\fracone{\gamma}\\
+  \eps(\omega)
+  &= 1 + \frac{e^2N}{\epso m}\fracone{-\omega^2+i\gamma\omega}
+    = 1 - \frac{\omega_p^2}{\omega^2-i\gamma\omega}
+  &\text{aus \eqref{brechungsindexallg}}
+\end{align*}%
+\nomenclature{$\gamma$}{Stoßfrequenz bei Streuzeit $\tau$; 
+  $\gamma\coloneqq \fracone{\tau}$}%
+Anschaulich:
+\begin{description}
+  \item[$0 < \fracone{\tau}$ (normaler Skineffekt)]
+    Die Eindringtiefe fällt mit wachsender Frequenz proportional zu
+      $\sqrt{\omega}$ ab.
+  \item[$\fracone{\tau}<\omega_p$ (annormaler Skineffekt)]
+    Die Eindringtiefe ist konstant mit $\fracone{a}=\frac{c}{2\omega_p}$.
+  \item[$\omega_p<\omega$ (normale Wellenausbreitung)]
+    Das Material ist transparent.
+\end{description}
+
 
 %%% Local Variables:
 %%% mode: latex

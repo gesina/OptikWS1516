@@ -1,0 +1,47 @@
+%%-----------------------------------------
+
+%% Vorlesungsmitschrift (Kapitel 4)
+
+%% an der Uni Regensburg, gelesen von Christian Back
+
+%%-----------------------------------------
+
+
+\chapter{Elektromagnetische Wellen an Grenzflächen}
+\section{Randbedingungen der elektromagnetischen Welle}
+Wir wollen jetzt Wellenausbreitung in inhomogenen Medien beschreiben,
+z.\,B. den Übergang von Medium~1 nach Medium~2, also einer
+Grenzfläche.
+
+\paragraph{Randbedingungen der MWGl.:} Die Tangentialkomponenten von
+$\vecE$ und $\vecH=\fracone{\muo\mu_r}\vecB$ sind stetig. Die
+Normalkomponenten von $\vecD=\epso\eps_r\vecE$ und $\vecB$ sind
+ebenfalls stetig (Erinnerung: Für isotrope, isolierende, nicht
+magnetische Medien gilt $\mu_r\eqqcolon\mu=1$).
+\paragraph{einfachster Fall:} Wir betrachten zwei homogene Medien mit
+Brechungsindex $n_e$ (einfallender Strahl) und $n_t$ (transmittierte
+Welle).
+%
+%% Skizze zu Reflexion
+%
+Der Winkel $\alpha$ liegt zwischen $\veck_e$ und $\vece_y$ bzw. zwischen $\veck_t$ und $\vece_y$. Wir nehmen an, dass es eine fest vorgegebene einlaufende Welle ist.
+\begin{align*}
+  \vecE_e &= \vecE_{0,e}\cos(\omega_et-\veck_e\vecr)
+            =\vecE_{0,e}(\phi_e(\vecr,t))\\
+  \vecE_r &= \vecE_{0,r}\cos(\omega_rt - \veck_r\vecr+\varphi_r)
+            =\vecE_{0,r}(\phi_r(\vecr,t))\\
+  \vecE_t &= \vecE_{0,t}\cos(\omega_tt - \veck_t\vecr + \varphi_t)
+            =\vecE_{0,t}(\phi_t(\vecr,t))
+\end{align*}
+Die Wellenvektoren $\veck_e$, $\veck_r$ und $\veck_t$ müssen die%
+\nomenclature{$\veck_e$}{Wellenvektor der einlaufenden Welle}%
+\nomenclature{$\veck_t$}{Wellenvektor der transmittierten Welle}%
+\nomenclature{$\veck_r$}{Wellenvektor der reflektierten Welle}
+Dispersionsrelationen im jeweiligen Medium erfüllen. Die
+\emph{Phasenfaktoren}\index{Phasenfaktoren}
+$\varphi_r$, $\varphi_t$%
+\nomenclature{$\varphi_r$}{Phasenfaktor der reflektierten Welle;
+  bestimmt Phasenverschiebung zur einlaufenden Welle}%
+\nomenclature{$\varphi_t$}{Phasenfaktor der transmittierten Welle;
+  bestimmt Phasenverschiebung zur einlaufenden Welle} 
+bestimmen die Phasenlage relativ zur einlaufenden Welle.
