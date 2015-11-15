@@ -21,9 +21,9 @@ magnetische Medien gilt $\mu_r\eqqcolon\mu=1$).
 \paragraph{einfachster Fall:} Wir betrachten zwei homogene Medien mit
 Brechungsindex $n_e$ (einfallender Strahl) und $n_t$ (transmittierte
 Welle).
-%
+% 
 %% Skizze zu Reflexion
-%
+% 
 Der Winkel $\alpha$ liegt zwischen $\veck_e$ und $\vece_y$
 bzw. zwischen $\veck_t$ und $\vece_y$. Wir nehmen an, dass es eine
 fest vorgegebene einlaufende Welle ist.
@@ -48,7 +48,7 @@ $\varphi_r$, $\varphi_t$%
   bestimmt Phasenverschiebung zur einlaufenden Welle} 
 bestimmen die Phasenlage relativ zur einlaufenden Welle.
 
-%-------------------
+% -------------------
 
 \section{Reflexions- und Brechungsgesetz}
 Die Stetigkeit der Tangentialkomponente des elektrischen Feldes an der
@@ -124,7 +124,7 @@ und mit relativem Brechungsindex $n_{et}=\frac{n_e}{n_t}$ lässt sich
   \sin\alpha = n_{et} \sin\beta
 \end{gather*}
 
-%---------------
+% ---------------
 
 \section{Die Fresnel'schen Formeln}
 Die in diesem Kapitel behandelten 
@@ -154,7 +154,7 @@ möglich ist. Für $\phi=0$ bzw. $\phi=\pm m\pi$ ($m\in\mathds{N}$) gilt
 \end{gather*}
 Die Richtung von $\vecE_0$ ist nicht zeitabhängig.
 
-%---
+% ---
 
 \subsection{Zirkular polarisiertes Licht}%
 \index{Polarisation!zirkular polarisiertes Licht}
@@ -162,16 +162,16 @@ Zirkular polarisiertes Licht ist der Spezialfall $E_{x,0} = E_{y,0} = E_0$
 und $\varphi = \frac{\pi}{2} + m\pi$ (wieder $m\in\mathds{N}$), in
 Formel
 \begin{gather*}
-\vecE = E_0\begin{pmatrix} 
-  \cos(k_zz - \omega t)\phantom{~+ \frac{\pi}{2} + m\pi}\\
-  \cos(k_zz - \omega t + \frac{\pi}{2} + m\pi)\\
-  0 
-\end{pmatrix}
-= E_0\begin{pmatrix} 
-  \phantom{\pm}\cos(k_zz - \omega t)\\
-  \pm\sin(k_zz - \omega t)\\
-  0 
-\end{pmatrix}
+  \vecE = E_0\begin{pmatrix} 
+    \cos(k_zz - \omega t)\phantom{~+ \frac{\pi}{2} + m\pi}\\
+    \cos(k_zz - \omega t + \frac{\pi}{2} + m\pi)\\
+    0 
+  \end{pmatrix}
+  = E_0\begin{pmatrix} 
+    \phantom{\pm}\cos(k_zz - \omega t)\\
+    \pm\sin(k_zz - \omega t)\\
+    0 
+  \end{pmatrix}
 \end{gather*}
 Hier ist der Betrag der Feldstärke zeitlich konstant und der
 $\vecE$-Vektor beschreibt eine Helixbahn (s. Folien), während $m$ den
@@ -183,7 +183,7 @@ Drehsinn bestimmt. Die Unterscheidung zwischen rechts und links zirkular ist:
   $\vecE$ rotiert gegen den Uhrzeigersinn
 \end{description}
 
-%---
+% ---
 
 \subsection{Elliptisch polarisiertes Licht}%
 \index{Polarisation!elliptisch polarisiertes Licht}
@@ -202,7 +202,7 @@ Einfallsebene auf:
 \item[$E_p$ bzw. $E_\parallel$] Feldvektor schwingt in der Einfallsebene
 \end{description}
 
-%---
+% ---
 
 \subsection{Senkrechter Lichteinfall}
 Wir nehmen für senkrechten Lichteinfall folgende Randbedingungen für
@@ -229,14 +229,14 @@ sowie
     \dif[E_{0,y}e^{i(\veck\vecr-\omega t)}]{x}
     - \dif[E_{0,x}e^{i(\veck\vecr-\omega t)}]{y}\\
   \end{pmatrix}
-  &= - \dif[\vecB_0e^{i(\veck\vecr-\omega t)}]{t}\\
+&= - \dif[\vecB_0e^{i(\veck\vecr-\omega t)}]{t}\\
   \Longleftrightarrow
   \begin{pmatrix}
     E_{0,z}\cdot ik_y - E_{0,y} \cdot ik_z\\
     E_{0,x}\cdot ik_z - E_{0,z} \cdot ik_x\\
     E_{0,y}\cdot ik_x - E_{0,x} \cdot ik_y
   \end{pmatrix}
-  & = -\vecB_0\cdot (-i\omega)
+& = -\vecB_0\cdot (-i\omega)
 \end{align*}
 Also
 \begin{align}\nonumber
@@ -270,8 +270,9 @@ Eliminiere $\vecE_{0,t}$ durch Einsetzen von \eqref{randbed1}
 \nomenclature{$t$}{Transmissionskoeffizient; $t=\frac{2n_e}{n_e+n_t}$}%
 
 % -----------------
-% 04.11.2015
+% 05.11.2015
 % -----------------
+\marginpar{05.11.2015}
 
 \begin{description}
 \item[$n_e>n_t$:] Wenn Licht von optisch dichteren in ein optisch dünneres
@@ -358,7 +359,6 @@ Die Amplituden der reflektierten $\vecE$-Felder erhält man durch
 Multiplikation der Amplituden des emittierten $\vecE$-Felder mit den
 Reflexionskoeffizienten.
 
-
 \minisec{Transmittierte Leistung $P_t$%
 \nomenclature{$P_t$}{transmittierte Leistung}%
 \index{transmittierte Leistung} 
@@ -400,7 +400,8 @@ Nun kann man folgende Gleichungen formulieren
          = |t|^2\frac{n_t}{n_e}
 \end{align*}
 
-\subsubsection{Diskussion der Fresnel'schen Formeln: Reflexionsgrad bei Lichteinfall aus einem optisch dünnerem Medium}
+\subsubsection{Diskussion der Fresnel'schen Formeln: Reflexionsgrad
+  bei Lichteinfall aus einem optisch dünnerem Medium}
 Ein Beispiel hierfür ist der Übergang von Luft in Gas mit $\frac{n_t}{n_e}=1,5$.
 Betrachte nun die Winkelabhängigkeit von $R=\vert r\vert^2$ aus den
 Fresnel'schen Formeln \ref{FF1} und \ref{FF2}. 
@@ -440,9 +441,148 @@ Der Brewsterwinkel ergibt sich aus der Formel
   \tan\alpha_B &= \frac{n_t}{n_e}
 \end{align*}
 
-% ------------------
+
+% -----------------
 % 09.11.2015
-% ------------------ 
+% -----------------
+\marginpar{09.11.2015}
+
+%% Anmerkung letzte Vorlesung
+% \begin{align*}
+%   E_{eT} &= E_e\cos\alpha\\
+%   E_{tT} &= E_t\cos\beta\\
+%   E_{rT} &= \mathbf{-} E_r\cos\alpha
+% \end{align*}
+% \begin{align*}
+%   E_{eN} &= E_e\sin\alpha
+%   &E_{tN} &= E_t\sin\beta
+%   &E_{rN} &= E_r\sin\alpha
+% \end{align*}
+% \begin{align*}
+%   E_{eT} + E_{rT} &= E_{rT}\\
+%   \cos\alpha(E_{e}-E_t) &= E_t\cos\beta
+% \end{align*}
+
+% 2.
+\paragraph{Reflexionsgrad bei Lichteinfall aus optisch dichteren
+  Medien}
+Wir betrachten $n_e>n_t$ und beobachten, dass ab einem
+Einfallswinkel $\alpha=\alpha_T<\ang{90}$ das Reflexionsvermögen
+100\% erreicht, d.h. \emph{Totalreflexion}\index{Totalreflexion}.
+Aus Snell erhalten wir $\sin\beta = 1$, also für den Winkel
+$\alpha_T$%
+\nomenclature{$\alpha_T$}{Winkel für Totalreflexion}
+der Totalreflexion
+\begin{align*}
+  \sin\alpha_t &= \frac{n_t}{n_e} \quad\text{bzw.}\\
+  \alpha_T &= \arcsin(\frac{n_t}{n_e})
+\end{align*}
+Für Winkel $\alpha>\alpha_T$ gibt es nach Snell keine Lösung
+für $\beta$. Der transmittierte Wellenvektor $\veck_t$ besitzt
+keine reelle Komponente senkrecht zur Grenzfläche.
+Die imaginäre Komponente führt zu Absorption! Wir erhalten eine
+\emph{evaneszente Welle}.
+
+Die Fresnel'schen Formeln können weiterhin verwendet
+werden. Ersetze hierfür $\cos\beta = \sqrt{1-\sin^2\beta}$ durch
+die Snell'sche Formel
+\begin{gather*}
+  \cos\beta = \sqrt{
+    1 - \left(\frac{n_e}{n_t}\right)^2 \sin\alpha
+  }
+\end{gather*}
+Für $\alpha>\alpha_T$ wird dieser Ausdruck rein imaginär.
+
+Der Reflexionsgrad (für Intensitäten) ist $R_\bot=R_\parallel=1$
+Die Koeffizienten $r_\parallel$ und $r_\bot$ werden ebenfalls komplex.
+Diese komplexen Amplitudenkoeffizienten verursachen eine
+\emph{Phasenverschiebung $\varphi_r$}
+bei Totalreflexion, die polarisationsabhängig ist.
+
+Anwendungen sind z.\,B.
+\begin{itemize}
+\item Fresnel-Rhombus (Polarisationsdreher)
+\item Umlenkprisma: Einlaufendes linear polarisiertes Licht wird
+  nach zweimaliger Reflexion zirkular polarisiert.
+  %% IMAGE MISSING
+  Der Grund dafür ist, dass die relative Phase von s- und
+  p-polarisierten Komponenten des $\vecE$-Feldes sich ändert.
+\end{itemize}
+
+% 3.
+\paragraph{Lichtwellenleiter}\index{Lichtwellenleiter}
+(s. Folien)\\
+Lichtwellenleiter sind wichtig für die Telekommunikation. 
+Anwendungen sind u.\,a.
+\begin{itemize}
+\item Mono-Moden Fasern
+\item Multi-Moden Fasern
+\item Bildübertragung
+\end{itemize}
+
+%---
+
+\subsection{Totalreflexion und evaneszente Welle}
+%% IMAGE MISSING
+Trifft eine ebene Welle auf eine Grenzschicht,
+erhält man ein Interferenzbild durch Überlagerung von einlaufender und
+reflektierter Welle im ersten Medium (aus dem die einlaufende Welle kommt).
+Im zweiten Medium beobachtet man eine stetige Abnahme der Feldstärke
+in $y$-Richtung. Um dies zu beschreiben, verwende
+\begin{itemize}
+\item $\veck_e$ hat die Komponenten 
+  \begin{align*}
+    k_{ex} &= k_e\sin\alpha 
+    &k_{ey} &= k_e\cos\alpha
+  \end{align*}
+\item Für $\veck_t$ gilt
+  \begin{gather*}
+    k_{tG} = k_{eG} = \frac{\omega n_e}{c}\sin\alpha
+  \end{gather*}
+  Mit der Dispersionsrelation folgt
+  \begin{gather*}
+    k_t = \frac{\omega n_t}{c} 
+    = \sqrt{k_{tG}^2 + k_{ty}^2}
+  \end{gather*}
+\end{itemize}
+Hiermit lässt sich die Komponente $k_{ty}=k_{t,\bot}$ berechnen als
+\begin{gather*}
+  k_{t,\bot}^2 = \left(\frac{\omega n_t}{c}\right)^2 - k_{tG}^2
+  = \frac{\omega^2}{c^2} \left( n_t^2 - n_e^2\sin^2\alpha \right)
+\end{gather*}
+Für $\alpha>\alpha_T$ gilt wegen Snell ($n_e\sin\alpha > n_t$),
+dass $k_{t,\bot}$ rein imaginär wird:
+\begin{gather*}
+  k_{t,\bot} 
+  = \pm ik_{t} \sqrt{\frac{n_e^2}{n_t^2}\sin^2\alpha - 1}
+  = \pm i\beta
+\end{gather*}
+Die Oberflächenwelle wird dann beschrieben durch
+\begin{gather*}
+  \vecE(x,y,t) = 
+  \underbrace{\vecE_{0,t}\exp(-\beta y)}_{\mathclap{\substack{
+        \text{exponentiell gedämpft}\\\text{in $y$-Richtung}
+      }}
+  }
+  \cdot 
+  \underbrace{\exp(ik_{tG}x - i\omega t)}_{\mathclap{\substack{
+        \text{ebene Welle}\\\text{in $x$-Richtung}
+      }}
+  }
+\end{gather*}
+
+Wir betrachten das Beispiel $n_e=1,5$, $n_t=1$, 
+also $\alpha_T=\ang{41.8}$, für eine Welle mit Wellenlänge
+$\lambda = \SI{600}{\nano\meter}$.
+Hier erhält man $\beta = \SI{3.7e3}{\per\milli\meter}$
+bzw. $\frac{1}{\beta}\approx\frac{\lambda}{2}$.
+D.\,h. die evaneszente Welle klingt auf der Längenskala der Wellenlänge
+ab (hier ca. $\SI{300}{\nano\meter}$).
+
+%---------------------
+% 12.11.2015
+%---------------------
+\marginpar{12.11.2015}
 
 \subsection{Absorbierende Medien}
 Das Reflexionsvermögen bei absorbierenden Medien ist mit
@@ -484,7 +624,6 @@ Materialien durch Reflexion, Transmission und Absorption beschreiben:
   Reflexion -- haben eine Transmissionsfarbe, die wieder durch den
   Spektralbereich mit optimaler Transparenz bestimmt.
 \end{description}
-
 
 %%% Local Variables:
 %%% mode: latex
