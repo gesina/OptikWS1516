@@ -7,6 +7,7 @@
   \item Brechungsgesetz
     \subitem Snellins'sches Brechungsgesetz, \hyperpage{21}
   \item Brechzahl, \hyperpage{14}
+  \item Brewsterwinkel, \hyperpage{25}
 
   \indexspace
 
@@ -27,6 +28,7 @@
   \indexspace
 
   \item Fresnel'sche Formeln, \hyperpage{21}
+  \item Fresnelsche Formeln, \hyperpage{24}
 
   \indexspace
 
@@ -79,6 +81,7 @@
   \indexspace
 
   \item Reflexionsgesetz, \hyperpage{21}
+  \item Reflexionsgrad, \hyperpage{24}
   \item Reflexionskoeffizient, \hyperpage{23}
 
   \indexspace
@@ -90,7 +93,10 @@
   \indexspace
 
   \item Transmission, \hyperpage{15}
+  \item Transmissionsgrad, \hyperpage{25}
   \item Transmissionskoeffizient, \hyperpage{23}
+  \item transmittierte Intensit\IeC {\"a}t, \hyperpage{25}
+  \item transmittierte Leistung, \hyperpage{25}
 
   \indexspace
 
