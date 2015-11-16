@@ -11,13 +11,17 @@
 
   \indexspace
 
+  \item Dichroismus, \hyperpage{31}
   \item Dielektrizit\IeC {\"a}tskonstante, \hyperpage{7}
+  \item Dielektrizit\IeC {\"a}tstensor, \hyperpage{32}
+    \subitem Hauptachsenform, \hyperpage{32}
   \item Dispersion
     \subitem normal, \hyperpage{19}
     \subitem positiv, \hyperpage{19}
   \item Dispersionsrelation, \hyperpage{10}
     \subitem linear, \hyperpage{10}
   \item Divergenz, \hyperpage{6}
+  \item Doppelbrechung, \hyperpage{32}
 
   \indexspace
 
@@ -34,6 +38,10 @@
 
   \item Gradient, \hyperpage{6}
   \item Gruppengeschwindigkeit, \hyperpage{13}
+
+  \indexspace
+
+  \item Hauptschnitt, \hyperpage{33}
 
   \indexspace
 
@@ -88,6 +96,7 @@
   \indexspace
 
   \item Sellmeier-Beziehung, \hyperpage{19}
+  \item Strahlenversatz, \hyperpage{32}
   \item Strahlungsflussdichte, \hyperpage{11}
   \item Streuzeit, \hyperpage{19}
 

@@ -1,4 +1,206 @@
 \chapter{Polarisation}
-%
-%Verweise auf vorherige Polarisationsabschnitte
-%
+
+Für die verschiedenen Arten von Polarisation, siehe
+
+
+%---------------------
+% 16.11.2015
+%---------------------
+\marginpar{16.11.2015}
+
+\minisec{Polarisation durch Dichroismus}
+Bisher haben wir eine kugelsymmetrische Elektronenverteilung um den
+Atomkern betrachtet. Jetzt werden wir eine \emph{anisotrope
+Ladungsverteilung} betrachten. Der einfachste Fall ist eine
+zigarrenförmige Ladungsverteilung.
+%% IMAGE MISSING
+Wir machen folgende vereinfachende Annahmen:
+\begin{itemize}
+\item Die Bewegungen senkrecht und parallel zur
+  Atom-/Molekülvorzugsachse sind unabhängig voneinander 
+\item zwei unabhängige harmonische Oszillatoren mit Eigenfrequenzen
+$\omega\bot$%
+\nomenclature{$\omega_\bot$}{Eigenfrequenz der harmonischen
+  Oszillation der Elektronen senkrecht zur Atom-/Molekülvorzugsachse}
+und $\omega\parallel$%
+\nomenclature{$\omega_\parallel$}{Eigenfrequenz der harmonischen
+  Oszillation der Elektronen parallel zur Atom-/Molekülvorzugsachse}
+\end{itemize}
+In unserem \enquote{Zigarrenmodell} sind folgende zwei Fälle der
+Ausrichtung der asymmetrischen Moleküle/Atome im Material zu
+unterscheiden:
+\begin{description}
+\item[isotrope Verteilung] Die Ausrichtung der asymmetrischen
+  Moleküle/Atome ist isotrop in alle Richtungen verteilt.
+\item[anisotrope Verteilung] Die asymmetrischen Moleküle
+  sind geordnet, d.\,h. gleich ausgerichtet, wie z.\,B. im
+  kristallinen Festkörper. Hier können die optischen Eigenschaften
+  stark anisotrop (richtungsabhängig) werden.
+\end{description}
+%% IMAGE MISSING : s. Folien; Absorption, Dispersion 
+Eine Folge von anisotroper Verteilung der Ausrichtung ist der
+\emph{Dichroismus}\index{Dichroismus} (richtungsabhängige Absorption):
+Je nach Richtung der Polarisation ist die Absorption stark
+unterschiedlich.
+Beispiele für Materialien, die ausgeprägten Dichroismus aufweisen,
+sind:
+\begin{itemize}
+\item Turmalinkristalle
+\item Polaroidfolien (Folienpolarisatoren)
+\item Drahtgitterpolarisatoren
+\end{itemize}
+
+%---------
+
+%5.3
+\section{Doppelbrechung} 
+Doppelbrechung gibt es in folgenden Formen
+\begin{description}
+\item[natürlich] anisotrope Kristalle (z.\,B. Calcit)
+\item[mechanisch induziert] z.\,B. durch mechanische Spannung
+\item[durch Felder induziert] z.\,B. durch elektrische Felder
+\end{description}
+Der physikalische Hintergrund ist eine anisotrope Ladungsverteilung,
+d.\,h. zwei Resonanzfrequenzen $\omega_\bot$ und $\omega_\parallel$.
+Dies lässt sich schön anhand des folgenden Modells darstellen:
+
+\paragraph{Federmodell}
+Als Modell betrachtet man eine Kugel, die mit zwei unterschiedlichen
+Federn vefestigt ist.
+Zieht man mit der Kraft $\vecF(x,y)$, so beugt sich die Masse nicht
+parallel zur Kraft.
+%% IMAGE MISSING
+
+\paragraph{Lichtausbreitung in einem doppelbrechenden Medium}
+Die Experimentelle Beobachtung ergibt
+\begin{itemize}
+\item Es treten Doppelbilder auf.
+\item Es tritt eine Aufspaltung in zwei getrennte Strahlen auf; Es
+  gibt eine Abhängigkeit von der Polarisation.
+\item Die relativen Intensitäten sind abhängig von der Polarisation
+  der einlaufenden Welle.
+\item Nur der ordentliche Strahl folgt dem Snellius'schen Gesetz.
+\item Der ordentliche und der außerordentliche Strahl bilden einen
+  Winkel zueinander; Dieser wird
+  Strahlenversatz\index{Strahlenversatz} genannt.
+\end{itemize}
+Für die dielektrischen Eigenschaften bedeutet das, dass
+\begin{enumerate}
+\item zwischen $\vecD$ und $\vecE$ ein tensorieller Zusammenhang
+  besteht:
+  \begin{gather*}
+    \vecD=\epso\teps\vecE
+    \qquad\text{oder}\qquad
+    D_i = \epso\sum_{k=1}^i \eps_{ik}E_k
+  \end{gather*}%
+  \nomenclature{$\teps$}{Dielektrizitätstensor; $\vecD=\epso\teps\vecE$}%
+  \index{Dielektrizitätstensor}%
+\item $\vecE$ und $\vecP$ sind i.\,A. nicht mehr parallel
+\end{enumerate}
+Wir erhalten durch orthogonale Transformation der Koordinatenachsen die
+sog. \emph{Hauptachsenform des Dielektrizitätstensors}%
+\index{Dielektrizitätstensor!Hauptachsenform},
+d.\,h. die Diagonalform der Matrixdarstellung des Tensors 
+($\eps_i$%
+\nomenclature{$\eps_i$}{$i$-tes Tensorelement des
+  Dielektrizitätstensors in der Hauptachsenform}
+ist der Eintrag auf der Diagonale in der $i$-ten Zeile). Hier gilt
+\begin{gather*}
+  D_i = \epso\eps_iE_i
+  \qquad\text{bzw.}\qquad
+  E_i = \frac{1}{\epso\eps_i}
+\end{gather*}%
+Die spezielle Form von $\teps$ hängt von der Symmetrie des Mediums ab.
+Man unterscheidet drei Fälle:
+\begin{description}
+\item[optisch isotrope Medien:  
+  $\eps_i = \eps$] 
+  Alle drei Tensorelemente sind
+  gleich. Hier sind die optischen Eigenschaften nicht
+  richtungsabhängig.
+\item[optische einachsige Kristalle: 
+  $\eps_x=\eps_y=\eps_\bot$ und $\eps_z=\eps_\parallel$]
+  Zwei der drei Tensorelemente sind gleich, d.\,h. es gibt eine ausgezeichnete
+  optische Achse (hier als Beispiel die $z$-Achse). Für
+  Richtungsausbreitung entlang der optischen Achse tritt keine
+  Polarisationsabhängigkeit der Ausbreitung auf (die $\vecE$-Felder
+  schwingen entlang $\eps_\bot$). In der anderen Richtung treten
+  Abweichungen vom Snellius'schen Gesetz auf.
+  Dieser Effekt wird \emph{Doppelbrechung}\index{Doppelbrechung}
+  genannt.
+\item[optisch zweiachsige Kristalle:
+  $\eps_x\neq\eps_y\neq\eps_z\neq\eps_x$]
+  Es gibt zwei optische Achsen, längs derer polarisationsunabhängige
+  Lichtausbreitung stattfinden kann.
+\end{description}
+Für die Herleitung verwende die MWGl in Tensorform mit dem Ansatz
+ebene Welle und Grenzbedingungen.
+Dann erhält man die Beziehungen für die Richtungen von $\vecE$,
+$\vecB$, $\vecD$, $\vecS$ und $\veck$.
+Das Resultat ist:
+Die Dielektrische Verschiebung ist i.\,A. nicht parallel zu $\vecE$.
+
+\minisec{Resultat für den Brechungsindex (einachsige Kristalle)}
+Es sei wie oben die Koordinatendarstellung so gewählt, dass der
+Dielektrizitätstensor Hauptachsenform hat, und die optische Achse sei
+wieder die $z$-Achse. Wir erhalten die Beziehung
+\begin{gather*}
+  \frac{1}{n_{ao}^2} 
+  = \frac{\cos^2\theta}{\eps_\bot} + \frac{\sin^2\theta}{\eps_\parallel}
+  \qquad\text{und} \qquad
+  n_o = \sqrt{\eps_\bot}
+\end{gather*}
+Der Brechungsindex ist also richtungsabhängig mit
+$\eps_x=\eps_y=\eps_\bot$ und $\eps_z=\eps_\parallel$.
+$\theta$ ist der Winkel, den der Wellenvektor $\veck$ mit der optischen
+Achse ($z$-Achse) einschließt.
+Wir betrachten folgende Fälle:
+\begin{description}
+\item[$\theta=\ang{0}$] Es gibt keine Doppelbrechung für Licht, das
+  sich entlang der optischen Achse ausbreitet ($n_{ao} = n_o$).
+\item[$\theta=\ang{90}$] Wenn der Wellenvektor in $x$-Richtung zeigt,
+  ergeben sich zwei Werte für den Brechungsindex: 
+  $n_o=\sqrt{\eps_\bot}$ und $n_{ao}=\sqrt{\eps_\parallel}$.
+  Dabei liegen die $\vecE$-Vektoren entlang der $z$-Richtung (optische
+  Achse) bzw. längs der $y$-Richtung. Licht kann sich in $x$-Richtung
+  nur mit diesen beiden Polarisationsrichtungen im Kristall ausbreiten!
+\end{description}
+Im optisch einachsigen Kristall gibt es zwei Polarisationsrichtungen
+\begin{description}
+\item[ordentlischer Strahl] Hier haben wir die Eigenschaften
+  \begin{itemize}
+  \item $\vecE$ und $\vecD$ sind senkrecht zur optischen Achse
+    gerichtet.
+  \item Der Brechungsindex ist unabhängig von der Ausbreitungsrichtung
+    $n_o=\sqrt{\eps_\bot}$.
+  \item Das Snellius'sche Gesetz gilt.
+  \end{itemize}
+\item[außerordentlicher Strahl] Hier gilt:
+  \begin{itemize}
+  \item Der Strahl ist in der Ebene, die durch die optische Achse und
+    $\veck$ gebildet wird, polarisiert
+    (Hauptschnitt\index{Hauptschnitt}).
+    \item Der Brechungsindex ist richtungsabhängig.
+    \item Das Snellius'sche Gesetz gilt nicht.
+  \end{itemize}
+\end{description}
+
+\minisec{Phasengeschwindigkeiten}
+Für den ordentlichen Strahl erhalten wir eine Kugelgleichung für $n$
+bzw. $v_{ph}$ und
+für den außerordentlichen Strahl wird es zu einem Ellipsoid:
+\begin{align*}
+  v_{ao} &= \frac{c}{\sqrt{\eps_\parallel}} = \frac{c}{n_{ao}}\\
+  v_o &= \frac{c}{\sqrt{\eps_\bot}} = \frac{c}{n_{o}}\\
+\end{align*}
+Es gilt:
+\begin{description}
+\item[$v_{ao}>v_o$ ($n_{ao}<n_o$):] negativ einachsig
+\item[$v_{ao}<v_o$ ($n_{ao}>n_o$):] negativ einachsig
+\end{description}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../OptikSkriptWS1516"
+%%% End:
