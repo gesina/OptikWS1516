@@ -13,7 +13,7 @@
   \item [{$\eps_0$}]\begingroup elektrische Feldkonstante\nomeqref {2.0}
 		\nompageref{7}
   \item [{$\eps_i$}]\begingroup $i$-tes Tensorelement des   Dielektrizitätstensors in der Hauptachsenform\nomeqref {5.0}
-		\nompageref{32}
+		\nompageref{34}
   \item [{$\frac{1}{\tau}$}]\begingroup Stoßfrequenz bei Streuzeit $\tau$;   $\gamma\coloneqq \frac{1}{\tau}$\nomeqref {3.1}
 		\nompageref{19}
   \item [{$\gamma$}]\begingroup Stoßfrequenz bei Streuzeit $\tau$;   $\gamma\coloneqq \fracone{\tau}$\nomeqref {3.2}
@@ -33,9 +33,9 @@
   \item [{$\omega$}]\begingroup Kreisfrequenz;   $\omega=2\pi\nu=\frac{2\pi}{T}$\nomeqref {2.1}
 		\nompageref{10}
   \item [{$\omega_\bot$}]\begingroup Eigenfrequenz der harmonischen   Oszillation der Elektronen senkrecht zur Atom-/Molekülvorzugsachse\nomeqref {5.0}
-		\nompageref{31}
+		\nompageref{32}
   \item [{$\omega_\parallel$}]\begingroup Eigenfrequenz der harmonischen   Oszillation der Elektronen parallel zur Atom-/Molekülvorzugsachse\nomeqref {5.0}
-		\nompageref{31}
+		\nompageref{32}
   \item [{$\omega_p$}]\begingroup Plasmafrequenz;   $\omega_p^2=\frac{e^2N}{\epso m_e}$ im nahezu ungedämpften Fall\nomeqref {3.2}
 		\nompageref{19}
   \item [{$\Phi$}]\begingroup Photonenfluss\nomeqref {2.1}
@@ -46,7 +46,7 @@
 		\nompageref{6}
   \item [{$\tau$}]\begingroup Streuzeit\nomeqref {3.1}\nompageref{19}
   \item [{$\teps$}]\begingroup Dielektrizitätstensor; $\vecD=\epso\teps\vecE$\nomeqref {5.0}
-		\nompageref{32}
+		\nompageref{34}
   \item [{$\varphi_r$}]\begingroup Phasenfaktor der reflektierten Welle;   bestimmt Phasenverschiebung zur einlaufenden Welle\nomeqref {4.0}
 		\nompageref{21}
   \item [{$\varphi_t$}]\begingroup Phasenfaktor der transmittierten Welle;   bestimmt Phasenverschiebung zur einlaufenden Welle\nomeqref {4.0}

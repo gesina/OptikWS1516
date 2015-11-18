@@ -1,7 +1,95 @@
 \chapter{Polarisation}
 
-Für die verschiedenen Arten von Polarisation, siehe
+% Fehlt bis 5.1 mathematische Formulierung (exkl. Beispiel)
 
+\minisec{Lineare Polarisation}
+Lineare Polarisation lässt sich wie folgt charakterisieren
+\begin{itemize}
+\item[\ang{0}:] $\frac{E_y}{E_x} = 0$
+\item[\ang{90}:] $\frac{E_y}{E_x} = \infty$, d.\,h.
+$\scriptsize\begin{pmatrix}E_x\\E_y\end{pmatrix}
+= \begin{pmatrix}0\\1\end{pmatrix}$
+\item[\ang{45}:] $\frac{E_y}{E_x} = 1$
+\item[bel.:] 
+  $\frac{E_y}{E_x} = \frac{\sin\alpha}{\cos\alpha} = \tan\alpha$
+\end{itemize}
+
+\minisec{Zirkulare und elliptische Polarisation}
+Bei \emph{zirkularer Polarisation}\index{Polarisation!zirkular}
+hat der Bones-Vektor eine rein imaginäre
+$y$-Komponente
+\begin{gather*}
+  \vecE = \begin{pmatrix}E_x\\E_y\end{pmatrix} 
+  = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\\pm i\end{pmatrix}
+\end{gather*}
+Die Richtungen lassen sich wie folgt unterscheiden:
+\begin{description}
+\item[rechtszirkular] $\frac{E_y}{E_x}=-i$
+\item[linkszirkular] $\frac{E_y}{E_x}=+i$
+\end{description}
+
+Bei \emph{elliptischer Polarisation}\index{Polarisation!elliptisch}
+hat der Bones-Vektor eine komplexe (nicht rein imaginäre)
+$y$-Komponente
+\begin{gather*}
+  \frac{E_y}{E_x} = a+bi
+\end{gather*}
+
+%----------
+
+%5.2
+\section{Polarisatoren}
+Ein Polarisator\index{Polarisator} ist ein optisches Element,
+das aus \enquote{unpolarisiertem} Licht einen definierten
+Polarisationszustand selektiert.
+Beispiele sind Linearpolarisatoren, Zirkularpolarisatoren oder
+elliptische Polarisatoren.
+Für die Funktionsweise ist eine \emph{optisch asymmetrische
+  Komponente}\index{optisch asymmetrische Komponente} nötig,
+die Licht mit ungewünschter Polarisation absorbiert/unterbindet.
+
+Man unterscheidet vier Mechanismen von Polarisatoren:
+\begin{enumerate}
+\item \emph{Reflexion} (Brewsterfenster, Fresnel-Rhombus)
+\item \emph{Streuung} (Hertz'scher Dipol)
+\item \emph{richtungsselektive Absorption} (Dichroismus)
+\item \emph{Doppelbrechung}
+\end{enumerate}
+
+Mit Hilfe eines Polarisators kann man die Polarisationseigenschaften
+von Licht bestimmen, ihn also als \emph{Analysator}\index{Analysator}
+verwenden.
+
+\paragraph{Beispiel} Selektiere den Polarisationszustand mit einem
+Linearpolarisator und analysiere mit dem Linearpolarisator
+%% IMAGE MISSING
+Es gilt für den Winkel $\alpha$ zwischen Polarisator und Analysator
+\begin{gather*}
+  \vecE_0 = \vecE_{0\parallel} + \vecE_{0\bot} 
+  = |\vecE_0|\cos\alpha \vece_\parallel
+  + |\vecE_0|\sin\alpha \vece_\bot
+\end{gather*}
+und $|\vecE_\parallel| = |\vecE_0|\cos\alpha$.
+
+\paragraph{Beispiel Polarisation durch Dichroismus}
+Dichromatische Materialien sind z.\,B. Turmalin oder (preiswerter)
+gestreckte, gefärbte Polymerfolien.
+Hier gilt das Malus'sche Gesetz\index{Malus'sches Gesetz}
+\begin{gather*}
+  I=I_0\cos^2\alpha
+\end{gather*}
+wobei die Stromstärke proportional zur Intensität ist.
+
+
+\minisec{Polarisation durch Reflexion}
+Beispiele für Polarisation durch Reflexion sind:
+\begin{itemize}
+\item Für den \emph{Brewster Winkel} gilt, dass das reflektierte Licht senkrecht
+zur Einfallsebene polarisiert ist.
+\item \emph{Fresnel-Rhombus}
+\item \emph{Polarisationsdrehung} durch Reflexion, z.\,B. Doppelspiegel
+%% IMAGE MISSING
+\end{itemize}
 
 %---------------------
 % 16.11.2015
