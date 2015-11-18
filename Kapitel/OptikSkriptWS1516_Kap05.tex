@@ -1,6 +1,35 @@
 \chapter{Polarisation}
 
-% Fehlt bis 5.1 mathematische Formulierung (exkl. Beispiel)
+Im allgemeinen Fall ist $E_{ox}\neq E_{oy}$ und $\varphi$
+beliebig. Deshalb beschreibt das $\vecE$-Feld eine Ellipse in der
+$x$-$y$-Ebene. Stärke und Richtung des $\vecE$-Felds ändern sich als
+Funktion der Zeit. Der Endpunkt des $\vecE$-Felds beschreibt eine
+Ellipse in der $x$-$y$-Ebene. Für den Winkel $\alpha$ zwischen der
+großen Halbachse der Ellipse und der $x$-Achse erhalten wir:
+\begin{gather*}
+  \tan(2\alpha) 
+  = \frac{2E_{ox}E_{oy}\cos\varphi}{E_{ox}^2 + E_{oy}^2}
+\end{gather*}
+Für spezielle Werte von $\alpha$ wird $\varphi = 0$ und es gilt
+\begin{gather*}
+  \frac{E_x^2}{E_{ox}^2} + \frac{E_y^2}{E_{oy}^2} = 1
+\end{gather*}
+
+\section{Mathematische Formulierung}
+Definiere Polarisationszustand eines Feldes als 2D-Vektor mit
+komplexen Amplituden, den sogenannten
+\emph{Bones-Vektor}\index{Bones-Vektor}:
+\begin{gather*}
+  \vecE = \begin{pmatrix}E_{ox}\\E_{oy}\end{pmatrix}
+\end{gather*}
+Normiere nun den Vektor auf Eins, denn oft ist nur der relative Wert
+von Interesse:
+\begin{gather*}
+  \frac{vecE}{E_x} 
+  = \begin{pmatrix}
+    1\\\frac{E_{oy}}{E_{ox}}
+  \end{pmatrix}
+\end{gather*}
 
 \minisec{Lineare Polarisation}
 Lineare Polarisation lässt sich wie folgt charakterisieren
