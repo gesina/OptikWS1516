@@ -33,9 +33,9 @@
   \item [{$\omega$}]\begingroup Kreisfrequenz;   $\omega=2\pi\nu=\frac{2\pi}{T}$\nomeqref {2.1}
 		\nompageref{10}
   \item [{$\omega_\bot$}]\begingroup Eigenfrequenz der harmonischen   Oszillation der Elektronen senkrecht zur Atom-/Molekülvorzugsachse\nomeqref {5.0}
-		\nompageref{32}
+		\nompageref{33}
   \item [{$\omega_\parallel$}]\begingroup Eigenfrequenz der harmonischen   Oszillation der Elektronen parallel zur Atom-/Molekülvorzugsachse\nomeqref {5.0}
-		\nompageref{32}
+		\nompageref{33}
   \item [{$\omega_p$}]\begingroup Plasmafrequenz;   $\omega_p^2=\frac{e^2N}{\epso m_e}$ im nahezu ungedämpften Fall\nomeqref {3.2}
 		\nompageref{19}
   \item [{$\Phi$}]\begingroup Photonenfluss\nomeqref {2.1}
@@ -64,6 +64,7 @@
 		\nompageref{21}
   \item [{$\veck_t$}]\begingroup Wellenvektor der transmittierten Welle\nomeqref {4.0}
 		\nompageref{21}
+  \item [{$\vecM$}]\begingroup Drehmoment\nomeqref {5.0}\nompageref{37}
   \item [{$\vecM$}]\begingroup Magnetisierung (magnetisches Dipolmoment pro Volumen)\nomeqref {2.0}
 		\nompageref{8}
   \item [{$\vecP$}]\begingroup Polarisation (Dipolmoment pro Volumen)\nomeqref {2.0}
@@ -79,6 +80,7 @@
 		\nompageref{16}
   \item [{$c$}]\begingroup Lichtgeschwindigkeit im Vakuum;   $ c=\frac{1}{\sqrt{\epso\muo}}=\SI{2.9979e8}{\m\per\s}$\nomeqref {2.1}
 		\nompageref{9}
+  \item [{$d$}]\begingroup Dicke\nomeqref {5.0}\nompageref{36}
   \item [{$e$}]\begingroup Elementarladung\nomeqref {3.1}
 		\nompageref{19}
   \item [{$E_\text{ph}$}]\begingroup Energie eines Photons\nomeqref {2.1}
@@ -95,6 +97,8 @@
 		\nompageref{26}
   \item [{$j_\text{frei}$}]\begingroup Stromdichte; in isolierenden Materialien $j_\text{frei}=0$\nomeqref {2.0}
 		\nompageref{6}
+  \item [{$K$}]\begingroup Kerr-Konstante;     $K\cdot \lambda E_k^2 = n_{ao}-n_o$\nomeqref {5.0}
+		\nompageref{38}
   \item [{$k$}]\begingroup Absorptionsindex eines Mediums;   Imaginärteil $n_I$ des Brechungsindex $n$\nomeqref {3.0}
 		\nompageref{15}
   \item [{$m_e$}]\begingroup Elektronenmasse\nomeqref {3.1}

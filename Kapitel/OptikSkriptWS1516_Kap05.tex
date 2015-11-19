@@ -212,7 +212,7 @@ Für die dielektrischen Eigenschaften bedeutet das, dass
   \end{gather*}%
   \nomenclature{$\teps$}{Dielektrizitätstensor; $\vecD=\epso\teps\vecE$}%
   \index{Dielektrizitätstensor}%
-\item $\vecE$ und $\vecP$ sind i.\,A. nicht mehr parallel
+\item $\vecE$ und $\vecP$ i.\,A. nicht mehr parallel sind
 \end{enumerate}
 Wir erhalten durch orthogonale Transformation der Koordinatenachsen die
 sog. \emph{Hauptachsenform des Dielektrizitätstensors}%
@@ -315,6 +315,135 @@ Es gilt:
 \item[$v_{ao}>v_o$ ($n_{ao}<n_o$):] negativ einachsig
 \item[$v_{ao}<v_o$ ($n_{ao}>n_o$):] negativ einachsig
 \end{description}
+
+%----------------
+% 19.11.2015
+%----------------
+
+
+\paragraph{Materialien}
+sind z.\,B.
+\begin{itemize}
+\item Calzit: Für großen Unterschied zwischen außerordentlichem und
+  ordentlichem Strahl. Wir erhalten Polarisation.
+\item Quartz: Für kleinen Unterschied zwischen außerordentlichem und
+  ordentlichem Strahl. Wir erhalten $\frac{\lambda}{2}$- und
+  $\frac{\lambda}{4}$-Plättchen.
+\end{itemize}
+
+\subsection{Anwendungen anisotroper Materialien (natürliche
+  Doppelbrechung)}
+\begin{enumerate}
+\item Erzeugung von polarisiertem Licht durch Dichroismus
+\item doppelbrechende Polarisatoren für linear polarisiertes Licht
+\item Polarisationsdreher ($\frac{\lambda}{2}$-Plättchen)
+\item Zirkularpolarisatoren ($\frac{\lambda}{4}$-Plättchen)
+\end{enumerate}
+
+\minisec{Gangunterschied/Phasenverschiegung}
+Wegen der unterschiedlichen Brechungsindizes von ordentlichem und
+außerordentlichem Strahl lassen sich durch geeigneten Schnitt
+(Plättchen mit best. Dicke $d$\nomenclature{$d$}{Dicke}) des
+doppelbrechenden Materials definierte Phasenunterschiede zwischen
+senkrecht zueinander polarisierten Teilstrahlen erreichen.
+Voraussetzung ist:
+\begin{itemize}
+\item optische Achse in der Plattenebene
+\item senkrechte Inzidenz
+\end{itemize}
+Dann breiten sich außerordentlicher und ordentlicher Strahl parallel
+in der Platte aus, allerdings aufgrund der unterschiedlichen
+Brechungsindizes mit unterschiedlicher Geschwindigkeit. Wir erhalten
+ein sogenanntes Verzögerungsplättchen\index{Verzögerungsplättchen}.
+%% IMAGE MISSING
+Wir erhalten folgende Formeln für den Versatz zwischen den Strahlen:
+\begin{align*}
+  \Delta l &= d(n_o-n_{ao}) 
+  &&\text{(Gangunterschied\index{Doppelbrechung!Gangunterschied})}\\
+  \Delta\varphi &= k_od - k_{ao}d = \frac{2\pi d}{\lambda}(n_a-n_{ao})
+  &&\text{(Phasenunterschied\index{Doppelbrechung!Phasenunterschied})}
+\end{align*}
+Wegen der $\lambda$-Abhängigkeit (wobei $\lambda$ die Wellenlänge
+bezeichnet) hängt die Funktion des optischen Bauteils von der Wahl des
+Lichts ab. Zwei Spezialfälle in der Optik sind die sogenannten
+$\frac{\lambda}{4}$-, $\frac{\lambda}{2}$-Plättchen:
+\begin{description}
+\item[$\frac{\lambda}{4}$-Plättchen] Wir erhalten von oben:
+  \begin{description}
+  \item[Wegunterschied] $\Delta l = n\lambda_o \pm \frac{\lambda_o}{4}$
+  \item[Phasenunterschied] $\Delta\varphi = \frac{\pi}{2}$
+    bzw. $(n\pm \frac{1}{2})\pi$
+  \end{description}
+  Die Dicke muss so eingestellt werden, dass
+  $\Delta\varphi=\frac{\pi}{2}$ ist. Die Platte wandelt unter einem
+  Winkel von $\theta=\ang{45}$ linear polarisiertes Licht in
+  zirkulares Licht um (und umgekehrt).
+  Für $\theta\neq\ang{45}$ erhält man elliptisch polarisiertes Licht.
+\item[$\frac{\lambda}{2}$-Plättchen] Wie oben erhalten wir
+  \begin{description}
+    \item[Wegunterschied] $\Delta l = n\lambda_o \pm \frac{\lambda_o}{2}$
+    \item[Phasenunterschied] $\Delta\varphi = \pi$
+      bzw. $(n+1)\pi$
+  \end{description}
+  %% IMAGE MISSING
+  Der ausfallende $\vecE$-Vektor wird durch eine Phasenverschiebung
+  um $\pi$ von $\vecE_\bot^\prime$ charakterisiert.
+  Damit erhält man eine \emph{Drehung der Polarisation} um $2\theta$.
+  Für $\theta=\ang{45}$ erhält man eine Drehung um \ang{90}.
+  Für zirkulares Licht erhält man eine Umwandlung von linkszirkular zu
+  rechtszirkular und umgekehrt.
+\end{description}
+
+%---
+
+\subsection{Induzierte Doppelbrechung}
+In vielen Materialien lässt sich die optische Asymmetrie durch äußere
+Einflüsse manipulieren, z.\,B. um die Polarisation von transmittiertem
+Licht zu beeinflussen.
+\paragraph{Beispiel}
+\begin{enumerate}[a)]
+\item \emph{Kerr-Effekt}\index{Kerr-Effekt}
+  Betrachte ein optisch anisotropes Material, z.\,B. Flüssigkeit mit
+  zigarrenförmig angeordneten Molekülen, wobei das Molekül anisotrope
+  Polarisierbarkeit $\alpha$ habe.
+  Damit haben wir ein induziertes Dipolmoment im elektrischen Feld
+  $\vec{\mu} = \epso\alpha\vecE_k$.
+  Das Dipolmoment wird im elektr. Feld gegen die thermische Bewegung
+  ausgerichtet, es gibt also ein Drehmoment
+  $\vecM$\nomenclature{$\vecM$}{Drehmoment}
+  \begin{align*}
+    \vecM &= \vec{\mu}\times \vecE_k\\
+    |\vecM| &= \epso\alpha E_k^2\sin\gamma 
+          &&\text{(Stärke des ausrichtenden Moments)}
+  \end{align*}
+  
+  Für $\vecE$-Vektor parallel zu $\vecE_k$ sei der
+  Brechungsindex $n_\parallel=n_{ao}$ und für
+  $\vecE$-Vektor senkrecht zu $\vecE_k$ sei der
+  Brechungsindex $n_\bot=n_{o}$. Dann erhält man
+  \begin{gather*}
+    \Delta n = n_\parallel - n_\bot = n_{ao}-n_o =
+    K\cdot \lambda E_k^2
+  \end{gather*}%
+  \nomenclature{$K$}{Kerr-Konstante;     
+    $K\cdot \lambda E_k^2 = n_{ao}-n_o$}%
+  mit \emph{Kerr-Konstante}\index{Kerr-Konstante} $K$.
+  Diese ist abhängig von der Wellenlänge $\lambda$ und der Periodendauer
+  $T$.
+  
+  Anwendungen sind u.\,a.
+  \begin{itemize}
+  \item schnelle optische Modulatoren (bis einige Gigahertz)
+  \item LCD-Bildschirme
+  \end{itemize}
+  
+  \item \emph{Spannungsdoppelbrechung}
+    Mechanische Krafteinwirkung kann zur Ausrichtung von Molekülen
+    führen, bzw. zur Verzerrung von Elektronenorbitalen.
+\end{enumerate}
+
+
+
 
 
 %%% Local Variables:
