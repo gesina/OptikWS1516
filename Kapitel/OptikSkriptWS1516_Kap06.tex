@@ -1,0 +1,52 @@
+\chapter{Nichtlineare Optik}
+
+Bisher haben wir nur den Zusammenhang
+\begin{gather*}
+  \vecP = \epso\chi\vecE
+\end{gather*}
+betrachtet mit $\chi=\eps(\omega)-1$, wobei $\eps$ nicht von $\vecE$
+abhängig war, also ein linearer Zusammenhang zwischen $\vecP $ und
+$\vec E$.
+Bei großen Feldstärken wird der Zusammenhang zwischen $\vecE $ und
+$\vecP $ aber nichtlinear (Sättigungsverhalten).
+
+Der einfachste Ansatz, um $\vecP(\vecE)$ dann zu beschreiben, ist die
+Entwicklung nach Ordnungen von $\vecE $:
+\begin{align*}
+  P &= \epso \left(
+      \chi_1 E + \chi_2 E^2 + \chi_3 E^3 \dotsb
+       \right) \\
+    &= P_\text{lin} + P_\text{nicht lin}
+\end{align*}
+I.\,A. sind die $\chi_i$ klein, aber $E$ kann dafür groß werden
+(z.\,B. bei starken Laserfeldern).
+Außerdem sind die $\chi_i=\vec{\chi}_i$ i.\,A. Tensoren $(i+1)$ter
+Ordnung.
+
+Wir verwenden den Ansatz ebener Wellen:
+\begin{align*}
+  P = \epso \chi_1 E_0\cos(\omega t) 
+  &+ \frac{1}{2}\epso\chi_2 E_0^2 \big[ 
+  \underbrace{1}_{\mathclap{\substack{\text{opt. Gleich-}\\\text{richtung}}}} +
+  \underbrace{\cos(2\omega t)}_{\substack{\text{doppelte}\\ \text{Frequenz}}}
+  \big]\\
+  &+ \frac{1}{4}\epso\chi_3 E_0^3 \big[
+  3\cos(\omega t) + 
+  \underbrace{\cos(3\omega t)}_{\substack{\text{dreifache}\\\text{Frequenz}}}
+  \big]\\
+  &+ \dotsb
+\end{align*}
+Zu beobachtende Konsequenzen sind
+\begin{itemize}
+\item nichtlineare Frequenzverdopplung
+\item nichtlinearer Brechungsindex (z.\,B. Selbstfokussierung)
+\item Selbstphasenmodulation
+\item \dots
+\end{itemize}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../OptikSkriptWS1516"
+%%% End:

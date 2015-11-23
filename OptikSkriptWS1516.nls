@@ -111,6 +111,10 @@
 		\nompageref{9}
   \item [{$n'$}]\begingroup reelle Brechzahl eines Mediums;   Realteil $n_R$ des Brechungsindex $n$\nomeqref {3.0}
 		\nompageref{15}
+  \item [{$n_L$}]\begingroup Brechungsindex für linkszirkulares Licht\nomeqref {5.0}
+		\nompageref{38}
+  \item [{$n_R$}]\begingroup Brechungsindex für rechtszirkulares Licht\nomeqref {5.0}
+		\nompageref{38}
   \item [{$P_t$}]\begingroup transmittierte Leistung\nomeqref {4.6}
 		\nompageref{26}
   \item [{$q$}]\begingroup elektrische Ladung\nomeqref {2.1}
@@ -118,6 +122,8 @@
   \item [{$R$}]\begingroup Reflexionsgrad\nomeqref {4.4}\nompageref{25}
   \item [{$r$}]\begingroup Reflexionskoeffizient;   $r=\frac{n_e-n_t}{n_e+n_t}$\nomeqref {4.4}
 		\nompageref{24}
+  \item [{$s$}]\begingroup Strecke (Pfad) zwischen zwei Punkten\nomeqref {7.0}
+		\nompageref{40}
   \item [{$T$}]\begingroup Periodendauer\nomeqref {2.1}\nompageref{10}
   \item [{$T$}]\begingroup Transmission eines Mediums bei ebener Welle; $T \coloneqq \frac{I(z)}{I(0)} = \exp(-az)$\nomeqref {3.0}
 		\nompageref{16}
@@ -128,11 +134,16 @@
 		\nompageref{26}
   \item [{$T^P$}]\begingroup Transmissionsgrad der Leistung;   $T^P=\frac{P_t}{P_e}$\nomeqref {4.6}
 		\nompageref{26}
+  \item [{$V$}]\begingroup Verdet-Konstante\nomeqref {5.0}
+		\nompageref{38}
   \item [{$v_\text{gr}$}]\begingroup Gruppengeschwindigkeit einer Welle;   $v_\text{gr} = \dif[\omega]{k}$\nomeqref {2.4}
 		\nompageref{13}
   \item [{$v_q$}]\begingroup Geschwindigkeit eines Teilchens mit Ladung $q$\nomeqref {2.1}
 		\nompageref{12}
   \item [{$v_{ph}$}]\begingroup Phasengeschwindigkeit;   Ausbreitungsgeschw. einer Welle;   $\diff[y]{t}=v_{ph}^2\diff[y]{x}$\nomeqref {2.0}
 		\nompageref{9}
+  \item [{$W(s)$}]\begingroup optischer Weg im Fermat'schen Prinzip;
+    $W(s) = \int_{s(Q\to P)}n(\vecx)\dd s$\nomeqref {7.0}
+		\nompageref{40}
 
 \end{thenomenclature}
