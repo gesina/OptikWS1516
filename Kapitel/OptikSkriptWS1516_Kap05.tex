@@ -1,7 +1,10 @@
 \chapter{Polarisation}
 
-Im allgemeinen Fall ist $E_{ox}\neq E_{oy}$ und $\varphi$
-beliebig. Deshalb beschreibt das $\vecE$-Feld eine Ellipse in der
+Wir betrachten ein Wellenausbreitung im homogenen Medium in
+$z$-Richtung.
+Im allgemeinen Fall ist $E_{0x}\neq E_{0y}$ und die Phasenverschiebung
+$\varphi$ zwischen den beiden Vektoranteilen beliebig.
+Deshalb beschreibt das $\vecE$-Feld eine Ellipse in der
 $x$-$y$-Ebene. Stärke und Richtung des $\vecE$-Felds ändern sich als
 Funktion der Zeit. Der Endpunkt des $\vecE$-Felds beschreibt eine
 Ellipse in der $x$-$y$-Ebene. Für den Winkel $\alpha$ zwischen der
@@ -10,24 +13,25 @@ großen Halbachse der Ellipse und der $x$-Achse erhalten wir:
   \tan(2\alpha) 
   = \frac{2E_{ox}E_{oy}\cos\varphi}{E_{ox}^2 + E_{oy}^2}
 \end{gather*}
-Für spezielle Werte von $\alpha$ wird $\varphi = 0$ und es gilt
+Für spezielle Werte von $\varphi$ (genau:
+$\varphi=\frac{(2n+1)\pi}{2}$) wird $\alpha = 0$ und es gilt 
 \begin{gather*}
-  \frac{E_x^2}{E_{ox}^2} + \frac{E_y^2}{E_{oy}^2} = 1
+  \frac{E_x^2}{E_{0x}^2} + \frac{E_y^2}{E_{0y}^2} = 1
 \end{gather*}
 
 \section{Mathematische Formulierung}
 Definiere Polarisationszustand eines Feldes als 2D-Vektor mit
 komplexen Amplituden, den sogenannten
-\emph{Bones-Vektor}\index{Bones-Vektor}:
+\emph{Jones-Vektor}\index{Jones-Vektor}:
 \begin{gather*}
-  \vecE = \begin{pmatrix}E_{ox}\\E_{oy}\end{pmatrix}
+  \vecE = \begin{pmatrix}E_{0x}\\E_{0y}\end{pmatrix}
 \end{gather*}
 Normiere nun den Vektor auf Eins, denn oft ist nur der relative Wert
 von Interesse:
 \begin{gather*}
-  \frac{vecE}{E_x} 
+  \frac{\vecE}{E_x} 
   = \begin{pmatrix}
-    1\\\frac{E_{oy}}{E_{ox}}
+    1\\\frac{E_{0y}}{E_{0x}}
   \end{pmatrix}
 \end{gather*}
 
@@ -45,7 +49,7 @@ $\scriptsize\begin{pmatrix}E_x\\E_y\end{pmatrix}
 
 \minisec{Zirkulare und elliptische Polarisation}
 Bei \emph{zirkularer Polarisation}\index{Polarisation!zirkular}
-hat der Bones-Vektor eine rein imaginäre
+hat der Jones-Vektor eine rein imaginäre
 $y$-Komponente
 \begin{gather*}
   \vecE = \begin{pmatrix}E_x\\E_y\end{pmatrix} 
@@ -58,7 +62,7 @@ Die Richtungen lassen sich wie folgt unterscheiden:
 \end{description}
 
 Bei \emph{elliptischer Polarisation}\index{Polarisation!elliptisch}
-hat der Bones-Vektor eine komplexe (nicht rein imaginäre)
+hat der Jones-Vektor eine komplexe (nicht rein imaginäre)
 $y$-Komponente
 \begin{gather*}
   \frac{E_y}{E_x} = a+bi
@@ -304,10 +308,10 @@ Im optisch einachsigen Kristall gibt es zwei Polarisationsrichtungen
 
 \minisec{Phasengeschwindigkeiten}
 Für den ordentlichen Strahl erhalten wir eine Kugelgleichung für $n$
-bzw. $v_{ph}$ und
-für den außerordentlichen Strahl wird es zu einem Ellipsoid:
+bzw. $v_{ph}$ und für den außerordentlichen Strahl wird es zu einem
+Ellipsoid:
 \begin{align*}
-  v_{ao} &= \frac{c}{\sqrt{\eps_\parallel}} = \frac{c}{n_{ao}}\\
+  v_{ao} &= \frac{c}{n_{ao}}\\
   v_o &= \frac{c}{\sqrt{\eps_\bot}} = \frac{c}{n_{o}}\\
 \end{align*}
 Es gilt:
@@ -340,7 +344,7 @@ sind z.\,B.
 \item Zirkularpolarisatoren ($\frac{\lambda}{4}$-Plättchen)
 \end{enumerate}
 
-\minisec{Gangunterschied/Phasenverschiegung}
+\minisec{Gangunterschied/Phasenverschiebung}
 Wegen der unterschiedlichen Brechungsindizes von ordentlichem und
 außerordentlichem Strahl lassen sich durch geeigneten Schnitt
 (Plättchen mit best. Dicke $d$\nomenclature{$d$}{Dicke}) des

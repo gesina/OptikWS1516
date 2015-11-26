@@ -419,59 +419,66 @@ Hier wird als Ursache die Wechselwirkung eines elektromagnetischen
 Feldes mit einer zunächst ruhenden Ladung $q$ gedeutet.
 \begin{itemize}
 \item Beschleunigung der Ladung im $\vecE$-Feld 
-\item Aus dem Lichtfeld wird Leistung entnommen:
-  \begin{align*}
-    &\text{Kraft:} & \vecF &= q\vecE\\
-    &\text{Geschwindigkeit} & \vecv_q\\
-    &\text{entnommene Leistung} & L &= qEv_q
-  \end{align*}%
-  \nomenclature{$q$}{elektrische Ladung}%
-  \nomenclature{$v_q$}{Geschwindigkeit eines Teilchens mit Ladung $q$}%
+\item Aus dem Lichtfeld wird Leistung entnommen:\\
+  \begin{tabular}{ll}
+    Kraft 
+    & $\vecF = q\vecE$%
+      \nomenclature{$q$}{elektrische Ladung}\\
+    Geschwindigkeit 
+    & $\vecv_q$%
+      \nomenclature{$v_q$}{Geschwindigkeit eines Teilchens mit Ladung $q$}\\
+      entnommene Leistung & $L = qEv_q$
+  \end{tabular}
 \item das sich jetzt bewegende Elektron erfährt eine Lorentzkraft $\vecF_\text{Lorentz}$
   im $\vecB$-Feld ($\vecB\bot\vecE$ und $\vecB\bot\veck$)
 \item $\vecF_\text{Lorentz}$ zeigt in Richtung von $\veck$
 \end{itemize}
 
 \section{Wellenpakete}
-Die Wellengleichung erfüllt das Superpositionsprinzip. Sind $\vecE_1$
-und $\vecE_2$ Lösungen der Wellengleichung, dann ist auch
-$\vecE_s=\vecE_1+\vecE_2$ eine Lösung (verwende
-Fouriertransformation). 
-Addition von Wellen ($\omega_j$ wird zu $j\omega_0$) und Amplituden
-($E_{0_j}$ wird zu beliebigem $\vecE(\vecr,t)$ mit Perioden $T=\frac{2\pi}{\omega_0}$) lassen sich konstruieren. z.B. bei $\vecr=0$:
+Die Wellengleichung erfüllt das Superpositionsprinzip, d.\,h. 
+sind $\vecE_1$ und $\vecE_2$ Lösungen der Wellengleichung, dann ist
+auch $\vecE_s=\vecE_1+\vecE_2$ eine Lösung (verwende
+Fouriertransformation).
+Durch Addition von Wellen verschiedener Frequenzen ($\omega_j$ wird zu
+$j\omega_0$) und Amplituden ($E_{0_j}$ wird zu beliebigem
+$\vecE(\vecr,t)$ mit Perioden $T=\frac{2\pi}{\omega_0}$) lassen sich
+beliebige Lösungen der Wellengleichung konstruieren. Z.\,B. bei
+$\vecr=0$:
 \begin{gather*}
   \vecE(t)= \sum_{j=-\infty}^{\infty}
   \vecE_{0_j}\exp(i\omega_j t)
 \end{gather*}
-Kontinuierliche Verteilung der Frequenzkomponenten
+oder bei kontinuierlicher Verteilung der Frequenzkomponenten
 \begin{gather}
-  \vecE(t)= \int_{-\infty}^{\infty}\vecE_{0_j}\exp(i\omega_j t)\dd \omega
+  \vecE(t)= c_1\int_{-\infty}^{\infty}\vecE_{0}(\omega)\exp(i\omega t)\dd \omega
   \label{trafo}
 \end{gather}
-da $\vecE(t)$ eine reelle Größe ist, kann man auch $E_0(\omega)=
-E_0^*(-\omega)$ schreiben. Rücktransformation:
+was gerade die Fourierreihe (erster Fall) bzw. die
+Fouriertransformation von $\vecE(\omega)$ ist. 
+Da $\vecE(t)$ eine reelle Größe ist, kann man auch $E_0(\omega)=
+E_0^*(-\omega)$ schreiben. Die Rücktransformation ist:
 \begin{gather}
-  \vecE(\omega) = \int_{-\infty}^{\infty}\vecE_{0_j}\exp(-i\omega_j
-  t)\dd t
+  \vecE(\omega) = c_2\int_{-\infty}^{\infty}
+  \vecE_{0}(t)\exp(-i\omega t)\dd t
   \label{ruecktrafo}
 \end{gather}
-Je nachdem, ob man die normierte Fouriertransformation durchführt (wie
-hier), oder nicht, ist der Vorfaktor in \eqref{trafo} $\frac{1}{2\pi}$ und
-in \eqref{ruecktrafo} $1$, oder beide Male $\frac{1}{\sqrt{2\pi}}$.
-Frequenz-~und Zeitraum sind äquivalent. Die eindimensionale
-Darstellung ist:
+Je nachdem, ob man die normierte Fouriertransformation durchführt oder
+nicht, ist der Vorfaktor $c_1=\frac{1}{2\pi}$ in \eqref{trafo} und 
+$c_2=1$ in \eqref{ruecktrafo}, oder beide Male $c_1,c_2=\frac{1}{\sqrt{2\pi}}$.
+Der Frequenz-~und der Zeitraum sind durch die eindeutigen
+Transformationen äquivalent. Die eindimensionale Darstellung ist:
 \begin{align}
   E(\omega) = A\exp\left(-\left(
   \frac{\omega-\omega_0}{\delta \omega}
   \right)^2\right)
   + A \exp\left(-\left(
-  \frac{-\omega-\omega_0}{\delta \omega}
+  \frac{\omega+\omega_0}{\delta \omega}
   \right)^2\right)
 \end{align}
 Einsetzen in Gleichung \eqref{trafo}
 \begin{align*}
-  E(t)&= \int_{-\infty}^{\infty} 
-        E(\omega)\exp(i\omega t) \frac{\dd\omega}{2\pi}\\
+  E(t)&= \int_{-\infty}^{\infty}
+        \frac{\dd\omega}{2\pi} E(\omega)\exp(i\omega t) \\
       &= \frac{A}{\sqrt{\pi}}\frac{\delta\omega}{2}\exp\left[
         -\left( \frac{\delta\omega}{2} \right)^2 t^2
         \right]
@@ -491,19 +498,20 @@ Es sind auch andere Einhüllende möglich, z.\,B. so dass $\Delta\omega_F\Delta
 t_F\approx2\pi$, $\Delta\nu_F\Delta t\approx 1$.
 
 \section{Phasen-~und Gruppengeschwindigkeiten}
-Ein Lichtimpuls breitet sich \textbf{nicht} mit der
-Phasengeschwindigkeit $v_{Ph}=\frac{\omegao}{k_0}=\frac{c}{n}$,
+Ein Lichtimpuls breitet sich \emph{nicht} mit der
+Phasengeschwindigkeit $v_\text{Ph}=\frac{\omegao}{k_0}=\frac{c}{n}$,
 sondern mit der \emph{Gruppengeschwindigkeit}%
 \index{Gruppengeschwindigkeit}%
 \nomenclature{$v_\text{gr}$}{Gruppengeschwindigkeit einer Welle;
-  $v_\text{gr} = \dif[\omega]{k}$}
+  $v_\text{gr} = \left( \dif[\omega]{k} \right)_{\omega=\omega_0}$}
 aus. 
 \begin{gather}
-  v_{gr}=\left(\frac{\dd \omega}{\dd k}\right)=\frac{c}{n}-\frac{kc}{n^2}\frac{\dd n}{\dd k}
+  v_\text{gr} = \left(\ddif[\omega]{k}\right)_{\omega_0}
+  =\frac{c}{n}-\frac{kc}{n^2}\ddif[n]{k}
 \end{gather}
 Wichtig! Zur Berechnung der Gruppengeschwindigkeit benötigen wir die
 \emph{Dispersionrelation} $\omega(k)$. Für Licht gilt
-$\omega=\frac{c}{n}k$ also falls $n=n(k)$
+$\omega=\frac{c}{n}k$, also für $n=n(k)$
 \begin{gather*}
   \frac{\dd \omega}{\dd k}=\frac{c}{n}-\frac{kc}{n^2}\frac{\dd n}{\dd k}
 \end{gather*}

@@ -5,7 +5,6 @@
 
   \indexspace
 
-  \item Bones-Vektor, \hyperpage{31}
   \item Brechungsgesetz
     \subitem Snellins'sches Brechungsgesetz, \hyperpage{22}
   \item Brechzahl, \hyperpage{15}
@@ -24,8 +23,8 @@
     \subitem linear, \hyperpage{10}
   \item Divergenz, \hyperpage{6}
   \item Doppelbrechung, \hyperpage{34}
-    \subitem Gangunterschied, \hyperpage{37}
-    \subitem Phasenunterschied, \hyperpage{37}
+    \subitem Gangunterschied, \hyperpage{36}
+    \subitem Phasenunterschied, \hyperpage{36}
 
   \indexspace
 
@@ -37,11 +36,12 @@
 
   \item Faraday-Effekt, \hyperpage{38}
   \item Fermat'sche Prinzip, \hyperpage{40}
-  \item Fresnel'sche Formeln, \hyperpage{22}
-  \item Fresnelsche Formeln, \hyperpage{25}
+  \item Fresnel'sche Formeln, \hyperpage{23}
+  \item Fresnelsche Formeln, \hyperpage{26}
 
   \indexspace
 
+  \item Gau\IeC {\ss }sche Optik, \hyperpage{41}
   \item geometrische Optik, \hyperpage{40}
   \item Gradient, \hyperpage{6}
   \item Gruppengeschwindigkeit, \hyperpage{13}
@@ -52,8 +52,12 @@
 
   \indexspace
 
+  \item Jones-Vektor, \hyperpage{31}
+
+  \indexspace
+
   \item Kerr-Effekt, \hyperpage{37}
-  \item Kerr-Konstante, \hyperpage{38}
+  \item Kerr-Konstante, \hyperpage{37}
   \item Kramer-Kronis-Relation, \hyperpage{16}
   \item Kugelwelle, \hyperpage{10}
 
@@ -87,6 +91,7 @@
 
   \indexspace
 
+  \item paraxiale   Optik, \hyperpage{41}
   \item Phasenfaktoren, \hyperpage{21}
   \item Phasengeschwindigkeit, \hyperpage{9}
   \item Photonenenergie, \hyperpage{11}
@@ -107,7 +112,7 @@
   \item rechtsdrehend, \hyperpage{38}
   \item Reflexionsgesetz, \hyperpage{22}
   \item Reflexionsgrad, \hyperpage{25}
-  \item Reflexionskoeffizient, \hyperpage{24}
+  \item Reflexionskoeffizient, \hyperpage{25}
 
   \indexspace
 
@@ -119,10 +124,10 @@
 
   \indexspace
 
-  \item Totalreflexion, \hyperpage{26}
+  \item Totalreflexion, \hyperpage{28}
   \item Transmission, \hyperpage{16}
   \item Transmissionsgrad, \hyperpage{26}
-  \item Transmissionskoeffizient, \hyperpage{24}
+  \item Transmissionskoeffizient, \hyperpage{25}
   \item transmittierte Intensit\IeC {\"a}t, \hyperpage{26}
   \item transmittierte Leistung, \hyperpage{26}
 

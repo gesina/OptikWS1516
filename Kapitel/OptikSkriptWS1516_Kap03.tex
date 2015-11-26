@@ -22,26 +22,43 @@ n=\sqrt{\eps(\omega=\SI{589}{\nano\meter})}$, ist ein Unterschied zu erkennen! T
 	\item$\infty$-schwerer Kern
 	\item negativ geladenes Elektron
 \end{itemize}
-\textit{Model:}harmonischer Oszilator\\
-\textit{Idee:} Berechne $x(t)$ der Elektronenwolke und daraus das Dipolmomentbzw. die Polarisation $\vecP$. es folgt $\epsilon(\omega)$ über $\vecP=(\epsilon-1)\epso \vecE$ mit der treibenden Kraft $\vecF(t)=-e\vecE(t)=-e\vecE_0 \exp(i\omega t)$, wobei $\vecE\|\vecx$ und $\vecE_0$ reell ist.
-Daraus erhält man die Bewegungsgleichung für einen 1-dim. harmonischen Oszillator mit schwacher Dämpfung.
+Dies ist vereinfacht mit dem Modell des harmonischen Oszillators zu
+beschreiben. Berechne $x(t)$ der Elektronenwolke und daraus das
+Dipolmoment bzw. die Polarisation $\vecP$. Es folgt $\eps(\omega)$
+über $\vecP=(\eps-1)\epso \vecE$ mit der treibenden Kraft
+$\vecF(t)=-e\vecE(t)=-e\vecE_0 \exp(i\omega t)$, wobei $\vecE\|\vecx$
+und $\vecE_0$ reell ist. 
+Daraus erhält man die Bewegungsgleichung für einen 1-dim. harmonischen
+Oszillator mit schwacher Dämpfung:
 \begin{align*}
-	\ddot{x}+\gamma\dot{x}+\omegao x&=\fracone{m}F(t)=\frac{-e}{m}E_0\exp(i\omega t)\\
-	\text{mit der Lösung:}\quad x(t)&=\frac{-e}{m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}E(t)
+  \ddot{x}+\gamma\dot{x}+\omegao x
+  &=\fracone{m} F(t)
+    =\frac{-e}{m}E_0\exp(i\omega t)\\
+  \text{Lösung:}\quad 
+  x(t)
+  &=\frac{-e}{m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}E(t)
 \end{align*}
-Wenn man nun noch die Teilchendichte N (Teilchen pro Volumen) dazunimmt, erhält man:
+Wenn man nun noch die Teilchendichte $N$ (Teilchen pro Volumen)
+dazunimmt, erhält man:
 \begin{align*}
-	P(t)&=-ex(t)N=\frac{eN^2}{m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}E(t)=(\eps(\omega)-1)\epso E(t)\\
+	P(t) &= -ex(t)N
+           = \frac{eN^2}{m} 
+           \fracone{(\omegao^2-\omega^2) + i\gamma\omega} E(t)
+           =(\eps(\omega)-1)\epso E(t)\\
 \end{align*}
-Daraus erhält man die frequenzabhängige Dielektrizitätskonstante:
+Daraus erhält man die frequenzabhängige Dielektrizitätskonstante: 
 \begin{align*}
-	 \eps(\omega)&=1+\frac{e^2N}{\epso m}\fracone{(\omegao^2-\omega^2)+i\gamma\omega}
+	 \eps(\omega) &= 1 + \frac{e^2N}{\epso m}
+                    \fracone{(\omegao^2 - \omega^2) + i\gamma\omega}
 \end{align*}
-Bei einem Medium mit verschiedenen Atomen/Molekülen summiert man über die Dielektrizitätskonstanten und man erhält folgendes:
+Bei einem Medium mit verschiedenen Atomen/Molekülen summiert man über
+die Dielektrizitätskonstanten und man erhält
 \begin{align*}
-	 \eps(\omega)&=1+\frac{e^2}{\epso m}\sum_{j}\frac{N_j}{(\omegao^2-\omega^2)+i\gamma\omega}
+	 \eps(\omega) &= 1 + \frac{e^2}{\epso m}
+                    \sum_{j} \frac{N_j}{(\omegao^2-\omega^2)+i\gamma\omega}
 \end{align*}
 
+%-------
 
 \section{Der Brechungsindex}
 Am einfachsten ist die Betrachtung eines verdünnten Mediums,
@@ -107,14 +124,14 @@ folgt für die Intensität der ebenen Welle
   I(z) = I(0)\exp\left(\frac{2\omega n_I z}{c}\right)
   = I(0) \exp(-az)
 \end{gather*}
-wobei $a=\frac{2\omega n_I}{c}$
+wobei $a=-\frac{2\omega n_I}{c}$
 \emph{Extinktionskoeffizient}%
 \index{Extinktionskoeffizient}%
 \nomenclature{$a$}{Extinktionskoeffizient eines Mediums}
 genannt wird. Es ist
 \begin{gather*}
   a = \frac{e^2N}{\epso mc}        
-  \frac{\gamma\omegao^2}{(\omegao^2-\omega^2)^2 + \gamma^2\omega^2}
+  \frac{\gamma\omega^2}{(\omegao^2-\omega^2)^2 + \gamma^2\omega^2}
 \end{gather*}
 Das Verhältnis von Intensität zu Nullintensität wird 
 Transmission $T$%
@@ -383,13 +400,6 @@ $\omega_p^2=\frac{e^2N}{\epso m_e}$%
 \nomenclature{$\omega_p$}{Plasmafrequenz;
   $\omega_p^2=\frac{e^2N}{\epso m_e}$ im nahezu ungedämpften Fall}%
 \index{Plasmafrequenz}.
-Es gilt
-\begin{description}
-\item[$0 < \fracone{\tau}$] normaler Skineffekt
-\item[$\fracone{\tau} < \omega_p$] annormaler Skineffekt
-\item[$\omega_p < \omega$] normale Wellenausbreitung
-\end{description}
-
 Aus der Gleichung \ref{Perm} folgt für
 \begin{description}
 	\item[große Frequenzen ($\omega>\omega_p$):] Hier ist die
@@ -419,7 +429,7 @@ Anschaulich:
   \item[$0 < \fracone{\tau}$ (normaler Skineffekt)]
     Die Eindringtiefe fällt mit wachsender Frequenz proportional zu
       $\sqrt{\omega}$ ab.
-  \item[$\fracone{\tau}<\omega_p$ (annormaler Skineffekt)]
+  \item[$\fracone{\tau}<\omega<\omega_p$ (annormaler Skineffekt)]
     Die Eindringtiefe ist konstant mit $\fracone{a}=\frac{c}{2\omega_p}$.
   \item[$\omega_p<\omega$ (normale Wellenausbreitung)]
     Das Material ist transparent.

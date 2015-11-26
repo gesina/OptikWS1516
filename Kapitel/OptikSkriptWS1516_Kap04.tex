@@ -13,12 +13,17 @@ Wir wollen jetzt Wellenausbreitung in inhomogenen Medien beschreiben,
 z.\,B. den Übergang von Medium~1 nach Medium~2, also einer
 Grenzfläche.
 
-\paragraph{Randbedingungen der MWGl.:} Die Tangentialkomponenten von
-$\vecE$ und $\vecH=\fracone{\muo\mu_r}\vecB$ sind stetig. Die
-Normalkomponenten von $\vecD=\epso\eps_r\vecE$ und $\vecB$ sind
+\paragraph{Randbedingungen der MWGl.:}
+Für die Ausbreitung einer elektromagnetischen Welle muss gelten:
+\begin{itemize}
+\item Die Tangentialkomponenten von $\vecE$ und
+  $\vecH=\fracone{\muo\mu_r}\vecB$ sind stetig. 
+\item Die Normalkomponenten von $\vecD=\epso\eps_r\vecE$ und $\vecB$ sind
 ebenfalls stetig (Erinnerung: Für isotrope, isolierende, nicht
 magnetische Medien gilt $\mu_r\eqqcolon\mu=1$).
-\paragraph{einfachster Fall:} Wir betrachten zwei homogene Medien mit
+\end{itemize}
+
+\paragraph{Einfachster Fall:} Wir betrachten zwei homogene Medien mit
 Brechungsindex $n_e$ (einfallender Strahl) und $n_t$ (transmittierte
 Welle).
 % 
@@ -260,7 +265,7 @@ Eliminiere $\vecE_{0,t}$ durch Einsetzen von \eqref{randbed1}
   &r &= \frac{n_e-n_t}{n_e+n_t} 
   &&\text{(Reflexionskoeffizient)}\\
   \vecE_{0,t} &= \frac{2n_e}{n_e+n_t} \vecE_{0,e} = t\vecE_{0,e}
-  &r &= \frac{2n_e}{n_e+n_t} 
+  &t &= \frac{2n_e}{n_e+n_t} 
   &&\text{(Transmissionskoeffizient)}
 \end{align*}%
 \index{Reflexionskoeffizient}%
@@ -531,10 +536,7 @@ Im zweiten Medium beobachtet man eine stetige Abnahme der Feldstärke
 in $y$-Richtung. Um dies zu beschreiben, verwende
 \begin{itemize}
 \item $\veck_e$ hat die Komponenten 
-  \begin{align*}
-    k_{ex} &= k_e\sin\alpha 
-    &k_{ey} &= k_e\cos\alpha
-  \end{align*}
+  $k_{ex} = k_e\sin\alpha$ und $k_{ey} = k_e\cos\alpha$
 \item Für $\veck_t$ gilt
   \begin{gather*}
     k_{tG} = k_{eG} = \frac{\omega n_e}{c}\sin\alpha
@@ -601,7 +603,7 @@ Daraus ergibt sich allgemein
   ist beispielsweise $R\approx100\%$ im Infrarot (IR), Nahinfrarot
   (NIR) und im sichtbaren Bereich (VIS), wobei $R$ im sichtbaren
   Breich bereits zurück geht.
-\item Mit wachsender Absorption ($n_I$ bzw. $k$) verschwindet der Brewsterwinkel, es bleibt ein Minimum von $R_{\parallel}$
+\item Mit wachsender Absorption ($n_I$ bzw. $k$) verschwindet der Brewsterwinkel, es bleibt ein Minimum von $R_{\parallel}$.
 \item Die Farbe von Gegenständen hängt von den dielektrischen Eigenschaften ab.
 \end{itemize}
 

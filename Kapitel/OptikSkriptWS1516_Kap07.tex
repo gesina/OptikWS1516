@@ -45,6 +45,126 @@ Bemerkung dazu:
 \end{itemize}
 %% IMAGE MISSING
 
+%------------
+% 26.11.2015
+%------------
+
+\minisec{Strahlablenkung durch ein Prisma}
+Wir betrachten als Beispiel ein Glasprisma ($n_1=n_\text{Luft}=1$
+$n_2=n_\text{Glas}\approx 1,5$) und verwenden das Snellius'sche Gesetz
+$n_1\sin\theta_1 = n_2\sin\theta_2$.
+Die Fragestellung ist nun: Wie hängt die Ablenkung $\delta$ von
+$\alpha_1$ ab?
+%% IMAGE MISSING (Prisma Skizze)
+
+Generell gilt $\delta = (\alpha_1-\beta_1)+(\alpha_2-\beta_2)$
+%% und $(\beta_1+\beta_2+\eps)=\ang{180}$
+Aus Snellius folgt
+\begin{gather*}
+  \delta = \alpha_1 - \eps
+  + \arcsin\left(
+    \sin\eps\sqrt{n^2-\sin^2\alpha_1}-\sin\alpha_1\cos\eps
+    \right)
+\end{gather*}
+Also, da $\beta_1$, $\beta_2$ durch den Schliff des Prismas gegeben
+sind, ist $\delta=\delta(\alpha_1)$ von $\alpha_1$ (d.\,h. dem
+Einfallswinkel) abhängig.
+
+Es kann gezeigt werden, dass es einen minimalen Ablenkwinkel gibt, der
+für Spektroskopie als Fixpunkt genutzt werden kann bei symmetrischem
+Strahlengang. Er liegt bei
+%% MISSING
+\begin{align*}
+  \delta_\text{min} 
+  &= 2\alpha_1-\eps = 2\arcsin(n\sin(\frac{\eps}{2}))\\
+  &\approx 2\arcsin(n\frac{\eps}{2})\\
+  &\approx n\cdot\eps - \eps \\
+  &= \eps(n-1)
+\end{align*}
+
+
+%-----
+
+\section{Die optische Abbildung}
+\subsection{Paraxiale Objekte}
+Eine Abbildung schickt mathematisch gesehen jeden Punkt im Objektraum
+auf einen Punkt im Bildraum. Allerdings gibt es folgende Unterschiede
+zwischen dieser Idealisierung und der Realität:
+\begin{description}
+\item[ideale opt. Abb.] Hier wird angenommen:
+  \begin{itemize}
+  \item maßstabsgetreu (z.\,B. 8:1)
+  \item umkehrbar (Umkehrbarkeit der Lichtwege)
+  \end{itemize}
+\item[real phys. Abb.] Hier gilt
+  \begin{itemize}
+  \item Abbildungsfehler
+  \item keine punktgenaue Abbildung möglich, d.\,h. das Bild eines
+    Punkts verschmiert in ein Scheibchen, es gibt also eine
+    Verbreiterung bzw. Unschärfe
+  \end{itemize}
+\end{description}
+Die Näherung einer idealen optischen Abbildung trifft am ehesten zu,
+wenn man sich in der Nähe der optischen Achse aufhält bzw. bei kleinen
+Winkeln. Denn dann gilt die Näherung $\tan\theta=\sin\theta=\theta$.
+Dieses Gebiet der Optik wird \emph{paraxiale Optik}\index{paraxiale
+  Optik} oder \emph{Gaußsche Optik}\index{Gaußsche Optik} genannt.
+
+\minisec{Reelle und virtuelle Abbildung}
+Grundsätzlich soll alles Licht, das von einem Objektpunkt ausgeht, in
+einem lagerichtigen Bildpunkt zusammengeführt werden.
+Dazu gibt es zwei Möglichkeiten:
+\begin{description}
+\item[reelle Abbildung:] Die Abbildung kann direkt beobachtet und auf
+  einen Schirm abgebildet werden.
+%% IMAGE MISSING Bildpunkt
+\item[virtuelles Bild:] Die Lichtstrahlen scheinen von einem Punkt zu
+  kommen, können aber nicht auf einem Schirm abgebildet werden.
+  Ein Beispiel ist ein Hohlspiegel.
+%% IMAGE MISSING virtueller Bildpunkt
+\end{description}
+
+
+\subsection{Abbildungen mit Kugelspiegel}
+siehe Übungsaufgaben
+
+\subsection{Abbildung durch brechende Kugelflächen}
+Die Fragestellung ist, wie sich eine Abbildung realisieren lässt.
+%% IMAGE MISSING
+Man kann sphärisch gekrümmte Grenzflächen zwischen zwei Bereichen mit
+unterschiedlichen Brechungsindices $n_1$ und $n_2$ verwenden.
+Wir betrachten die paraxiale Näherung, also kleine Winkel.
+%% IMAGE MISSING Strahlengang bei sphärischer Grenzfläche
+Damit wird das Snellius'sche Gesetz $n_1\sin\theta_e =
+n_2\sin\theta_t$ zu $n_1\theta_e=n_2\theta_t$.
+Ersetzen wir hier $\theta_e=\gamma+\alpha$ und $\theta_t=\alpha-\beta$%
+\footnote{$\alpha$: Winkel zwischen optischer Achse und Lot auf die sphärische
+Grenzfläche am Grenzpunkt des Lichtstrahls;\\
+$\gamma$: Winkel zwischen optischer Achse und Ausbreitungsrichtung des
+einfallenden Lichtstrahls;\\
+$\beta$: Winkel zwischen optischer Achse und Ausbreitungsrichtung des
+transmittierten Lichtstrahls;}
+erhalten wir
+\begin{align*}
+  n_1\cdot(\gamma+\alpha) &= n_2\cdot(\alpha-\beta)\\
+\end{align*}
+und mit%
+\footnote{$h$: Höhe des Grenzpunktes über der optischen Achse;\\
+$g$: Entfernung vom Objektpunkt (auf der opt. Achse) zum Lotpunkt des
+Grenzpunkts auf der opt. Achse;\\
+$b$: Entfernung vom Bildpunkt (auf der opt. Achse) zum Lotpunkt des
+Grenzpunkts auf der opt. Achse;\\
+$r$: Radius der sphärischen Krümmung}
+\begin{align*}
+  \gamma &= \frac{h}{g}
+  &\alpha &=\frac{h}{r}
+  &\beta &= \frac{h}{b}
+\end{align*}
+dann insgesamt
+\begin{gather*}
+  n_1\left(\frac{h}{g} + \frac{h}{r}\right)
+  = n_2\left(\frac{h}{r} - \frac{h}{b}\right)
+\end{gather*}
 
 
 %%% Local Variables:
