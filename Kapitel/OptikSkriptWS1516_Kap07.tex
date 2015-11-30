@@ -50,15 +50,15 @@ Bemerkung dazu:
 %------------
 
 \minisec{Strahlablenkung durch ein Prisma}
-Wir betrachten als Beispiel ein Glasprisma ($n_1=n_\text{Luft}=1$
+Wir betrachten als Beispiel ein Glasprisma ($n_1=n_\text{Luft}=1$,
 $n_2=n_\text{Glas}\approx 1,5$) und verwenden das Snellius'sche Gesetz
 $n_1\sin\theta_1 = n_2\sin\theta_2$.
 Die Fragestellung ist nun: Wie hängt die Ablenkung $\delta$ von
 $\alpha_1$ ab?
 %% IMAGE MISSING (Prisma Skizze)
 
-Generell gilt $\delta = (\alpha_1-\beta_1)+(\alpha_2-\beta_2)$
-%% und $(\beta_1+\beta_2+\eps)=\ang{180}$
+Generell gilt $\delta = (\alpha_1-\beta_1)+(\alpha_2-\beta_2)$.
+%% und $(\beta_1+\beta_2+\eps)=\ang{180}$ %wird Montag nachgeliefert
 Aus Snellius folgt
 \begin{gather*}
   \delta = \alpha_1 - \eps
@@ -72,12 +72,13 @@ Einfallswinkel) abhängig.
 
 Es kann gezeigt werden, dass es einen minimalen Ablenkwinkel gibt, der
 für Spektroskopie als Fixpunkt genutzt werden kann bei symmetrischem
-Strahlengang. Er liegt bei
+Strahlengang. Er liegt bei (Kleinwinkelnäherung)
 %% MISSING
 \begin{align*}
   \delta_\text{min} 
-  &= 2\alpha_1-\eps = 2\arcsin(n\sin(\frac{\eps}{2}))\\
-  &\approx 2\arcsin(n\frac{\eps}{2})\\
+  = 2\alpha_1-\eps 
+  &= 2\arcsin\left(n\sin\left(\frac{\eps}{2}\right)\right)\\
+  &\approx 2\arcsin\left(n\frac{\eps}{2}\right)\\
   &\approx n\cdot\eps - \eps \\
   &= \eps(n-1)
 \end{align*}
@@ -138,7 +139,7 @@ Wir betrachten die paraxiale Näherung, also kleine Winkel.
 Damit wird das Snellius'sche Gesetz $n_1\sin\theta_e =
 n_2\sin\theta_t$ zu $n_1\theta_e=n_2\theta_t$.
 Ersetzen wir hier $\theta_e=\gamma+\alpha$ und $\theta_t=\alpha-\beta$%
-\footnote{$\alpha$: Winkel zwischen optischer Achse und Lot auf die sphärische
+\footnote{{} $\alpha$: Winkel zwischen optischer Achse und Lot auf die sphärische
 Grenzfläche am Grenzpunkt des Lichtstrahls;\\
 $\gamma$: Winkel zwischen optischer Achse und Ausbreitungsrichtung des
 einfallenden Lichtstrahls;\\
@@ -148,18 +149,16 @@ erhalten wir
 \begin{align*}
   n_1\cdot(\gamma+\alpha) &= n_2\cdot(\alpha-\beta)\\
 \end{align*}
-und mit%
-\footnote{$h$: Höhe des Grenzpunktes über der optischen Achse;\\
+und mit
+$\gamma = \frac{h}{g}$,
+$\alpha =\frac{h}{r}$ und
+$\beta = \frac{h}{b}$%
+\footnote{{} $h$: Höhe des Grenzpunktes über der optischen Achse;\\
 $g$: Entfernung vom Objektpunkt (auf der opt. Achse) zum Lotpunkt des
 Grenzpunkts auf der opt. Achse;\\
 $b$: Entfernung vom Bildpunkt (auf der opt. Achse) zum Lotpunkt des
 Grenzpunkts auf der opt. Achse;\\
 $r$: Radius der sphärischen Krümmung}
-\begin{align*}
-  \gamma &= \frac{h}{g}
-  &\alpha &=\frac{h}{r}
-  &\beta &= \frac{h}{b}
-\end{align*}
 dann insgesamt
 \begin{gather*}
   n_1\left(\frac{h}{g} + \frac{h}{r}\right)
