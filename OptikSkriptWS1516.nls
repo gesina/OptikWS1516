@@ -78,6 +78,8 @@
   \item [{$A$}]\begingroup Fläche\nomeqref {2.1}\nompageref{11}
   \item [{$a$}]\begingroup Extinktionskoeffizient eines Mediums\nomeqref {3.0}
 		\nompageref{16}
+  \item [{$b$}]\begingroup bildseitige Brennweite\nomeqref {7.1}
+		\nompageref{43}
   \item [{$c$}]\begingroup Lichtgeschwindigkeit im Vakuum;   $ c=\frac{1}{\sqrt{\epso\muo}}=\SI{2.9979e8}{\m\per\s}$\nomeqref {2.1}
 		\nompageref{9}
   \item [{$d$}]\begingroup Dicke\nomeqref {5.0}\nompageref{36}
@@ -91,6 +93,10 @@
 		\nompageref{11}
   \item [{$f_j$}]\begingroup Oszillatorstärke;   $\eps(\omega)   = 1 + \frac{e^2}{\epso m_e}\sum_{j}   \frac{f_jN_j}{\omegao^2-\omega^2+i\gamma_j\omega}$\nomeqref {3.1}
 		\nompageref{19}
+  \item [{$g$}]\begingroup Gegenstandsweite\nomeqref {7.1}
+		\nompageref{43}
+  \item [{$g$}]\begingroup gegenstandsseitige Brennweite\nomeqref {7.1}
+		\nompageref{43}
   \item [{$I$}]\begingroup Lichtintensität;   $I=\langle\vert\vecS\vert\rangle$\nomeqref {2.1}
 		\nompageref{11}
   \item [{$I_t$}]\begingroup transmittierte Intensität\nomeqref {4.6}
@@ -98,7 +104,7 @@
   \item [{$j_\text{frei}$}]\begingroup Stromdichte; in isolierenden Materialien $j_\text{frei}=0$\nomeqref {2.0}
 		\nompageref{6}
   \item [{$K$}]\begingroup Kerr-Konstante;     $K\cdot \lambda E_k^2 = n_{ao}-n_o$\nomeqref {5.0}
-		\nompageref{38}
+		\nompageref{37}
   \item [{$k$}]\begingroup Absorptionsindex eines Mediums;   Imaginärteil $n_I$ des Brechungsindex $n$\nomeqref {3.0}
 		\nompageref{15}
   \item [{$m_e$}]\begingroup Elektronenmasse\nomeqref {3.1}
@@ -121,14 +127,14 @@
 		\nompageref{12}
   \item [{$R$}]\begingroup Reflexionsgrad\nomeqref {4.4}\nompageref{25}
   \item [{$r$}]\begingroup Reflexionskoeffizient;   $r=\frac{n_e-n_t}{n_e+n_t}$\nomeqref {4.4}
-		\nompageref{24}
+		\nompageref{25}
   \item [{$s$}]\begingroup Strecke (Pfad) zwischen zwei Punkten\nomeqref {7.0}
 		\nompageref{40}
   \item [{$T$}]\begingroup Periodendauer\nomeqref {2.1}\nompageref{10}
   \item [{$T$}]\begingroup Transmission eines Mediums bei ebener Welle; $T \coloneqq \frac{I(z)}{I(0)} = \exp(-az)$\nomeqref {3.0}
 		\nompageref{16}
   \item [{$t$}]\begingroup Transmissionskoeffizient; $t=\frac{2n_e}{n_e+n_t}$\nomeqref {4.4}
-		\nompageref{24}
+		\nompageref{25}
   \item [{$t$}]\begingroup Zeit\nomeqref {2.1}\nompageref{11}
   \item [{$T^I$}]\begingroup Transmissionsgrad der Intensität;   $T^{I}=\frac{I_t}{I_e}$\nomeqref {4.6}
 		\nompageref{26}
@@ -136,14 +142,13 @@
 		\nompageref{26}
   \item [{$V$}]\begingroup Verdet-Konstante\nomeqref {5.0}
 		\nompageref{38}
-  \item [{$v_\text{gr}$}]\begingroup Gruppengeschwindigkeit einer Welle;   $v_\text{gr} = \dif[\omega]{k}$\nomeqref {2.4}
+  \item [{$v_\text{gr}$}]\begingroup Gruppengeschwindigkeit einer Welle;   $v_\text{gr} = \left( \dif[\omega]{k} \right)_{\omega=\omega_0}$\nomeqref {2.4}
 		\nompageref{13}
   \item [{$v_q$}]\begingroup Geschwindigkeit eines Teilchens mit Ladung $q$\nomeqref {2.1}
 		\nompageref{12}
   \item [{$v_{ph}$}]\begingroup Phasengeschwindigkeit;   Ausbreitungsgeschw. einer Welle;   $\diff[y]{t}=v_{ph}^2\diff[y]{x}$\nomeqref {2.0}
 		\nompageref{9}
-  \item [{$W(s)$}]\begingroup optischer Weg im Fermat'schen Prinzip;
-    $W(s) = \int_{s(Q\to P)}n(\vecx)\dd s$\nomeqref {7.0}
+  \item [{$W(s)$}]\begingroup optischer Weg im Fermat'schen Prinzip;   $W(s) = \int_{s(Q\to P)}n(\vecx)\dd s$\nomeqref {7.0}
 		\nompageref{40}
 
 \end{thenomenclature}

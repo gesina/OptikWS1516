@@ -164,7 +164,128 @@ dann insgesamt
   n_1\left(\frac{h}{g} + \frac{h}{r}\right)
   = n_2\left(\frac{h}{r} - \frac{h}{b}\right)
 \end{gather*}
+Ein wenig umgeschrieben erhalten wir die \emph{Abbildungsgleichung für
+  eine brechende Kugelfläche}\index{Abbildungsgleichung!Kugelfläche}
+\begin{gather}
+  \frac{n_1}{g} + \frac{n_2}{b} = \frac{n_2-n_1}{r}
+  \label{abbgleichung}
+\end{gather}
 
+%------------
+% 20.11.2015
+%------------
+
+\minisec{Brennweite}
+Lässt man die Gegenstandsweite $g$\nomenclature{$g$}{Gegenstandsweite}
+gegen unendlich gehen (also geht man von Einfall paralleler Strahlen
+aus), wird Gleichung \eqref{abbgleichung} zu
+\begin{gather*}
+  \frac{n_2-n_1}{r}
+  = \frac{n_1}{g} + \frac{n_2}{b}
+  \overset{g\to\infty}{\longrightarrow}
+  \underbrace{\frac{n_1}{\infty}}_{0} + \frac{n_2}{b} 
+\end{gather*}
+und wir erhalten durch Umformung die 
+\emph{bildseitige Brennweite}\index{Brennweite!bildseitig}
+$b$\nomenclature{$b$}{bildseitige Brennweite}
+\begin{gather*}
+  b = f_B = \frac{n_2\cdot r}{n_2-n_1}
+\end{gather*}
+Analog erhält man die
+\emph{gegenstandsseitige Brennweite}%
+\index{Brennweite!gegenstandsseitig}
+$g$\nomenclature{$g$}{gegenstandsseitige Brennweite}
+\begin{gather*}
+  g = f_G = \frac{n_1\cdot r}{n_2-n_1}
+\end{gather*}
+
+Bisher haben wir nur eine halbe Linse betrachtet, also nur einen
+sphärischen Übergang von zwei Materialien mit unterschiedlichem
+Brechungsindex.
+Für eine richtige Linse benötigt man einen Übergang von einem Medium
+(Brechungsindex $n_1$) in die Linse (Brechungsindex $n_2$) und wieder
+in ein anderes Medium (Brechungsindex $n_3$). 
+Wir betrachten wieder sphärische Grenzflächen von Medium 1 und 3 zum
+Linsenmedium. Wir erhalten:
+\begin{align*}
+  \frac{n_1}{g_1} + \frac{n_2}{b_1} &= \frac{n_2-n_1}{r_1}
+  &&\text{1. Kugelfläche}\\
+  \frac{n_2}{g_2} + \frac{n_3}{b_2} &= \frac{n_3-n_2}{r_2}
+  &&\text{2. Kugelfläche}
+\end{align*}
+wobei $g_2 = -b_1$ für $d\ll r_1,r_2$ (d.\,h. der Abstand der beiden
+Linsengrenzflächen ist wesentlich kleiner als die Grenzflächenradien).
+Ineinander eingesetzt ergibt das
+\begin{gather*}
+  \frac{n_1}{g_1} + \frac{n_3}{b_3} 
+  = \frac{n_2-n_1}{r_1} + \frac{n_3-n_2}{r_2}
+\end{gather*}
+Für $n_1=n_3=n_\text{Luft}=1$ und
+mit $b\coloneqq b_2$ und $g\coloneqq g_1$ erhalten wir die
+\emph{allgemeine Linsenmachergleichung}%
+\index{Linsenmachergleichung!allgemein}
+\begin{gather*}
+  \frac{1}{g} + \frac{1}{b}
+  = (n_2-1)\left( \frac{1}{r_1}-\frac{1}{r_2} \right)
+  \eqqcolon \frac{1}{f}
+\end{gather*}
+$f$ ist die Brennweite der Linse (auf beiden Seiten gleich) und alle
+zur optischen Achse parallele Strahlen verlaufen nach Durchgang durch
+die Linse durch einen der zwei Brennpunkte
+(Sammellinse: Brennpunkt auf der Austrittsseite, Zerstreuungslinse:
+Brennpunkt auf der Eintrittsseite).
+
+\red{Achtung:} Die Brennweite $f$ ist (unter den genannten Näherungen)
+nur abhängig von $\left( \frac{1}{r_1}-\frac{1}{r_2} \right)$ und auf
+beiden Linsenseiten gleich!
+
+\minisec{Sammellinsen}
+%% IMAGE MISSING verschiedene Gegenstands- und Bildweiten;
+% Konstruktion von Bildebenen für geg. Brennweite
+Bei gegebener Linse mit best. Brennweite ist die Bildweite (die Ebene,
+in der Punkte scharf auf Punkte abgebildet werden) von der
+Gegenstandsweite abhängig.
+Je größer die Gegenstandsweite, desto kleiner die Bildweite.
+
+%% IMAGE MISSING Unschärfe eines Bildes mit und ohne Blende
+Der Grad der Unschärfe ist bestimmt durch die Größe des
+Bildscheibchens, auf das ein Gegenstandspunkt abgebildet wird. Die
+Bildscheibchengröße wiederum ist bestimmt durch den Winkel, den zwei
+vom Gegenstandspunkt ausgehende Strahlen einschließen können.
+Dieser Winkel kann durch das einsetzen einer Blende wesentlich
+verringert werden.
+
+\minisec{Zerstreuungslinsen}
+Eine Zerstreuungslinse erhält man, wenn die Grenzflächen der Linse
+nach innen sphärisch sind anstatt nach außen.
+Dann durchläuft ein zur optischen Achse paralleler Strahl nach
+Durchtritt durch die Linse nicht mehr den Brennpunkt auf der Austrittsseite,
+sondern seine Verlängerung verläuft durch den Brennpunkt auf der Eintrittsseite.
+Ein Betrachter sieht ein virtuelles Bild, das weiter als die
+Gegenstandsweite weg zu sein scheint.
+
+\minisec{Betrachtungswinkel}
+Der Betrachtungswinkel $\eps_0$ (bzgl. der optischen Achse), den unser
+Auge für einen Gegenstand der Größe $G$ wahrnimmt
+bzw. der Größe $\frac{G}{2}$ von der opt. Achse aus gemessen,
+lässt sich aus dem Winkel $\eps$ zwischen der optischen Achse und
+einem Strahl von der Gegenstandsspitze durch die Linsenmitte
+bestimmen.
+Für $\eps$ gilt
+\begin{gather*}
+  \tan(\eps) = \frac{G}{2 }\cdot\frac{1}{f} =\frac{G}{2f} \approx
+  \epso
+\end{gather*}
+Dann ist $\epso$ ohne Lupe (also nur die Linse des Auges) und mit
+$s_0=f_\text{Auge}\approx \SI{25}{\centi\meter}$
+\begin{gather*}
+  \eps_0 = \frac{G}{2 s_0}
+\end{gather*}
+Damit ist der Vergrößerungsfaktor einer weiteren Sammellinse, die man
+vor das Auge schiebt,
+\begin{gather*}
+  V = \frac{\eps}{\epso} = \frac{s_0}{f}
+\end{gather*}
 
 %%% Local Variables:
 %%% mode: latex
