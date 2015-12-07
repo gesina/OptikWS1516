@@ -1,155 +1,162 @@
 \begin{theindex}
 
   \item Abbildungsgleichung
-    \subitem Kugelfl\IeC {\"a}che, \hyperpage{42}
-  \item Absorptionsindex, \hyperpage{15}
-  \item Analysator, \hyperpage{32}
+    \subitem Kugelfl\IeC {\"a}che, \hyperpage{41}
+  \item Aberration
+    \subitem chromatische, \hyperpage{45}
+    \subitem lateral, \hyperpage{45}
+  \item Abrration
+    \subitem sph\IeC {\"a}rische, \hyperpage{45}
+  \item Absorptionsindex, \hyperpage{14}
+  \item Analysator, \hyperpage{31}
+  \item Astigmatismus, \hyperpage{46}
 
   \indexspace
 
   \item Brechungsgesetz
-    \subitem Snellins'sches Brechungsgesetz, \hyperpage{22}
-  \item Brechzahl, \hyperpage{15}
+    \subitem Snellins'sches Brechungsgesetz, \hyperpage{21}
+  \item Brechzahl, \hyperpage{14}
   \item Brennweite
-    \subitem bildseitig, \hyperpage{43}
-    \subitem gegenstandsseitig, \hyperpage{43}
-  \item Brewsterwinkel, \hyperpage{26}
+    \subitem bildseitig, \hyperpage{42}
+    \subitem gegenstandsseitig, \hyperpage{42}
+  \item Brewsterwinkel, \hyperpage{25}
 
   \indexspace
 
-  \item Dichroismus, \hyperpage{33}
-  \item Dielektrizit\IeC {\"a}tskonstante, \hyperpage{7}
-  \item Dielektrizit\IeC {\"a}tstensor, \hyperpage{34}
-    \subitem Hauptachsenform, \hyperpage{34}
+  \item Dichroismus, \hyperpage{32}
+  \item Dielektrizit\IeC {\"a}tskonstante, \hyperpage{6}
+  \item Dielektrizit\IeC {\"a}tstensor, \hyperpage{33}
+    \subitem Hauptachsenform, \hyperpage{33}
   \item Dispersion
-    \subitem normal, \hyperpage{19}
-    \subitem positiv, \hyperpage{19}
-  \item Dispersionsrelation, \hyperpage{10}
-    \subitem linear, \hyperpage{10}
-  \item Divergenz, \hyperpage{6}
-  \item Doppelbrechung, \hyperpage{34}
-    \subitem Gangunterschied, \hyperpage{36}
-    \subitem Phasenunterschied, \hyperpage{36}
+    \subitem normal, \hyperpage{18}
+    \subitem positiv, \hyperpage{18}
+  \item Dispersionsrelation, \hyperpage{9}
+    \subitem linear, \hyperpage{9}
+  \item Divergenz, \hyperpage{5}
+  \item Doppelbrechung, \hyperpage{33}
+    \subitem Gangunterschied, \hyperpage{35}
+    \subitem Phasenunterschied, \hyperpage{35}
 
   \indexspace
 
-  \item ebene Welle, \hyperpage{10}
-  \item elektrische Feldkonstante, \hyperpage{7}
-  \item Extinktionskoeffizient, \hyperpage{16}
+  \item ebene Welle, \hyperpage{9}
+  \item elektrische Feldkonstante, \hyperpage{6}
+  \item Extinktionskoeffizient, \hyperpage{15}
 
   \indexspace
 
-  \item Faraday-Effekt, \hyperpage{38}
-  \item Fermat'sche Prinzip, \hyperpage{40}
-  \item Fresnel'sche Formeln, \hyperpage{23}
-  \item Fresnelsche Formeln, \hyperpage{26}
+  \item Faraday-Effekt, \hyperpage{37}
+  \item Fermat'sche Prinzip, \hyperpage{39}
+  \item Fresnel'sche Formeln, \hyperpage{22}
+  \item Fresnelsche Formeln, \hyperpage{25}
 
   \indexspace
 
-  \item Gau\IeC {\ss }sche Optik, \hyperpage{41}
-  \item geometrische Optik, \hyperpage{40}
-  \item Gradient, \hyperpage{6}
-  \item Gruppengeschwindigkeit, \hyperpage{13}
+  \item Gau\IeC {\ss }sche Optik, \hyperpage{40}
+  \item geometrische Optik, \hyperpage{39}
+  \item Gradient, \hyperpage{5}
+  \item Gruppengeschwindigkeit, \hyperpage{12}
 
   \indexspace
 
-  \item Hauptschnitt, \hyperpage{35}
+  \item Hauptschnitt, \hyperpage{34}
 
   \indexspace
 
-  \item Jones-Vektor, \hyperpage{31}
+  \item Jones-Vektor, \hyperpage{30}
 
   \indexspace
 
-  \item Kerr-Effekt, \hyperpage{37}
-  \item Kerr-Konstante, \hyperpage{37}
-  \item Kramer-Kronis-Relation, \hyperpage{16}
-  \item Kugelwelle, \hyperpage{10}
+  \item Kerr-Effekt, \hyperpage{36}
+  \item Kerr-Konstante, \hyperpage{36}
+  \item Koma, \hyperpage{45}
+  \item Kramer-Kronis-Relation, \hyperpage{15}
+  \item Kugelwelle, \hyperpage{9}
 
   \indexspace
 
-  \item Lambert-Beersches Gesetz, \hyperpage{16}
-  \item Laplace-Operator, \hyperpage{6}
-  \item Lichtintensit\IeC {\"a}t, \hyperpage{11}
-  \item Lichtwellenleiter, \hyperpage{28}
-  \item linksdrehend, \hyperpage{38}
+  \item Lambert-Beersches Gesetz, \hyperpage{15}
+  \item Laplace-Operator, \hyperpage{5}
+  \item Lichtintensit\IeC {\"a}t, \hyperpage{10}
+  \item Lichtwellenleiter, \hyperpage{27}
+  \item linksdrehend, \hyperpage{37}
   \item Linsenmachergleichung
-    \subitem allgemein, \hyperpage{43}
+    \subitem allgemein, \hyperpage{42}
 
   \indexspace
 
-  \item Malus'sches Gesetz, \hyperpage{32}
+  \item Malus'sches Gesetz, \hyperpage{31}
   \item Mathematische Operatoren
-    \subitem Divergenz, \hyperpage{6}
-    \subitem Gradient, \hyperpage{6}
-    \subitem Laplace-Operator, \hyperpage{6}
-    \subitem Nabla-Operator, \hyperpage{6}
+    \subitem Divergenz, \hyperpage{5}
+    \subitem Gradient, \hyperpage{5}
+    \subitem Laplace-Operator, \hyperpage{5}
+    \subitem Nabla-Operator, \hyperpage{5}
   \item Maxwellgleichungen
-    \subitem mit dielektrischer Versch., \hyperpage{7}
+    \subitem mit dielektrischer Versch., \hyperpage{6}
 
   \indexspace
 
-  \item Nabla-Operator, \hyperpage{6}
+  \item Nabla-Operator, \hyperpage{5}
 
   \indexspace
 
-  \item optisch asymmetrische Komponente, \hyperpage{32}
-  \item Oszillatorst\IeC {\"a}rke, \hyperpage{19}
+  \item optisch asymmetrische Komponente, \hyperpage{31}
+  \item Oszillatorst\IeC {\"a}rke, \hyperpage{18}
 
   \indexspace
 
-  \item paraxiale   Optik, \hyperpage{41}
-  \item Phasenfaktoren, \hyperpage{21}
-  \item Phasengeschwindigkeit, \hyperpage{9}
-  \item Photonenenergie, \hyperpage{11}
-  \item Photonenflussdichte, \hyperpage{11}
-  \item Photonenimpuls, \hyperpage{11}
-  \item Plasmafrequenz, \hyperpage{19}
+  \item paraxiale   Optik, \hyperpage{40}
+  \item Phasenfaktoren, \hyperpage{20}
+  \item Phasengeschwindigkeit, \hyperpage{8}
+  \item Photonenenergie, \hyperpage{10}
+  \item Photonenflussdichte, \hyperpage{10}
+  \item Photonenimpuls, \hyperpage{10}
+  \item Plasmafrequenz, \hyperpage{18}
   \item Polarisation
-    \subitem elliptisch, \hyperpage{32}
-    \subitem elliptisch polarisiertes Licht, \hyperpage{23}
-    \subitem linear polarisiertes Licht, \hyperpage{23}
-    \subitem zirkular, \hyperpage{32}
-    \subitem zirkular polarisiertes Licht, \hyperpage{23}
-  \item Polarisator, \hyperpage{32}
-  \item Poynting-Vektor, \hyperpage{11}
+    \subitem elliptisch, \hyperpage{31}
+    \subitem elliptisch polarisiertes Licht, \hyperpage{22}
+    \subitem linear polarisiertes Licht, \hyperpage{22}
+    \subitem zirkular, \hyperpage{31}
+    \subitem zirkular polarisiertes Licht, \hyperpage{22}
+  \item Polarisator, \hyperpage{31}
+  \item Poynting-Vektor, \hyperpage{10}
 
   \indexspace
 
-  \item rechtsdrehend, \hyperpage{38}
-  \item Reflexionsgesetz, \hyperpage{22}
-  \item Reflexionsgrad, \hyperpage{25}
-  \item Reflexionskoeffizient, \hyperpage{25}
+  \item rechtsdrehend, \hyperpage{37}
+  \item Reflexionsgesetz, \hyperpage{21}
+  \item Reflexionsgrad, \hyperpage{24}
+  \item Reflexionskoeffizient, \hyperpage{24}
 
   \indexspace
 
-  \item Sellmeier-Beziehung, \hyperpage{19}
-  \item Strahlenoptik, \hyperpage{40}
-  \item Strahlenversatz, \hyperpage{34}
-  \item Strahlungsflussdichte, \hyperpage{11}
-  \item Streuzeit, \hyperpage{19}
+  \item Sellmeier-Beziehung, \hyperpage{18}
+  \item Strahlenoptik, \hyperpage{39}
+  \item Strahlenversatz, \hyperpage{33}
+  \item Strahlungsflussdichte, \hyperpage{10}
+  \item Streuzeit, \hyperpage{18}
 
   \indexspace
 
-  \item Totalreflexion, \hyperpage{28}
-  \item Transmission, \hyperpage{16}
-  \item Transmissionsgrad, \hyperpage{26}
-  \item Transmissionskoeffizient, \hyperpage{25}
-  \item transmittierte Intensit\IeC {\"a}t, \hyperpage{26}
-  \item transmittierte Leistung, \hyperpage{26}
+  \item Totalreflexion, \hyperpage{27}
+  \item Transmission, \hyperpage{15}
+  \item Transmissionsgrad, \hyperpage{25}
+  \item Transmissionskoeffizient, \hyperpage{24}
+  \item transmittierte Intensit\IeC {\"a}t, \hyperpage{25}
+  \item transmittierte Leistung, \hyperpage{25}
 
   \indexspace
 
-  \item Variationsprinzip, \hyperpage{40}
-  \item Verdet-Konstante, \hyperpage{38}
-  \item Verz\IeC {\"o}gerungspl\IeC {\"a}ttchen, \hyperpage{36}
+  \item Variationsprinzip, \hyperpage{39}
+  \item Verdet-Konstante, \hyperpage{37}
+  \item Verz\IeC {\"o}gerungspl\IeC {\"a}ttchen, \hyperpage{35}
 
   \indexspace
 
   \item Wellenfunktion
-    \subitem ebene Welle, \hyperpage{10}
-    \subitem Kugelwelle, \hyperpage{10}
+    \subitem ebene Welle, \hyperpage{9}
+    \subitem Kugelwelle, \hyperpage{9}
   \item Wellengleichung
-    \subitem Elektromagnetische Wellen, \hyperpage{9}
+    \subitem Elektromagnetische Wellen, \hyperpage{8}
 
 \end{theindex}

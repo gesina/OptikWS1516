@@ -1,5 +1,4 @@
 \chapter{Geometrische Optik}
-Geometrische Optik
 Die \emph{geometrische Optik}\index{geometrische Optik}
 bzw. \emph{Strahlenoptik}\index{Strahlenoptik} befasst sich mit der
 Darstellung komplexer optischer Instrumente.
@@ -25,7 +24,7 @@ Dann gilt das \emph{Fermat'sche Prinzip}\index{Fermat'sche Prinzip}
 Lichtausbreitung erfolgt so, dass der optische Weg $W(s)$%
 \nomenclature{$W(s)$}{optischer Weg im Fermat'schen Prinzip;
   $W(s) = \int_{s(Q\to P)}n(\vecx)\dd s$}
-(Produkt aus Brechungungsindex $n(\vecr)$ und zurückgelegter Strecke
+(Produkt aus Brechungsindex $n(\vecr)$ und zurückgelegter Strecke
 $s$) einen Extremwert besitzt:
 \begin{gather*}
   W(s) = \int_{s(Q\to P)}n(\vecx)\dd s
@@ -176,7 +175,7 @@ Ein wenig umgeschrieben erhalten wir die \emph{Abbildungsgleichung für
 %------------
 
 \minisec{Brennweite}
-Lässt man die Gegenstandsweite $g$\nomenclature{$g$}{Gegenstandsweite}
+Lässt man die Gegenstandsweite $g$
 gegen unendlich gehen (also geht man von Einfall paralleler Strahlen
 aus), wird Gleichung \eqref{abbgleichung} zu
 \begin{gather*}
@@ -187,14 +186,14 @@ aus), wird Gleichung \eqref{abbgleichung} zu
 \end{gather*}
 und wir erhalten durch Umformung die 
 \emph{bildseitige Brennweite}\index{Brennweite!bildseitig}
-$b$\nomenclature{$b$}{bildseitige Brennweite}
+$b$\nomenclature{$b$}{bildseitige Brennweite, Bildweite}
 \begin{gather*}
   b = f_B = \frac{n_2\cdot r}{n_2-n_1}
 \end{gather*}
 Analog erhält man die
 \emph{gegenstandsseitige Brennweite}%
 \index{Brennweite!gegenstandsseitig}
-$g$\nomenclature{$g$}{gegenstandsseitige Brennweite}
+$g$\nomenclature{$g$}{gegenstandsseitige Brennweite, Gegenstandsweite}
 \begin{gather*}
   g = f_G = \frac{n_1\cdot r}{n_2-n_1}
 \end{gather*}
@@ -293,73 +292,142 @@ vor das Auge schiebt,
 % 3.12.2015
 %------------------------
 \subsection{Das Teleskop bzw. Fernrohr}
-Für weit entfernte Objekte kann man mit 2 Linsen gute Vergrößerungen erreichen. Der wesentliche Unterschied zur Lupe ist hierbei, dass die Strahlen nahezu parallel aufgrund der großen Entfernung auf die Linse treffen.
-\minisec{Funktionsweise:}
-Von einem Objekt wird ein verkleinertes auf dem Kopf stehendes reelles Bild auf die Brennebene der ersten Linse projeziert. Dieses wird mit der Lupe (2. Linse) betrachtet.
+Für weit entfernte Objekte kann man mit 2 Linsen gute Vergrößerungen
+erreichen. Der wesentliche Unterschied zur Lupe ist hierbei, dass die
+Strahlen nahezu parallel aufgrund der großen Entfernung auf die Linse
+treffen.
+
+\paragraph{Funktionsweise}
+Von einem Objekt wird ein verkleinertes auf dem Kopf stehendes reelles
+Bild auf die Brennebene der ersten Linse projeziert. Dieses wird mit
+der Lupe (2. Linse) betrachtet.
 %% Image missing
-Das erste Zwischenbild in der Brennebene hat die Größe:
+
+Das erste Zwischenbild in der Brennebene hat die Größe
 \begin{align*}
-	B=\frac{f_{obj}}{g}G
+	B = \frac{f_\text{obj}}{g}G
 \end{align*}
-B wird also mit $f_{obj}$ größer bzw. wenn man ein größeres Bild haben will, benötigt man eine größere Brennweite. Beispielsweise besitzen Teleobjektive Brennweiten von $\num{100}-\SI{1000}{\milli\meter}$.
-Weiter kann man eine Lupe benutzen um dieses reelle Zwischenbild noch weiter zu vergrößern.\\
-Nun betrachten wir die Vergrößerung zunächst ohne Lupe:
+$B$ wird also mit $f_\text{obj}$ größer bzw. wenn man ein größeres Bild
+haben will, benötigt man eine größere Brennweite. Beispielsweise
+besitzen Teleobjektive Brennweiten von
+$\num{100}-\SI{1000}{\milli\meter}$.
+Weiter kann man eine Lupe benutzen, um dieses reelle Zwischenbild noch
+weiter zu vergrößern.
+
+Nun betrachten wir die Vergrößerung zunächst ohne Lupe
 \begin{align*}
-	\fracone{2}\eps&=\frac{B}{S_0}&\fracone{2}\epso&=\frac{G}{g}\\
-	=>\quad V_{obj}&=\frac{f_{obj}}{S_0}
+  \fracone{2}\eps &= \frac{B}{S_0} 
+  &\fracone{2}\epso &=\frac{G}{g}\\
+  \Rightarrow\quad V_\text{obj} &=\frac{f_\text{obj}}{S_0}
 \end{align*}
 Nun mit Lupe:
 \begin{align*}
-	V&=\frac{f_{obj}}{S_0}V_{Lupe}=\frac{f_{obj}}{S_0}\frac{S_0}{f_{Lupe}}=\frac{f_{obj}}{f_{Lupe}}\\
-	V_{Tele}&=\frac{f_{obj}}{f_{Lupe}}
+  V &= \frac{f_\text{obj}}{S_0}V_\text{Lupe}
+      =\frac{f_\text{obj}}{S_0} \cdot \frac{S_0}{f_\text{Lupe}}
+      =\frac{f_\text{obj}}{f_\text{Lupe}}\\
+  V_{Tele} &=\frac{f_\text{obj}}{f_\text{Lupe}}
 \end{align*}
-Also erhalten wir höchste Vergrößerung, wenn $f_{obj}$ sehr groß und $f_{Lupe}$ sehr klein ist. Allerdings ist das Teleskop für terrestrische Anwendungen nicht geeignet, da das Bild invertiert wird und eine große Baulänge benötigt wird. Man müsste also mit Prismenglas zur Faltung des Strahls arbeiten und bei astronomischen Ferngläsern bekommt man Gewichtsprobleme.
+Also erhalten wir höchste Vergrößerung, wenn $f_\text{obj}$ sehr groß und
+$f_\text{Lupe}$ sehr klein ist. Allerdings ist das Teleskop für
+terrestrische Anwendungen nicht geeignet, da das Bild invertiert wird
+und eine große Baulänge benötigt wird. Man müsste also mit Prismenglas
+zur Faltung des Strahls arbeiten und bei astronomischen Ferngläsern
+bekommt man Gewichtsprobleme. 
 
-\minisec{Alternativ: Galileisches Fernrohr}
-Anstatt einer Sammellinse als Okular wird eine negative Linse, Zerstreuungslinse, mit negativer Brennweite ($f_{okular}<0$) verwendet und \emph{vor} das reelle Bild gebracht. Der Abstand der negativen Linse von der Bildebene soll gleich $\vert f_{okular}\vert$ sein.
-Mit entspanntem Auge sieht man ein aufrecht stehendes Bild unter dem Sehwinkel:
+\paragraph{Galileisches Fernrohr}
+Alternativ kann man anstatt einer Sammellinse als Okular eine negative
+Linse (Zerstreuungslinse) mit negativer Brennweite ($f_\text{okular}<0$)
+verwenden und \emph{vor} das reelle Bild einbringen. Der Abstand der
+negativen Linse von der Bildebene soll gleich $\vert f_\text{okular}\vert$
+sein.
+Mit entspanntem Auge sieht man ein aufrecht stehendes Bild unter dem
+Sehwinkel
 \begin{align*}
-	\eps&=\epso\frac{f_{obj}}{\vert f_{okular}\vert}
+	\eps &= \epso\frac{f_\text{obj}}{\vert f_\text{okular}\vert}
 \end{align*}
 
 \subsection{Mondaufgang}
-%Image missing
-Die Größe G eines Objekts wird durch den Beobachtungswinkel $\eps$ bestimmt.
+%% Image missing
+Die Größe $G$ eines Objekts wird durch den Beobachtungswinkel $\eps$ bestimmt.
 Wir schätzen die Größe ab, indem wir die Entfernung $g$ zum Objekt schätzen.
 \begin{align*}
-	G&=g\sin\eps=g\eps
+	G &= g\sin\eps=g\eps
 \end{align*}
-Zum Beispiel der Mond, der beim Aufgang oberhalb von nahen Objekten zu stehen scheint.
+Ein Beispiel ist der Mond, der beim Aufgang oberhalb von nahen Objekten zu
+stehen scheint:
 \begin{align*}
-	d_{Mond}&=\SI{3,6e6}{\meter}\\
-	g&=\SI{3,8e8}{\meter}\\
-	\eps&=\frac{d}{g}=\SI{9,05e-3}{\radian}
+	d_{Mond} &= \SI{3,6e6}{\meter}\\
+	g &= \SI{3,8e8}{\meter}\\
+	\eps &= \frac{d}{g}=\SI{9,05e-3}{\radian}
 \end{align*}
-Wenn man dies nun mit dem Sehwinkel eines $\SI{10}{\meter}$ hohen Baums in $\SI{1}{\kilo\meter}$ Entfernung vergleicht:
+Wenn man dies nun mit dem Sehwinkel eines $\SI{10}{\meter}$ hohen
+Baums in $\SI{1}{\kilo\meter}$ Entfernung vergleicht:
 \begin{align*}
-	\eps\prime=\SI{10e-2}{\radian}
+	\eps^\prime = \SI{10e-2}{\radian}
 \end{align*}
-Daher sieht der Mensch den Mond in der selben Größe, wenn der Mond nun weiter aufsteigt wird er nicht kleiner, sondern unser Gehirn vergleicht ihn nun mit Objekten mit dem gleichen kleineren Sehwinkel. Beispielsweise einem Baum in $\SI{7}{\kilo\meter}$ Entfernung. Dann erhalten wir einen Durchmesser für den Mond von $d=\SI{64}{\meter}$.
+Daher sieht der Mensch den Mond in der selben Größe. Wenn der Mond nun
+weiter aufsteigt, wird er nicht kleiner, sondern unser Gehirn
+vergleicht ihn nun mit Objekten mit dem gleichen kleineren
+Sehwinkel. Beispielsweise einem Baum in $\SI{7}{\kilo\meter}$
+Entfernung. Dann erhalten wir einen Durchmesser für den Mond von
+$d=\SI{64}{\meter}$.
 
 \section{Abbildungsfehler}
-\subsection{Chromatische Aberration}
-Abbildungsgleichung für dünne Linsen:
+\subsection{Chromatische Aberration}\index{Aberration!chromatische}
+Aus der Abbildungsgleichung für dünne Linsen
 \begin{align*}
-	\fracone{g}+\fracone{b}=(n(\lambda)-1)\left(\fracone{r_1}-\fracone{r_2}\right)=\fracone{f}
+  \fracone{g} + \fracone{b}
+  = (n(\lambda)-1) \left( \fracone{r_1} - \fracone{r_2} \right)
+  = \fracone{f}
 \end{align*}
-Also ist die Brennweite $f$ einer einfachen Linse eine monotone Funktion des Brechungsindex.
+erhalten wir, dass die Brennweite $f$ einer einfachen Linse eine
+monotone Funktion des Brechungsindex ist:
 \begin{align*}
-	D(\lambda)=\fracone{f(\lambda)}=(n(\lambda)-1)\rho
+  D(\lambda) 
+  = \fracone{f(\lambda)}
+  = (n(\lambda)-1)\rho
 \end{align*}
-Das bedeutet, dass bei einer dünneren Linse die Brennweite für rotes Licht immer größer ist als für blaues Licht (wegen normaler Dispersion von n).
-%Image missing
-Es gibt also keinen Ort an dem das\enquote{rote} und das \enquote{blaue} Bild scharf sind. Außerdem tritt die sogenannte \emph{laterale Aberation} auf, nämlich dass die Bilder unterschiedliche Größen haben.
+Das bedeutet, dass bei einer dünneren Linse die Brennweite für rotes
+Licht immer größer ist als für blaues Licht (wegen normaler Dispersion
+von $n$).
+%% Image missing
+Es gibt also keinen Ort an dem das \enquote{rote} und das
+\enquote{blaue} Bild gleichzeitig scharf sind. Außerdem tritt die
+sogenannte \emph{laterale Aberation}\index{Aberration!lateral}
+auf, nämlich dass die Bilder unterschiedliche Größen haben.
 \emph{Es gibt also keine einfachen Linsen ohne Farbfehler.}
-Man kann dies durch Kombinationen von Linsen korrigieren. Zum Beispiel durch einen \emph{Achromat}, der aus zwei Linsen aus Glas mit unterschiedlichen Dispersionen besteht.
+Man kann dies durch Kombinationen von Linsen korrigieren. Zum Beispiel
+durch einen \emph{Achromat}, der aus zwei Linsen aus Glas mit
+unterschiedlichen Dispersionen besteht.
 
-\subsection{Sphärische Aberration (Öffnungsfehler)}
-Die Brennweite hängt vom Abstand der Strahlen von der optischen Achse ab. Der Brennpunkt verschiebt sich also für Strahlen, die weiter Entfernt von der optischen Achse sind, da die Kleinwinkelnäherung hier nicht mehr gültig ist.
-Man nennt diese auch \emph{monochromatische Aberration}, da dieser Effekt auch bei monochromatischem Licht auftritt und unabhängig von der Wellenlänge ist.
+\subsection{Sphärische Aberration (Öffnungsfehler)}\index{Abrration!sphärische}
+Die Brennweite hängt vom Abstand der Strahlen von der optischen Achse
+ab. Der Brennpunkt verschiebt sich also für Strahlen, die weiter
+entfernt von der optischen Achse sind, da die Kleinwinkelnäherung hier
+nicht mehr gültig ist.
+Man nennt diese auch \emph{monochromatische Aberration}, da dieser
+Effekt auch bei monochromatischem Licht auftritt und unabhängig von
+der Wellenlänge ist.
+
+%-------------
+% 07.12.2015
+%-------------
+
+\subsection{Koma}\index{Koma}
+Bei schiefem Lichteinfall auf die Linse entsteht ein \enquote{schiefes
+  Bündel} mit großem Öffnungswinkel (s. Folien).
+
+\subsection{Astigmatismus}\index{Astigmatismus}
+Eine nicht rotationssymmetrische Linsenform hat unterschiedliche
+Brennweiten in unterschiedlichen Raumrichtungen zur Folge,
+z.\,B. unterschiedliche Wölbung in $x$-~und in $y$-Richtung.
+Astigmatismus tritt auch bei Bündeln mit kleinen Öffnungswinkeln auf.
+Anschaulich: Ein Strahl, der zur optischen Achse geneigt auf die Linse
+auftrifft, \enquote{sieht} eine nicht rotationssymmetrische Linse.
+
+
+\subsection{Bildfeldwölbung und -verzerrung}
+(s. Folien)
 
 %%% Local Variables:
 %%% mode: latex
