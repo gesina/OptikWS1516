@@ -211,6 +211,248 @@ eine sinc-Funktion.
 
 %Bei der Funktion stimmt iwas noch nicht und sie kommt vollständig noch in der Übung dran
 
+%------------
+% Vorlesung 14.12.
+%------------
+
+Es gilt die \emph{Parseval'sche Formel}\index{Parseval'sche Formel}
+\begin{gather*}
+  \int_{\infty}{\infty} |f(t)|^2 \dd t 
+  = \int_{\infty}{\infty} |F(\omega)|^2 \dd\omega
+\end{gather*}
+und der \emph{Verschiebungssatz}\index{Verschiebungssatz}
+\begin{align*}
+  FT(f(t-t_0)) = FT(f(x)\otimes\delta(t-t_0))
+  = \underbrace{FT(f(t))}_{F(\omega)}e^{-i\omegao t_0}
+\end{align*}
+
+%-----
+
+\section{Beugung}
+\subsection{Das Huygen'sche Prinzip}
+Das \emph{Huygen'sche Prinzip}\index{Huygen'sche Prinzip} lautet
+\begin{quote}
+  Jeder Punkt einer primären Wellenfront ist Quelle von sekundären
+  Elementarwellen
+\end{quote}
+Die genannten Elementarwellen breiten sich mit der Dispersion des
+Mediums aus (also isotrop oder anisotrop).
+Die Einhüllende dieser Elementarwellen bildet eine neue Wellenfront.
+Die Einhüllende beschreibt nicht die Randbereiche (hier findet Beugung statt).
+
+\paragraph{Fresnel-Huygen'sches Prinzip}
+Eine Verbesserung dieser Theorie liefert das 
+\emph{Fresnel-Huygen'sches Prinzip}\index{Fresnel-Huygen'sches
+  Prinzip}
+\begin{quote}
+  Das Lichtfeld am Punkt $P$ wird durch \emph{Interferenz} (Summation
+  der Amplituden/Phasen) aller Elementarwellen beschrieben.
+\end{quote}
+
+%---
+
+\subsection{Die Fresnel'sche Beugung}
+Es sind die \emph{Fresnel'sche Beugung}{Fresnel'sche Beugung} ($d$
+groß aber endlich) und die \emph{Fraunhofer'sche Beugung}%
+\index{Fraunhofer'sche Beugung} ($d=\infty$) zu unterscheiden.
+
+%% IMAGE MISSING
+Die Fresnel'sche Beugung lässt sich anhand des Huygen'schen Prinzips
+erklären:
+Elementarwellen aus der Ebene $z=0$ erreichen aufgrund der
+unterschiedlichen Wegstrecken zu unterschiedlichen Zeiten einen Punkt
+$P$ im Abstand $R$ von der Ebene.
+Die Strecke von einem Geradenpunkt zu $P$ ist
+\begin{gather*}
+  r = \sqrt{x^2+R^2}
+\end{gather*}
+wobei $x$ die Verschiebung bzgl. $P$ parallel zur Ebene ist.
+
+Die Vorgehensweise zur Berechnung der Intensität in $P$ ist, die
+Elementarwellen am Ort $P$ mit Phasenfaktor $\exp(ikr)$ aufzusummieren.
+Für $x=0$ ist $r=R$. $r$ wächst mit $x$ an und, solange $r<R+\frac{\lambda}{2}$, tragen die
+Bereiche der Blendenöffnung konstruktiv zum Feld bei.
+Es gilt allgemein für $r$:
+\begin{description}
+\item[$r<R+\frac{\lambda}{2}$] konstruktive Interferenz
+\item[$R+\frac{\lambda}{2}<r<R+\lambda$] destruktive Interferenz
+\item[$R+\lambda<r<R+\frac{2\lambda}{2}$] konstruktive Interferenz
+\end{description}
+
+% MISSING
+Beim Blendenversuch tragen die Zonen zur Lichtintensität im Punkt $P$
+bei, die nicht von der Kante der Blende abgedeckt werden.
+
+\subsection{Die Fresnel-Kirchhoff'sche Beugungstheorie}
+%% IMAGE MISSING
+Betrachte die Situation, dass eine Lichtquelle im Punkt $Q$ Licht der
+Wellenlänge $\lambda$ ($k=\frac{2\pi}{\lambda}$) emittiert.
+Ziel ist nun, die Wellenamplitude bzw. Intensität am Ort $P$ zu
+berechnen, der hinter einem Objekt $B$ mit der Transmissionsfunktion
+$\Omega$ liegt. $\Omega$ hänge von den Orthonormalkoordinaten $\zeta$
+und $\eta$ auf der Ebene senkrecht zur Verbindung von $Q$ und $P$ ab
+und sei nur innerhalb der Blendenöffnung ungleich 0.
+Die Lösung hierfür über die MWG als Randwertproblem ist
+kompliziert. Daher trifft man folgende Näherungen
+\begin{itemize}
+\item Das skalare Lichtfeld $U$ breitet sich von $Q$ nach $B$
+  ungestört aus.
+\item Das Blendenobjekt $B$ sei \enquote{vernünftig} (eben und
+  beeinflusst das einfallende Lichtfeld nicht)
+\item Für die Beeinflussung des Lichtfelds durch die
+  Transmissionsfunktions $\Omega(\zeta,\eta)$ auf der rechten Seite der
+  Blende gilt ($U_e$ einfallendes Lichtfeld)
+  \begin{gather*}
+    U_0(\zeta,\eta) = \Omega(\zeta,\eta)\cdot U_e(\zeta,\eta)
+  \end{gather*}
+\end{itemize}
+Aus der Theorie erhält man eine Vorschrift zur Berechnung der
+Feldstärke im Punkt $P$
+\begin{gather*}
+  U_P(\vecR) \propto \iint_{\Omega} 
+  U_0(\zeta,\eta)\frac{\exp(ikr)}{r}\dd\zeta\dd\eta
+\end{gather*}
+Jetzt betrachte eine Beleuchtung der Blende durch eine
+Punktlichtquelle in $Q$ mit $\vecR_0=(x_0,y_0,z_0)$ und Feldstärke
+$e_0$.
+Von dieser Kugelwelle wird eine Kugelwelle mit der Feldstärke $U_0$ in
+der Öffnung $\Omega$ erzeugt
+\begin{gather*}
+  U_0(\zeta,\eta) = \frac{e_0}{r_0} \exp(ikr_0)
+\end{gather*}
+Wir erhalten
+\begin{gather}
+  U_P(\vecR) \propto e_0 \iint_{\Omega} 
+  \frac{\exp(ik(r+r_0))}{rr_0}\dd\zeta\dd\eta
+\end{gather}
+Wir treffen die vereinfachende Annahme, dass $r, r_0\gg\lambda$.
+Bei Änderung des Beobachtungspunkts $P$ ändert sich das Produkt $rr_0$
+viel schwächer als $\exp(ik(r+r_0))$. Ersetze also zur Vereinfachung
+$rr_0\approx RR_0$ und ziehe diesen Ausdruck aus dem Integral:
+\begin{gather*}
+  U_P(\vecR) \propto \frac{e_0}{RR_0} \iint_{\Omega} 
+  \exp(ik(r+r_0)) \dd\zeta\dd\eta  
+  \label{UP}
+\end{gather*}
+$r$ und $r_0$ werden in der Exponentialfunktion durch die Koordinaten
+$\zeta$ und $\eta$ ersetzt.
+Für $Q$ und $P$ weit voneinander entfernt (im Vergleich zum
+Blendendurchmesser) gilt
+\begin{align*}
+  r &= \sqrt{(x-\zeta)^2+(y-\eta)^2+z^2} \\
+    &= R-\alpha\zeta - \beta\eta 
+      + O\left(\frac{\zeta^2}{R},\frac{\eta^2}{R}\right)
+      + \dotsb \\
+  r_0 &= R_0-\alpha_0\zeta - \beta_0\eta 
+        + O\left(\frac{\zeta^2}{R},\frac{\eta^2}{R}\right)
+      + \dotsb \\
+\end{align*}
+$\alpha$ und $\beta$ bzw. $\alpha_0$ und $\beta_0$ nennt man
+Richtungskosinus. Es gilt
+\begin{align*}
+  \alpha &= \frac{x}{R}
+  &\beta &= \frac{y}{R}
+  &\alpha_0 &= -\frac{x_0}{R}
+&\beta_0 &= -\frac{y_0}{R}
+\end{align*}
+\red{Achtung:} Richtungskosinus gegen $\zeta(x)$ und $\eta(y)$ zu
+berechnen; Vorzeichen!
+Insgesamt erhalten wir
+\begin{align*}
+  r+r_0 = R+R_0 - (alpha-\alpha_0)\zeta - (\beta-\beta_0)\eta 
+  + \underbrace{\psi}_{\mathclap{\text{höhere Ordn.}}}
+\end{align*}
+Die $k$-Vektoren der gebeugten Strahlen werden beschrieben durch
+\begin{align*}
+  k_x = k\alpha \qquad \text{und}\qquad k_y = k\beta
+  \qquad k=\frac{2\pi}{\lambda}=\sqrt{k_x^2+k_y^2+k_z^2}
+\end{align*}
+
+Die Näherungen, die in der Fraunhofer'schen Beugung getroffen werden,
+sind:
+\begin{itemize}
+\item $R\rightarrow\infty$
+\item $R_0\rightarrow\infty$
+\item $\psi\equiv 0$
+\end{itemize}
+Dann wird die Formel \eqref{UP} zu
+\begin{align*}
+  U_P(\alpha,\beta) 
+  & \underbrace{\propto \frac{e_0}{RR_0}}_{\nu_{P,0}} 
+    \iint_{\Omega} \dd\zeta\dd\eta
+    \exp\left( ik(\alpha-\alpha_0)\zeta - ik(\beta-\beta_0)\eta \right)\\
+  U_P(\alpha,\beta) 
+  &= \nu_{P,0} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+    \dd\zeta\dd\eta \Omega(\zeta,\eta)
+  \exp\left( ik(\alpha-\alpha_0)\zeta - ik(\beta-\beta_0)\eta \right)
+\end{align*}
+
+
+\minisec{Spezialfall: Senkrechter Einfall}
+Hier gilt $\alpha_0=\beta_0=0$, also
+\begin{gather*}
+  U_P(\alpha,\beta) 
+  = \nu_{P,0} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+    \dd\zeta\dd\eta \Omega(\zeta,\eta)
+  \exp\left( ik\alpha\zeta - ik\beta\eta \right)
+\end{gather*}
+Das ist die 2D-Fouriertransformation der Blendenfunktion.
+
+\minisec{Beispiele für Fraunhofer'sche Beugung}
+\begin{enumerate}[a)]
+\item \emph{Beugung am langen Spalt:}
+%% IMAGE MISSING
+Wir betrachten senkrecht einfallendes Licht auf einen Spalt mit Breite
+$b$ und Höhe $h$ ($h\gg b$). Die Transmissionsfunktion sei 
+$\Omega_\text{Spalt}(\zeta,\eta) = \Omega_\text{Spalt}(\eta)$.
+Die Integration über $\zeta$ liefert
+\begin{align*}
+  U_P(\alpha,\beta) 
+  &= \nu_{P,0} 
+  \int_{-\infty}^{\infty} \exp(k\alpha\zeta)\dd\zeta
+  \int_{-\infty}^{\infty} \Omega_\text{Spalt}(\eta)\exp(k\beta\eta)\dd\eta\\
+  &= \nu_{P,0} 2\pi\delta(k\alpha)
+    \int_{-\infty}^{\infty} \Omega_\text{Spalt}(\eta)\exp(k\beta\eta)\dd\eta
+\end{align*}
+wobei
+\begin{gather*}
+  \Omega_\text{Spalt}(\eta) = 
+  \begin{cases}
+    1 & -\frac{b}{2} < \eta < \frac{b}{2}\\
+    0 & \text{sonst}
+  \end{cases}
+\end{gather*}
+Damit wird die Fouriertransformation die einer Rechtecksfunktion:
+\begin{align*}
+  U_P(\beta) 
+  &\propto \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}\\
+  \text{Intensität}
+  &\propto (U_P(\beta))^2
+\end{align*}
+Insbesondere erhält man für $\beta=0$ 
+\begin{gather*}
+  I_\text{Spalt}(\beta=0) 
+  \propto \lim_{\beta\to0} \left(
+    \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}
+    \right)^2
+    = \dotsb = b^2
+\end{gather*}
+Das ist die Formel für Beugungsmuster am langen Spalt
+\begin{gather*}
+  \frac{I_\text{Spalt}(\beta)}{I_\text{Spalt}(0)}
+  = \left(
+    \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}
+  \right)^2
+  = \left(
+    \frac{\sin(\frac{\pi b\sin\theta}{\lambda})}
+    {\frac{\pi b\sin\theta}{\lambda}}
+  \right)^2
+  = \left(\frac{\sin B}{B}\right)^2
+\end{gather*}
+
+\end{enumerate}
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../OptikSkriptWS1516"
