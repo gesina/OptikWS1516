@@ -21,112 +21,197 @@ der Blende) und zu Intensitätsmodulationen am Schirm
 %%
 %Vorlesung vom 10.12
 %%
+
 \section{Fourier-Transformation}
-Mit der Fouriertransformation ist die Fourierreihe für periodisce Funktionen verwandt.
+Mit der Fouriertransformation ist die Fourierreihe für periodische
+Funktionen verwandt.
+
 \minisec{Fourierreihe}
-$f(t)$ ist eine komplexwertige periodische Funktion mit Periode $T=\frac{2\pi}{\omegao}$ und lässt sich als Summe darstellen.
+Sei $f(t)$ eine komplexwertige periodische Funktion mit Periode
+$T=\frac{2\pi}{\omegao}$, dann lässt sie sich als Summe wie folgt darstellen
 \begin{align*}
-	f(t)&=\sum_{k=-\infty}^{\infty} F_k\cdot e^{ik\omegao t}\\
-	=>\quad f(t)&=\sum_0^{\infty} A_k\cos(\omega_k t)+B_k\sin(\omega_k t)
-	\text{wobei: }\omega_k&=k\omegao=\frac{2\pi k}{T}&B_0&=0
+  f(t) &= \sum_{k=-\infty}^{\infty} F_k\cdot e^{ik\omegao t}\\
+  \Rightarrow\quad 
+  f(t) &= \sum_0^{\infty} A_k\cos(\omega_k t)+B_k\sin(\omega_k t)
 \end{align*}
-Wobei $\omegao$ die Kreisfrequenz der periodischen Funktion ist.Die Koeffizienten lassen sich berechnen, indem man beide Seiten mit $\exp(-ikt\omegao)$ multipliziert und über eine Periode integriert.
+wobei $B_0=0$ und $\omega_k=k\omegao=\frac{2\pi k}{T}$ die
+Kreisfrequenz der periodischen Funktion ist. Die Koeffizienten lassen
+sich berechnen, indem man beide Seiten mit $\exp(-ikt\omegao)$
+multipliziert und über eine Periode integriert
 \begin{align*}
-	A_k&=\frac{2}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}f(t)\cos(\omega_k t)\dd t&k&\neq 0\\
-	A_0&=\fracone{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}f(t)\dd t\\
-	B_k&=\frac{2}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}f(t)\sin(\omega_k t)\dd t\\
-	\text{bzw.}\quad F_k&=\fracone{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}f(t) e^{-k\omegao t}\dd t&-\infty&\leq k\leq\infty\\
-	\text{also}\quad f(t)&=A_0+\sum_{1}^{\infty}(A_k\cos(\omega_k t)+B_k\sin(\omega_k t)\\
-	&=F_0+\sum_{1}^{\infty}e^{i\omega_kt}\left(\frac{A_k-iB_k}{2}\right)+e^{-i\omega_kt}\left(\frac{A_k+iB_k}{2}\right)\\
-	&=\sum_{-\infty}^{\infty}F_ke^{i\omega_k t}
+  A_k &= \frac{2}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}}
+        f(t)\cos(\omega_k t)\dd t
+  & k&\neq 0\\
+  A_0 &= \fracone{T}\int_{-\frac{T}{2}}^{\frac{T}{2}} f(t)\dd t\\
+  B_k &= \frac{2}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}
+        f(t)\sin(\omega_k t)\dd t\\
 \end{align*}
-\paragraph{Beispiel 1:} periodische Rechtecksfunktion
+Das ergibt für die Summen-Koeffizienten $F_k$ der
+Fouriertransformierten
 \begin{align*}
-	f(t)&=\begin{Bmatrix}
-	0&\text{für}&-\frac{T}{2}\leq t\leq -\frac{b}{2}\\
-	a&\text{für}&-\frac{b}{2}\leq t\leq \phantom{-}\frac{b}{2}\\
-	0&\text{für}&\phantom{-} \frac{b}{2}\leq t\leq \phantom{-}\frac{T}{2}\\
-	\end{Bmatrix}
+  F_k &= \fracone{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}
+        f(t) e^{-k\omegao t}\dd t
+  &-\infty &\leq k\leq\infty\\
+  \text{also}\quad 
+  f(t) &= A_0 + \sum_{1}^{\infty}(A_k\cos(\omega_k t) + B_k\sin(\omega_k t)\\
+      &= F_0 + \sum_{1}^{\infty}e^{i\omega_kt} 
+        \left( \frac{A_k-iB_k}{2} \right)
+        + e^{-i\omega_kt}\left( \frac{A_k+iB_k}{2} \right)\\
+      &= \sum_{-\infty}^{\infty} F_k e^{i\omega_k t}
 \end{align*}
-Der nullte Koeffizient lautet dann:
+\paragraph{Beispiel 1} periodische Rechtecksfunktion
 \begin{align*}
-	F_0&=\frac{1}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}f(t)e^{-i\omegao 0 t}\dd t= \frac{ab}{T}
+  f(t)&=\left\{
+        \begin{array}{ll}
+          0&\text{für $-\frac{T}{2}\leq t\leq -\frac{b}{2}$}\\
+          a&\text{für $-\frac{b}{2}\leq t\leq \frac{b}{2}$}\\
+          0&\text{für $\phantom{-}\frac{b}{2}\leq t\leq \frac{T}{2}$}
+        \end{array}
+                        \right.
+\end{align*}
+Der nullte Koeffizient lautet dann
+\begin{align*}
+	F_0 &= \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}}
+          f(t)e^{-i\omegao t}\dd t
+          = \frac{ab}{T}
 \end{align*}
 Die weiteren Koeffizienten lauten:
 \begin{align*}
-	F_k&=\fracone{T}\int_{-\frac{b}{2}}^{\frac{b}{2}} ae^{i\omegao t}\dd t=\frac{a}{k\pi}\sin(k\omegao \frac{b}{2})
+	F_k &= \fracone{T} \int_{-\frac{b}{2}}^{\frac{b}{2}} 
+          ae^{i\omegao t}\dd t
+          = \frac{a}{k\pi}\sin(k\omegao\frac{b}{2})
 \end{align*}
 Im Spezialfall $b=\frac{b}{2}$ (50\% Duty-Cycle) gilt:
 \begin{align*}
-	F_0&=\frac{a}{2}& F_{\pm 2n}&=0&F_{\pm (2n+1)}&=\frac{a}{(2n+1)\pi}
+  F_0 &= \frac{a}{2}
+  &F_{\pm 2n} &= 0
+  &F_{\pm (2n+1)} &= \frac{a}{(2n+1)\pi}
 \end{align*}
-\paragraph{Beispiel 2:}Übergang zu nicht- periodischen Funktionen. Betrrachte nun wieder Rechteckfunktionen mit der Breite b, verändere nun aber die Periode bzw. den Abstand zwischen Rechteckimpulsen.
-Wenn die Periodendauer gegen unendlich geht ($T\longrightarrow\infty$), geht der Abstand der Fourierkoeffizienten gegen null. Dabei beschreiben die Fourierkoeffizienten immer noch die gleiche Funktion $f(\omega)$. Führt man nun eine Grenze $T_0$ ein kann man oberhalb davon, also bei $\vert t\vert >T_0$, $f(t)$ vernachlässigen. Die Koeffizienten werden also durch $\omega=k\omegao$ und $\fracone{T}$ bestimmt.
+
+\paragraph{Beispiel 2} Übergang zu nicht-periodischen
+Funktionen. Betrachte nun wieder Rechtecksfunktionen mit der Breite $b$,
+verändere nun aber die Periode bzw. den Abstand zwischen
+Rechtecksimpulsen.
+Wenn die Periodendauer gegen unendlich geht
+($T\longrightarrow\infty$), geht der Abstand der Fourierkoeffizienten
+gegen null. Dabei beschreiben die Fourierkoeffizienten immer noch die
+gleiche Funktion $f(\omega)$. Führt man nun eine Grenze $T_0$ ein kann
+man oberhalb davon, also bei $\vert t\vert >T_0$, $f(t)$
+vernachlässigen. Die Koeffizienten werden also durch $\omega=k\omegao$
+und $\fracone{T}$ bestimmt. 
 \begin{align*}
-	F_k&=\fracone{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} f(t) e^{-ik\omegao t}\dd t
+	F_k &= \fracone{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} 
+          f(t) e^{-ik\omegao t}\dd t
 \end{align*}
-Führe nun eine Funktion $F(\omega)$ ein, deren Funktionswerte bei $\omega=\omegao k$ die Fourierkoeffizienten $F_k$ bestimmen.
+Führe nun eine Funktion $F(\omega)$ ein, deren Funktionswerte bei
+$\omega=\omegao k$ die Fourierkoeffizienten $F_k$ bestimmen.
 \begin{align*}
-	F(\omega)&=\int_{-\frac{T}{2}}^{\frac{T}{2}}f(t)e^{-i\omega t}\dd t\\
-	F_k&=\fracone{T}F(\omega_k)=\fracone{T}F(k\omega)
+  F(\omega) &= \int_{-\frac{T}{2}}^{\frac{T}{2}}
+              f(t)e^{-i\omega t}\dd t\\
+  F_k &= \fracone{T} F(\omega_k)        
+=\fracone{T}F(k\omega)
 \end{align*}
-Wenn man dies nun in $f(t)$ einsetzt erhält man:
+Wenn man dies nun in $f(t)$ einsetzt erhält man
 \begin{align*}
-	f(t)&=\sum_{k=-\infty}^{\infty}\fracone{T} F(k\omegao)e^{ik\omegao t}
+  f(t) &= \sum_{k=-\infty}^{\infty}
+         \fracone{T} F(k\omegao)e^{ik\omegao t}
 \end{align*}
-Da $\fracone{T}$ direkt proportional zum Frequenzabstand $\dd\omega =\omegao$ zwischen zwei Fourierkomponenten ist, folgt daraus:
+Da $\fracone{T}$ direkt proportional zum Frequenzabstand 
+$\dd\omega=\omegao$ zwischen zwei Fourierkomponenten ist, folgt daraus
 \begin{align*}
-	f(t)&=\sum_{k=-\infty}^{\infty}\frac{\dd \omega}{2\pi} F(k\omegao)e^{ik\omegao t}
+	f(t) &= \sum_{k=-\infty}^{\infty}
+           \frac{\dd \omega}{2\pi} F(k\omegao) e^{ik\omegao t}
 \end{align*}
-Wenn nun die Periodendauer gegen unendlich geht, wird $\dd \omega$ infitissimal klein und man erhält die Fouriertransformation $f(t)$ mit ihrer Fouriertransformierten $F(\omega)$.
+Wenn nun die Periodendauer gegen unendlich geht, 
+wird $\dd \omega$ infinitesimal klein und man erhält die
+Fouriertransformation $f(t)$ mit ihrer Fouriertransformierten
+$F(\omega)$.
 \begin{align*}
-	f(t)&=\int_{-\infty}^{\infty} F(\omega)e^{i\omega t}\frac{\dd\omega}{2\pi}\\
-	F(\omega)&=\int_{-\infty}^{\infty} f(t)e^{-i\omega t}\dd t
+  f(t) &= \int_{-\infty}^{\infty} 
+         F(\omega)e^{i\omega t}\frac{\dd\omega}{2\pi}\\
+  F(\omega) &= \int_{-\infty}^{\infty} 
+              f(t)e^{-i\omega t}\dd t
 \end{align*}
-Die Abbildung $f(t)\longrightarrow F(\omega)$ ergibt das Frequenzspektrum der Funktion $f(t)$.
-\paragraph{Messungen:} Bei Messungen wird meist nur die Intensität in Abhängigkeit von Zeit und Frequenz gemessen. Die Intensitäten sind aber nicht über eine Fouriertransformation miteinander verknüpft, deshalb muss man $I\propto E^2$ ausnutzen, denn die E-Felder in Abhängigkeit zur Zeit und Frequenz sind wieder über eine Fouriertransformation miteinander verknüpft.
+Die Abbildung $f(t)\longrightarrow F(\omega)$ ergibt das
+Frequenzspektrum der Funktion $f(t)$.
+
+\paragraph{Messungen} Bei Messungen wird meist nur die Intensität in
+Abhängigkeit von Zeit und Frequenz gemessen. Die Intensitäten sind
+aber nicht über eine Fouriertransformation miteinander verknüpft,
+deshalb muss man $I\propto E^2$ ausnutzen, denn die $E$-Felder in
+Abhängigkeit zur Zeit und Frequenz sind wieder über eine
+Fouriertransformation miteinander verknüpft.
 
 \minisec{Rechenregeln und Spezialfälle}
-Betrachte nun die Delta-Funktion $\delta(x)$ bzw. $\delta(\omega), \delta(t)$.$\delta(t)$ ist überall identisch Null außer bei $t=0$.
+Betrachte nun die Delta-Funktion $\delta(x)$ bzw. $\delta(\omega)$,
+$\delta(t)$. $\delta(t)$ ist überall identisch Null außer bei $t=0$. 
 \begin{align*}
-	\delta(t)&=\begin{Bmatrix}
-	 0&\text{für}&t\neq 0\\
-	 \infty&\text{für}&t=0
-	\end{Bmatrix}\\
-	\delta(\omega)&=\fracone{2\pi}\int_{-\infty}^{\infty}e^{-i\omega t}\dd t
+	\delta(t) &= \begin{Bmatrix}
+      0 &\text{für} &t\neq 0\\
+      \infty &\text{für} &t=0
+    \end{Bmatrix}\\
+  \delta(\omega) &= \fracone{2\pi}\int_{-\infty}^{\infty}
+                   e^{-i\omega t}\dd t
 \end{align*}
-Eine konstante Funktion besitzt also als FT die $\delta(\omega)$-Funktion.
+Eine konstante Funktion besitzt also als Fouriertransformierte die
+$\delta(\omega)$-Funktion.
 \begin{align*}
-	\int_{x-a}^{x+a}f(t)\delta(t-\omega)\dd t&=f(\omega)\\
-	\delta(ax)&=\fracone{a}\delta(x)\\
-	\delta(g(x))&=\sum_{i=1}^{n}\fracone{g\prime (x_i)}\delta(x-x_i)&\text{mit:}\quad g(x_i)&0&g\prime(x_i)&\neq 0
+  \int_{x-a}^{x+a} f(t)\delta(t-\omega)\dd t
+  &= f(\omega)\\
+  \delta(ax) &= \fracone{a}\delta(x)\\
+  \delta(g(x)) &= \sum_{i=1}^{n}\fracone{g\prime (x_i)}\delta(x-x_i)
+             &\text{mit } g(x_i)&0&g\prime(x_i)&\neq 0
 \end{align*}
+
 \minisec{Der Faltungssatz}
 Eine Faltung ist mathematisch definiert als 
 \begin{align*}
-	f(t)\otimes g(t)&=\int_{-\infty}^{\infty}f(\zeta)g(t-\zeta)\dd\zeta
-	x(t)&=g(t)\otimes f(t)& \text{FT:}\quad X(\omega)&=G(\omega)F(\omega)\\
-	=>\quad x(t)&=FT^{-1}(FT(g(t))\cdot FT(f(t))
+  f(t)\otimes g(t)
+  &\coloneqq \int_{-\infty}^{\infty} f(\zeta)g(t-\zeta)\dd\zeta
 \end{align*}
-Eine Faltung lässt sich berechnen, indem die zu faltenden Funktionen $g(t)$ und $f(t)$ fouriertransformiert werde, dann miteinander multipliziert werden und schließlich das Produkt wieder in den ursprünglichen Raum rücktransformiert wird.
+Die Fouriertransformation einer Faltung sieht wie folgt aus ($F$ FT
+von $f$, $G$ FT von $g$):
+\begin{align*}
+  x(t) &\coloneqq g(t)\otimes f(t)
+  &\text{FT: } X(\omega) &= G(\omega)F(\omega)\\
+  \Rightarrow\quad 
+  x(t) &= FT^{-1}(FT(g(t))\cdot FT(f(t))
+\end{align*}
+Eine Faltung lässt sich berechnen, indem die zu faltenden Funktionen
+$g(t)$ und $f(t)$ fouriertransformiert, dann miteinander
+multipliziert werden und schließlich das Produkt wieder in den
+ursprünglichen Raum rücktransformiert wird.
+Hierbei ist die Fouriertransformation (FT) als Operation zwischen
+Funktionsräumen aufgefasst (Funktionen $\to$ Funktionen).
+
 \minisec{Spezielle Funktionen}
-\paragraph{Gauß-Funktion} Eine (breite) Gauß-Funktion transformiert immer in eine (schmale) Gauß-Funktion.
+\paragraph{Gauß-Funktion} Eine (breite) Gauß-Funktion transformiert
+immer in eine (schmale) Gauß-Funktion.
 \begin{align*}
-	F(\omega)&=\fracone{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-\frac{t^2}{2\sigma^2}}e^{-i\omega t}\dd t
-	=e^{-\frac{\sigma^2\omega^2}{2}}
+	F(\omega) &= \fracone{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}
+                e^{-\frac{t^2}{2\sigma^2}} e^{-i\omega t} \dd t
+                = e^{-\frac{\sigma^2\omega^2}{2}}
 \end{align*}
-Die Gauß-Funktion ist eine Darstellung der $\delta$-Funktion für $\sigma\longrightarrow 0$.
-\paragraph{Exponentialfunktion} Eine (breite) Exponentialfunktion transformiert in eine (schmale) Lorentzfunktion.
+Die Gauß-Funktion ist eine Darstellung der $\delta$-Funktion für
+$\sigma\longrightarrow 0$.
+
+\paragraph{Exponentialfunktion} Eine (breite) Exponentialfunktion
+transformiert in eine (schmale) Lorentzfunktion.
 \begin{align*}
-	f(t)&=e^{-\frac{\vert t\vert}{\tau}}\\
-	F(\omega)&=\frac{2\tau}{1+\omega^2\tau}
+	f(t) &= e^{-\frac{\vert t\vert}{\tau}}\\
+	F(\omega) &= \frac{2\tau}{1+\omega^2\tau}
 \end{align*}
-\paragraph{Rechteckfunktion} Eine Rechteckfunktion transformiert in eine sinc- Funktion.
+
+\paragraph{Rechteckfunktion} Eine Rechteckfunktion transformiert in
+eine sinc-Funktion.
 \begin{align*}
-	F(\omega)&=2\int_{0}^{\frac{T}{2}}\cos(\omega t)\dd t&\propto-\frac{\sin(x)}{x}x
+  F(\omega) &= 2\int_{0}^{\frac{T}{2}}\cos(\omega t)\dd t
+  &\propto -\frac{\sin(x)}{x} x
 \end{align*}
+
 %Bei der Funktion stimmt iwas noch nicht und sie kommt vollständig noch in der Übung dran
 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../OptikSkriptWS1516"
 %%% End:
