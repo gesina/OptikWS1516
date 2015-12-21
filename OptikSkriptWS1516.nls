@@ -78,7 +78,7 @@
   \item [{$A$}]\begingroup Fläche\nomeqref {2.1}\nompageref{10}
   \item [{$a$}]\begingroup Extinktionskoeffizient eines Mediums\nomeqref {3.0}
 		\nompageref{15}
-  \item [{$b$}]\begingroup bildseitige Brennweite\nomeqref {7.1}
+  \item [{$b$}]\begingroup bildseitige Brennweite, Bildweite\nomeqref {7.1}
 		\nompageref{42}
   \item [{$c$}]\begingroup Lichtgeschwindigkeit im Vakuum;   $ c=\frac{1}{\sqrt{\epso\muo}}=\SI{2.9979e8}{\m\per\s}$\nomeqref {2.1}
 		\nompageref{8}
@@ -93,9 +93,7 @@
 		\nompageref{10}
   \item [{$f_j$}]\begingroup Oszillatorstärke;   $\eps(\omega)   = 1 + \frac{e^2}{\epso m_e}\sum_{j}   \frac{f_jN_j}{\omegao^2-\omega^2+i\gamma_j\omega}$\nomeqref {3.1}
 		\nompageref{18}
-  \item [{$g$}]\begingroup Gegenstandsweite\nomeqref {7.1}
-		\nompageref{41}
-  \item [{$g$}]\begingroup gegenstandsseitige Brennweite\nomeqref {7.1}
+  \item [{$g$}]\begingroup gegenstandsseitige Brennweite, Gegenstandsweite\nomeqref {7.1}
 		\nompageref{42}
   \item [{$I$}]\begingroup Lichtintensität;   $I=\langle\vert\vecS\vert\rangle$\nomeqref {2.1}
 		\nompageref{10}

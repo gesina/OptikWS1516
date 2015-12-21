@@ -13,6 +13,12 @@
 
   \indexspace
 
+  \item Beugung
+    \subitem am Doppelspalt, \hyperpage{54}
+    \subitem am langen Spalt, \hyperpage{54}
+    \subitem an kreisf\IeC {\"o}rmiger \IeC {\"O}ffnung, \hyperpage{54}
+    \subitem an Rechtecksblende, \hyperpage{54}
+  \item Beugungsordnung, \hyperpage{57}
   \item Brechungsgesetz
     \subitem Snellins'sches Brechungsgesetz, \hyperpage{21}
   \item Brechzahl, \hyperpage{14}
@@ -36,6 +42,7 @@
   \item Doppelbrechung, \hyperpage{33}
     \subitem Gangunterschied, \hyperpage{35}
     \subitem Phasenunterschied, \hyperpage{35}
+  \item Doppelspalt, \hyperpage{54}
 
   \indexspace
 
@@ -47,19 +54,26 @@
 
   \item Faraday-Effekt, \hyperpage{37}
   \item Fermat'sche Prinzip, \hyperpage{39}
+  \item Fraunhofer'sche Beugung, \hyperpage{51}
+  \item Fresnel'sche Beugung, \hyperpage{51}
   \item Fresnel'sche Formeln, \hyperpage{22}
+  \item Fresnel-Huygen'sches   Prinzip, \hyperpage{51}
   \item Fresnelsche Formeln, \hyperpage{25}
 
   \indexspace
 
   \item Gau\IeC {\ss }sche Optik, \hyperpage{40}
   \item geometrische Optik, \hyperpage{39}
+  \item Gitterspektrometer, \hyperpage{56}
   \item Gradient, \hyperpage{5}
   \item Gruppengeschwindigkeit, \hyperpage{12}
 
   \indexspace
 
+  \item Hauptmaxima, \hyperpage{56}
+  \item Hauptmaximum, \hyperpage{56}
   \item Hauptschnitt, \hyperpage{34}
+  \item Huygen'sche Prinzip, \hyperpage{51}
 
   \indexspace
 
@@ -97,6 +111,7 @@
   \indexspace
 
   \item Nabla-Operator, \hyperpage{5}
+  \item Nebenmaxima, \hyperpage{56}
 
   \indexspace
 
@@ -106,6 +121,7 @@
   \indexspace
 
   \item paraxiale   Optik, \hyperpage{40}
+  \item Parseval'sche Formel, \hyperpage{51}
   \item Phasenfaktoren, \hyperpage{20}
   \item Phasengeschwindigkeit, \hyperpage{8}
   \item Photonenenergie, \hyperpage{10}
@@ -149,10 +165,12 @@
 
   \item Variationsprinzip, \hyperpage{39}
   \item Verdet-Konstante, \hyperpage{37}
+  \item Verschiebungssatz, \hyperpage{51}
   \item Verz\IeC {\"o}gerungspl\IeC {\"a}ttchen, \hyperpage{35}
 
   \indexspace
 
+  \item Wei\IeC {\ss }licht, \hyperpage{56}
   \item Wellenfunktion
     \subitem ebene Welle, \hyperpage{9}
     \subitem Kugelwelle, \hyperpage{9}
