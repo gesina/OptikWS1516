@@ -637,8 +637,84 @@ und $N$ die Zahl der Gitterstriche.
 
 \end{enumerate}
 
+%%-----------------
+% Vorlesung vom 7.1
+%%-----------------
+\minisec{Spektrometer}
+Für ein Spektrometer fordert man eine hohe spektrale Auflösung bei großem Lichtdurchsatz.\\
+Für Spektrometer gibt es verschiedene Arten.\\
+\paragraph{Prismenspektrograph:} Der Vorteil an diesem ist die eindeutige Zuordnung der Wellenlänge. Er besitzt aber nur einen geringen Lichtdurchsatz und eine geringe Dispersion.\\
+\paragraph{Gitterspektrograph} mit Reflexionsgitter und Reflexionsoptik. Es besteht aufgrund der Gittergleichung ein fester Zusammenhang zwischen Ablenkwinkel $\theta_a=\alpha+\beta$ und der Wellenlänge.
+%%-----------------------------
+% Skizze zum Gitterspektrometer
+%%-----------------------------
+$\theta_a$ bleibt in der Anordnung fest. Durch Drehen des Gitters werden bei festem $\theta_a$ Ein- und Ausfallswinkel geändert und so die Transmissionswellenlänge durchgestimmt.
+% ( das hat er so in der Vorlesung geschrieben, ich würde eher sagen "bestimmt", aber es weiß auch keiner was er damit gemeint hat)
+Für $\theta_a\approx 0$ (beispielsweise in der Litrow-Anordnung) gilt $\alpha=-\beta$.\\
+\emph{Gittergleichung für Litrow-Anordnung:}
+\begin{align*}
+	2a\sin\beta&=n\lambda\\
+	\lambda&= \frac{2a}{n}\sin\beta
+\end{align*}
+wobei $a$ der Gitterabstand und $n$ die Beugungsordnung ist. Die \emph{apparative Wellenlängenauflösung} wird durch die Spaltbreite und die Brennweite des Spektrometers bestimmt:
+\begin{align*}
+	\Delta\lambda&=\diff[\lambda]{\beta}\Delta\Phi_1\\
+	\Delta\Phi\approx \frac{\beta_1}{f}
+\end{align*}
+Die zweite Gleichung ist die Divergenz des Lichtbündels von Hohlspiegel auf das Gitter, $b_1$ die Breite des Eintrittspalts und $f$ die Brennweite des Hohlspiegels. Man erhält eine bessere Auflösung bei einem langen Spektrometer und kleinem Spalt. Der Austrittsspalt bestimmt die Genauigkeit in der Bestimmung des Ablenkwinkel $\theta_a$. Weiter nehmen wir an, dass $B_1=B_2=B$.
+\begin{align*}
+	\Delta\lambda\approx\diff[\lambda]{\beta}\Delta\Phi=\frac{2a}{n}\cos\beta \frac{B}{f}
+\end{align*}
+Man erhält somit eine ideale Auflösung für $B\approx\lambda$.
+\minisec{Beugung am 2D-Gitter}
+\minisec{Beugung am 3D-Gitter}
+wichtig für die Strahlenanalyse, beispielsweise bei:
+\begin{itemize}
+	\item Röntgenbeugung: liegt im Bereich von 10\,keV
+	\item Elektronenbeugung: 50-100\,eV
+\end{itemize}
 
 
+\section{Interferenz und Kohärenz}
+Betrachte zwei Punktquellen $Q_1$ und $Q_2$, die am Ort $\vecr_0$ zur Überlagerung der elektrischen Felder führen.
+\begin{align*}
+	E_{ges}(x=0)=E_1+E_2=\frac{A_1}{x_0}e^{i\omega t-ikx_0}*\frac{A_2}{x_0}e^{i\omega t- ikx_0}
+\end{align*}
+mit $A_1=A_2=A$ folgt für die Intensitäten:
+\begin{align*}
+	I(0)=\fracone{2}\epso nc \langle \vert E_1+E_2\vert^2 \rangle =\epso nc\frac{2A^2}{x_0^2}=4I_1
+\end{align*}
+Man erhält also \emph{konstruktive Interferenz}.\\
+Bewege jetzt den Beobachtungspunkt P um $\Delta x$. 
+Dadurch haben die Wellen jetzt einen relativen Phasenunterschied von $\Delta\phi=2\Delta x\frac{2\pi}{\lambda}$.
+Wenn $\Delta x=\frac{\lambda}{4}$ ist $\Delta\phi=\pi$ und man erhält \emph{destruktive Interferenz}, wobei die mittlere Intensität gleich 0 ist.\\
+\emph{Achtung:} Dies ist nur für \emph{kohärentes} Licht möglich, also für Licht mit fester Phasenbeziehung. Schwankt die Phase statistisch, so kann man ( je nach Beobachtungsdauer) die Interferenz nicht mehr beobachten.
+
+\minisec{Kohärenz von Lichtquellen}
+Abschätzung der Kohärenzzeit aus der \enquote{Unschärfebeziehung} $\D t\D\nu\approx1$.
+Das Weißlicht einer Glühbirne hat eine Bandbreite von $\D\nu=\SI{4e14}{\hertz}$. Daraus erhält man die \emph{Kohärenzzeit} $t_c=\frac{l_c}{c}=\SI{2,5e-15}{\second}$ und die \emph{Kohärenzlänge}:
+\begin{align*}
+	l_c=t_c c_{Licht}
+\end{align*}
+Kohärentes Licht für Interferenzexperimente wird typischerweise durch \enquote{Spaltanordnungen} realisiert, wie:
+\begin{itemize}
+	\item youngscher Doppelspalt
+	\item Fresnelsches Biprisma
+	\item Fresnelscher Doppelspiegel
+\end{itemize}
+Betraachte nun die \emph{räumliche Kohärenz} bei einem Doppelspalt.
+%%---------
+%Skizze mit Doppelspalt
+%----------
+Lichtquelle hat die Ausdehnung $2d$,Abstand $z_0$, Spaltabstand $a$ und Gangunterschied $\D g=g_1-g_2\approx a\alpha$.
+Wenn $\D g<<\frac{\lambda}{2}$ liegt räumliche Kohärenz vor. Die Interferenz verschwindet, wenn das Beugungsmaximum im Beugungsminimum \enquote{sitzt}.\\
+\emph{Achtung:}gilt für alle Punkte der Lichtquelle.\\
+Für große Abstände $z_0$ gilt $\D g=\frac{ad}{z_0}<<\frac{\lambda}{2}$ mit Öffnungswinkel $\phi=\frac{a}{z_0}$ oder
+\begin{align*}
+	\D g &=\frac{ad}{z_0}<<\frac{\lambda}{2}\\
+	\phi &<<\frac{\lambda}{2d}
+\end{align*}
+als Bedingung für räumliche Kohärenz. Kohärenz liegt dann vor, wenn der Durchmesser der Quelle und genannter Öffnungswinkel klein sind.
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../OptikSkriptWS1516"
