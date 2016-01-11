@@ -83,6 +83,7 @@
   \item [{$c$}]\begingroup Lichtgeschwindigkeit im Vakuum;   $ c=\frac{1}{\sqrt{\epso\muo}}=\SI{2.9979e8}{\m\per\s}$\nomeqref {2.1}
 		\nompageref{8}
   \item [{$d$}]\begingroup Dicke\nomeqref {5.0}\nompageref{35}
+  \item [{$d$}]\begingroup Filmdicke\nomeqref {8.1}\nompageref{59}
   \item [{$e$}]\begingroup Elementarladung\nomeqref {3.1}
 		\nompageref{18}
   \item [{$E_\text{ph}$}]\begingroup Energie eines Photons\nomeqref {2.1}
@@ -95,6 +96,8 @@
 		\nompageref{18}
   \item [{$g$}]\begingroup gegenstandsseitige Brennweite, Gegenstandsweite\nomeqref {7.1}
 		\nompageref{42}
+  \item [{$GU$}]\begingroup Gangunterschied\nomeqref {8.3}
+		\nompageref{60}
   \item [{$I$}]\begingroup Lichtintensität;   $I=\langle\vert\vecS\vert\rangle$\nomeqref {2.1}
 		\nompageref{10}
   \item [{$I_t$}]\begingroup transmittierte Intensität\nomeqref {4.6}

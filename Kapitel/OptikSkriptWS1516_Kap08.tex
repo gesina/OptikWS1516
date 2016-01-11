@@ -767,6 +767,182 @@ mit Öffnungswinkel $\phi=\frac{a}{z_0}$ oder
 als Bedingung für räumliche Kohärenz. Kohärenz liegt dann vor, wenn
 der Durchmesser der Quelle und genannter Öffnungswinkel klein sind.
 
+%-----------------
+% VL 11.01.2016
+%-----------------
+\marginpar{11.01.2016}
+
+\section{Zweistrahlinterferenzen}
+\subsection{Interferenzen dünner Schichten}
+Bei dünnen, dielektrischen Schichten mit $n\approx\num{1.5}$ zeigt
+sich ein Reflexionsvermögen von ca. \SI{4}{\percent}.
+Daher wird nur der 1.~und 2.~Reflex an der zweiten Grenzfläche
+betrachtet. Es zeigt sich \emph{Zweifachinterferenz} (der Strahl, der an der
+1.~Grenzfläche reflektiert wird, interferiert mit dem Strahl, der an der
+2.~Grenzfläche reflektiert und durch die 1. wieder transmittiert wird).
+%% IMAGE MISSING
+
+Die Lage der Interferenzmaxima~bzw. -minima ist durch die
+Phasenverschiebung bei Reflexion
+(\emph{Fresnel-Koeffizient}\index{Fresnel-Koeffizient}) und durch den
+Gangunterschied gegeben.
+\begin{enumerate}[a)]
+\item \emph{Interferenzen gleicher Neigung}
+Betrachte einen ausgedehnten, parallelen Film der Dicke
+$d$\nomenclature{$d$}{Filmdicke} mit Brechungsindex
+$n_f$ (umgebendes Medium habe $n_1=1$ und $n_2=1$), auf den ein Strahl mit
+Einfallswinkel $\theta_1$ trifft. 
+Es ergeben sich Phasensprünge $\Delta\Phi_1$ und $\Delta\Phi_2$ an der
+1.~ bzw. 2.~Grenzfläche.
+
+Der Winkel des transmittierten Strahls zur 2.~Grenzfläche sei
+$\theta_f$ (gegeben mit Snellius).
+Wir bezeichnen mit $a=b$ die Strecke, die der transmittierte Strahl
+von der 1.~zur 2.~Grenzfläche (bzw. umgekehrt) zurücklegt und mit $x$
+den Streckenunterschied der betrachteten zurückgeworfenen Strahlen.
+%% IMAGE MISSING (Stahlteilung am ausgedehnten dünnen Film mit Phasenverschiebungen)
+
+Es gilt
+\begin{align}\label{*}
+  a &= 2d\tan\theta_f \\\nonumber
+  b &= \frac{d}{\cos\theta_f}\\\nonumber
+  x &= a\sin\theta_1
+\end{align}
+Für die Phasensprünge gilt
+\begin{align}\label{Phasendifferenzen}
+  \Delta\Phi_1 &= \pi &\text{falls } n_f>n_1\\\nonumber
+  \Delta\Phi_1 &= 0   &\text{falls } n_f<n_1\\\nonumber
+  \Delta\Phi_2 &= \pi &\text{falls } n_2>n_f\\\nonumber
+  \Delta\Phi_1 &= 0   &\text{falls } n_2<n_f
+\end{align}
+Wichtig für die Interferenz ist die Phasendifferenz
+\begin{gather*}
+  \Delta\Phi \coloneqq \Delta\Phi_2 - \Delta\Phi_1
+\end{gather*}
+Wegen \eqref{Phasendifferenzen} gibt die drei Möglichkeiten
+\begin{gather*}
+  \Delta\Phi \pm \pi  
+  \qquad\text{oder}\qquad 
+  \Delta\Phi = 0\,,
+\end{gather*}
+je nachdem, ob der Film einen größeren oder
+kleineren Brechungsindex als \emph{beide} umgebenden Materialien hat,
+oder bei einem größer, beim anderen kleiner. Genauer
+\begin{align*}
+  \Delta\Phi 
+  &=
+    \begin{cases}
+      \phantom{-}\pi & n_f<n_1\text{ und }n_f<n_2\\
+      -\pi           & n_f>n_1\text{ und }n_f>n_2\\
+      \phantom{-}0   & n_1<n_f<n_2\\ 
+      \phantom{-}0   & n_2<n_f<n_1\\
+    \end{cases}
+\end{align*}
+Der Gangunterschied $\GU$\nomenclature{$GU$}{Gangunterschied} ist
+\begin{gather*}
+  \GU = 2n_f b - n_1x 
+\end{gather*}
+Verwende \eqref{*} und Snellius ($n_1\sin\theta_1 = n_f\sin\theta_f$),
+um $\GU$ zu berechnen:
+\begin{align*}
+  \GU &= 2 n_f\frac{d}{\cos\theta_f} 
+        - n_f\frac{\sin\theta_f}{\sin\theta_1} \cdot a\sin\theta_1\\
+      &= 2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot a\\
+      &\overset{\mathllap{\eqref{*}}}{=} 
+        2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot 2d\tan\theta_f\\
+      &= \frac{2d}{\cos\theta_f}\left( n_f-n_f\sin^2\theta_f\right)\\
+      &= \frac{2dn_f}{\cos\theta_f}\cos^2\theta_f\\
+      &= 2dn_f\cos\theta_f
+\end{align*}
+Wir erhalten konstruktive Interferenz bei
+\begin{gather*}
+  \frac{\GU}{\lambda} = \frac{\Delta\Phi}{2\pi} = m 
+  \qquad m\in\N
+\end{gather*}
+Konstruktive Interferenz findet statt, wenn folgendes erfüllt ist
+\begin{gather*}
+  2n_f d\cos\theta_f = \left( m+\frac{\Delta\Phi}{2\pi} \right)\lambda
+\end{gather*}
+Hier bilden sich \emph{Haidingerschen Ringe}\index{Haidingerschen Ringe}.
+
+\item \emph{Interferenzen gleicher Dicke}
+  Betrachte eine Variation der optischen Dicke $n_f\cdot d$.
+  (z.\,B. Ölfilme oder Seifenblasen).
+  %% IMAGE MISSING (Zweistrahlinterferenz am Ölfilm auf Wasser)
+
+  Wir nehmen senkrechten Lichteinfall an, dann ergibt sich eine
+  konstruktive Interferenz bei
+  \begin{gather*}
+    \frac{2 n_f d}{\lambda} = (m+\frac{1}{2})
+  \end{gather*}
+
+  Betrachtet man zwei Platten, die in einem Winkel $\alpha$ übereinander
+  liegen (äquidistant), ergeben sich nach Keil Interferenzen bei
+  \begin{gather*}
+    \Delta x = \frac{\lambda}{2\alpha}
+  \end{gather*}
+  %% IMAGE MISSING
+
+  So kann auch die Präzision einer Linse geprüft werden: Lege die Linse
+  auf eine planare Platte (Krümmungsradius $R$ der Linse wesentlich
+  größer als maximaler Abstand der Linse zur Platte).
+  Dann sollten sich konzentrische Kreise (Newton'sche Ringe) vom Radius
+  \begin{gather*}
+    r_m = \sqrt{\frac{(m+1)R\lambda}{n_f}}
+  \end{gather*}
+  für den $m$ten-Ring bilden (s. Übung).
+  In gleicher Weise kann ein kleiner Abstand zweier Objekte oder die
+  Dicke einer Schicht/Stufen auf einer dünnen Schicht gemessen werden.
+
+\item \emph{Dielektrische Schichten und Antireflexvergütungen}
+  Hat das an Forder-~und Rückseite der dünnen Schicht reflektierte Licht
+  die gleiche Feldstärke, kann es bei destruktiver Interferenz zu
+  völliger Auslöschung kommen. 
+  So können \emph{Anti-Reflex-Schichten}\index{Anti-Reflex-Schicht}
+  zustande kommen.
+
+  Betrachte eine Glasplatte mit Brechungsindex $n_2$ und eine Schicht
+  mit Dicke $d$ und Brechungsindex $n_f$, die aus Luft ($n_1=1$) heraus
+  beleuchtet wird. Es sei $n_f<n_2$, also $n_1<n_f<n_2$, so dass die
+  Phasenverschiebung $\Delta\Phi$ in Reflexion Null wird.
+  Wir nehmen senkrechten Einfall an. Dann findet destruktive
+  Interferenz (1.~Minimum) bei
+  \begin{gather*}
+    2n_fd = \frac{\lambda}{2}
+  \end{gather*}
+  statt. Die optische Schichtdicke $dn_f$ muss also
+  $\frac{\lambda}{4}$ sein, auch \enquote{$\frac{\lambda}{4}$-Schicht}
+  genannt.
+  Für völlige Auslöschung müssen die Reflexionskoeffizienten beim
+  Eintritt und Austritt aus der Schicht (mit $n_f$) gleich groß
+  werden, die Bedingung für eine 
+  \emph{Anti-Reflex-Vergütung}\index{Anti-Reflex-Vergütung} in
+  Abhängigkeit von $\lambda$ ist also
+  \begin{gather*}
+    n_f = \sqrt{n_1n_2} 
+    \qquad\text{und}\qquad
+    n_fd = \frac{\lambda}{4}
+  \end{gather*}
+
+\end{enumerate}
+
+%---
+
+\subsection{Interferometer}
+\paragraph{Michelson Interferometer}%
+\index{Interferometer!Michelson Interferometer}
+%% IMAGE MISSING
+
+Das Michelson Interferometer kann zur Längenmessung verwendet werden.
+Es ergibt sich Interferenz durch eine Aufspaltung der Wellenamplitude.
+Außerdem kann man die Kohärenzlänge $\Delta s$ einer Lichtquelle
+messen, da diese sich proportional zu $\frac{1}{\Delta\lambda}$
+(d.\,h. invers zur spektralen Bandbreite) verhält.
+
+
+
+
+
 
 %%% Local Variables:
 %%% mode: latex
