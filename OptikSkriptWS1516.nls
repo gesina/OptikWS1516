@@ -75,6 +75,8 @@
 		\nompageref{6}
   \item [{$\vec{E}$}]\begingroup elektrische Feldstärke\nomeqref {2.0}
 		\nompageref{6}
+  \item [{$A$}]\begingroup Austrittsarbeit beim Photoeffekt; Materialkonstante\nomeqref {9.0}
+		\nompageref{64}
   \item [{$A$}]\begingroup Fläche\nomeqref {2.1}\nompageref{10}
   \item [{$a$}]\begingroup Extinktionskoeffizient eines Mediums\nomeqref {3.0}
 		\nompageref{15}
@@ -88,6 +90,14 @@
 		\nompageref{18}
   \item [{$E_\text{ph}$}]\begingroup Energie eines Photons\nomeqref {2.1}
 		\nompageref{10}
+  \item [{$E_B(x,y)$}]\begingroup Bildfeld\nomeqref {8.3}
+		\nompageref{62}
+  \item [{$E_L(x,y)$}]\begingroup Auslesefeld beim Auslesen eines Hologramms\nomeqref {8.3}
+		\nompageref{62}
+  \item [{$E_O$}]\begingroup Objektwelle in der Holographie\nomeqref {8.3}
+		\nompageref{62}
+  \item [{$E_R$}]\begingroup Referenzwelle in der Holographie\nomeqref {8.3}
+		\nompageref{62}
   \item [{$F_\text{el}$}]\begingroup elektrische Kraft\nomeqref {2.1}
 		\nompageref{10}
   \item [{$F_\text{mag}$}]\begingroup magnetische Kraft, Lorentzkraft\nomeqref {2.1}
@@ -98,8 +108,12 @@
 		\nompageref{42}
   \item [{$GU$}]\begingroup Gangunterschied\nomeqref {8.3}
 		\nompageref{60}
+  \item [{$h$}]\begingroup Plank'sches Wirkungsquantum;   $h=\SI{6.626e-34}{\J\s}$\nomeqref {9.0}
+		\nompageref{64}
   \item [{$I$}]\begingroup Lichtintensität;   $I=\langle\vert\vecS\vert\rangle$\nomeqref {2.1}
 		\nompageref{10}
+  \item [{$I_\text{max}$}]\begingroup Sättigungsstrom beim Photoeffekt\nomeqref {9.0}
+		\nompageref{63}
   \item [{$I_t$}]\begingroup transmittierte Intensität\nomeqref {4.6}
 		\nompageref{25}
   \item [{$j_\text{frei}$}]\begingroup Stromdichte; in isolierenden Materialien $j_\text{frei}=0$\nomeqref {2.0}
@@ -137,6 +151,8 @@
   \item [{$t$}]\begingroup Transmissionskoeffizient; $t=\frac{2n_e}{n_e+n_t}$\nomeqref {4.4}
 		\nompageref{24}
   \item [{$t$}]\begingroup Zeit\nomeqref {2.1}\nompageref{10}
+  \item [{$T(x,y)$}]\begingroup Transmissionsbild eines Hologramms\nomeqref {8.3}
+		\nompageref{62}
   \item [{$T^I$}]\begingroup Transmissionsgrad der Intensität;   $T^{I}=\frac{I_t}{I_e}$\nomeqref {4.6}
 		\nompageref{25}
   \item [{$T^P$}]\begingroup Transmissionsgrad der Leistung;   $T^P=\frac{P_t}{P_e}$\nomeqref {4.6}

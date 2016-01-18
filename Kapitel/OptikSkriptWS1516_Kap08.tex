@@ -18,10 +18,11 @@ Abweichung von der geradlinigen Ausbreitung (\emph{Beugung} an
 der Blende) und zu Intensitätsmodulationen am Schirm
 (\emph{Interferenz}) führt.
 
-% ---------
+% --------------
 % VL 10.12.2015
-% ---------
+% --------------
 \marginpar{10.12.2015}
+
 \section{Fourier-Transformation}
 Mit der Fouriertransformation ist die Fourierreihe für periodische
 Funktionen verwandt.
@@ -67,19 +68,19 @@ Fouriertransformierten
           a&\text{für $-\frac{b}{2}\leq t\leq \frac{b}{2}$}\\
           0&\text{für $\phantom{-}\frac{b}{2}\leq t\leq \frac{T}{2}$}
         \end{array}
-                        \right.
+             \right.
 \end{align*}
 Der nullte Koeffizient lautet dann
 \begin{align*}
-	F_0 &= \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}}
-          f(t)e^{-i\omegao t}\dd t
-          = \frac{ab}{T}
+  F_0 &= \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}}
+        f(t)e^{-i\omegao t}\dd t
+        = \frac{ab}{T}
 \end{align*}
 Die weiteren Koeffizienten lauten:
 \begin{align*}
-	F_k &= \fracone{T} \int_{-\frac{b}{2}}^{\frac{b}{2}} 
-          ae^{i\omegao t}\dd t
-          = \frac{a}{k\pi}\sin(k\omegao\frac{b}{2})
+  F_k &= \fracone{T} \int_{-\frac{b}{2}}^{\frac{b}{2}} 
+        ae^{i\omegao t}\dd t
+        = \frac{a}{k\pi}\sin(k\omegao\frac{b}{2})
 \end{align*}
 Im Spezialfall $b=\frac{b}{2}$ (50\% Duty-Cycle) gilt:
 \begin{align*}
@@ -100,8 +101,8 @@ man oberhalb davon, also bei $\vert t\vert >T_0$, $f(t)$
 vernachlässigen. Die Koeffizienten werden also durch $\omega=k\omegao$
 und $\fracone{T}$ bestimmt. 
 \begin{align*}
-	F_k &= \fracone{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} 
-          f(t) e^{-ik\omegao t}\dd t
+  F_k &= \fracone{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} 
+        f(t) e^{-ik\omegao t}\dd t
 \end{align*}
 Führe nun eine Funktion $F(\omega)$ ein, deren Funktionswerte bei
 $\omega=\omegao k$ die Fourierkoeffizienten $F_k$ bestimmen.
@@ -109,7 +110,7 @@ $\omega=\omegao k$ die Fourierkoeffizienten $F_k$ bestimmen.
   F(\omega) &= \int_{-\frac{T}{2}}^{\frac{T}{2}}
               f(t)e^{-i\omega t}\dd t\\
   F_k &= \fracone{T} F(\omega_k)        
-=\fracone{T}F(k\omega)
+        =\fracone{T}F(k\omega)
 \end{align*}
 Wenn man dies nun in $f(t)$ einsetzt erhält man
 \begin{align*}
@@ -119,8 +120,8 @@ Wenn man dies nun in $f(t)$ einsetzt erhält man
 Da $\fracone{T}$ direkt proportional zum Frequenzabstand 
 $\dd\omega=\omegao$ zwischen zwei Fourierkomponenten ist, folgt daraus
 \begin{align*}
-	f(t) &= \sum_{k=-\infty}^{\infty}
-           \frac{\dd \omega}{2\pi} F(k\omegao) e^{ik\omegao t}
+  f(t) &= \sum_{k=-\infty}^{\infty}
+         \frac{\dd \omega}{2\pi} F(k\omegao) e^{ik\omegao t}
 \end{align*}
 Wenn nun die Periodendauer gegen unendlich geht, 
 wird $\dd \omega$ infinitesimal klein und man erhält die
@@ -146,10 +147,10 @@ Fouriertransformation miteinander verknüpft.
 Betrachte nun die Delta-Funktion $\delta(x)$ bzw. $\delta(\omega)$,
 $\delta(t)$. $\delta(t)$ ist überall identisch Null außer bei $t=0$. 
 \begin{align*}
-	\delta(t) &= \begin{Bmatrix}
-      0 &\text{für} &t\neq 0\\
-      \infty &\text{für} &t=0
-    \end{Bmatrix}\\
+  \delta(t) &= \begin{Bmatrix}
+    0 &\text{für} &t\neq 0\\
+    \infty &\text{für} &t=0
+  \end{Bmatrix}\\
   \delta(\omega) &= \fracone{2\pi}\int_{-\infty}^{\infty}
                    e^{-i\omega t}\dd t
 \end{align*}
@@ -188,9 +189,9 @@ Funktionsräumen aufgefasst (Funktionen $\to$ Funktionen).
 \paragraph{Gauß-Funktion} Eine (breite) Gauß-Funktion transformiert
 immer in eine (schmale) Gauß-Funktion.
 \begin{align*}
-	F(\omega) &= \fracone{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}
-                e^{-\frac{t^2}{2\sigma^2}} e^{-i\omega t} \dd t
-                = e^{-\frac{\sigma^2\omega^2}{2}}
+  F(\omega) &= \fracone{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}
+              e^{-\frac{t^2}{2\sigma^2}} e^{-i\omega t} \dd t
+              = e^{-\frac{\sigma^2\omega^2}{2}}
 \end{align*}
 Die Gauß-Funktion ist eine Darstellung der $\delta$-Funktion für
 $\sigma\longrightarrow 0$.
@@ -198,8 +199,8 @@ $\sigma\longrightarrow 0$.
 \paragraph{Exponentialfunktion} Eine (breite) Exponentialfunktion
 transformiert in eine (schmale) Lorentzfunktion.
 \begin{align*}
-	f(t) &= e^{-\frac{\vert t\vert}{\tau}}\\
-	F(\omega) &= \frac{2\tau}{1+\omega^2\tau}
+  f(t) &= e^{-\frac{\vert t\vert}{\tau}}\\
+  F(\omega) &= \frac{2\tau}{1+\omega^2\tau}
 \end{align*}
 
 \paragraph{Rechteckfunktion} Eine Rechteckfunktion transformiert in
@@ -209,16 +210,16 @@ eine sinc-Funktion.
   &\propto -\frac{\sin(x)}{x} x
 \end{align*}
 
-%Bei der Funktion stimmt iwas noch nicht und sie kommt vollständig noch in der Übung dran
+% Bei der Funktion stimmt iwas noch nicht und sie kommt vollständig noch in der Übung dran
 
-%------------
+% ------------
 % Vorlesung 14.12.
-%------------
+% ------------
 \marginpar{14.12.2015}
 Es gilt die \emph{Parseval'sche Formel}\index{Parseval'sche Formel}
 \begin{gather*}
-  \int_{\infty}{\infty} |f(t)|^2 \dd t 
-  = \int_{\infty}{\infty} |F(\omega)|^2 \dd\omega
+  \int_{\infty}^{\infty} |f(t)|^2 \dd t 
+  = \int_{\infty}^{\infty} |F(\omega)|^2 \dd\omega
 \end{gather*}
 und der \emph{Verschiebungssatz}\index{Verschiebungssatz}
 \begin{align*}
@@ -226,7 +227,7 @@ und der \emph{Verschiebungssatz}\index{Verschiebungssatz}
   = \underbrace{FT(f(t))}_{F(\omega)}e^{-i\omegao t_0}
 \end{align*}
 
-%-----
+% -----
 
 \section{Beugung}
 \subsection{Das Huygen'sche Prinzip}
@@ -249,7 +250,7 @@ Eine Verbesserung dieser Theorie liefert das
   der Amplituden/Phasen) aller Elementarwellen beschrieben.
 \end{quote}
 
-%---
+% ---
 
 \subsection{Die Fresnel'sche Beugung}
 Es sind die \emph{Fresnel'sche Beugung}\index{Fresnel'sche Beugung} 
@@ -345,7 +346,7 @@ Blendendurchmesser) gilt
       + \dotsb \\
   r_0 &= R_0-\alpha_0\zeta - \beta_0\eta 
         + O\left(\frac{\zeta^2}{R},\frac{\eta^2}{R}\right)
-      + \dotsb \\
+        + \dotsb \\
 \end{align*}
 $\alpha$ und $\beta$ bzw. $\alpha_0$ und $\beta_0$ nennt man
 Richtungskosinus. Es gilt
@@ -353,7 +354,7 @@ Richtungskosinus. Es gilt
   \alpha &= \frac{x}{R}
   &\beta &= \frac{y}{R}
   &\alpha_0 &= -\frac{x_0}{R}
-&\beta_0 &= -\frac{y_0}{R}
+  &\beta_0 &= -\frac{y_0}{R}
 \end{align*}
 (\red{Achtung:} Der Richtungskosinus ist gegen $\zeta(x)$ und $\eta(y)$ zu
 berechnen, achte auf das Vorzeichen!)
@@ -384,7 +385,7 @@ Dann wird die Formel \eqref{UP} zu
   U_P(\alpha,\beta) 
   &= \nu_{P,0} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
     \dd\zeta\dd\eta \Omega(\zeta,\eta)
-  \exp\left( ik(\alpha-\alpha_0)\zeta - ik(\beta-\beta_0)\eta \right)
+    \exp\left( ik(\alpha-\alpha_0)\zeta - ik(\beta-\beta_0)\eta \right)
 \end{align*}
 
 
@@ -393,7 +394,7 @@ Hier gilt $\alpha_0=\beta_0=0$, also
 \begin{gather*}
   U_P(\alpha,\beta) 
   = \nu_{P,0} \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
-    \dd\zeta\dd\eta \Omega(\zeta,\eta)
+  \dd\zeta\dd\eta \Omega(\zeta,\eta)
   \exp\left( ik\alpha\zeta - ik\beta\eta \right)
 \end{gather*}
 Das ist die 2D-Fouriertransformation der Blendenfunktion.
@@ -401,59 +402,60 @@ Das ist die 2D-Fouriertransformation der Blendenfunktion.
 \minisec{Beispiele für Fraunhofer'sche Beugung}
 \begin{enumerate}[a)]
 \item \emph{Beugung am langen Spalt}\index{Beugung!am langen Spalt}
-%% IMAGE MISSING
-Wir betrachten senkrecht einfallendes Licht auf einen Spalt mit Breite
-$b$ und Höhe $h$ ($h\gg b$). Die Transmissionsfunktion sei 
-$\Omega_\text{Spalt}(\zeta,\eta) = \Omega_\text{Spalt}(\eta)$.
-Die Integration über $\zeta$ liefert
-\begin{align*}
-  U_P(\alpha,\beta) 
-  &= \nu_{P,0} 
-  \int_{-\infty}^{\infty} \exp(k\alpha\zeta)\dd\zeta
-  \int_{-\infty}^{\infty} \Omega_\text{Spalt}(\eta)\exp(k\beta\eta)\dd\eta\\
-  &= \nu_{P,0} 2\pi\delta(k\alpha)
-    \int_{-\infty}^{\infty} \Omega_\text{Spalt}(\eta)\exp(k\beta\eta)\dd\eta
-\end{align*}
-wobei
-\begin{gather*}
-  \Omega_\text{Spalt}(\eta) = 
-  \begin{cases}
-    1 & -\frac{b}{2} < \eta < \frac{b}{2}\\
-    0 & \text{sonst}
-  \end{cases}
-\end{gather*}
-Damit wird die Fouriertransformation die einer Rechtecksfunktion:
-\begin{align*}
-  U_P(\beta) 
-  &\propto \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}\\
-  \text{Intensität}
-  &\propto (U_P(\beta))^2
-\end{align*}
-Insbesondere erhält man für $\beta=0$ 
-\begin{gather*}
-  I_\text{Spalt}(\beta=0) 
-  \propto \lim_{\beta\to0} \left(
-    \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}
+  %% IMAGE MISSING
+  Wir betrachten senkrecht einfallendes Licht auf einen Spalt mit Breite
+  $b$ und Höhe $h$ ($h\gg b$). Die Transmissionsfunktion sei 
+  $\Omega_\text{Spalt}(\zeta,\eta) = \Omega_\text{Spalt}(\eta)$.
+  Die Integration über $\zeta$ liefert
+  \begin{align*}
+    U_P(\alpha,\beta) 
+    &= \nu_{P,0} 
+      \int_{-\infty}^{\infty} \exp(k\alpha\zeta)\dd\zeta
+      \int_{-\infty}^{\infty} \Omega_\text{Spalt}(\eta)\exp(k\beta\eta)\dd\eta\\
+    &= \nu_{P,0} 2\pi\delta(k\alpha)
+      \int_{-\infty}^{\infty} \Omega_\text{Spalt}(\eta)\exp(k\beta\eta)\dd\eta
+  \end{align*}
+  wobei
+  \begin{gather*}
+    \Omega_\text{Spalt}(\eta) = 
+    \begin{cases}
+      1 & -\frac{b}{2} < \eta < \frac{b}{2}\\
+      0 & \text{sonst}
+    \end{cases}
+  \end{gather*}
+  Damit wird die Fouriertransformation die einer Rechtecksfunktion:
+  \begin{align*}
+    U_P(\beta) 
+    &\propto \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}\\
+    \text{Intensität}
+    &\propto (U_P(\beta))^2
+  \end{align*}
+  Insbesondere erhält man für $\beta=0$ 
+  \begin{gather*}
+    I_\text{Spalt}(\beta=0) 
+    \propto \lim_{\beta\to0} \left(
+      \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}
     \right)^2
     = \dotsb = b^2
-\end{gather*}
-Damit ist die Formel für Beugungsmuster am langen Spalt
-\begin{gather*}
-  \frac{I_\text{Spalt}(\beta)}{I_\text{Spalt}(0)}
-  = \left(
-    \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}
-  \right)^2
-  = \left(
-    \frac{\sin(\frac{\pi b\sin\theta}{\lambda})}
-    {\frac{\pi b\sin\theta}{\lambda}}
-  \right)^2
-  = \left(\frac{\sin B}{B}\right)^2
-\end{gather*}
+  \end{gather*}
+  Damit ist die Formel für Beugungsmuster am langen Spalt
+  \begin{gather*}
+    \frac{I_\text{Spalt}(\beta)}{I_\text{Spalt}(0)}
+    = \left(
+      \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}
+    \right)^2
+    = \left(
+      \frac{\sin(\frac{\pi b\sin\theta}{\lambda})}
+      {\frac{\pi b\sin\theta}{\lambda}}
+    \right)^2
+    = \left(\frac{\sin B}{B}\right)^2
+  \end{gather*}
 
-% ------------
-% VL 17.12.2015
-% ------------
-\marginpar{17.12.2015}
+  % --------------
+  % VL 17.12.2015
+  % --------------
+  \marginpar{17.12.2015}
+
 \item \emph{Beugung an einer Rechtecksblende}%
   \index{Beugung!an Rechtecksblende}
 \item \emph{Beugung an einer kreisförmigen Öffnung}%
@@ -461,185 +463,185 @@ Damit ist die Formel für Beugungsmuster am langen Spalt
 \item \emph{Beugung am Doppelspalt}%
   \index{Beugung!am Doppelspalt}\index{Doppelspalt}
 
-%% MISSING
+  %% MISSING
 
-% ------------
-% VL 21.12.2015
-% ------------
-\marginpar{21.12.2015}
-\minisec{Beschreibung über Fouriertransformation}
+  % ------------
+  % VL 21.12.2015
+  % ------------
+  \marginpar{21.12.2015}
+  \minisec{Beschreibung über Fouriertransformation}
 
-\begin{align*}
-  \Omega_1(\eta) 
-  &= \begin{cases}
-    1 & \text{für } 
-    -\left(\frac{a+b}{2}\right) < \eta < \frac{a+b}{2}\\
-    0 & \text{sonst}
-  \end{cases}\\
-  \Omega_2(\eta) 
-  &= \begin{cases}
-    1 & \text{für } 
-    -\left(\frac{a-b}{2}\right) < \eta < \frac{a-b}{2}\\
-    0 & \text{sonst}
-  \end{cases}    
-\end{align*}
-Der Doppelspalt wird beschrieben durch 
-$\Omega_\text{DS}(\eta)=\Omega_1(\eta)-\Omega_2(\eta)$
-Berechne zuerst die Fouriertransformation der Blendenfunktion
-$\Omega_\text{DS}$ um den Feldverlauf zu erhalten
-($k_y=k\beta$, $\beta=\frac{y}{R}=\sin\theta$):
-\begin{align*}
-  \FT(\Omega_\text{DS}) 
-  =\, &\int_{-\infty}^{\infty} 
-    (\Omega_1-\Omega_2) e^{-ik_y\eta} \dd\eta \\
-  =\, &\int_{-\left(\frac{a+b}{2}\right)}^{+\left(\frac{a+b}{2}\right)}
-     e^{-ik_y\eta} \dd\eta 
-  -  \int_{-\left(\frac{a-b}{2}\right)}^{+\left(\frac{a-b}{2}\right)}
-     e^{-ik_y\eta} \dd\eta \\
-  =\, &-\frac{1}{ik_y} \left[
-    \exp\left( -ik_y\left(\frac{a+b}{2}\right) \right)
-    -\exp\left( ik_y\left(\frac{a+b}{2}\right) \right)
-    \right]\\
-    &-\frac{1}{ik_y} \left[
-    \exp\left( -ik_y\left(\frac{a-b}{2}\right) \right)
-    -\exp\left( ik_y\left(\frac{a-b}{2}\right) \right)
-    \right]\\
-  =\, &\frac{2}{k_y}\left[
-    \sin\left(  k_y\left(\frac{a+b}{2}\right) \right)
-    -\sin\left( k_y\left(\frac{a-b}{2}\right) \right)
-    \right] \\
-  =\, &\underbrace{ 2\cos\left( k_y\frac{a}{2} \right) }_{\FT(\Omega_\delta)}
-    \cdot \underbrace{ \left(
-    \frac{ \sin\left( k_y\frac{b}{2} \right) }{ \frac{k_y}{2} }
-    \right) }_{\FT(\Omega_\text{Spalt})}
-\end{align*}
-Normierung des Intensitätsverlaufs
-\begin{gather*}
-  I_\text{DS}(\beta=0) 
-  \propto \lim_{\beta\to 0} 
-  4\cos^2\left( k\beta\frac{a}{2} \right)
-  \cdot \frac
-  { \sin^2\left( k\beta\frac{b}{2} \right) }
-  { \left(k\beta\frac{b}{2}\right)^2 }
-  = 4b^2
-\end{gather*}
-Damit ergibt sich für die Beugungsmuster am Doppelspalt
-\begin{gather*}
-  \frac{ I_\text{DS}(\beta) }{ I_\text{DS}(\beta=0) }
-  = \cos^2\left( k\beta\frac{a}{2} \right)
-  \cdot \frac
-  { \sin^2\left( k\beta\frac{b}{2} \right) }
-  {       \left( k\beta\frac{b}{2} \right)^2 }
-\end{gather*}
-wobei $\beta=\sin\theta$.
+  \begin{align*}
+    \Omega_1(\eta) 
+    &= \begin{cases}
+      1 & \text{für } 
+      -\left(\frac{a+b}{2}\right) < \eta < \frac{a+b}{2}\\
+      0 & \text{sonst}
+    \end{cases}\\
+    \Omega_2(\eta) 
+    &= \begin{cases}
+      1 & \text{für } 
+      -\left(\frac{a-b}{2}\right) < \eta < \frac{a-b}{2}\\
+      0 & \text{sonst}
+    \end{cases}    
+  \end{align*}
+  Der Doppelspalt wird beschrieben durch 
+  $\Omega_\text{DS}(\eta)=\Omega_1(\eta)-\Omega_2(\eta)$
+  Berechne zuerst die Fouriertransformation der Blendenfunktion
+  $\Omega_\text{DS}$ um den Feldverlauf zu erhalten
+  ($k_y=k\beta$, $\beta=\frac{y}{R}=\sin\theta$):
+  \begin{align*}
+    \FT(\Omega_\text{DS}) 
+    =\, &\int_{-\infty}^{\infty} 
+          (\Omega_1-\Omega_2) e^{-ik_y\eta} \dd\eta \\
+    =\, &\int_{-\left(\frac{a+b}{2}\right)}^{+\left(\frac{a+b}{2}\right)}
+          e^{-ik_y\eta} \dd\eta 
+          -  \int_{-\left(\frac{a-b}{2}\right)}^{+\left(\frac{a-b}{2}\right)}
+          e^{-ik_y\eta} \dd\eta \\
+    =\, &-\frac{1}{ik_y} \left[
+          \exp\left( -ik_y\left(\frac{a+b}{2}\right) \right)
+          -\exp\left( ik_y\left(\frac{a+b}{2}\right) \right)
+          \right]\\
+        &-\frac{1}{ik_y} \left[
+          \exp\left( -ik_y\left(\frac{a-b}{2}\right) \right)
+          -\exp\left( ik_y\left(\frac{a-b}{2}\right) \right)
+          \right]\\
+    =\, &\frac{2}{k_y}\left[
+          \sin\left(  k_y\left(\frac{a+b}{2}\right) \right)
+          -\sin\left( k_y\left(\frac{a-b}{2}\right) \right)
+          \right] \\
+    =\, &\underbrace{ 2\cos\left( k_y\frac{a}{2} \right) }_{\FT(\Omega_\delta)}
+          \cdot \underbrace{ \left(
+          \frac{ \sin\left( k_y\frac{b}{2} \right) }{ \frac{k_y}{2} }
+          \right) }_{\FT(\Omega_\text{Spalt})}
+  \end{align*}
+  Normierung des Intensitätsverlaufs
+  \begin{gather*}
+    I_\text{DS}(\beta=0) 
+    \propto \lim_{\beta\to 0} 
+    4\cos^2\left( k\beta\frac{a}{2} \right)
+    \cdot \frac
+    { \sin^2\left( k\beta\frac{b}{2} \right) }
+    { \left(k\beta\frac{b}{2}\right)^2 }
+    = 4b^2
+  \end{gather*}
+  Damit ergibt sich für die Beugungsmuster am Doppelspalt
+  \begin{gather*}
+    \frac{ I_\text{DS}(\beta) }{ I_\text{DS}(\beta=0) }
+    = \cos^2\left( k\beta\frac{a}{2} \right)
+    \cdot \frac
+    { \sin^2\left( k\beta\frac{b}{2} \right) }
+    {       \left( k\beta\frac{b}{2} \right)^2 }
+  \end{gather*}
+  wobei $\beta=\sin\theta$.
 
-Bei Beleuchtung mit ebenen Wellen wird das Beugungsbild des
-Doppelspalts gebildet durch Multiplikation des Beugungsbildes des
-Einzelspalts mit $\cos^2\left(\frac{k\beta a}{2}\right)$.
-Ist der Spaltabstand wesentlich größer als die Spaltbreite, erhält man
-eine hochfrequente Modulation.
-Die Bedeutung der Fouriertransformation ist hier:
-\begin{align*}
-  \Omega_\delta 
-  &= \delta\left( \eta-\frac{a}{2} \right) 
-  +  \delta\left( \eta+\frac{a}{2} \right)\\
-  \FT(\Omega_{DS}) 
-  &= \FT(\Omega_\delta) \cdot \FT(\Omega_\text{Spalt})
-\end{align*}
-Mit dem Faltungstheorem 
-$\FT(A\otimes B) = \FT(A)\cdot\FT(B)$
-wird das zu
-\begin{gather*}
-  \Omega_\text{DS} = \Omega_\delta \otimes \Omega_\text{Spalt}
-\end{gather*}
+  Bei Beleuchtung mit ebenen Wellen wird das Beugungsbild des
+  Doppelspalts gebildet durch Multiplikation des Beugungsbildes des
+  Einzelspalts mit $\cos^2\left(\frac{k\beta a}{2}\right)$.
+  Ist der Spaltabstand wesentlich größer als die Spaltbreite, erhält man
+  eine hochfrequente Modulation.
+  Die Bedeutung der Fouriertransformation ist hier:
+  \begin{align*}
+    \Omega_\delta 
+    &= \delta\left( \eta-\frac{a}{2} \right) 
+      +  \delta\left( \eta+\frac{a}{2} \right)\\
+    \FT(\Omega_{DS}) 
+    &= \FT(\Omega_\delta) \cdot \FT(\Omega_\text{Spalt})
+  \end{align*}
+  Mit dem Faltungstheorem 
+  $\FT(A\otimes B) = \FT(A)\cdot\FT(B)$
+  wird das zu
+  \begin{gather*}
+    \Omega_\text{DS} = \Omega_\delta \otimes \Omega_\text{Spalt}
+  \end{gather*}
 
-%% IMAGE MISSING
+  %% IMAGE MISSING
 
 
 \item \emph{Beugung am Gitter}
-Wir betrachten ein Beugungsgitter, das aus $N$ langen Spalten mit
-konstantem Abstand $a$ besteht.
-%% IMAGE MISSING
-Die Beugung setzt sich zusammen aus:
-\begin{itemize}
-\item[$\Omega_\text{Spalt}$] Beugung am Einzelspalt
-\item[$\Omega_\text{Gitter}$] Position der Spalte
-\end{itemize}
-wobei
-\begin{align*}
-  \Omega_\text{Gitter} = \sum_{m=0}^{N-1}\delta(\eta-ma)
-\end{align*}
-Die Fouriertransformation von $\Omega_\text{Gitter}$
-($\FT(\Omega_\text{Gitter})$) bestimmt das Lichtfeld des Gitters:
-\begin{align*}
-  U_\text{Gitter}(\beta) 
-  &= U_0 \sum_{m=0}^{N-1} \delta(\eta-ma)\\
-  &= U_0 \frac
-    {e^{-iNk\beta a} - 1}
-    {e^{-i k\beta a} - 1} \\
-  &= U_0 \cdot \frac
-    { \sin\left( Nk\beta\frac{a}{2} \right) }
-    { \sin\left(  k\beta\frac{a}{2} \right) }
-    \cdot e^{-i(N-1)k\beta\frac{a}{2}}
-\end{align*}
-Die Intensität für den Grenzfall $\beta=\sin\theta=0$ (senkrechter
-Einfall) ist
-$I_\text{Gitter}(\beta=0) = N^2$, also
-\begin{gather*}
-  \frac{ I_\text{Gitter}(\sin\theta) }{ I_\text{Gitter}(0)}
-  = \frac
-  {    \sin^2\left( Nk\frac{a}{2} \sin\theta \right) }
-  { N^2\sin^2\left(  k\frac{a}{2} \sin\theta \right) }
-\end{gather*}
-%%IMAGE MISSING
+  Wir betrachten ein Beugungsgitter, das aus $N$ langen Spalten mit
+  konstantem Abstand $a$ besteht.
+  %% IMAGE MISSING
+  Die Beugung setzt sich zusammen aus:
+  \begin{itemize}
+  \item[$\Omega_\text{Spalt}$] Beugung am Einzelspalt
+  \item[$\Omega_\text{Gitter}$] Position der Spalte
+  \end{itemize}
+  wobei
+  \begin{align*}
+    \Omega_\text{Gitter} = \sum_{m=0}^{N-1}\delta(\eta-ma)
+  \end{align*}
+  Die Fouriertransformation von $\Omega_\text{Gitter}$
+  ($\FT(\Omega_\text{Gitter})$) bestimmt das Lichtfeld des Gitters:
+  \begin{align*}
+    U_\text{Gitter}(\beta) 
+    &= U_0 \sum_{m=0}^{N-1} \delta(\eta-ma)\\
+    &= U_0 \frac
+      {e^{-iNk\beta a} - 1}
+      {e^{-i k\beta a} - 1} \\
+    &= U_0 \cdot \frac
+      { \sin\left( Nk\beta\frac{a}{2} \right) }
+      { \sin\left(  k\beta\frac{a}{2} \right) }
+      \cdot e^{-i(N-1)k\beta\frac{a}{2}}
+  \end{align*}
+  Die Intensität für den Grenzfall $\beta=\sin\theta=0$ (senkrechter
+  Einfall) ist
+  $I_\text{Gitter}(\beta=0) = N^2$, also
+  \begin{gather*}
+    \frac{ I_\text{Gitter}(\sin\theta) }{ I_\text{Gitter}(0)}
+    = \frac
+    {    \sin^2\left( Nk\frac{a}{2} \sin\theta \right) }
+    { N^2\sin^2\left(  k\frac{a}{2} \sin\theta \right) }
+  \end{gather*}
+  %% IMAGE MISSING
 
-Für die Lage der \emph{Hauptmaxima}\index{Hauptmaxima} gilt
-\begin{gather*}
-  a(\sin\theta-\sin\theta_0) = \pm n\lambda
-\end{gather*}
-Damit ist die Gittergleichung abhängig von $\lambda$ und es lässt sich
-dadurch ein Gitterspektrometer\index{Gitterspektrometer} realisieren.
-Für die Lage der \emph{Nullstellen} gilt ($m\in\{1,\dotsc,N-1\}$)
-\begin{gather*}
-  a(\sin\theta-\sin\theta_0) = \pm \frac{m}{N}\lambda \pm n\lambda
-\end{gather*}
-Für die Lage der \emph{Nebenmaxima}\index{Nebenmaxima} gilt ($m\in\N$)
-\begin{gather*}
-  a(\sin\theta-\sin\theta_0) = \pm \frac{2m+1}{2N}\lambda \pm n\lambda
-\end{gather*}
+  Für die Lage der \emph{Hauptmaxima}\index{Hauptmaxima} gilt
+  \begin{gather*}
+    a(\sin\theta-\sin\theta_0) = \pm n\lambda
+  \end{gather*}
+  Damit ist die Gittergleichung abhängig von $\lambda$ und es lässt sich
+  dadurch ein Gitterspektrometer\index{Gitterspektrometer} realisieren.
+  Für die Lage der \emph{Nullstellen} gilt ($m\in\{1,\dotsc,N-1\}$)
+  \begin{gather*}
+    a(\sin\theta-\sin\theta_0) = \pm \frac{m}{N}\lambda \pm n\lambda
+  \end{gather*}
+  Für die Lage der \emph{Nebenmaxima}\index{Nebenmaxima} gilt ($m\in\N$)
+  \begin{gather*}
+    a(\sin\theta-\sin\theta_0) = \pm \frac{2m+1}{2N}\lambda \pm n\lambda
+  \end{gather*}
 
-Insgesamt erhalten wir, dass Gitter als Spektrometer verwendet werden
-können, da es einen eindeutigen Zusammenhang zwischen Wellenlänge und
-dem Beugungswinktel $\Sigma = \sin\theta-\sin\theta_0$ gibt.
-(\red{Achtung:} Das gilt nur für höhere Ordnungen, nicht für $m=0$.)
-Der Strahl mit $m=0$ (\emph{Hauptmaximum}\index{Hauptmaximum}) wird
-auch \emph{Weißlicht}\index{Weißlicht} genannt.
+  Insgesamt erhalten wir, dass Gitter als Spektrometer verwendet werden
+  können, da es einen eindeutigen Zusammenhang zwischen Wellenlänge und
+  dem Beugungswinktel $\Sigma = \sin\theta-\sin\theta_0$ gibt.
+  (\red{Achtung:} Das gilt nur für höhere Ordnungen, nicht für $m=0$.)
+  Der Strahl mit $m=0$ (\emph{Hauptmaximum}\index{Hauptmaximum}) wird
+  auch \emph{Weißlicht}\index{Weißlicht} genannt.
 
-Die Breite des Hauptmaximums ist
-\begin{gather*}
-  \Delta\Sigma 
-  \approx \num{0,88}s\cdot \frac{\lambda}{aN} 
-  \propto \frac{\lambda}{aN} 
-\end{gather*}
-und daher umgekehrt proportional zur Anzahl der ausgeleuchteten
-Gitterspalte $N$.
-Zwei spektrale Komponenten können gerade noch aufgelöst werden, wenn
-das Maximum des einen auf das Maximum des anderen gebeugt wird.
-D.\,h. das Auflösungsvermögen eines Gitterspektrometers wird
-beschrieben durch
-\begin{gather*}
-  \frac{\Delta\lambda}{\lambda} = \frac{1}{nN}
-  \qquad\text{bzw.}\qquad
-  \frac{\lambda}{\Delta\lambda} = nN
-\end{gather*}
-wobei $n$ die Beugungsordnung\index{Beugungsordnung} ist 
-und $N$ die Zahl der Gitterstriche.
+  Die Breite des Hauptmaximums ist
+  \begin{gather*}
+    \Delta\Sigma 
+    \approx \num{0,88}s\cdot \frac{\lambda}{aN} 
+    \propto \frac{\lambda}{aN} 
+  \end{gather*}
+  und daher umgekehrt proportional zur Anzahl der ausgeleuchteten
+  Gitterspalte $N$.
+  Zwei spektrale Komponenten können gerade noch aufgelöst werden, wenn
+  das Maximum des einen auf das Maximum des anderen gebeugt wird.
+  D.\,h. das Auflösungsvermögen eines Gitterspektrometers wird
+  beschrieben durch
+  \begin{gather*}
+    \frac{\Delta\lambda}{\lambda} = \frac{1}{nN}
+    \qquad\text{bzw.}\qquad
+    \frac{\lambda}{\Delta\lambda} = nN
+  \end{gather*}
+  wobei $n$ die Beugungsordnung\index{Beugungsordnung} ist 
+  und $N$ die Zahl der Gitterstriche.
 
 \end{enumerate}
 
-%%-----------------
-% Vorlesung vom 7.1
-%%-----------------
+% --------------
+% VL 07.01.2015
+% --------------
 \marginpar{07.01.2016}
 
 \minisec{Spektrometer}
@@ -673,8 +675,8 @@ wobei $a$ der Gitterabstand und $n$ die Beugungsordnung ist.
 Die \emph{apparative Wellenlängenauflösung} wird durch die Spaltbreite
 und die Brennweite des Spektrometers wie folgt bestimmt
 \begin{align*}
-	\Delta\lambda &=\diff[\lambda]{\beta}\Delta\Phi\\
-	\Delta\Phi &\approx \frac{\beta_1}{f}
+  \Delta\lambda &=\diff[\lambda]{\beta}\Delta\Phi\\
+  \Delta\Phi &\approx \frac{\beta_1}{f}
 \end{align*}
 Die zweite Gleichung ist die Divergenz des Lichtbündels vom
 Hohlspiegel auf das Gitter, $b_1$ die Breite des Eintrittspalts und
@@ -695,8 +697,8 @@ Man erhält somit eine ideale Auflösung für $B\approx\lambda$.
 \minisec{Beugung am 3D-Gitter}
 Die Beugung am 3D-Gitter ist Wichtig für die Strahlenanalyse, z.\,B. bei
 \begin{itemize}
-	\item Röntgenbeugung (im Bereich von \SI{10}{\kilo\eV})
-	\item Elektronenbeugung (50–100\si{\eV})
+\item Röntgenbeugung (im Bereich von \SI{10}{\kilo\eV})
+\item Elektronenbeugung (50–100\si{\eV})
 \end{itemize}
 
 % -----
@@ -738,14 +740,14 @@ $\D\nu=\SI{4e14}{\hertz}$. Daraus erhält man die \emph{Kohärenzzeit}
 $t_c=\frac{l_c}{c}=\SI{2,5e-15}{\second}$ und die
 \emph{Kohärenzlänge}\index{Kohärenzlänge}
 \begin{align*}
-	l_c=t_c c_{Licht}
+  l_c=t_c c_{Licht}
 \end{align*}
 Kohärentes Licht für Interferenzexperimente wird typischerweise durch
 \enquote{Spaltanordnungen} realisiert, wie etwa
 \begin{itemize}
-	\item Young'scher Doppelspalt
-	\item Fresnel'sches Biprisma
-	\item Fresnel'scher Doppelspiegel
+\item Young'scher Doppelspalt
+\item Fresnel'sches Biprisma
+\item Fresnel'scher Doppelspiegel
 \end{itemize}
 Betraachte nun die \emph{räumliche Kohärenz} bei einem Doppelspalt.
 %% IMAGE MISSING (Skizze mit Doppelspalt)
@@ -761,15 +763,15 @@ Interferenz verschwindet, wenn das Beugungsmaximum im Beugungsminimum
 Für große Abstände $z_0$ gilt $\D g=\frac{ad}{z_0}\ll\frac{\lambda}{2}$
 mit Öffnungswinkel $\phi=\frac{a}{z_0}$ oder
 \begin{align*}
-	\D g = \frac{ad}{z_0} &\ll \frac{\lambda}{2}\\
-	\phi &\ll \frac{\lambda}{2d}
+  \D g = \frac{ad}{z_0} &\ll \frac{\lambda}{2}\\
+  \phi &\ll \frac{\lambda}{2d}
 \end{align*}
 als Bedingung für räumliche Kohärenz. Kohärenz liegt dann vor, wenn
 der Durchmesser der Quelle und genannter Öffnungswinkel klein sind.
 
-%-----------------
+% --------------
 % VL 11.01.2016
-%-----------------
+% --------------
 \marginpar{11.01.2016}
 
 \section{Zweistrahlinterferenzen}
@@ -788,82 +790,82 @@ Phasenverschiebung bei Reflexion
 Gangunterschied gegeben.
 \begin{enumerate}[a)]
 \item \emph{Interferenzen gleicher Neigung}
-Betrachte einen ausgedehnten, parallelen Film der Dicke
-$d$\nomenclature{$d$}{Filmdicke} mit Brechungsindex
-$n_f$ (umgebendes Medium habe $n_1=1$ und $n_2=1$), auf den ein Strahl mit
-Einfallswinkel $\theta_1$ trifft. 
-Es ergeben sich Phasensprünge $\Delta\Phi_1$ und $\Delta\Phi_2$ an der
-1.~ bzw. 2.~Grenzfläche.
+  Betrachte einen ausgedehnten, parallelen Film der Dicke
+  $d$\nomenclature{$d$}{Filmdicke} mit Brechungsindex
+  $n_f$ (umgebendes Medium habe $n_1=1$ und $n_2=1$), auf den ein Strahl mit
+  Einfallswinkel $\theta_1$ trifft. 
+  Es ergeben sich Phasensprünge $\Delta\Phi_1$ und $\Delta\Phi_2$ an der
+  1.~ bzw. 2.~Grenzfläche.
 
-Der Winkel des transmittierten Strahls zur 2.~Grenzfläche sei
-$\theta_f$ (gegeben mit Snellius).
-Wir bezeichnen mit $a=b$ die Strecke, die der transmittierte Strahl
-von der 1.~zur 2.~Grenzfläche (bzw. umgekehrt) zurücklegt und mit $x$
-den Streckenunterschied der betrachteten zurückgeworfenen Strahlen.
-%% IMAGE MISSING (Stahlteilung am ausgedehnten dünnen Film mit Phasenverschiebungen)
+  Der Winkel des transmittierten Strahls zur 2.~Grenzfläche sei
+  $\theta_f$ (gegeben mit Snellius).
+  Wir bezeichnen mit $a=b$ die Strecke, die der transmittierte Strahl
+  von der 1.~zur 2.~Grenzfläche (bzw. umgekehrt) zurücklegt und mit $x$
+  den Streckenunterschied der betrachteten zurückgeworfenen Strahlen.
+  %% IMAGE MISSING (Stahlteilung am ausgedehnten dünnen Film mit Phasenverschiebungen)
 
-Es gilt
-\begin{align}\label{*}
-  a &= 2d\tan\theta_f \\\nonumber
-  b &= \frac{d}{\cos\theta_f}\\\nonumber
-  x &= a\sin\theta_1
-\end{align}
-Für die Phasensprünge gilt
-\begin{align}\label{Phasendifferenzen}
-  \Delta\Phi_1 &= \pi &\text{falls } n_f>n_1\\\nonumber
-  \Delta\Phi_1 &= 0   &\text{falls } n_f<n_1\\\nonumber
-  \Delta\Phi_2 &= \pi &\text{falls } n_2>n_f\\\nonumber
-  \Delta\Phi_1 &= 0   &\text{falls } n_2<n_f
-\end{align}
-Wichtig für die Interferenz ist die Phasendifferenz
-\begin{gather*}
-  \Delta\Phi \coloneqq \Delta\Phi_2 - \Delta\Phi_1
-\end{gather*}
-Wegen \eqref{Phasendifferenzen} gibt die drei Möglichkeiten
-\begin{gather*}
-  \Delta\Phi \pm \pi  
-  \qquad\text{oder}\qquad 
-  \Delta\Phi = 0\,,
-\end{gather*}
-je nachdem, ob der Film einen größeren oder
-kleineren Brechungsindex als \emph{beide} umgebenden Materialien hat,
-oder bei einem größer, beim anderen kleiner. Genauer
-\begin{align*}
-  \Delta\Phi 
-  &=
-    \begin{cases}
-      \phantom{-}\pi & n_f<n_1\text{ und }n_f<n_2\\
-      -\pi           & n_f>n_1\text{ und }n_f>n_2\\
-      \phantom{-}0   & n_1<n_f<n_2\\ 
-      \phantom{-}0   & n_2<n_f<n_1\\
-    \end{cases}
-\end{align*}
-Der Gangunterschied $\GU$\nomenclature{$GU$}{Gangunterschied} ist
-\begin{gather*}
-  \GU = 2n_f b - n_1x 
-\end{gather*}
-Verwende \eqref{*} und Snellius ($n_1\sin\theta_1 = n_f\sin\theta_f$),
-um $\GU$ zu berechnen:
-\begin{align*}
-  \GU &= 2 n_f\frac{d}{\cos\theta_f} 
-        - n_f\frac{\sin\theta_f}{\sin\theta_1} \cdot a\sin\theta_1\\
-      &= 2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot a\\
-      &\overset{\mathllap{\eqref{*}}}{=} 
-        2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot 2d\tan\theta_f\\
-      &= \frac{2d}{\cos\theta_f}\left( n_f-n_f\sin^2\theta_f\right)\\
-      &= \frac{2dn_f}{\cos\theta_f}\cos^2\theta_f\\
-      &= 2dn_f\cos\theta_f
-\end{align*}
-Wir erhalten konstruktive Interferenz bei
-\begin{gather*}
-  \frac{\GU}{\lambda} = \frac{\Delta\Phi}{2\pi} = m 
-  \qquad m\in\N
-\end{gather*}
-Konstruktive Interferenz findet statt, wenn folgendes erfüllt ist
-\begin{gather*}
-  2n_f d\cos\theta_f = \left( m+\frac{\Delta\Phi}{2\pi} \right)\lambda
-\end{gather*}
-Hier bilden sich \emph{Haidingerschen Ringe}\index{Haidingerschen Ringe}.
+  Es gilt
+  \begin{align}\label{*}
+    a &= 2d\tan\theta_f \\\nonumber
+    b &= \frac{d}{\cos\theta_f}\\\nonumber
+    x &= a\sin\theta_1
+  \end{align}
+  Für die Phasensprünge gilt
+  \begin{align}\label{Phasendifferenzen}
+    \Delta\Phi_1 &= \pi &\text{falls } n_f>n_1\\\nonumber
+    \Delta\Phi_1 &= 0   &\text{falls } n_f<n_1\\\nonumber
+    \Delta\Phi_2 &= \pi &\text{falls } n_2>n_f\\\nonumber
+    \Delta\Phi_1 &= 0   &\text{falls } n_2<n_f
+  \end{align}
+  Wichtig für die Interferenz ist die Phasendifferenz
+  \begin{gather*}
+    \Delta\Phi \coloneqq \Delta\Phi_2 - \Delta\Phi_1
+  \end{gather*}
+  Wegen \eqref{Phasendifferenzen} gibt die drei Möglichkeiten
+  \begin{gather*}
+    \Delta\Phi \pm \pi  
+    \qquad\text{oder}\qquad 
+    \Delta\Phi = 0\,,
+  \end{gather*}
+  je nachdem, ob der Film einen größeren oder
+  kleineren Brechungsindex als \emph{beide} umgebenden Materialien hat,
+  oder bei einem größer, beim anderen kleiner. Genauer
+  \begin{align*}
+    \Delta\Phi 
+    &=
+      \begin{cases}
+        \phantom{-}\pi & n_f<n_1\text{ und }n_f<n_2\\
+        -\pi           & n_f>n_1\text{ und }n_f>n_2\\
+        \phantom{-}0   & n_1<n_f<n_2\\ 
+        \phantom{-}0   & n_2<n_f<n_1\\
+      \end{cases}
+  \end{align*}
+  Der Gangunterschied $\GU$\nomenclature{$GU$}{Gangunterschied} ist
+  \begin{gather*}
+    \GU = 2n_f b - n_1x 
+  \end{gather*}
+  Verwende \eqref{*} und Snellius ($n_1\sin\theta_1 = n_f\sin\theta_f$),
+  um $\GU$ zu berechnen:
+  \begin{align*}
+    \GU &= 2 n_f\frac{d}{\cos\theta_f} 
+          - n_f\frac{\sin\theta_f}{\sin\theta_1} \cdot a\sin\theta_1\\
+        &= 2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot a\\
+        &\overset{\mathllap{\eqref{*}}}{=} 
+          2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot 2d\tan\theta_f\\
+        &= \frac{2d}{\cos\theta_f}\left( n_f-n_f\sin^2\theta_f\right)\\
+        &= \frac{2dn_f}{\cos\theta_f}\cos^2\theta_f\\
+        &= 2dn_f\cos\theta_f
+  \end{align*}
+  Wir erhalten konstruktive Interferenz bei
+  \begin{gather*}
+    \frac{\GU}{\lambda} = \frac{\Delta\Phi}{2\pi} = m 
+    \qquad m\in\N
+  \end{gather*}
+  Konstruktive Interferenz findet statt, wenn folgendes erfüllt ist
+  \begin{gather*}
+    2n_f d\cos\theta_f = \left( m+\frac{\Delta\Phi}{2\pi} \right)\lambda
+  \end{gather*}
+  Hier bilden sich \emph{Haidingerschen Ringe}\index{Haidingerschen Ringe}.
 
 \item \emph{Interferenzen gleicher Dicke}
   Betrachte eine Variation der optischen Dicke $n_f\cdot d$.
@@ -926,7 +928,7 @@ Hier bilden sich \emph{Haidingerschen Ringe}\index{Haidingerschen Ringe}.
 
 \end{enumerate}
 
-%---
+% ---
 
 \subsection{Interferometer}
 \paragraph{Michelson Interferometer}%
@@ -939,10 +941,66 @@ Außerdem kann man die Kohärenzlänge $\Delta s$ einer Lichtquelle
 messen, da diese sich proportional zu $\frac{1}{\Delta\lambda}$
 (d.\,h. invers zur spektralen Bandbreite) verhält.
 
+% --------------
+% VL 14.01.2016
+% --------------
 
+% MISSING
 
+\begin{description}
+\item[1. Schritt: Aufzeichnung des Hologramms]
+  \nomenclature{$E_O$}{Objektwelle in der Holographie}
+  \nomenclature{$E_R$}{Referenzwelle in der Holographie}
+  % MISSING
 
+  % --------------
+  % VL 18.01.2016
+  % --------------
+  \marginpar{18.01.2016}
 
+\item[2. Schritt: Auslesen des Hologramms]
+  Nach Entwicklung der Photoplatte erhält man ein
+  \emph{Transmissionsbild} $T(x,y)$%
+  \nomenclature{$T(x,y)$}{Transmissionsbild eines Hologramms}
+  (nur Streifen).
+  Das \enquote{Beugungsgitter} wird jetzt wieder mit einer Referenzwelle
+  beleuchtet.
+  Das Auslesefeld $E_L(x,y)$%
+  \nomenclature{$E_L(x,y)$}{Auslesefeld beim Auslesen eines Hologramms} 
+  soll den gleichen Amplituden und Phasenverlauf haben wie $E_R(x,y)$
+  \begin{gather*}
+    E_L(x,y) = E_{R_0}\exp(i\omega t + i\Phi_R(x,y))
+  \end{gather*}
+  Das Transmissionsbild $T(x,y)$ sei proportional zur Intensität des
+  gesamten Beleuchtungslichts auf der Platte
+  \begin{gather*}
+    T(x,y) = \kappa \cdot I(x,y)
+  \end{gather*}
+  Durch Beleuchtung wird das Bildfeld $E_B(x,y)$\nomenclature{$E_B(x,y)$}{Bildfeld} 
+  erzeugt
+  \begin{align*}
+    E_B(x,y) &= E_L(x,y) \cdot T(x,y)\\
+    E_B(x,y) &= E_{R_0}\exp(i\omega t + i\Phi_R(x,y))\cdot \kappa 
+               \cdot\left\{E_{R_0}^2 + E_{O_0}^2 +
+               2E_{R_0}E_{O_0}(x,y)\cos(\Phi_O(x,y))\right\}\\
+             &= E_1 + E_2 + E_3\\
+    E_B &= \kappa E_R(x,y) \left( E_{R_0}^2 + E_{O_0}^2 \right)\\
+             &\phantom{=}\; + 
+               \kappa E_{R_0}^2 E_{O_0}(x,y)\exp(i\omega t + i\Phi_O(x,y))\\
+             &\phantom{=}\; + 
+               \kappa E_{R}^2 E_{O_0}(x,y)\exp(i\omega t-\Phi_O(x,y)+2i\Phi_R(x,y))
+  \end{align*}
+  Man sieht:
+  \begin{itemize}
+  \item[$E_1$:] proportional zum Auslesefeld, aber abgeschwächt;
+  \item[$E_2$:] direkt proportional zum Objektfeld an der Photoplatte;
+    verhält sich so, als ob die Information direkt vom Ort des Objekts
+    käme, enthält dieselbe Information wie das Original (virtuelles
+    Bild); Hologramm
+  \item[$E_3$:] hat gegenüber $E_2$ negative Phase (reelles Bild)
+  \end{itemize}
+
+\end{description}
 
 %%% Local Variables:
 %%% mode: latex
