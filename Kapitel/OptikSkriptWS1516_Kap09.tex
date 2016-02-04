@@ -67,6 +67,112 @@ $h=\SI{6.626e-34}{\J\s}$%
 das Plank'sche Wirkungsquantum ist.
 
 
+%--------------
+% VL 04.02.2016
+%--------------
+\marginpar{04.02.2016}
+
+\begin{enumerate}
+\item  \emph{e.\,m. Schritt}\\
+  -> Energie des s.g.h.O. mit Eigenfrequenz $\nu$ im harmonischen
+  e.m. Feld\\
+  -> in kohärente Überlagerung von harmonischen Feldern variabler
+  Frequenz
+
+Berechne Gleichgewichtsenergie $U$ des Oszillators, wobei alle Felder
+entsprechnd der spektralen Energiedichte $u$ gewichtet werden.
+Resultat (empirische Formel, 07.10.1900):
+\begin{gather*}
+  u(\nu, T) = \frac{8\pi\nu^2}{c^3} U(\nu, T)
+\end{gather*}
+Es folgt
+\begin{gather}
+  U(\nu, T) = \frac{h\nu}{\exp(\frac{h\nu}{uT}) - 1}
+  \label{GGWEnergie}
+\end{gather}
+Bedeutung von Formel~\eqref{GGWEnergie}:
+
+\item \emph{Thermodynamischer Schritt}
+Ausgehend von Gleichung~\eqref{GGWEnergie} berechnet Planck die
+Entropie $S$\nomenclature{$S$}{Entropie}
+\begin{align*}
+  \dd U &= T\dd S - p\underbrace{\dd V}_{=0} \dotsb \\
+  \Rightarrow \frac{\dd S}{\dd U} &= \frac{1}{T}
+\end{align*}
+Man findet 
+$\dd S = \frac{\dd U}{T}$ und 
+$\frac{1}{T(U)} = \frac{k_B}{h\nu} \ln\left(\frac{h\nu+U}{U}\right)$
+aus Gleichung~\eqref{GGWEnergie} dann
+\begin{gather*}
+  S = k_B \left[ 
+    \left(1+\frac{U}{h\nu}\right) \ln\left(1+\frac{U}{h\nu}\right)
+    + \frac{U}{h\nu}\ln\left(\frac{U}{h\nu}\right)
+  \right]
+\end{gather*}
+Die Entropie \emph{muss} diese Form haben!
+
+\item \emph{Statistischer Schritt}
+  Wir behandeln nun die Herleitung der Entropie mit statistischen
+  Argumenten.
+  Die Entropie von $N$ unabhängigen Oszillatoren der Frequenz $\nu$
+  ist
+  \begin{gather*}
+    S_N = k_B\cdot \ln(W_N)
+  \end{gather*}
+  wobei $W_N$\nomenclature{$W_N$}{thermodynamische Wahrscheinlichkeit;
+    Anzahl der möglichen Verteilungen der Gesamtenergie $U_N$ auf $N$
+    Oszillatoren}
+  die thermodynamische Wahrscheinlichkeit ist, also die Anzahl der
+  möglichen Verteilungen der Gesamtenergie $U_N$ auf $N$ Oszillatoren.
+  Die Gesamtenergie ist $U_N=N\cdot
+  U$\nomenclature{$U_N$}{Gesamtenergie eines Systems mit $N$
+    Oszillatoren; $U_N=N\cdot U$}.
+
+  \red{Achtung:} Es gilt $W\to\infty$ für eine beliebige,
+  kontinuierliche Verteilung von $U_N$.
+
+  \minisec{1. Postulat (Quantenpostulat)}
+  Die Oszillatoren dürfen Energie nur in ganzzahligen Vielfachen einer
+  Grundeinheit $\eps$ aufnehmen
+  \begin{gather*}
+    U_N = p\cdot \eps 
+    \qquad \text{mit } p\in\Z, p\gg 1
+  \end{gather*}
+
+  \minisec{2. Postulat (statistisches Postulat)}
+  Gibt die Anzahl der Möglichkeiten an $p$ ununterscheidbare
+  Energiequanten auf $N$ unterscheidbare Oszillatoren zu verteilen
+  (Bose-Einstein-Statistik)
+  \begin{gather*}
+    W_N = \frac{(N+p-1)!}{(N-1)!\cdot p!}
+    \overset{\mathllap{\text{Stirling}}}{\approx} 
+    \frac{(N+p)^{N+p}}{N^N \cdot p^p}
+  \end{gather*}
+  
+  \minisec{Beispiel}
+  Es sei $N=2$, $p=3$ und $W_2=4$.
+  Dann sind die vier Möglichkeiten, die gesamte Energie $U=3\eps$ auf
+  die beiden Oszillatoren 1~und 2 zu verteilen
+  %% IMAGE MISSING (Verteilung der Energie auf Oszillatoren)
+
+  Also
+  \begin{align*}
+    S_N &= k_B \left[
+      (N+p)\ln(N+p) - N\ln(N) - p\ln(p)
+      \right]
+    &= N \underbrace{
+      k_B \left[
+      \left(1+\frac{U}{\eps}\right) \ln\left(1+\frac{U}{\eps}\right) 
+      - \frac{U}{\eps}\ln\left(\frac{U}{\eps}\right)
+      \right]
+      }_{\text{Entropie für einen Oszillator}}\\
+    S_N &= N\cdot S
+  \end{align*}
+\end{enumerate}
+
+
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../OptikSkriptWS1516"
