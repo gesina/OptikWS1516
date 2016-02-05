@@ -277,7 +277,8 @@ Die Fresnel'sche Beugung lässt sich anhand des Huygen'schen Prinzips
 erklären:
 Elementarwellen aus der Ebene $z=0$ erreichen aufgrund der
 unterschiedlichen Wegstrecken zu unterschiedlichen Zeiten einen Punkt
-$P$ im Abstand $R$ von der Ebene.
+$P$ im Abstand $R$\nomenclature{$R$}{Abstand von
+  Schirm/Beobachtungspunkt zu Blende} von der Ebene.
 Die Strecke von einem Geradenpunkt zu $P$ ist
 \begin{gather*}
   r = \sqrt{x^2+R^2}
@@ -292,10 +293,10 @@ Es gilt allgemein für $r$:
 \begin{description}
 \item[$r<R+\frac{\lambda}{2}$] konstruktive Interferenz
 \item[$R+\frac{\lambda}{2}<r<R+\lambda$] destruktive Interferenz
-\item[$R+\lambda<r<R+\frac{2\lambda}{2}$] konstruktive Interferenz
+\item[$R+\lambda<r<R+\frac{3\lambda}{2}$] konstruktive Interferenz
 \end{description}
+% IMAGE MISSING (Fresnelzonen einer Punktquelle)
 
-% MISSING
 Beim Blendenversuch tragen die Zonen zur Lichtintensität im Punkt $P$
 bei, die nicht von der Kante der Blende abgedeckt werden.
 
@@ -441,8 +442,8 @@ wobei
 Damit wird die Fouriertransformation die einer Rechtecksfunktion:
 \begin{align*}
   U_P(\beta) 
-  &\propto \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}\\
-  \text{Intensität}
+  &\propto \frac{\sin(\frac{k\beta b}{2})}{\frac{k\beta}{2}}
+  &\text{Intensität}
   &\propto (U_P(\beta))^2
 \end{align*}
 Insbesondere erhält man für $\beta=0$ 
@@ -465,6 +466,40 @@ Damit ist die Formel für Beugungsmuster am langen Spalt
   \right)^2
   = \left(\frac{\sin B}{B}\right)^2
 \end{gather*}
+Das \emph{Hauptmaximum} liegt bei $\theta=0$.
+Die \emph{Minima} mit $I(\theta_\text{min})=0$ liegen bei den Nullstellen von
+$\sin(B)$ (für $B\neq 0$), also 
+\begin{align*}
+  \sin(B) &= \sin\left(
+            \pi\frac{b}{\lambda}\sin\theta_\text{min}
+            \right) = 0\\
+  \Leftrightarrow\;
+  \sin\theta_\text{min} &= \pm\frac{n\lambda}{b}
+                        & \text{für } n\in\N_{>0}
+\end{align*}
+Für die Lage der \emph{Nebenmaxima} muss gelten
+\begin{align*}
+  \ddif{B} \left( \frac{\sin^2(B)}{B^2} \right) &= 0 
+  &\Rightarrow\; \tan(B) &= B
+\end{align*}
+Diese Gleichung lässt sich graphisch lösen und liefert für die Lage
+und Intensität der Nebenmaxima
+\begin{align*}
+  \sin\theta_\text{max}
+  &= \pm \num{1,43}\frac{\lambda}{b},\,
+    \pm \num{2,46}\frac{\lambda}{b},
+    \dotsc\\
+  \frac{I(\theta_\text{max})}{I_0} 
+  &= \num{0,047} ,\,
+    \num{0,017},
+    \dotsc
+\end{align*}
+Für kleine Winkel $\theta$ kann man direkt die Lage der Minima auf
+einem Schirm im Abstand $R$ bestimmen, denn es gilt
+$\sin\theta\approx\theta\approx\tan\theta=\frac{y}{z_0}$, also
+\begin{gather*}
+  y(\pm n) = \pm n\lambda\frac{z_0}{b}
+\end{gather*}
 
 % --------------
 % VL 17.12.2015
@@ -473,19 +508,55 @@ Damit ist die Formel für Beugungsmuster am langen Spalt
 
 \paragraph{Beugung an einer Rechtecksblende}%
 \index{Beugung!an Rechtecksblende}
+Betrachte eine Rechtecksblende mit 
+Höhe $h$\nomenclature{$h$}{Höhe der Blende} und
+Breite $b$\nomenclature{$b$}{Breite der Blende}.
+Für die Intensitätsverteilung erhält man analog zum langen Spalt nur
+unter Berücksichtigung der Beugung in $x$-Richtung
+\begin{gather*}
+  \frac{I(\alpha,\beta)}{I_0} = \frac{\sin^2(A)}{A^2} \cdot \frac{\sin^2(B)}{B^2}
+\end{gather*}
+mit $A=\frac{h}{2}\pi\alpha$ und $B=A=\frac{b}{2}\pi\beta$.
+
 \paragraph{Beugung an einer kreisförmigen Öffnung}%
 \index{Beugung!an kreisförmiger Öffnung}
+Die Beugung an Kreisblenden ist wichtig für das
+Auflösungsvermögen optischer Instrumente.
+Wir betrachten eine Blende mit Durchmesser
+$D$\nomenclature{$D$}{Blendendurchmesser} und erhalten für die
+Intensität
+\begin{gather*}
+  I(r) \propto \left(
+    \frac
+    { \Bessel \left(\frac{\pi D\sin\theta}{2}\right) }
+    { \left(\frac{\pi D\sin\theta}{2}\right) }
+    \right)^2
+\end{gather*}
+wobei $\Bessel$ die Besselfunktion 1.~Ordnung ist.
+Es fallen also etwa \SI{85}{\percent} der Intensität auf den Kreis ab,
+der vom 1.~Beugungsminimum begrenzt ist. Das erste Beugungsminimum
+liegt bei $\sin\theta = \num{1,22}\frac{\lambda}{b}$ 
+(\emph{Rayleigh-Kriterium}\index{Rayleigh-Kriterium})
+
 \paragraph{Beugung am Doppelspalt}%
 \index{Beugung!am Doppelspalt}\index{Doppelspalt}
+Die betrachtete Anordnung ist eine Blende aus zwei Einfachspalten, je mit
+Breite $b$, nebeneinander mit Spaltabstand
+$a$\nomenclature{$a$}{Spaltabstand beim Mehrfachspalt/Gitter}.
+%% IMAGE MISSING (Aufbau Doppelspalt)
 
-%% MISSING
+Beide Spalte werden mit einer in Näherung ebenen Welle
+beleuchtet. Deckt man jeweils einen Spalt ab, so erhält man entsprechend das
+Beugungsmuster des Einfachspalts. Die Summe der Beugungsmuster ergibt
+aber \emph{nicht} das Beugungsmuster des Doppelspalts!
+Beispielsweise sind für $a=3b$ ausgeprägte Modulationen zu erkennen.
 
 % --------------
 % VL 21.12.2015
 % --------------
 \VL{21.12.2015}
 
-\subsubsection{Beschreibung über Fouriertransformation}
+\subparagraph{Beschreibung über Fouriertransformation}
 \begin{align*}
   \Omega_1(\eta) 
   &= \begin{cases}
