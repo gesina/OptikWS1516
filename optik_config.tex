@@ -1,3 +1,4 @@
+\KOMAoptions{index=totoc, numbers=noendperiod}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{babel}
@@ -22,7 +23,6 @@
 \bibliography{optik.bib}
 
 \usepackage{color}
-\newcommand*{\red}[1]{\textcolor{red}{#1}}
 
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -45,6 +45,12 @@ pdfauthor={Hedwig Werner}]%
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{gensymb}
+
+% Nummeriere Paragraphen
+\setcounter{secnumdepth}{4}
+\renewcommand{\theparagraph}{\alph{paragraph})} 
+% zum durchschauen der Abschnittsüberschriften
+%\setcounter{tocdepth}{4}
 
 \subject{Vorlesungsmitschrift}
 \title{Experimentalphysik III\\ (Wellen und Quanten)}
