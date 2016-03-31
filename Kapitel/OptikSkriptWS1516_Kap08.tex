@@ -894,12 +894,12 @@ Gangunterschied gegeben.
     x &= a\sin\theta_1
   \end{align}
   Für die Phasensprünge gilt
-  \begin{align}\label{Phasendifferenzen}
-    \Delta\Phi_1 &= \pi &\text{falls } n_f>n_1\\\nonumber
-    \Delta\Phi_1 &= 0   &\text{falls } n_f<n_1\\\nonumber
-    \Delta\Phi_2 &= \pi &\text{falls } n_2>n_f\\\nonumber
-    \Delta\Phi_1 &= 0   &\text{falls } n_2<n_f
-  \end{align}
+  \begin{alignat}{2}\label{Phasendifferenzen}
+    \Delta\Phi_1 &= \pi &\quad\text{falls } &n_f>n_1\\\nonumber
+    \Delta\Phi_1 &= 0   &\text{falls } &n_f<n_1\\\nonumber
+    \Delta\Phi_2 &= \pi &\text{falls } &n_2>n_f\\\nonumber
+    \Delta\Phi_2 &= 0   &\text{falls } &n_2<n_f
+  \end{alignat}
   Wichtig für die Interferenz ist die Phasendifferenz
   \begin{gather*}
     \Delta\Phi \coloneqq \Delta\Phi_2 - \Delta\Phi_1
@@ -1014,34 +1014,221 @@ Gangunterschied gegeben.
 % ---
 
 \subsection{Interferometer}
-\paragraph{Michelson Interferometer}%
-\index{Interferometer!Michelson Interferometer}
+\paragraph{Michelson-Interferometer}%
+\index{Interferometer!Michelson-Interferometer}
 %% IMAGE MISSING
 
 Das Michelson Interferometer kann zur Längenmessung verwendet werden.
-Es ergibt sich Interferenz durch eine Aufspaltung der Wellenamplitude.
+Es ergibt sich Interferenz durch eine räumliche Aufspaltung der
+Wellenamplitude.
 Außerdem kann man die Kohärenzlänge $\Delta s$ einer Lichtquelle
 messen, da diese sich proportional zu $\frac{1}{\Delta\lambda}$
-(d.\,h. invers zur spektralen Bandbreite) verhält.
+(d.\,h. invers zur spektralen Bandbreite) verhält ($N$ ist die Anzahl
+der durchlaufenen Intensitätsmaxima):
+\begin{gather*}
+\Delta s = \frac{N\lambda}{2}
+\end{gather*}
+Besonders gut geeignet ist z.\,B. die Wellenlänge der roten Cadmium-Linie.
 
 % --------------
 % VL 14.01.2016
 % --------------
 
-% MISSING
+\section{Vielstrahlinterferenz: Fabry-Perot-Interferometer}
+\index{Vielstrahlinterferenz}
+\index{Interferomenter!Fabry-Perot-Interferometer}
+Vielfachinterferenzen können zu scharfen Interferenzfiguren führen.
+Der grundsätzliche Aufbau sieht vor, dass der einfallende Strahl
+(z.\,B. durch Reflexion und Transmission an Schichtübergängen)
+geteilt wird und so wie beim Gitter mehrere Strahlen derselben Quelle
+miteinander interferieren.
+%% IMAGE MISSING Zinth, Abb. 4.46
+Man erhält konzentrische Kreise als Interferenzen gleicher-Neigung,
+die sogenannten \emph{Fabry-Perot-Ringe}\index{Fabry-Perot-Ringe}
 
+Mögliche Bauformen sind:
 \begin{description}
-\item[1. Schritt: Aufzeichnung des Hologramms]
+\item[Reflexionsschichten] mit definiertem Abstand $d$ im Vakuum
+\item[planparallele Platte] mit hochreflektierenden Schichten
+\end{description}
+
+Für die Funktionsweise betrachte eine Schar ebener Lichtbündel, die
+schräg im Winkel
+$\theta_F$\nomenclature{$\theta_F$}{Fabry-Perot-Interferometer:
+  Winkel, in dem die Lichtbündel auf die Platte treffen}
+auf eine planparallele Platte mit Dicke $d$ und Brechungsindex $n_F$
+trifft.
+Zur Berechnung der gesamten Reflexion und Transmission mache die
+Annahme eines idealen Interferometers, d.\,h. vernachlässige
+Absorption und Streuung.
+Es seien 
+$t$%
+\nomenclature{$t$}{Fabry-Perot-Interferometer:
+  Transmissionskoeffizient bei Eintritt in die planparallele Platte}%
+/$r$%
+\nomenclature{$t$}{Fabry-Perot-Interferometer:
+  Reflexionskoeffizient bei Eintritt in die planparallele Platte}
+die Transmissions-/ Reflexionskoeffizienten der
+Amplitude für Eintritt in die Platte
+und $t'$%
+\nomenclature{$t$}{Fabry-Perot-Interferometer:
+  Transmissionskoeffizient bei Austritt aus der planparallelen Platte}%
+/$r'$%
+\nomenclature{$t$}{Fabry-Perot-Interferometer:
+  Reflexionskoeffizient bei Austritt aus der planparallelen Platte}
+die Transmissions-/ Reflexionskoeffizienten der
+Amplitude für Austritt aus der Platte,
+sowie $\delta$%
+\nomenclature{$\delta$}{Fabry-Perot-Interferometer: Phasenverschiebung
+  des elektrischen Felds bei einfacher Reflexion;
+$\delta = \frac{4\pi n_F d}{\lambda}\cos(\theta_F)$}
+die Phasenverschiebung des elektrischen Felds bei einfacher Reflexion.
+Für die Feldstärke gilt dann
+\begin{align*}
+  E_r &= E_{1,r} + E_{2,r} + E_{3,r} + \dotsb \\
+      &= E_0r + E_0tr't'e^{i\delta} + E_0tr'r'r't'e^{i\delta} +
+        \dotsb \\
+      &= E_0r + E_0tt'r'e^{i\delta}\cdot\left(
+        1 + {(r')}^{2}e^{i\delta} 
+        + \left( {(r')}^{2}e^{i\delta} \right)^2 + \dotsb
+        \right)\\
+      &= E_0r + E_0tt'r'e^{i\delta}\cdot 
+        \sum_{j=0}^{\infty}\left( {(r')}^{2}e^{i\delta} \right)^{j}
+\end{align*}
+Da $\left|(r')^2e^{i\delta}\right|<1$ konvergiert die geometrische
+Reihe und die Gleichung lässt sich umschreiben zu
+\begin{gather*}
+  E_r = E_0\left( 
+    r + \frac{r'tt'e^{i\delta}}{1-(r')^2e^{i\delta}} 
+  \right)
+\end{gather*}
+Mit $t\cdot t' = 1-r^2$ und $-r=r'$ (s.\,\nameref{Fresnel}) folgt
+\begin{align*}
+  E_r &= E_0\left( 
+    r + \frac{r(1-e^{i\delta})}{1-r^2e^{i\delta}} 
+  \right)\\
+  I_R &= I_0\;\frac{2r^2(1-\cos\delta)}{(1+r^4)-2r^2\cos\delta} 
+        = I_0\;\frac
+        {F\sin^2\left(\frac{\delta}{2}\right)}
+        {1+F\sin^2\left(\frac{\delta}{2}\right)}
+\end{align*}
+wobei $F\coloneqq \left(\frac{2r}{1-r^2}\right)^2 
+= \frac{4R}{(1-R)}^2$\nomenclature{$F$}{Konstante für das
+  Fabry-Perot-Interferometer;
+  $F\coloneqq \frac{4R}{(1-R)}^2$},
+$R=r^2$ der Intensitätskoeffizient,
+$I_0$ die transmittierte Intensität
+ist und
+$\delta = \frac{4\pi n_F d}{\lambda}\cos(\theta_F)$
+die Phasenverschiebung beschreibt.
+
+Mit $I_0=I_R+I_T$ erhalten wir die \emph{Transmission des
+Fabry-Perot-Interferometers} als
+\begin{gather*} 
+I_T = I_0\;\frac{1}{1+F\sin^2\left( \frac{\delta}{2} \right)}
+\end{gather*}
+Diese Funktionsform wird \emph{Airy-Funktion}\index{Airy-Funktion}
+genannt.
+Für $T\approx 1$ erhält man die Lage der \emph{Transmissionsmaxima} mithilfe
+der Bedingung
+\begin{gather*}
+  2n_Fd\cos\theta_F = m\lambda \qquad m\in\N
+\end{gather*}
+\emph{Minimale Transmission} ist bei
+\begin{gather*}
+  T_\text{min} = \frac{1}{1+F} = \frac{(1-R)^2}{(1+R)^2}
+\end{gather*}
+Das Reflexionsvermögen beeinflusst die Spiegelschichten wesentlich,
+s.\,\autoref{tab:finesse}.
+\begin{table}
+\centering
+\captionabove[Reflexionskonstanten von Fabry-Perot-Interferometern]
+{\label{tab:finesse}
+  Einfluss des Reflexionsvermögens der Spiegelschichten eines
+  Fabry-Perot-Interferometers}
+\begin{equation*}
+\begin{array}{ r l l r }
+  \toprule
+  \multicolumn{1}{l}{R} & F & T_\text{min} & \multicolumn{1}{l}{\text{Modulationstiefe}}\\
+  \midrule[\heavyrulewidth]
+  \SI{99}{\percent} & \num{1520} & \num{6.6e-4} & \SI{100}{\percent}\\
+  \midrule
+  \SI{10}{\percent} & \num{0.5} & \num{0.66} & \\
+  \midrule
+  \SI{4}{\percent} & \num{0.17} & \num{0.85} & \SI{15}{\percent}\\
+  \bottomrule
+\end{array}
+\end{equation*}
+\end{table}
+Für große $R$ wird der Verlauf von $I_T$ in der Nähe eines Maximums
+ähnlich einer Lorentzfunktion mit Halbwertszeit 
+$\Delta\delta=\frac{4}{\sqrt{F}}$.
+Daraus ist die Definition der sog. \emph{Finesse}\index{Finesse}
+entstanden als
+\begin{gather*}
+  \widetilde F 
+  \coloneqq \frac{\text{Abstand Maxima}}{\text{Breite Maxima}} 
+  = \frac{2\pi\sqrt{F}}{4}
+  = \frac{\pi\sqrt{R}}{(1-R)}
+\end{gather*}%
+\nomenclature{$\widetilde F$}{Finesse; 
+  $\widetilde F = \frac{\pi\sqrt{R}}{(1-R)}$}
+
+\section[Holographie]{Holographie (D. Gabor)}\index{Holographie}
+Um die volle Information eines Objekts aufzuzeichnen, muss die
+Amplituden-~und Phaseninformation des elektrischen Feldes aufgenommen
+werden, was zu einem \emph{Hologramm} führt.
+Die Idee ist die Überlagerung zweier ebener, kohärenter Teilwellen,
+welche ein streifenförmiges Interferenzmuster erzeugt.
+Für die Umsetzung kann man den von einem Spiegel reflektierten Anteil
+mit dem am Objekt gestreuten Anteil des kohärenten Lichts
+interferieren lassen.
+
+\subsection*{1. Schritt: Aufzeichnung des Hologramms}%
+\index{Hologramm!Aufzeichnung}
   \nomenclature{$E_O$}{Objektwelle in der Holographie}
   \nomenclature{$E_R$}{Referenzwelle in der Holographie}
-  % MISSING
+  Man beleuchtet das Objekt mit \emph{monochromatischem} Licht und
+  nimmt die Überlagerung des \enquote{direkten} Lichts (am Spiegel
+  reflektiert) mit dem vom Objekt gestreuten Licht auf.
+  Dadurch erhält man die Phaseninformation mithilfe der Interferenz
+  (bei ausreichender Kohärenzlänge ergibt sich ein
+  Interferenzstreifenmuster):
+  \begin{description}
+    \item[Objektwelle] 
+      $\displaystyle E_0(x,y) = E_{0,0}(x_y)\exp(i\omega t+i\phi_0(x,y))$\\
+      Die Objektwelle enthält die Bildinformation mit einer stark
+      ortsabhängigen Amplitude und Phase.
+    \item[Referenzwelle]
+      $\displaystyle E_R(x,y) = E_{R,0}(x_y)\exp(i\omega t+ i\phi_R(x,y))$\\
+      Die Referenzwelle hat eine konstante Amplitude und einen
+      \enquote{einfachen} Phasenverlauf.
+  \end{description}
+  Zusammen ergibt sich die Intensität auf dem Film als
+  \begin{align*}
+    I(x,y) & \propto E_{R,0}^2 + E_{0,0}^2 
+             + E_{R,0}E_{0,0}(x,y)\left(
+             e^{i(\phi_0(x,y)-\phi_R(x,y))}
+             + e^{-i(\phi_0(x,y)-i\phi_R(x,y))}
+             \right)\\
+    I(x,y) &\propto E_{R,0}^2 + E_{0,0}^2 
+             + \underbrace{
+             2E_{R,0}E_{0,0}(x,y)
+             \cos\left(\phi_0(x,y)-\phi_R(x,y)\right)}_{
+             \mathclap{\substack{
+             \text{hochfrequente Modulation}\\
+    \text{des Intensitätsverlaufs}}}
+    }
+  \end{align*}
+  Diese enthält nun die Gesamtinformation über das Objekt, da
+  $\phi_R(x,y)$ bekannt ist.
 
   % --------------
   % VL 18.01.2016
   % --------------
   \VL{18.01.2016}
 
-\item[2. Schritt: Auslesen des Hologramms]
+\subsection*{2. Schritt: Auslesen des Hologramms}
   Nach Entwicklung der Photoplatte erhält man ein
   \emph{Transmissionsbild} $T(x,y)$%
   \nomenclature{$T(x,y)$}{Transmissionsbild eines Hologramms}
@@ -1083,7 +1270,6 @@ messen, da diese sich proportional zu $\frac{1}{\Delta\lambda}$
   \item[$E_3$:] hat gegenüber $E_2$ negative Phase (reelles Bild)
   \end{itemize}
 
-\end{description}
 
 %%% Local Variables:
 %%% mode: latex

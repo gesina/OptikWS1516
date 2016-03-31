@@ -1,15 +1,15 @@
-%%----------------------------------------------
-%%
-%%            Mitschrift der Vorlesung
-%%   Experimentalphysik III: Wellen und Quanten 
-%%       im WS2015/16 an der Uni Regensburg
-%%
+%% ----------------------------------------------
+%% 
+%% Mitschrift der Vorlesung
+%% Experimentalphysik III: Wellen und Quanten 
+%% im WS2015/16 an der Uni Regensburg
+%% 
 %% Kapitel 9: Quantenphänomene: Welle-Teilchen-Dualismus
-%%
-%%
+%% 
+%% 
 %% gesetzt von Gesina und Hedwig
-%%
-%%----------------------------------------------
+%% 
+%% ----------------------------------------------
 
 \chapter[Quantenphänomene]%
 {Quantenphänomene: Welle-Teilchen-Dualismus}
@@ -69,121 +69,379 @@ Elektronen die Anode zu erreichen
 \end{gather*}
 Die \emph{Einsteingleichung}\index{Einsteingleichung} lautet
 \begin{gather*}
-    E_{\text{kin,max}}(\nu) = h\nu - A
+  E_{\text{kin,max}}(\nu) = h\nu - A
 \end{gather*}
 wobei 
 $A$\nomenclature{$A$}{Austrittsarbeit beim Photoeffekt; 
-Materialkonstante} 
-die materialabhängige Konstante für die \emph{Austrittsarbeit} und
+  Materialkonstante} 
+die materialabhängige Konstante für die sog. \emph{Austrittsarbeit} und
 $h=\SI{6.626e-34}{\J\s}$%
 \nomenclature{$h$}{Plank'sches Wirkungsquantum; 
   $h=\SI{6.626e-34}{\Joule\second}$}
 das Plank'sche Wirkungsquantum ist.
 
-%% MISSING
+% --------------
+% VL 21.01.2016
+% --------------
+\VL{21.01.2016}
 
-%--------------
+%% IMAGE MISSING: Austrittsarbeit, Zinth, Abb. 5.8
+Die Austrittsarbeit $A$ ist abhängig von der Frequenz $\omega$.
+Elektronen können nur dann aus dem Festkörper ausgelöst werden, wenn
+$A$ überwunden wird.
+Der Energieübertrag aus dem Lichtfeld ist \enquote{gequantelt} und die
+Intensität ist proportional zur Anzahl der \enquote{Energiequanten
+  $h\nu$} (Photonen).
+Typische Werte für die Austrittsarbeit sind:
+\begin{description}
+\item[Alkalimetalle] $A\approx \SI{1.2}{\electronvolt}$
+\item[Edelmetalle] $A\approx \SI{5}{\electronvolt}$
+\end{description}
+
+% -----
+
+\section{Nachweis von Photonen}
+\cite[siehe][Kap. 5.1.4, Halbleitersensoren]{zinth}
+
+% -----
+
+\section{Eigenschaften von Photonen}
+Licht ist ein Teilchenstrom von Photonen mit der Geschwindigkeit $c$
+und der Ruhemasse $m_0=0$\nomenclature{$m_0$}{Ruhemasse}.
+
+% ---
+
+\subsection{Energie des Photons}\index{Photon!Energie}
+Die Energie eines Photons ist
+\begin{gather*}
+  W_\text{Ph} = h\nu = \frac{hc}{\lambda} = \hbar\omega
+\end{gather*}%
+\nomenclature{$W_\text{Ph}$}{Energie eines Photons}%
+
+\paragraph*{Beispiel}
+Für $\lambda=\SI{600}{\nano\meter}$ gilt
+$W_\text{Ph}=\SI{3.3e-18}{\joule}$
+und für $\lambda=\SI{0.1}{\nano\meter}$ gilt
+$W_\text{Ph}=\SI{12.407}{\kilo\electronvolt}$.
+
+Die Photonenflussdichte $N$\nomenclature{$N$}{Photonenflussdichte}
+eines Lichtbündels mit Intensität $I$ ist definiert über
+\begin{gather*}
+  I = Nh\nu
+  \qquad\text{und}\qquad
+  N \coloneqq 
+  \frac{\text{Zahl der Photonen}}{\text{Fläche}\cdot\text{Zeit}}
+\end{gather*}
+
+\paragraph*{Beispiel}
+Das Sonnenlicht hat eine Intensität von etwa
+\SI{1000}{\watt\per\centi\meter\squared} und somit eine
+Photonenflussdichte
+$N=\SI{2.77e21}{{\text{Photonen}}\per\square\meter\second}$
+
+% ---
+
+\subsection{Impuls des Photons}\index{Photon!Impuls}
+Ein Photon stößt wie ein Teilchen, was u.\,a. zum sogenannten
+\emph{Compton-Effekt} führt.
+Bei der Behandlung von Licht als eine Welle haben wir den
+Photonenimpuls $P_\text{Ph}$ und den Strahlungsdruck $P_S$ kennen
+gelernt:
+\begin{alignat*}{2}
+  P_\text{Ph} &= \frac{h\nu}{c} = \frac{h}{\lambda} = \hbar h\\
+  P_S &= \frac{I}{c} = \frac{Nh\nu}{c} = N\cdot P_\text{ph}
+\end{alignat*}
+und wegen $W_\text{Ph}=h\nu$ ergibt sich die Darstellung
+$W_\text{Ph} = P_\text{Ph}\cdot c$.
+
+
+Die relativistische Beziehung zwischen Energie $W$ und Impuls $p$ für ein
+allgemeines Teilchen lautet
+\begin{gather*}
+  W^2 = (m_0c^2)^2 + p^2
+\end{gather*}
+Da die tatsächlich Ruhemasse eines Photons verschwindet, muss für das
+Photon die \enquote{Masse}
+\begin{gather*}
+  m_{0,\text{Ph}}= \frac{W_\text{Ph}}{c^2} = \frac{h\nu}{c^2}
+\end{gather*}
+gesetzt werden.
+
+% ---
+
+\subsection{Eigendrehimpuls des Photons}\index{Photon!Eigendrehimpuls}
+Der Eigendrehimpuls des Photons (Spin) ist
+\begin{gather*}
+  |\vecS_\text{Ph}| = \hbar
+\end{gather*}
+
+% -----
+
+\section{Welle-Teilchen-Dualismus}
+Es gibt zwei unterschiedliche Bilder von Licht, das Wellen-~und das
+Teilchenbild. (Das trifft auch für alle anderen Quantenteilchen zu.)
+Welche Anschauung man verwendet, hängt von der Fragestellung ab, siehe
+auch \autoref{tab:verwendung-welle-teilchen-bild}.
+\begin{table}[tbh]
+  \centering
+  \captionabove[Anwerwendung des Welle- und des Teilchenbilds]
+  {\label{tab:verwendung-welle-teilchen-bild}
+    Typische Anwerwendung des Welle- und des Teilchenbilds}
+  \begin{tabular}{ll}
+    \toprule
+    \emph{Fragestellung} & \emph{verwendetes Bild}\\\midrule[\heavyrulewidth]
+    Lichtausbreitung, Beugung & Wellenbild \\\midrule
+    Lichtabsorption/~-emission & Teilchenbild \\\midrule
+    Lokalisierung & Wahrscheinlichkeitsinterpretation\\\bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Beispiel: Doppelspaltexperiment}
+Misst man beim Doppelspaltexperiment mit einzelnen Photonen, so
+entspricht die statistische Verteilung (also die
+Aufenthaltswahrscheinlichkeit) der Intensitätsverteilung beim
+normalen Doppelspaltversuch. (Trifft auf alle Quantenteilchen zu.)
+Daraus kann man schließen, dass Quantenteilchen auch
+Welleneigenschaften haben müssen und man kann einem Teilchen mit
+Impuls $P_T$\nomenclature{$P_T$}{Teilchenimpuls} die sogenannte 
+\emph{De-Broglie-Wellenlänge}\index{De-Broglie-Wellenlänge}
+\begin{gather*}
+  \lambda_B=\frac{h}{P_T}
+\end{gather*}%
+\nomenclature{$\lambda_B$}{De-Broglie-Wellenlänge}%
+zuweisen.
+
+% --------------
+% VL 28.01.2016
+% --------------
+\VL{28.01.2016}
+
+\section{Hohlraumstrahlung}
+Die Problemstellung hier ist, ein Strahlungsfeld, das im
+thermodynamischen Gleichgewicht mit der Umgebung steht, zu
+quantifizieren.
+%% IMAGE MISSING: Hohlraumstrahler, Zinth, Abb. 5.27
+
+Ein \emph{Schwarzer Strahler}\index{Schwarzer Strahler} ist ein
+beliebiger Körper, der im harmonischen Gleichgewicht mit seiner
+Umgebung steht, d.\,h. es wird pro Zeiteinheit genauso viel Strahlung
+absorbiert wie emittiert.
+
+Allgemein gilt: Ein guter Absorber ist ein guter Emitter.
+
+Ein \emph{Schwarzer Körper}\index{Schwarzer Körper} ist ein Körper,
+der alle auf ihn treffende Strahlung vollständig absorbiert.
+
+\subsection{Kirchhoff'sches Strahlungsgesetz}%
+\index{Kirchhoff'sches Strahlungsgesetz}
+Das \emph{Kirchhoff'sche Strahlungsgesetz} lautet
+\begin{align*}
+  \frac{\text{Emission}}{s} &= E_\nu(T) \dd\nu \dd\sigma \dd\theta\\
+  \frac{\text{Absorption}}{s} &= A_\nu(T)u_\nu(T) \dd\nu \dd\sigma \dd\theta\\
+\end{align*}
+wobei
+\begin{description}
+\item[$T$] Temperatur
+  \nomenclature{$T$}{Temperatur}
+\item[$\dd\sigma$] Fläche
+  \nomenclature{$\dd\sigma$}{Fläche}
+\item[$\dd\theta$] Raumwinkelelement
+  \nomenclature{$\dd\theta$}{Raumwinkelelement}
+\item[$\dd\nu$] Frequenzwinkel
+  \nomenclature{$\dd\nu$}{Frequenzwinkel}
+\item[$u(\nu,T)\dd\nu$] spektrale Energiedichte
+  \nomenclature{$u(\nu,T)\dd\nu$}{spektrale Energiedichte}
+\item[$u(\nu,T)$] universelle Funktion von Frequenz und Temperatur
+\item[$A(\nu,T)$] 
+  $\frac{\text{absorbierte Strahlungsleistung}}
+  {\text{einfallende Strahlungsleistung}}$ (bei Frequenz $\nu$ und
+  Temperatur $T$)%
+  \nomenclature{$A(\nu,T)$}{$\frac{\text{absorbierte Strahlungsleistung}}
+    {\text{einfallende Strahlungsleistung}}$
+    (bei Frequenz $\nu$ und Temperatur $T$)}
+\item[$E(\nu,T)$] emittierte Strahlungsleistung
+  \nomenclature{$E(\nu,T)$}{emittierte Strahlungsleistung 
+    (bei Frequenz $\nu$ und Temperatur $T$)}
+\end{description}
+Ist ein Körper im thermischen Gleichgewicht, entspricht dies
+\begin{gather*}
+  E_\nu(T) = u_\nu(T)\cdot A_\nu(T)
+\end{gather*}
+Für einen Schwarzen Strahler gilt $A_\nu(T)\equiv 1$, alle anderen
+Körper haben $A_\nu(T)<1$. Das Emissionsvermögen eines Schwarzen
+Strahlers ist also $E_S(\nu,T) = u(\nu,T)$.
+
+Im Allgemeinen ist $u(\nu,T)$ gesucht. Dazu gibt es verschiedene
+Ansätze.
+
+\paragraph{Rayleigh-Jeans-Gesetz (1898)}
+Dieses Gesetz gilt für 
+$h\nu\ll K_B T$\nomenclature{$K_B$}{Boltzmann-Konstante}
+und lautet
+\begin{gather*}
+  u(\nu,T)\dd\nu = \frac{8\pi}{c^3}(K_BT)\nu^2\dd\nu
+\end{gather*}
+Es hätte eine UV-Katastrophe zur Folge.
+Der Ansatz fußt auf der Thermodynamik: 
+Die stehenden elektromagnetischen Wellen in einem Hohlraum (z.\,B. Würfel)
+sind die Freiheitsgrade des Systems. Der Äquipartitionssatz der
+Thermodynamik besagt, dass in jedem Freiheitsgrad die mittlere Energie
+$\frac{1}{2}K_BT$ steckt.
+
+\paragraph{Wien'sches Gesetz}
+Dieses Gesetz gilt für hohe Frequenzen $h\nu\gg K_BT$ 
+und lautet
+\begin{gather*}
+  u(\nu, T) = A\nu^3e^{-g\frac{\nu}{T}}
+\end{gather*}
+wobei $A=\frac{8\pi h}{c^3}$ und $g=\frac{h}{K_B}$ Konstanten sind
+(die Werte wurden später ermittelt).
+Dies beschreibt die Farbänderung der Emission eines glühenden Körpers bei
+steigender Temperatur.
+
+\paragraph{Wien'sches Verschiebungsgesetz (1893)}
+Dieses Gesetz beschreibt die Lage des Maximums von $u$ als Funktion
+der Temperatur
+($b=\SI{0.29e-2}{\meter\kelvin}$%
+\nomenclature{$b$}{Konstante im Wien'schen Verschiebungsgesetz;
+  $b=\SI{0.29e-2}{\meter\kelvin}$}
+Konstante):
+\begin{gather*}
+  \lambda_\text{max}\cdot T = b
+\end{gather*}
+Z.\,B. hat die Sonnenoberfläche eine Temperatur von
+ca. \SI{6000}{\kelvin} und man erhält ein Maximum von $u$ bei
+$\lambda=\SI{480}{\nano\meter}$.
+
+\paragraph{Stefan-Boltzmann-Gesetz}
+Es gilt für die über alle Frequenzen integrierte Strahlungsleistung
+$\widetilde u$\nomenclature{$\widetilde u$}{über alle Frequenzen
+  integrierte Strahlungsleistung}
+($\sigma = \SI{5.67051e-8}{\watt\per\square\meter\kelvin^{-4}}$%
+\nomenclature{$\sigma$}{Stefan-Boltzmann-Konstante; 
+  $\sigma = \SI{5.67051e-8}{\watt\per\square\meter\kelvin^{-4}}$}
+Stefan-Boltzmann-Konstante):
+\begin{gather*}
+  \widetilde u(T) = \int u(\nu,T)\dd\nu = \sigma T^4
+\end{gather*}
+
+\paragraph{Planck'sches Strahlungsgesetz}
+Dieses Gesetz liefert, dass die Photonenenergie quantisiert ist mit
+$E=h\nu$. Im folgenden sind die groben Schritte der Herleitung.
+
+Nach Planck gilt die (zunächst empirische) Formel
+\begin{gather}
+  u(\nu, T) 
+  = \frac{8\pi\nu^2}{c^2}
+  \cdot \frac{h\nu}{\exp(\frac{h\nu}{kT}}
+  \label{planck}
+\end{gather}
+
+% --------------
 % VL 04.02.2016
-%--------------
+% --------------
 \VL{04.02.2016}
 
-\begin{enumerate}
-\item  \emph{e.\,m. Schritt}\\
-  -> Energie des s.g.h.O. mit Eigenfrequenz $\nu$ im harmonischen
-  e.m. Feld\\
-  -> in kohärente Überlagerung von harmonischen Feldern variabler
-  Frequenz
-
-Berechne Gleichgewichtsenergie $U$ des Oszillators, wobei alle Felder
-entsprechnd der spektralen Energiedichte $u$ gewichtet werden.
-Resultat (empirische Formel, 07.10.1900):
+\subparagraph{Elektromagnetischer Schritt}
+Betrachte die Energie des s.\,g. harmonischen Oszillator mit
+Eigenfrequenz $\nu$ im harmonischen elektromagnetischen Feld
+als kohärente Überlagerung von harmonischen Feldern variabler
+Frequenz.
+Berechne die Gleichgewichtsenergie $U$ des Oszillators%
+\nomenclature{$U$}{Gleichgewichtsenergie eines Oszillators}, wobei
+alle Felder entsprechend der spektralen Energiedichte $u$ gewichtet
+werden.
+Das Resultat ist (empirische Formel, 07.10.1900):
 \begin{gather*}
   u(\nu, T) = \frac{8\pi\nu^2}{c^3} U(\nu, T)
 \end{gather*}
-Es folgt
+Es folgt mit \eqref{planck}
 \begin{gather}
   U(\nu, T) = \frac{h\nu}{\exp(\frac{h\nu}{uT}) - 1}
   \label{GGWEnergie}
 \end{gather}
-Bedeutung von Formel~\eqref{GGWEnergie}:
+Jetzt die Bedeutung von Formel~\eqref{GGWEnergie}:
 
-\item \emph{Thermodynamischer Schritt}
+\subparagraph{Thermodynamischer Schritt}
 Ausgehend von Gleichung~\eqref{GGWEnergie} berechnet Planck die
-Entropie $S$\nomenclature{$S$}{Entropie}
-\begin{align*}
-  \dd U &= T\dd S - p\underbrace{\dd V}_{=0} \dotsb \\
-  \Rightarrow \frac{\dd S}{\dd U} &= \frac{1}{T}
-\end{align*}
-Man findet 
-$\dd S = \frac{\dd U}{T}$ und 
-$\frac{1}{T(U)} = \frac{k_B}{h\nu} \ln\left(\frac{h\nu+U}{U}\right)$
-aus Gleichung~\eqref{GGWEnergie} dann
+Entropie $S$\nomenclature{$S$}{Entropie}, denn es gilt der Zusammenhang
 \begin{gather*}
-  S = k_B \left[ 
+  \dd U = T\dd S - p\underbrace{\dd V}_{=0} \dotsb
+  \qquad\text{also} \qquad
+  \frac{\dd S}{\dd U} = \frac{1}{T}
+  \qquad\text{bzw.} \qquad
+  \dd S = \frac{\dd U}{T} 
+\end{gather*}
+Da mit Gleichung~\eqref{GGWEnergie}
+$\frac{1}{T(U)} = \frac{K_B}{h\cdot\nu}\ln\left(\frac{h\nu+U}{U}\right)$,
+gilt insgesamt
+\begin{gather*}
+  S = K_B \left[ 
     \left(1+\frac{U}{h\nu}\right) \ln\left(1+\frac{U}{h\nu}\right)
     + \frac{U}{h\nu}\ln\left(\frac{U}{h\nu}\right)
   \right]
 \end{gather*}
 Die Entropie \emph{muss} diese Form haben!
 
-\item \emph{Statistischer Schritt}
-  Wir behandeln nun die Herleitung der Entropie mit statistischen
-  Argumenten.
-  Die Entropie von $N$ unabhängigen Oszillatoren der Frequenz $\nu$
-  ist
-  \begin{gather*}
-    S_N = k_B\cdot \ln(W_N)
-  \end{gather*}
-  wobei $W_N$\nomenclature{$W_N$}{thermodynamische Wahrscheinlichkeit;
-    Anzahl der möglichen Verteilungen der Gesamtenergie $U_N$ auf $N$
-    Oszillatoren}
-  die thermodynamische Wahrscheinlichkeit ist, also die Anzahl der
-  möglichen Verteilungen der Gesamtenergie $U_N$ auf $N$ Oszillatoren.
-  Die Gesamtenergie ist $U_N=N\cdot
-  U$\nomenclature{$U_N$}{Gesamtenergie eines Systems mit $N$
-    Oszillatoren; $U_N=N\cdot U$}.
+\subparagraph{Statistischer Schritt}
+Wir behandeln nun die Herleitung der Entropie mit statistischen
+Argumenten.
+Die Entropie von $N$ unabhängigen Oszillatoren der Frequenz $\nu$
+ist
+\begin{gather*}
+  S_N = K_B\cdot \ln(W_N)
+\end{gather*}
+wobei $W_N$\nomenclature{$W_N$}{thermodynamische Wahrscheinlichkeit;
+  Anzahl der möglichen Verteilungen der Gesamtenergie $U_N$ auf $N$
+  Oszillatoren}
+die thermodynamische Wahrscheinlichkeit ist, also die Anzahl der
+möglichen Verteilungen der Gesamtenergie $U_N$ auf $N$ Oszillatoren.
+Die Gesamtenergie ist $U_N=N\cdot
+U$\nomenclature{$U_N$}{Gesamtenergie eines Systems mit $N$
+  Oszillatoren; $U_N=N\cdot U$}.
 
-  \red{Achtung:} Es gilt $W\to\infty$ für eine beliebige,
-  kontinuierliche Verteilung von $U_N$.
+\red{Achtung:} Es gilt $W\to\infty$ für eine beliebige,
+kontinuierliche Verteilung von $U_N$.
 
-  \minisec{1. Postulat (Quantenpostulat)}
+\begin{postulat}[Quantenpostulat]
   Die Oszillatoren dürfen Energie nur in ganzzahligen Vielfachen einer
-  Grundeinheit $\eps$ aufnehmen
+  Grundeinheit $\eps$ aufnehmen, d.\,h.
   \begin{gather*}
     U_N = p\cdot \eps 
     \qquad \text{mit } p\in\Z, p\gg 1
   \end{gather*}
+\end{postulat}
 
-  \minisec{2. Postulat (statistisches Postulat)}
-  Gibt die Anzahl der Möglichkeiten an $p$ ununterscheidbare
-  Energiequanten auf $N$ unterscheidbare Oszillatoren zu verteilen
-  (Bose-Einstein-Statistik)
+\begin{postulat}[statistisches Postulat]
+  Die Anzahl der Möglichkeiten, $p$ ununterscheidbare
+  Energiequanten auf $N$ unterscheidbare Oszillatoren zu verteilen,
+  ist (Bose-Einstein-Statistik)
   \begin{gather*}
     W_N = \frac{(N+p-1)!}{(N-1)!\cdot p!}
-    \overset{\mathllap{\text{Stirling}}}{\approx} 
+    \overset{\text{Stirling}}{\approx} 
     \frac{(N+p)^{N+p}}{N^N \cdot p^p}
   \end{gather*}
-  
-  \minisec{Beispiel}
-  Es sei $N=2$, $p=3$ und $W_2=4$.
-  Dann sind die vier Möglichkeiten, die gesamte Energie $U=3\eps$ auf
-  die beiden Oszillatoren 1~und 2 zu verteilen
-  %% IMAGE MISSING (Verteilung der Energie auf Oszillatoren)
+\end{postulat}  
 
-  Also
-  \begin{align*}
-    S_N &= k_B \left[
-      (N+p)\ln(N+p) - N\ln(N) - p\ln(p)
-      \right]
-    &= N \underbrace{
-      k_B \left[
-      \left(1+\frac{U}{\eps}\right) \ln\left(1+\frac{U}{\eps}\right) 
-      - \frac{U}{\eps}\ln\left(\frac{U}{\eps}\right)
-      \right]
-      }_{\text{Entropie für einen Oszillator}}\\
-    S_N &= N\cdot S
-  \end{align*}
-\end{enumerate}
+\subparagraph{Beispiel}
+Es sei $N=2$, $p=3$ und $W_2=4$.
+Dann sind die vier Möglichkeiten, die gesamte Energie $U=3\eps$ auf
+die beiden Oszillatoren 1~und 2 zu verteilen, leicht grafisch zu
+ermitteln
+%% IMAGE MISSING (Verteilung der Energie auf Oszillatoren)
+und für die Entropie gilt
+\begin{align*}
+  S_N &= K_B \left[
+        (N+p)\ln(N+p) - N\ln(N) - p\ln(p)
+        \right]\\
+  &= N \underbrace{
+    K_B \left[
+    \left(1+\frac{U}{\eps}\right) \ln\left(1+\frac{U}{\eps}\right) 
+    - \frac{U}{\eps}\ln\left(\frac{U}{\eps}\right)
+    \right]
+    }_{\text{Entropie für einen Oszillator}}\\
+  &= N\cdot S
+\end{align*}
 
 
 
