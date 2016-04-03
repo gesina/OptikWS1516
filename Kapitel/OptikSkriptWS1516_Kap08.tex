@@ -32,215 +32,14 @@ Abweichung von der geradlinigen Ausbreitung (\emph{Beugung} an
 der Blende) und zu Intensitätsmodulationen am Schirm
 (\emph{Interferenz}) führt.
 
-% --------------
-% VL 10.12.2015
-% --------------
-\VL{10.12.2015}
+Es werden Kenntnisse der \emph{Fourier-Transformation} benötigt, siehe
+dazu \nameref{fouriertrafo} im Anhang, S.\,\pageref{fouriertrafo}.
 
-\section{Fourier-Transformation}
-Mit der Fouriertransformation ist die Fourierreihe für periodische
-Funktionen verwandt.
-
-\minisec{Fourierreihe}
-Sei $f(t)$ eine komplexwertige periodische Funktion mit Periode
-$T=\frac{2\pi}{\omegao}$, dann lässt sie sich als Summe wie folgt darstellen
-\begin{align*}
-  f(t) &= \sum_{k=-\infty}^{\infty} F_k\cdot e^{ik\omegao t}\\
-  \Rightarrow\quad 
-  f(t) &= \sum_0^{\infty} A_k\cos(\omega_k t)+B_k\sin(\omega_k t)
-\end{align*}
-wobei $B_0=0$ und $\omega_k=k\omegao=\frac{2\pi k}{T}$ die
-Kreisfrequenz der periodischen Funktion ist. Die Koeffizienten lassen
-sich berechnen, indem man beide Seiten mit $\exp(-ikt\omegao)$
-multipliziert und über eine Periode integriert
-\begin{align*}
-  A_k &= \frac{2}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}}
-        f(t)\cos(\omega_k t)\dd t
-  & k&\neq 0\\
-  A_0 &= \fracone{T}\int_{-\frac{T}{2}}^{\frac{T}{2}} f(t)\dd t\\
-  B_k &= \frac{2}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}
-        f(t)\sin(\omega_k t)\dd t\\
-\end{align*}
-Das ergibt für die Summen-Koeffizienten $F_k$ der
-Fouriertransformierten
-\begin{align*}
-  F_k &= \fracone{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}
-        f(t) e^{-k\omegao t}\dd t
-  &-\infty &\leq k\leq\infty\\
-  \text{also}\quad 
-  f(t) &= A_0 + \sum_{1}^{\infty}(A_k\cos(\omega_k t) + B_k\sin(\omega_k t)\\
-      &= F_0 + \sum_{1}^{\infty}e^{i\omega_kt} 
-        \left( \frac{A_k-iB_k}{2} \right)
-        + e^{-i\omega_kt}\left( \frac{A_k+iB_k}{2} \right)\\
-      &= \sum_{-\infty}^{\infty} F_k e^{i\omega_k t}
-\end{align*}
-\paragraph{Beispiel 1} periodische Rechtecksfunktion
-\begin{align*}
-  f(t)&=\left\{
-        \begin{array}{ll}
-          0&\text{für $-\frac{T}{2}\leq t\leq -\frac{b}{2}$}\\
-          a&\text{für $-\frac{b}{2}\leq t\leq \frac{b}{2}$}\\
-          0&\text{für $\phantom{-}\frac{b}{2}\leq t\leq \frac{T}{2}$}
-        \end{array}
-             \right.
-\end{align*}
-Der nullte Koeffizient lautet dann
-\begin{align*}
-  F_0 &= \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}}
-        f(t)e^{-i\omegao t}\dd t
-        = \frac{ab}{T}
-\end{align*}
-Die weiteren Koeffizienten lauten:
-\begin{align*}
-  F_k &= \fracone{T} \int_{-\frac{b}{2}}^{\frac{b}{2}} 
-        ae^{i\omegao t}\dd t
-        = \frac{a}{k\pi}\sin(k\omegao\frac{b}{2})
-\end{align*}
-Im Spezialfall $b=\frac{b}{2}$ (50\% Duty-Cycle) gilt:
-\begin{align*}
-  F_0 &= \frac{a}{2}
-  &F_{\pm 2n} &= 0
-  &F_{\pm (2n+1)} &= \frac{a}{(2n+1)\pi}
-\end{align*}
-
-\paragraph{Beispiel 2} Übergang zu nicht-periodischen
-Funktionen. Betrachte nun wieder Rechtecksfunktionen mit der Breite $b$,
-verändere nun aber die Periode bzw. den Abstand zwischen
-Rechtecksimpulsen.
-Wenn die Periodendauer gegen unendlich geht
-($T\longrightarrow\infty$), geht der Abstand der Fourierkoeffizienten
-gegen null. Dabei beschreiben die Fourierkoeffizienten immer noch die
-gleiche Funktion $f(\omega)$. Führt man nun eine Grenze $T_0$ ein kann
-man oberhalb davon, also bei $\vert t\vert >T_0$, $f(t)$
-vernachlässigen. Die Koeffizienten werden also durch $\omega=k\omegao$
-und $\fracone{T}$ bestimmt. 
-\begin{align*}
-  F_k &= \fracone{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} 
-        f(t) e^{-ik\omegao t}\dd t
-\end{align*}
-Führe nun eine Funktion $F(\omega)$ ein, deren Funktionswerte bei
-$\omega=\omegao k$ die Fourierkoeffizienten $F_k$ bestimmen.
-\begin{align*}
-  F(\omega) &= \int_{-\frac{T}{2}}^{\frac{T}{2}}
-              f(t)e^{-i\omega t}\dd t\\
-  F_k &= \fracone{T} F(\omega_k)        
-        =\fracone{T}F(k\omega)
-\end{align*}
-Wenn man dies nun in $f(t)$ einsetzt erhält man
-\begin{align*}
-  f(t) &= \sum_{k=-\infty}^{\infty}
-         \fracone{T} F(k\omegao)e^{ik\omegao t}
-\end{align*}
-Da $\fracone{T}$ direkt proportional zum Frequenzabstand 
-$\dd\omega=\omegao$ zwischen zwei Fourierkomponenten ist, folgt daraus
-\begin{align*}
-  f(t) &= \sum_{k=-\infty}^{\infty}
-         \frac{\dd \omega}{2\pi} F(k\omegao) e^{ik\omegao t}
-\end{align*}
-Wenn nun die Periodendauer gegen unendlich geht, 
-wird $\dd \omega$ infinitesimal klein und man erhält die
-Fouriertransformation $f(t)$ mit ihrer Fouriertransformierten
-$F(\omega)$.
-\begin{align*}
-  f(t) &= \int_{-\infty}^{\infty} 
-         F(\omega)e^{i\omega t}\frac{\dd\omega}{2\pi}\\
-  F(\omega) &= \int_{-\infty}^{\infty} 
-              f(t)e^{-i\omega t}\dd t
-\end{align*}
-Die Abbildung $f(t)\longrightarrow F(\omega)$ ergibt das
-Frequenzspektrum der Funktion $f(t)$.
-
-\paragraph{Messungen} Bei Messungen wird meist nur die Intensität in
-Abhängigkeit von Zeit und Frequenz gemessen. Die Intensitäten sind
-aber nicht über eine Fouriertransformation miteinander verknüpft,
-deshalb muss man $I\propto E^2$ ausnutzen, denn die $E$-Felder in
-Abhängigkeit zur Zeit und Frequenz sind wieder über eine
-Fouriertransformation miteinander verknüpft.
-
-\minisec{Rechenregeln und Spezialfälle}
-Betrachte nun die Delta-Funktion $\delta(x)$ bzw. $\delta(\omega)$,
-$\delta(t)$. $\delta(t)$ ist überall identisch Null außer bei $t=0$. 
-\begin{align*}
-  \delta(t) &= \begin{Bmatrix}
-    0 &\text{für} &t\neq 0\\
-    \infty &\text{für} &t=0
-  \end{Bmatrix}\\
-  \delta(\omega) &= \fracone{2\pi}\int_{-\infty}^{\infty}
-                   e^{-i\omega t}\dd t
-\end{align*}
-Eine konstante Funktion besitzt also als Fouriertransformierte die
-$\delta(\omega)$-Funktion.
-\begin{align*}
-  \int_{x-a}^{x+a} f(t)\delta(t-\omega)\dd t
-  &= f(\omega)\\
-  \delta(ax) &= \fracone{a}\delta(x)\\
-  \delta(g(x)) &= \sum_{i=1}^{n}\fracone{g\prime (x_i)}\delta(x-x_i)
-             &\text{mit } g(x_i)&0&g\prime(x_i)&\neq 0
-\end{align*}
-
-\minisec{Der Faltungssatz}
-Eine Faltung ist mathematisch definiert als 
-\begin{align*}
-  f(t)\otimes g(t)
-  &\coloneqq \int_{-\infty}^{\infty} f(\zeta)g(t-\zeta)\dd\zeta
-\end{align*}
-Die Fouriertransformation einer Faltung sieht wie folgt aus ($F$ FT
-von $f$, $G$ FT von $g$):
-\begin{align*}
-  x(t) &\coloneqq g(t)\otimes f(t)
-  &\text{FT: } X(\omega) &= G(\omega)F(\omega)\\
-  \Rightarrow\quad 
-  x(t) &= FT^{-1}(FT(g(t))\cdot FT(f(t))
-\end{align*}
-Eine Faltung lässt sich berechnen, indem die zu faltenden Funktionen
-$g(t)$ und $f(t)$ fouriertransformiert, dann miteinander
-multipliziert werden und schließlich das Produkt wieder in den
-ursprünglichen Raum rücktransformiert wird.
-Hierbei ist die Fouriertransformation (FT) als Operation zwischen
-Funktionsräumen aufgefasst (Funktionen $\to$ Funktionen).
-
-\minisec{Spezielle Funktionen}
-\paragraph{Gauß-Funktion} Eine (breite) Gauß-Funktion transformiert
-immer in eine (schmale) Gauß-Funktion.
-\begin{align*}
-  F(\omega) &= \fracone{\sigma\sqrt{2\pi}}\int_{-\infty}^{\infty}
-              e^{-\frac{t^2}{2\sigma^2}} e^{-i\omega t} \dd t
-              = e^{-\frac{\sigma^2\omega^2}{2}}
-\end{align*}
-Die Gauß-Funktion ist eine Darstellung der $\delta$-Funktion für
-$\sigma\longrightarrow 0$.
-
-\paragraph{Exponentialfunktion} Eine (breite) Exponentialfunktion
-transformiert in eine (schmale) Lorentzfunktion.
-\begin{align*}
-  f(t) &= e^{-\frac{\vert t\vert}{\tau}}\\
-  F(\omega) &= \frac{2\tau}{1+\omega^2\tau}
-\end{align*}
-
-\paragraph{Rechteckfunktion} Eine Rechteckfunktion transformiert in
-eine sinc-Funktion.
-\begin{align*}
-  F(\omega) &= 2\int_{0}^{\frac{T}{2}}\cos(\omega t)\dd t
-  &\propto -\frac{\sin(x)}{x} x
-\end{align*}
-
-% Bei der Funktion stimmt iwas noch nicht und sie kommt vollständig noch in der Übung dran
 
 % --------------
 % VL 14.12.2015
 % --------------
 \VL{14.12.2015}
-
-Es gilt die \emph{Parseval'sche Formel}\index{Parseval'sche Formel}
-\begin{gather*}
-  \int_{\infty}^{\infty} |f(t)|^2 \dd t 
-  = \int_{\infty}^{\infty} |F(\omega)|^2 \dd\omega
-\end{gather*}
-und der \emph{Verschiebungssatz}\index{Verschiebungssatz}
-\begin{align*}
-  FT(f(t-t_0)) = FT(f(x)\otimes\delta(t-t_0))
-  = \underbrace{FT(f(t))}_{F(\omega)}e^{-i\omegao t_0}
-\end{align*}
 
 % -----
 
@@ -249,20 +48,20 @@ und der \emph{Verschiebungssatz}\index{Verschiebungssatz}
 Das \emph{Huygen'sche Prinzip}\index{Huygen'sche Prinzip} lautet
 \begin{quote}
   Jeder Punkt einer primären Wellenfront ist Quelle von sekundären
-  Elementarwellen
+  Elementarwellen.
 \end{quote}
 Die genannten Elementarwellen breiten sich mit der Dispersion des
 Mediums aus (also isotrop oder anisotrop).
 Die Einhüllende dieser Elementarwellen bildet eine neue Wellenfront.
 Die Einhüllende beschreibt nicht die Randbereiche (hier findet Beugung statt).
 
-\paragraph{Fresnel-Huygen'sches Prinzip}
+\minisec{Fresnel-Huygen'sches Prinzip}
 Eine Verbesserung dieser Theorie liefert das 
 \emph{Fresnel-Huygen'sches Prinzip}\index{Fresnel-Huygen'sches
   Prinzip}
 \begin{quote}
   Das Lichtfeld am Punkt $P$ wird durch \emph{Interferenz} (Summation
-  der Amplituden/Phasen) aller Elementarwellen beschrieben.
+  der Amplituden und Phasen) aller Elementarwellen beschrieben.
 \end{quote}
 
 % ---
@@ -309,12 +108,12 @@ berechnen, der hinter einem Objekt $B$ mit der Transmissionsfunktion
 $\Omega$ liegt. $\Omega$ hänge von den Orthonormalkoordinaten $\zeta$
 und $\eta$ auf der Ebene senkrecht zur Verbindung von $Q$ und $P$ ab
 und sei nur innerhalb der Blendenöffnung ungleich 0.
-Die Lösung hierfür über die MWG als Randwertproblem ist
+Die Lösung hierfür über die MWGl. als Randwertproblem ist
 kompliziert. Daher trifft man folgende Näherungen
 \begin{itemize}
 \item Das skalare Lichtfeld $U$ breitet sich von $Q$ nach $B$
   ungestört aus.
-\item Das Blendenobjekt $B$ sei \enquote{vernünftig} (eben und
+\item Das Blendenobjekt $B$ sei \enquote{vernünftig} (d.\,h. eben und
   beeinflusst das einfallende Lichtfeld nicht)
 \item Für die Beeinflussung des Lichtfelds durch die
   Transmissionsfunktions $\Omega(\zeta,\eta)$ auf der rechten Seite der
@@ -385,8 +184,11 @@ Die $k$-Vektoren der gebeugten Strahlen werden beschrieben durch
   \qquad k=\frac{2\pi}{\lambda}=\sqrt{k_x^2+k_y^2+k_z^2}
 \end{align*}
 
+% --
+
+\subsubsection{Näherungen der Fraunhofer'schen Beugung}
 Die Näherungen, die in der Fraunhofer'schen Beugung getroffen werden,
-sind:
+sind
 \begin{itemize}
 \item $R\rightarrow\infty$
 \item $R_0\rightarrow\infty$
@@ -404,9 +206,10 @@ Dann wird die Formel \eqref{UP} zu
     \exp\left( ik(\alpha-\alpha_0)\zeta - ik(\beta-\beta_0)\eta \right)
 \end{align*}
 
+% --
 
 \subsubsection[Senkrechter Einfall]%
-{Spezialfall: Senkrechter Einfall}
+{Spezialfall senkrechter Einfall}
 Hier gilt $\alpha_0=\beta_0=0$, also
 \begin{gather*}
   U_P(\alpha,\beta) 
@@ -415,6 +218,8 @@ Hier gilt $\alpha_0=\beta_0=0$, also
   \exp\left( ik\alpha\zeta - ik\beta\eta \right)
 \end{gather*}
 Das ist die 2D-Fouriertransformation der Blendenfunktion.
+
+% --
 
 \subsubsection{Beispiele für Fraunhofer'sche Beugung}
 \paragraph{Beugung am langen Spalt}\index{Beugung!am langen Spalt}
@@ -530,7 +335,7 @@ Intensität
     \frac
     { \Bessel \left(\frac{\pi D\sin\theta}{2}\right) }
     { \left(\frac{\pi D\sin\theta}{2}\right) }
-    \right)^2
+  \right)^2
 \end{gather*}
 wobei $\Bessel$ die Besselfunktion 1.~Ordnung ist.
 Es fallen also etwa \SI{85}{\percent} der Intensität auf den Kreis ab,
@@ -649,12 +454,13 @@ Wir betrachten ein Beugungsgitter, das aus $N$ langen Spalten mit
 konstantem Abstand $a$ besteht.
 %% IMAGE MISSING
 Die Beugung setzt sich zusammen aus:
-\begin{itemize}
+\begin{description}
 \item[$\Omega_\text{Spalt}$] Beugung am Einzelspalt
 \item[$\Omega_\text{Gitter}$] Position der Spalte
-\end{itemize}
-wobei
+\end{description}
+wobei gilt
 \begin{align*}
+  \SwapAboveDisplaySkip
   \Omega_\text{Gitter} = \sum_{m=0}^{N-1}\delta(\eta-ma)
 \end{align*}
 Die Fouriertransformation von $\Omega_\text{Gitter}$
@@ -871,150 +677,152 @@ Die Lage der Interferenzmaxima~bzw. -minima ist durch die
 Phasenverschiebung bei Reflexion
 (\emph{Fresnel-Koeffizient}\index{Fresnel-Koeffizient}) und durch den
 Gangunterschied gegeben.
-\begin{enumerate}[a)]
-\item \emph{Interferenzen gleicher Neigung}
-  Betrachte einen ausgedehnten, parallelen Film der Dicke
-  $d$\nomenclature{$d$}{Filmdicke} mit Brechungsindex
-  $n_f$ (umgebendes Medium habe $n_1=1$ und $n_2=1$), auf den ein Strahl mit
-  Einfallswinkel $\theta_1$ trifft. 
-  Es ergeben sich Phasensprünge $\Delta\Phi_1$ und $\Delta\Phi_2$ an der
-  1.~ bzw. 2.~Grenzfläche.
 
-  Der Winkel des transmittierten Strahls zur 2.~Grenzfläche sei
-  $\theta_f$ (gegeben mit Snellius).
-  Wir bezeichnen mit $a=b$ die Strecke, die der transmittierte Strahl
-  von der 1.~zur 2.~Grenzfläche (bzw. umgekehrt) zurücklegt und mit $x$
-  den Streckenunterschied der betrachteten zurückgeworfenen Strahlen.
-  %% IMAGE MISSING (Stahlteilung am ausgedehnten dünnen Film mit Phasenverschiebungen)
+% --
 
-  Es gilt
-  \begin{align}\label{*}
-    a &= 2d\tan\theta_f \\\nonumber
-    b &= \frac{d}{\cos\theta_f}\\\nonumber
-    x &= a\sin\theta_1
-  \end{align}
-  Für die Phasensprünge gilt
-  \begin{alignat}{2}\label{Phasendifferenzen}
-    \Delta\Phi_1 &= \pi &\quad\text{falls } &n_f>n_1\\\nonumber
-    \Delta\Phi_1 &= 0   &\text{falls } &n_f<n_1\\\nonumber
-    \Delta\Phi_2 &= \pi &\text{falls } &n_2>n_f\\\nonumber
-    \Delta\Phi_2 &= 0   &\text{falls } &n_2<n_f
-  \end{alignat}
-  Wichtig für die Interferenz ist die Phasendifferenz
-  \begin{gather*}
-    \Delta\Phi \coloneqq \Delta\Phi_2 - \Delta\Phi_1
-  \end{gather*}
-  Wegen \eqref{Phasendifferenzen} gibt die drei Möglichkeiten
-  \begin{gather*}
-    \Delta\Phi \pm \pi  
-    \qquad\text{oder}\qquad 
-    \Delta\Phi = 0\,,
-  \end{gather*}
-  je nachdem, ob der Film einen größeren oder
-  kleineren Brechungsindex als \emph{beide} umgebenden Materialien hat,
-  oder bei einem größer, beim anderen kleiner. Genauer
-  \begin{align*}
-    \Delta\Phi 
-    &=
-      \begin{cases}
-        \phantom{-}\pi & n_f<n_1\text{ und }n_f<n_2\\
-        -\pi           & n_f>n_1\text{ und }n_f>n_2\\
-        \phantom{-}0   & n_1<n_f<n_2\\ 
-        \phantom{-}0   & n_2<n_f<n_1\\
-      \end{cases}
-  \end{align*}
-  Der Gangunterschied $\GU$\nomenclature{$GU$}{Gangunterschied} ist
-  \begin{gather*}
-    \GU = 2n_f b - n_1x 
-  \end{gather*}
-  Verwende \eqref{*} und Snellius ($n_1\sin\theta_1 = n_f\sin\theta_f$),
-  um $\GU$ zu berechnen:
-  \begin{align*}
-    \GU &= 2 n_f\frac{d}{\cos\theta_f} 
-          - n_f\frac{\sin\theta_f}{\sin\theta_1} \cdot a\sin\theta_1\\
-        &= 2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot a\\
-        &\overset{\mathllap{\eqref{*}}}{=} 
-          2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot 2d\tan\theta_f\\
-        &= \frac{2d}{\cos\theta_f}\left( n_f-n_f\sin^2\theta_f\right)\\
-        &= \frac{2dn_f}{\cos\theta_f}\cos^2\theta_f\\
-        &= 2dn_f\cos\theta_f
-  \end{align*}
-  Wir erhalten konstruktive Interferenz bei
-  \begin{gather*}
-    \frac{\GU}{\lambda} = \frac{\Delta\Phi}{2\pi} = m 
-    \qquad m\in\N
-  \end{gather*}
-  Konstruktive Interferenz findet statt, wenn folgendes erfüllt ist
-  \begin{gather*}
-    2n_f d\cos\theta_f = \left( m+\frac{\Delta\Phi}{2\pi} \right)\lambda
-  \end{gather*}
-  Hier bilden sich \emph{Haidingerschen Ringe}\index{Haidingerschen Ringe}.
+\subsubsection{Interferenzen gleicher Neigung}
+Betrachte einen ausgedehnten, parallelen Film der Dicke
+$d$\nomenclature{$d$}{Filmdicke} mit Brechungsindex
+$n_f$ (umgebendes Medium habe $n_1=1$ und $n_2=1$), auf den ein Strahl mit
+Einfallswinkel $\theta_1$ trifft. 
+Es ergeben sich Phasensprünge $\Delta\Phi_1$ und $\Delta\Phi_2$ an der
+1.~ bzw. 2.~Grenzfläche.
 
-\item \emph{Interferenzen gleicher Dicke}
-  Betrachte eine Variation der optischen Dicke $n_f\cdot d$.
-  (z.\,B. Ölfilme oder Seifenblasen).
-  %% IMAGE MISSING (Zweistrahlinterferenz am Ölfilm auf Wasser)
+Der Winkel des transmittierten Strahls zur 2.~Grenzfläche sei
+$\theta_f$ (gegeben mit Snellius).
+Wir bezeichnen mit $a=b$ die Strecke, die der transmittierte Strahl
+von der 1.~zur 2.~Grenzfläche (bzw. umgekehrt) zurücklegt und mit $x$
+den Streckenunterschied der betrachteten zurückgeworfenen Strahlen.
+%% IMAGE MISSING (Stahlteilung am ausgedehnten dünnen Film mit Phasenverschiebungen)
 
-  Wir nehmen senkrechten Lichteinfall an, dann ergibt sich eine
-  konstruktive Interferenz bei
-  \begin{gather*}
-    \frac{2 n_f d}{\lambda} = (m+\frac{1}{2})
-  \end{gather*}
+Es gilt
+\begin{align}\label{*}
+  a &= 2d\tan\theta_f \\\nonumber
+  b &= \frac{d}{\cos\theta_f}\\\nonumber
+  x &= a\sin\theta_1
+\end{align}
+Für die Phasensprünge gilt
+\begin{alignat}{2}\label{Phasendifferenzen}
+  \Delta\Phi_1 &= \pi &\quad\text{falls } &n_f>n_1\\\nonumber
+  \Delta\Phi_1 &= 0   &\text{falls } &n_f<n_1\\\nonumber
+  \Delta\Phi_2 &= \pi &\text{falls } &n_2>n_f\\\nonumber
+  \Delta\Phi_2 &= 0   &\text{falls } &n_2<n_f
+\end{alignat}
+Wichtig für die Interferenz ist die Phasendifferenz
+\begin{gather*}
+  \Delta\Phi \coloneqq \Delta\Phi_2 - \Delta\Phi_1
+\end{gather*}
+Wegen \eqref{Phasendifferenzen} gibt die drei Möglichkeiten
+\begin{gather*}
+  \Delta\Phi \pm \pi  
+  \qquad\text{oder}\qquad 
+  \Delta\Phi = 0\,,
+\end{gather*}
+je nachdem, ob der Film einen größeren oder
+kleineren Brechungsindex als \emph{beide} umgebenden Materialien hat,
+oder bei einem größer, beim anderen kleiner. Genauer
+\begin{align*}
+  \Delta\Phi 
+  &=
+    \begin{cases}
+      \phantom{-}\pi & n_f<n_1\text{ und }n_f<n_2\\
+      -\pi           & n_f>n_1\text{ und }n_f>n_2\\
+      \phantom{-}0   & n_1<n_f<n_2\\ 
+      \phantom{-}0   & n_2<n_f<n_1\\
+    \end{cases}
+\end{align*}
+Der Gangunterschied $\GU$\nomenclature{$GU$}{Gangunterschied} ist
+\begin{gather*}
+  \GU = 2n_f b - n_1x 
+\end{gather*}
+Verwende \eqref{*} und Snellius ($n_1\sin\theta_1 = n_f\sin\theta_f$),
+um $\GU$ zu berechnen:
+\begin{align*}
+  \GU &= 2 n_f\frac{d}{\cos\theta_f} 
+        - n_f\frac{\sin\theta_f}{\sin\theta_1} \cdot a\sin\theta_1\\
+      &= 2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot a\\
+      &\overset{\mathllap{\eqref{*}}}{=} 
+        2 n_f\frac{d}{\cos\theta_f} - n_f\sin\theta_f \cdot 2d\tan\theta_f\\
+      &= \frac{2d}{\cos\theta_f}\left( n_f-n_f\sin^2\theta_f\right)\\
+      &= \frac{2dn_f}{\cos\theta_f}\cos^2\theta_f\\
+      &= 2dn_f\cos\theta_f
+\end{align*}
+Wir erhalten konstruktive Interferenz bei
+\begin{gather*}
+  \frac{\GU}{\lambda} = \frac{\Delta\Phi}{2\pi} = m 
+  \qquad m\in\N
+\end{gather*}
+Konstruktive Interferenz findet statt, wenn folgendes erfüllt ist
+\begin{gather*}
+  2n_f d\cos\theta_f = \left( m+\frac{\Delta\Phi}{2\pi} \right)\lambda
+\end{gather*}
+Hier bilden sich \emph{Haidingerschen Ringe}\index{Haidingerschen Ringe}.
 
-  Betrachtet man zwei Platten, die in einem Winkel $\alpha$ übereinander
-  liegen (äquidistant), ergeben sich nach Keil Interferenzen bei
-  \begin{gather*}
-    \Delta x = \frac{\lambda}{2\alpha}
-  \end{gather*}
-  %% IMAGE MISSING
+% --
 
-  So kann auch die Präzision einer Linse geprüft werden: Lege die Linse
-  auf eine planare Platte (Krümmungsradius $R$ der Linse wesentlich
-  größer als maximaler Abstand der Linse zur Platte).
-  Dann sollten sich konzentrische Kreise (Newton'sche Ringe) vom Radius
-  \begin{gather*}
-    r_m = \sqrt{\frac{(m+1)R\lambda}{n_f}}
-  \end{gather*}
-  für den $m$ten-Ring bilden (s. Übung).
-  In gleicher Weise kann ein kleiner Abstand zweier Objekte oder die
-  Dicke einer Schicht/Stufen auf einer dünnen Schicht gemessen werden.
+\subsubsection{Interferenzen gleicher Dicke}
+Betrachte eine Variation der optischen Dicke $n_f\cdot d$.
+(z.\,B. Ölfilme oder Seifenblasen).
+%% IMAGE MISSING (Zweistrahlinterferenz am Ölfilm auf Wasser)
 
-\item \emph{Dielektrische Schichten und Antireflexvergütungen}
-  Hat das an Forder-~und Rückseite der dünnen Schicht reflektierte Licht
-  die gleiche Feldstärke, kann es bei destruktiver Interferenz zu
-  völliger Auslöschung kommen. 
-  So können \emph{Anti-Reflex-Schichten}\index{Anti-Reflex-Schicht}
-  zustande kommen.
+Wir nehmen senkrechten Lichteinfall an, dann ergibt sich eine
+konstruktive Interferenz bei
+\begin{gather*}
+  \frac{2 n_f d}{\lambda} = (m+\frac{1}{2})
+\end{gather*}
 
-  Betrachte eine Glasplatte mit Brechungsindex $n_2$ und eine Schicht
-  mit Dicke $d$ und Brechungsindex $n_f$, die aus Luft ($n_1=1$) heraus
-  beleuchtet wird. Es sei $n_f<n_2$, also $n_1<n_f<n_2$, so dass die
-  Phasenverschiebung $\Delta\Phi$ in Reflexion Null wird.
-  Wir nehmen senkrechten Einfall an. Dann findet destruktive
-  Interferenz (1.~Minimum) bei
-  \begin{gather*}
-    2n_fd = \frac{\lambda}{2}
-  \end{gather*}
-  statt. Die optische Schichtdicke $dn_f$ muss also
-  $\frac{\lambda}{4}$ sein, auch \enquote{$\frac{\lambda}{4}$-Schicht}
-  genannt.
-  Für völlige Auslöschung müssen die Reflexionskoeffizienten beim
-  Eintritt und Austritt aus der Schicht (mit $n_f$) gleich groß
-  werden, die Bedingung für eine 
-  \emph{Anti-Reflex-Vergütung}\index{Anti-Reflex-Vergütung} in
-  Abhängigkeit von $\lambda$ ist also
-  \begin{gather*}
-    n_f = \sqrt{n_1n_2} 
-    \qquad\text{und}\qquad
-    n_fd = \frac{\lambda}{4}
-  \end{gather*}
+Betrachtet man zwei Platten, die in einem Winkel $\alpha$ übereinander
+liegen (äquidistant), ergeben sich nach Keil Interferenzen bei
+\begin{gather*}
+  \Delta x = \frac{\lambda}{2\alpha}
+\end{gather*}
+%% IMAGE MISSING
 
-\end{enumerate}
+So kann auch die Präzision einer Linse geprüft werden: Lege die Linse
+auf eine planare Platte (Krümmungsradius $R$ der Linse wesentlich
+größer als maximaler Abstand der Linse zur Platte).
+Dann sollten sich konzentrische Kreise (Newton'sche Ringe) vom Radius
+\begin{gather*}
+  r_m = \sqrt{\frac{(m+1)R\lambda}{n_f}}
+\end{gather*}
+für den $m$ten-Ring bilden (s. Übung).
+In gleicher Weise kann ein kleiner Abstand zweier Objekte oder die
+Dicke einer Schicht/Stufen auf einer dünnen Schicht gemessen werden.
+
+\subsubsection{Dielektrische Schichten und Antireflexvergütungen}
+Hat das an Forder-~und Rückseite der dünnen Schicht reflektierte Licht
+die gleiche Feldstärke, kann es bei destruktiver Interferenz zu
+völliger Auslöschung kommen. 
+So können \emph{Anti-Reflex-Schichten}\index{Anti-Reflex-Schicht}
+zustande kommen.
+
+Betrachte eine Glasplatte mit Brechungsindex $n_2$ und eine Schicht
+mit Dicke $d$ und Brechungsindex $n_f$, die aus Luft ($n_1=1$) heraus
+beleuchtet wird. Es sei $n_f<n_2$, also $n_1<n_f<n_2$, so dass die
+Phasenverschiebung $\Delta\Phi$ in Reflexion Null wird.
+Wir nehmen senkrechten Einfall an. Dann findet destruktive
+Interferenz (1.~Minimum) bei
+\begin{gather*}
+  2n_fd = \frac{\lambda}{2}
+\end{gather*}
+statt. Die optische Schichtdicke $dn_f$ muss also
+$\frac{\lambda}{4}$ sein, auch \enquote{$\frac{\lambda}{4}$-Schicht}
+genannt.
+Für völlige Auslöschung müssen die Reflexionskoeffizienten beim
+Eintritt und Austritt aus der Schicht (mit $n_f$) gleich groß
+werden, die Bedingung für eine 
+\emph{Anti-Reflex-Vergütung}\index{Anti-Reflex-Vergütung} in
+Abhängigkeit von $\lambda$ ist also
+\begin{gather*}
+  n_f = \sqrt{n_1n_2} 
+  \qquad\text{und}\qquad
+  n_fd = \frac{\lambda}{4}
+\end{gather*}
 
 % ---
 
 \subsection{Interferometer}
-\paragraph{Michelson-Interferometer}%
+\subsubsection{Michelson-Interferometer}%
 \index{Interferometer!Michelson-Interferometer}
 %% IMAGE MISSING
 
@@ -1026,7 +834,7 @@ messen, da diese sich proportional zu $\frac{1}{\Delta\lambda}$
 (d.\,h. invers zur spektralen Bandbreite) verhält ($N$ ist die Anzahl
 der durchlaufenen Intensitätsmaxima):
 \begin{gather*}
-\Delta s = \frac{N\lambda}{2}
+  \Delta s = \frac{N\lambda}{2}
 \end{gather*}
 Besonders gut geeignet ist z.\,B. die Wellenlänge der roten Cadmium-Linie.
 
@@ -1034,7 +842,14 @@ Besonders gut geeignet ist z.\,B. die Wellenlänge der roten Cadmium-Linie.
 % VL 14.01.2016
 % --------------
 
-\section{Vielstrahlinterferenz: Fabry-Perot-Interferometer}
+\subsubsection{Mach-Zehnder-Interferometer}
+\sFolien
+
+\subsubsection{Sagnac-Interferometer}
+\sFolien
+
+\section[Vielstrahlinterferenzen]%
+{Vielstrahlinterferenz: Fabry-Perot-Interferometer}
 \index{Vielstrahlinterferenz}
 \index{Interferomenter!Fabry-Perot-Interferometer}
 Vielfachinterferenzen können zu scharfen Interferenzfiguren führen.
@@ -1081,7 +896,7 @@ Amplitude für Austritt aus der Platte,
 sowie $\delta$%
 \nomenclature{$\delta$}{Fabry-Perot-Interferometer: Phasenverschiebung
   des elektrischen Felds bei einfacher Reflexion;
-$\delta = \frac{4\pi n_F d}{\lambda}\cos(\theta_F)$}
+  $\delta = \frac{4\pi n_F d}{\lambda}\cos(\theta_F)$}
 die Phasenverschiebung des elektrischen Felds bei einfacher Reflexion.
 Für die Feldstärke gilt dann
 \begin{align*}
@@ -1105,8 +920,8 @@ Reihe und die Gleichung lässt sich umschreiben zu
 Mit $t\cdot t' = 1-r^2$ und $-r=r'$ (s.\,\nameref{Fresnel}) folgt
 \begin{align*}
   E_r &= E_0\left( 
-    r + \frac{r(1-e^{i\delta})}{1-r^2e^{i\delta}} 
-  \right)\\
+        r + \frac{r(1-e^{i\delta})}{1-r^2e^{i\delta}} 
+        \right)\\
   I_R &= I_0\;\frac{2r^2(1-\cos\delta)}{(1+r^4)-2r^2\cos\delta} 
         = I_0\;\frac
         {F\sin^2\left(\frac{\delta}{2}\right)}
@@ -1123,9 +938,9 @@ $\delta = \frac{4\pi n_F d}{\lambda}\cos(\theta_F)$
 die Phasenverschiebung beschreibt.
 
 Mit $I_0=I_R+I_T$ erhalten wir die \emph{Transmission des
-Fabry-Perot-Interferometers} als
+  Fabry-Perot-Interferometers} als
 \begin{gather*} 
-I_T = I_0\;\frac{1}{1+F\sin^2\left( \frac{\delta}{2} \right)}
+  I_T = I_0\;\frac{1}{1+F\sin^2\left( \frac{\delta}{2} \right)}
 \end{gather*}
 Diese Funktionsform wird \emph{Airy-Funktion}\index{Airy-Funktion}
 genannt.
@@ -1141,24 +956,24 @@ der Bedingung
 Das Reflexionsvermögen beeinflusst die Spiegelschichten wesentlich,
 s.\,\autoref{tab:finesse}.
 \begin{table}
-\centering
-\captionabove[Reflexionskonstanten von Fabry-Perot-Interferometern]
-{\label{tab:finesse}
-  Einfluss des Reflexionsvermögens der Spiegelschichten eines
-  Fabry-Perot-Interferometers}
-\begin{equation*}
-\begin{array}{ r l l r }
-  \toprule
-  \multicolumn{1}{l}{R} & F & T_\text{min} & \multicolumn{1}{l}{\text{Modulationstiefe}}\\
-  \midrule[\heavyrulewidth]
-  \SI{99}{\percent} & \num{1520} & \num{6.6e-4} & \SI{100}{\percent}\\
-  \midrule
-  \SI{10}{\percent} & \num{0.5} & \num{0.66} & \\
-  \midrule
-  \SI{4}{\percent} & \num{0.17} & \num{0.85} & \SI{15}{\percent}\\
-  \bottomrule
-\end{array}
-\end{equation*}
+  \centering
+  \captionabove[Reflexionskonstanten von Fabry-Perot-Interferometern]
+  {\label{tab:finesse}
+    Einfluss des Reflexionsvermögens der Spiegelschichten eines
+    Fabry-Perot-Interferometers}
+  \begin{equation*}
+    \begin{array}{ r l l r }
+      \toprule
+      \multicolumn{1}{l}{R} & F & T_\text{min} & \multicolumn{1}{l}{\text{Modulationstiefe}}\\
+      \midrule[\heavyrulewidth]
+      \SI{99}{\percent} & \num{1520} & \num{6.6e-4} & \SI{100}{\percent}\\
+      \midrule
+      \SI{10}{\percent} & \num{0.5} & \num{0.66} & \\
+      \midrule
+      \SI{4}{\percent} & \num{0.17} & \num{0.85} & \SI{15}{\percent}\\
+      \bottomrule
+    \end{array}
+  \end{equation*}
 \end{table}
 Für große $R$ wird der Verlauf von $I_T$ in der Nähe eines Maximums
 ähnlich einer Lorentzfunktion mit Halbwertszeit 
@@ -1186,89 +1001,89 @@ interferieren lassen.
 
 \subsection*{1. Schritt: Aufzeichnung des Hologramms}%
 \index{Hologramm!Aufzeichnung}
-  \nomenclature{$E_O$}{Objektwelle in der Holographie}
-  \nomenclature{$E_R$}{Referenzwelle in der Holographie}
-  Man beleuchtet das Objekt mit \emph{monochromatischem} Licht und
-  nimmt die Überlagerung des \enquote{direkten} Lichts (am Spiegel
-  reflektiert) mit dem vom Objekt gestreuten Licht auf.
-  Dadurch erhält man die Phaseninformation mithilfe der Interferenz
-  (bei ausreichender Kohärenzlänge ergibt sich ein
-  Interferenzstreifenmuster):
-  \begin{description}
-    \item[Objektwelle] 
-      $\displaystyle E_0(x,y) = E_{0,0}(x_y)\exp(i\omega t+i\phi_0(x,y))$\\
-      Die Objektwelle enthält die Bildinformation mit einer stark
-      ortsabhängigen Amplitude und Phase.
-    \item[Referenzwelle]
-      $\displaystyle E_R(x,y) = E_{R,0}(x_y)\exp(i\omega t+ i\phi_R(x,y))$\\
-      Die Referenzwelle hat eine konstante Amplitude und einen
-      \enquote{einfachen} Phasenverlauf.
-  \end{description}
-  Zusammen ergibt sich die Intensität auf dem Film als
-  \begin{align*}
-    I(x,y) & \propto E_{R,0}^2 + E_{0,0}^2 
-             + E_{R,0}E_{0,0}(x,y)\left(
-             e^{i(\phi_0(x,y)-\phi_R(x,y))}
-             + e^{-i(\phi_0(x,y)-i\phi_R(x,y))}
-             \right)\\
-    I(x,y) &\propto E_{R,0}^2 + E_{0,0}^2 
-             + \underbrace{
-             2E_{R,0}E_{0,0}(x,y)
-             \cos\left(\phi_0(x,y)-\phi_R(x,y)\right)}_{
-             \mathclap{\substack{
-             \text{hochfrequente Modulation}\\
-    \text{des Intensitätsverlaufs}}}
-    }
-  \end{align*}
-  Diese enthält nun die Gesamtinformation über das Objekt, da
-  $\phi_R(x,y)$ bekannt ist.
+\nomenclature{$E_O$}{Objektwelle in der Holographie}
+\nomenclature{$E_R$}{Referenzwelle in der Holographie}
+Man beleuchtet das Objekt mit \emph{monochromatischem} Licht und
+nimmt die Überlagerung des \enquote{direkten} Lichts (am Spiegel
+reflektiert) mit dem vom Objekt gestreuten Licht auf.
+Dadurch erhält man die Phaseninformation mithilfe der Interferenz
+(bei ausreichender Kohärenzlänge ergibt sich ein
+Interferenzstreifenmuster):
+\begin{description}
+\item[Objektwelle] 
+  $\displaystyle E_0(x,y) = E_{0,0}(x_y)\exp(i\omega t+i\phi_0(x,y))$\\
+  Die Objektwelle enthält die Bildinformation mit einer stark
+  ortsabhängigen Amplitude und Phase.
+\item[Referenzwelle]
+  $\displaystyle E_R(x,y) = E_{R,0}(x_y)\exp(i\omega t+ i\phi_R(x,y))$\\
+  Die Referenzwelle hat eine konstante Amplitude und einen
+  \enquote{einfachen} Phasenverlauf.
+\end{description}
+Zusammen ergibt sich die Intensität auf dem Film als
+\begin{align*}
+  I(x,y) & \propto E_{R,0}^2 + E_{0,0}^2 
+           + E_{R,0}E_{0,0}(x,y)\left(
+           e^{i(\phi_0(x,y)-\phi_R(x,y))}
+           + e^{-i(\phi_0(x,y)-i\phi_R(x,y))}
+           \right)\\
+  I(x,y) &\propto E_{R,0}^2 + E_{0,0}^2 
+           + \underbrace{
+           2E_{R,0}E_{0,0}(x,y)
+           \cos\left(\phi_0(x,y)-\phi_R(x,y)\right)}_{
+           \mathclap{\substack{
+           \text{hochfrequente Modulation}\\
+  \text{des Intensitätsverlaufs}}}
+  }
+\end{align*}
+Diese enthält nun die Gesamtinformation über das Objekt, da
+$\phi_R(x,y)$ bekannt ist.
 
-  % --------------
-  % VL 18.01.2016
-  % --------------
-  \VL{18.01.2016}
+% --------------
+% VL 18.01.2016
+% --------------
+\VL{18.01.2016}
 
 \subsection*{2. Schritt: Auslesen des Hologramms}
-  Nach Entwicklung der Photoplatte erhält man ein
-  \emph{Transmissionsbild} $T(x,y)$%
-  \nomenclature{$T(x,y)$}{Transmissionsbild eines Hologramms}
-  (nur Streifen).
-  Das \enquote{Beugungsgitter} wird jetzt wieder mit einer Referenzwelle
-  beleuchtet.
-  Das Auslesefeld $E_L(x,y)$%
-  \nomenclature{$E_L(x,y)$}{Auslesefeld beim Auslesen eines Hologramms} 
-  soll den gleichen Amplituden und Phasenverlauf haben wie $E_R(x,y)$
-  \begin{gather*}
-    E_L(x,y) = E_{R_0}\exp(i\omega t + i\Phi_R(x,y))
-  \end{gather*}
-  Das Transmissionsbild $T(x,y)$ sei proportional zur Intensität des
-  gesamten Beleuchtungslichts auf der Platte
-  \begin{gather*}
-    T(x,y) = \kappa \cdot I(x,y)
-  \end{gather*}
-  Durch Beleuchtung wird das Bildfeld $E_B(x,y)$\nomenclature{$E_B(x,y)$}{Bildfeld} 
-  erzeugt
-  \begin{align*}
-    E_B(x,y) &= E_L(x,y) \cdot T(x,y)\\
-    E_B(x,y) &= E_{R_0}\exp(i\omega t + i\Phi_R(x,y))\cdot \kappa 
-               \cdot\left\{E_{R_0}^2 + E_{O_0}^2 +
-               2E_{R_0}E_{O_0}(x,y)\cos(\Phi_O(x,y))\right\}\\
-             &= E_1 + E_2 + E_3\\
-    E_B &= \kappa E_R(x,y) \left( E_{R_0}^2 + E_{O_0}^2 \right)\\
-             &\phantom{=}\; + 
-               \kappa E_{R_0}^2 E_{O_0}(x,y)\exp(i\omega t + i\Phi_O(x,y))\\
-             &\phantom{=}\; + 
-               \kappa E_{R}^2 E_{O_0}(x,y)\exp(i\omega t-\Phi_O(x,y)+2i\Phi_R(x,y))
-  \end{align*}
-  Man sieht:
-  \begin{itemize}
-  \item[$E_1$:] proportional zum Auslesefeld, aber abgeschwächt;
-  \item[$E_2$:] direkt proportional zum Objektfeld an der Photoplatte;
-    verhält sich so, als ob die Information direkt vom Ort des Objekts
-    käme, enthält dieselbe Information wie das Original (virtuelles
-    Bild); Hologramm
-  \item[$E_3$:] hat gegenüber $E_2$ negative Phase (reelles Bild)
-  \end{itemize}
+Nach Entwicklung der Photoplatte erhält man ein
+\emph{Transmissionsbild} $T(x,y)$%
+\nomenclature{$T(x,y)$}{Transmissionsbild eines Hologramms}
+(nur Streifen).
+Das \enquote{Beugungsgitter} wird jetzt wieder mit einer Referenzwelle
+beleuchtet.
+Das Auslesefeld $E_L(x,y)$%
+\nomenclature{$E_L(x,y)$}{Auslesefeld beim Auslesen eines Hologramms} 
+soll den gleichen Amplituden und Phasenverlauf haben wie $E_R(x,y)$
+\begin{gather*}
+  E_L(x,y) = E_{R_0}\exp(i\omega t + i\Phi_R(x,y))
+\end{gather*}
+Das Transmissionsbild $T(x,y)$ sei proportional zur Intensität des
+gesamten Beleuchtungslichts auf der Platte
+\begin{gather*}
+  T(x,y) = \kappa \cdot I(x,y)
+\end{gather*}
+Durch Beleuchtung wird das Bildfeld $E_B(x,y)$\nomenclature{$E_B(x,y)$}{Bildfeld} 
+erzeugt
+\begin{align*}
+  E_B(x,y) &= E_L(x,y) \cdot T(x,y)\\
+  E_B(x,y) &= E_{R_0}\exp(i\omega t + i\Phi_R(x,y))\cdot \kappa 
+             \cdot\left\{E_{R_0}^2 + E_{O_0}^2 +
+             2E_{R_0}E_{O_0}(x,y)\cos(\Phi_O(x,y))\right\}\\
+           &= E_1 + E_2 + E_3\\
+  E_B &= \kappa E_R(x,y) \left( E_{R_0}^2 + E_{O_0}^2 \right)\\
+           &\phantom{=}\; + 
+             \kappa E_{R_0}^2 E_{O_0}(x,y)\exp(i\omega t + i\Phi_O(x,y))\\
+           &\phantom{=}\; + 
+             \kappa E_{R}^2 E_{O_0}(x,y)\exp(i\omega t-\Phi_O(x,y)+2i\Phi_R(x,y))
+\end{align*}
+Man sieht:
+\begin{itemize}
+\item[$E_1$:] proportional zum Auslesefeld, aber abgeschwächt;
+\item[$E_2$:] direkt proportional zum Objektfeld an der Photoplatte;
+  verhält sich so, als ob die Information direkt vom Ort des Objekts
+  käme, enthält dieselbe Information wie das Original (virtuelles
+  Bild); Hologramm
+\item[$E_3$:] hat gegenüber $E_2$ negative Phase (reelles Bild)
+\end{itemize}
 
 
 %%% Local Variables:

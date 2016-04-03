@@ -1,86 +1,24 @@
-%%----------------------------------------------
-%%
-%%            Mitschrift der Vorlesung
-%%   Experimentalphysik III: Wellen und Quanten 
-%%       im WS2015/16 an der Uni Regensburg
-%%
+%% ----------------------------------------------
+%% 
+%% Mitschrift der Vorlesung
+%% Experimentalphysik III: Wellen und Quanten 
+%% im WS2015/16 an der Uni Regensburg
+%% 
 %% Kapitel 2: Elektromagnetische Wellen
-%%
-%%
+%% 
+%% 
 %% gesetzt von Gesina und Hedwig
-%%
-%%----------------------------------------------
+%% 
+%% ----------------------------------------------
 
 \chapter{Elektromagnetische Wellen}
-\section{Wiederholung}
-Im Folgenden wird ein Überblick über die häufig gebrauchten Operatoren 
-Gradient ($\Grad$), Rotation ($\Rot$), Divergenz ($\Div$), den Nabla-Operator
-($\vecna$) und den Laplace-Operator ($\Delta$) gegeben.
-
-\paragraph{Vektorableitungen:}
-Für 3-dimensionale Vektoren verwendet man den 
-\emph{Nabla}-Operator%
-\index{Mathematische Operatoren!Nabla-Operator}%
-\index{Nabla-Operator}
-\begin{gather*}
-  \vecna = 
-  \begin{pmatrix}
-    \dif[]{x}, \dif[]{y}, \dif[]{z}
-  \end{pmatrix}
-\end{gather*}
-
-Der \emph{Gradient}%
-\index{Mathematische Operatoren!Gradient}%
-\index{Gradient}
-einer skalaren Funktion $f=f(x,y,z)$ zeigt in die Richtung des größten Anstiegs.
-\begin{gather*}
-  \Grad f = \vecna f = 
-  \begin{pmatrix}
-    \dif[f]{x},\dif[f]{y},\dif[f]{z}
-  \end{pmatrix}
-\end{gather*}
-
-Die \emph{Divergenz}%
-\index{Mathematische Operatoren!Divergenz}%
-\index{Divergenz}
-einer Vektorfunktion ist
-\begin{gather*}
-  \Div\vec{f} = \vecna\vec{f}
-  = \dif[f_{x}]{x}+\dif[f_{y}]{y}+\dif[f_{z}]{z}
-\end{gather*}
-Die Divergenz ist ungleich null, wenn es Quellen oder Senken gibt
-(vgl. elektr. Ladung).
-
-Der \emph{Laplace-Operator}%
-\index{Mathematische Operatoren!Laplace-Operator}%
-\index{Laplace-Operator}
-einer skalaren Funktion ist die \emph{Divergenz des Gradienten}.
-\begin{gather*}
-  \Delta f = \vecna^2 f= \vecna\vecna f = \vecna 
-  \begin{pmatrix}
-	\dif[f]{x},\dif[f]{y},\dif[f]{z}
-  \end{pmatrix}
-  = \diff[f]{x} + \diff[f]{y} + \diff[f]{z}
-\end{gather*}
-Der Laplace einer Vektorfunktion wir komponentenweise gebildet.
-\begin{gather*}
-  \Delta \vec{f} = \vecna^2 \vec{f}= 
-  \begin{pmatrix}
-    \diff[f_x]{x}+\diff[f_x]{y}+\diff[f_x]{z}+\dots
-  \end{pmatrix}
-\end{gather*}
-Die \emph{Rotation} einer Vektorfunktion $\vec{f}$ ist
-\begin{gather*}
-  \Rot \vec{f}= \vecna\times \vec{f}=
-  \begin{pmatrix}
-    \dif[f_z]{y}-\dif[f_y]{z},\dif[f_x]{z}-\dif[f_z]{x},\dif[f_y]{x}-\dif[f_x]{y}
-  \end{pmatrix}
-\end{gather*}
-Funktionen, die sich stark \enquote{winden}, haben eine starke Rotation.
-
 \section{Licht als elektromagnetische Welle}
+Im Folgenden werden Kenntnisse in \emph{Vektorableitung} benötigt,
+siehe dazu \nameref{vektorableitungen} im Anhang,
+S.\,\pageref{vektorableitungen}.
+
 In dieser Vorlesung behandeln wir Lichtausbreitung in
-nicht-magnetischen Medien, d.h. man kann die 
+nicht-magnetischen Medien, d.\,h. man kann die 
 magnetische Permeabilität $\mu =1$%
 \nomenclature{$\mu$}{magnetische Permeabilität eines Mediums; hier immer $\mu=1$}
 setzen. Für nicht leitende Materialien ist zudem die
@@ -88,15 +26,14 @@ Ladungsdichte $\rho_\text{frei}$%
 \nomenclature{$\rho_\text{frei}$}{Ladungsdichte; in isolierenden Materialien $\rho_\text{frei}=0$}
 und die Stromdichte $j_\text{frei}$%
 \nomenclature{$j_\text{frei}$}{Stromdichte; in isolierenden Materialien $j_\text{frei}=0$}
-gleich
-null. In Formeln also $\mu=1$, $\rho_\text{frei}=0$, $j_\text{frei}=0$.
+gleich null. 
+In Formeln also $\mu=1$, $\rho_\text{frei}=0$, $j_\text{frei}=0$. 
 
-\minisec{Lichtausbreitung in Vakuum oder in einem Dielektrikum}
-Im Dielektrikum muss man die \textcolor{red}{Maxwellgleichungen} (kurz
-\textcolor{red}{MWGl.}) \textcolor{red}{für ein Medium mit
-  dielektrischer Verschiebung}%
+\minisec{Lichtausbreitung im Vakuum oder im Dielektrikum}
+Im Dielektrikum muss man die \emph{Maxwellgleichungen} (kurz
+MWGl.) \emph{für ein Medium mit dielektrischer Verschiebung}%
 \index{Maxwellgleichungen!mit dielektrischer Versch.}
-verwenden. 
+verwenden.
 Weitere Annahmen sind
 \begin{itemize}
 \item lineare Optik
@@ -108,18 +45,22 @@ Mit diesen Annahmen gilt
 \end{gather*}%
 \nomenclature{$\vec{D}$}{dielektrische Verschiebung}%
 \nomenclature{$\vec{E}$}{elektrische Feldstärke}%
-\nomenclature{$\eps_0$}{elektrische Feldkonstante}%
+\nomenclature{$\eps_0$}{elektrische Feldkonstante;
+  $\eps_0=\SI{8.854e-12}{\coulomb^2\m^{-2}\newton^{-1}}$}%
 \nomenclature{$\eps$}{relative Dielektrizitätskonstante eines Mediums}%
 wobei $\eps_0=\SI{8.854e-12}{\coulomb^2\m^{-2}\newton^{-1}}$
 die elektrische Feldkonstante\index{elektrische Feldkonstante} ist und
 \emph{$\eps$} die relative \emph{Dielektrizitätskonstante}%
 \index{Dielektrizitätskonstante} des Mediums.
 
-\textcolor{red}{Achtung:} in optisch anisotropen Medien wird
+\red{Achtung:} in optisch anisotropen Medien wird
 $\eps$ durch einen Tensor ersetzt.
 
+% ---
+
+\subsection{Maxwell-Gleichungen}
 Elektrische und magnetische Felder sind wie folgt über die MWGl. verknüpft:
-\paragraph{MWGl. für isolierendes nicht magnetisches Medium:}
+\minisec{MWGl. für isolierendes nicht magnetisches Medium:}
 \begin{align*}	 
   \vecna\vec{D}&=0\\
   \vecna\vec{B}&=0\\
@@ -131,7 +72,7 @@ mit magnetischer Feldkonstante
 $\mu_0=\SI{1.2566e-6}{\newton\ampere^{-2}}$%
 \nomenclature{$\mu_0$}{magnetische Feldkonstante; $\mu_0=\SI{1.2566e-6}{\newton\ampere^{-2}}$}
 
-\paragraph{MWGl. im Vakuum:}
+\minisec{MWGl. im Vakuum}
 \begin{align*}
   \vecna \vecE &=\frac{\rho}{\eps_0}\\
   \vecna\vecB&=0\\
@@ -140,7 +81,8 @@ $\mu_0=\SI{1.2566e-6}{\newton\ampere^{-2}}$%
 \end{align*}
 mit $\eps_0,\mu_0$ \enquote{Materialparameter} für Vakuum.
 
-\minisec{Effekte in Materie} In echter Materie können (mikroskopisch)
+\minisec{Effekte in Materie} 
+In echter Materie können (mikroskopisch)
 Polarisationsladungen und Ampere'sche Kreisströme induziert werden, was
 \begin{itemize}
 \item mikroskopische elektrische Dipole
@@ -149,9 +91,10 @@ Polarisationsladungen und Ampere'sche Kreisströme induziert werden, was
 verursacht. Zur Vereinfachung betrachten wir makroskopische, örtlich
 gemittelte Größen.
 
-\paragraph{Unterschiede zwischen freien und gebundenen Ladungen}
+\minisec{Unterschiede zwischen freien und gebundenen Ladungen}
 Es gilt allgemein für die Ladungsdichte $\rho$%
-\nomenclature{$\rho$}{Ladungsdichte (Ladung pro Volumen)} und die
+\nomenclature{$\rho$}{Ladungsdichte (Ladung pro Volumen)} 
+und die
 Stromdichte $\vecj$%
 \nomenclature{$\vecj$}{Stromdichte (Ladung pro Zeit pro Fläche)} 
 \begin{align*}
@@ -187,8 +130,9 @@ $\eps_r$ gilt
   \Div\vecP&= -\rho + \rho_\text{frei} = -\rho_\text{Pol}
 \end{align*}%
 \nomenclature{$\chi$}{elektrische Suszeptibilität}%
-Damit ergeben sich
-\paragraph{MWGl. in Materie mit Spezialfall}(isotropes, ungeladenes, unmagnetisches Medium)
+Damit ergeben sich die
+
+\minisec{MWGl. in Materie mit Spezialfall (isotropes, ungeladenes, unmagnetisches Medium)}
 \begin{align*}
   \vecna\vecD&=\epso\vecna\vecE+\vecna\vecP=\rho_\text{frei}=0\\
   \vecna\vecB&=0\\
@@ -196,7 +140,10 @@ Damit ergeben sich
   \vecna\times\vecH&=\vecj_\text{frei}+\dif[\vecD]{t}
                      =\dif[\vecD]{t}=\frac{1}{\muo}(\vecna\times\vecB)
 \end{align*}
-\paragraph{Von den MWGl. zur Wellengleichung für das $\vecE$-Feld}
+
+% ---
+
+\subsection[Wellengleichung]{Von den MWGl. zur Wellengleichung für das $\vecE$-Feld}
 Wir erhalten folgende Zusammenhänge
 \begin{align*}
   \vecna \times \vecE 
@@ -222,8 +169,9 @@ Setzen wir diese zusammen, folgen die
   \Delta\vecE-\eps\epso\muo\diff[\vecE]{t} &= 0\\
   \Delta\vecB-\eps\epso\muo\diff[\vecB]{t} &= 0
 \end{align*}
-\paragraph{Allgemein} 
-Die allgemeine Form der Wellengleichungen (u.a. für elektromagnetische
+
+\minisec{Allgemeine Form} 
+Die allgemeine Form der Wellengleichungen (u.\,a. für elektromagnetische
 Wellen) sind Differentialgleichungen, die eine 2.~Ableitung einer Größe nach der Zeit mit der
 2.~Ableitung der Größe nach dem Ort verknüpft: 
 \begin{align*}
@@ -256,7 +204,8 @@ wobei $c$ die Lichtgeschwindigkeit im Vakuum%
 $c=\frac{1}{\sqrt{\epso\muo}}=\SI{2.9979e8}{\m\per\s}$.
 \red{Achtung:} Nur im Vakuum (hier ist $\eps = 1$) gilt
 $c=\frac{1}{\sqrt{\epso\muo}}=v_{ph}$!
-In anderen Medien ist Einfluss eines Mediums ist durch
+
+In anderen Medien ist der Einfluss des Mediums durch
 $\frac{1}{\sqrt{\eps}}=\frac{1}{n}$ gegeben. 
 Der \emph{Brechungsindex} 
 \begin{gather*}
@@ -267,7 +216,7 @@ Der \emph{Brechungsindex}
 ist direkt mit der Wellenausbreitung verknüpft.
 
 \section{Bestimmung der Lichtgeschwindigkeit}
-(s. Folien)
+\sFolien
 \begin{itemize}
 \item Planetenmethode
 \item Zahnradmethode
@@ -430,7 +379,7 @@ Feldes mit einer zunächst ruhenden Ladung $q$ gedeutet.
     Geschwindigkeit 
     & $\vecv_q$%
       \nomenclature{$v_q$}{Geschwindigkeit eines Teilchens mit Ladung $q$}\\
-      entnommene Leistung & $L = qEv_q$
+    entnommene Leistung & $L = qEv_q$
   \end{tabular}
 \item das sich jetzt bewegende Elektron erfährt eine Lorentzkraft $\vecF_\text{Lorentz}$
   im $\vecB$-Feld ($\vecB\bot\vecE$ und $\vecB\bot\veck$)

@@ -74,10 +74,10 @@ Die \emph{Einsteingleichung}\index{Einsteingleichung} lautet
 wobei 
 $A$\nomenclature{$A$}{Austrittsarbeit beim Photoeffekt; 
   Materialkonstante} 
-die materialabhängige Konstante für die sog. \emph{Austrittsarbeit} und
-$h=\SI{6.626e-34}{\J\s}$%
+die materialabhängige Konstante für die sogenannte \emph{Austrittsarbeit} und
+$h=\SI{6.626e-34}{\joule\second}$%
 \nomenclature{$h$}{Plank'sches Wirkungsquantum; 
-  $h=\SI{6.626e-34}{\Joule\second}$}
+  $h=\SI{6.626e-34}{\joule\second}$}
 das Plank'sche Wirkungsquantum ist.
 
 % --------------
@@ -118,7 +118,7 @@ Die Energie eines Photons ist
 \end{gather*}%
 \nomenclature{$W_\text{Ph}$}{Energie eines Photons}%
 
-\paragraph*{Beispiel}
+\Beispiel{}
 Für $\lambda=\SI{600}{\nano\meter}$ gilt
 $W_\text{Ph}=\SI{3.3e-18}{\joule}$
 und für $\lambda=\SI{0.1}{\nano\meter}$ gilt
@@ -133,7 +133,7 @@ eines Lichtbündels mit Intensität $I$ ist definiert über
   \frac{\text{Zahl der Photonen}}{\text{Fläche}\cdot\text{Zeit}}
 \end{gather*}
 
-\paragraph*{Beispiel}
+\Beispiel{}
 Das Sonnenlicht hat eine Intensität von etwa
 \SI{1000}{\watt\per\centi\meter\squared} und somit eine
 Photonenflussdichte
@@ -196,7 +196,7 @@ auch \autoref{tab:verwendung-welle-teilchen-bild}.
   \end{tabular}
 \end{table}
 
-\subsection{Beispiel: Doppelspaltexperiment}
+\Beispiel{Doppelspaltexperiment}
 Misst man beim Doppelspaltexperiment mit einzelnen Photonen, so
 entspricht die statistische Verteilung (also die
 Aufenthaltswahrscheinlichkeit) der Intensitätsverteilung beim
@@ -239,7 +239,7 @@ Das \emph{Kirchhoff'sche Strahlungsgesetz} lautet
   \frac{\text{Emission}}{s} &= E_\nu(T) \dd\nu \dd\sigma \dd\theta\\
   \frac{\text{Absorption}}{s} &= A_\nu(T)u_\nu(T) \dd\nu \dd\sigma \dd\theta\\
 \end{align*}
-wobei
+wobei folgende Nomenklatur verwendet wurde:
 \begin{description}
 \item[$T$] Temperatur
   \nomenclature{$T$}{Temperatur}
@@ -274,7 +274,7 @@ Strahlers ist also $E_S(\nu,T) = u(\nu,T)$.
 Im Allgemeinen ist $u(\nu,T)$ gesucht. Dazu gibt es verschiedene
 Ansätze.
 
-\paragraph{Rayleigh-Jeans-Gesetz (1898)}
+\subsubsection{Rayleigh-Jeans-Gesetz (1898)}
 Dieses Gesetz gilt für 
 $h\nu\ll K_B T$\nomenclature{$K_B$}{Boltzmann-Konstante}
 und lautet
@@ -288,7 +288,7 @@ sind die Freiheitsgrade des Systems. Der Äquipartitionssatz der
 Thermodynamik besagt, dass in jedem Freiheitsgrad die mittlere Energie
 $\frac{1}{2}K_BT$ steckt.
 
-\paragraph{Wien'sches Gesetz}
+\subsubsection{Wien'sches Gesetz}
 Dieses Gesetz gilt für hohe Frequenzen $h\nu\gg K_BT$ 
 und lautet
 \begin{gather*}
@@ -299,7 +299,7 @@ wobei $A=\frac{8\pi h}{c^3}$ und $g=\frac{h}{K_B}$ Konstanten sind
 Dies beschreibt die Farbänderung der Emission eines glühenden Körpers bei
 steigender Temperatur.
 
-\paragraph{Wien'sches Verschiebungsgesetz (1893)}
+\subsubsection{Wien'sches Verschiebungsgesetz (1893)}
 Dieses Gesetz beschreibt die Lage des Maximums von $u$ als Funktion
 der Temperatur
 ($b=\SI{0.29e-2}{\meter\kelvin}$%
@@ -313,7 +313,7 @@ Z.\,B. hat die Sonnenoberfläche eine Temperatur von
 ca. \SI{6000}{\kelvin} und man erhält ein Maximum von $u$ bei
 $\lambda=\SI{480}{\nano\meter}$.
 
-\paragraph{Stefan-Boltzmann-Gesetz}
+\subsubsection{Stefan-Boltzmann-Gesetz}
 Es gilt für die über alle Frequenzen integrierte Strahlungsleistung
 $\widetilde u$\nomenclature{$\widetilde u$}{über alle Frequenzen
   integrierte Strahlungsleistung}
@@ -325,7 +325,7 @@ Stefan-Boltzmann-Konstante):
   \widetilde u(T) = \int u(\nu,T)\dd\nu = \sigma T^4
 \end{gather*}
 
-\paragraph{Planck'sches Strahlungsgesetz}
+\subsubsection{Planck'sches Strahlungsgesetz}
 Dieses Gesetz liefert, dass die Photonenenergie quantisiert ist mit
 $E=h\nu$. Im folgenden sind die groben Schritte der Herleitung.
 
@@ -342,7 +342,7 @@ Nach Planck gilt die (zunächst empirische) Formel
 % --------------
 \VL{04.02.2016}
 
-\subparagraph{Elektromagnetischer Schritt}
+\paragraph{Elektromagnetischer Schritt}
 Betrachte die Energie des s.\,g. harmonischen Oszillator mit
 Eigenfrequenz $\nu$ im harmonischen elektromagnetischen Feld
 als kohärente Überlagerung von harmonischen Feldern variabler
@@ -362,7 +362,7 @@ Es folgt mit \eqref{planck}
 \end{gather}
 Jetzt die Bedeutung von Formel~\eqref{GGWEnergie}:
 
-\subparagraph{Thermodynamischer Schritt}
+\paragraph{Thermodynamischer Schritt}
 Ausgehend von Gleichung~\eqref{GGWEnergie} berechnet Planck die
 Entropie $S$\nomenclature{$S$}{Entropie}, denn es gilt der Zusammenhang
 \begin{gather*}
@@ -383,7 +383,7 @@ gilt insgesamt
 \end{gather*}
 Die Entropie \emph{muss} diese Form haben!
 
-\subparagraph{Statistischer Schritt}
+\paragraph{Statistischer Schritt}
 Wir behandeln nun die Herleitung der Entropie mit statistischen
 Argumenten.
 Die Entropie von $N$ unabhängigen Oszillatoren der Frequenz $\nu$
@@ -423,7 +423,7 @@ kontinuierliche Verteilung von $U_N$.
   \end{gather*}
 \end{postulat}  
 
-\subparagraph{Beispiel}
+\Beispiel{}
 Es sei $N=2$, $p=3$ und $W_2=4$.
 Dann sind die vier Möglichkeiten, die gesamte Energie $U=3\eps$ auf
 die beiden Oszillatoren 1~und 2 zu verteilen, leicht grafisch zu
@@ -434,15 +434,14 @@ und für die Entropie gilt
   S_N &= K_B \left[
         (N+p)\ln(N+p) - N\ln(N) - p\ln(p)
         \right]\\
-  &= N \underbrace{
-    K_B \left[
-    \left(1+\frac{U}{\eps}\right) \ln\left(1+\frac{U}{\eps}\right) 
-    - \frac{U}{\eps}\ln\left(\frac{U}{\eps}\right)
-    \right]
-    }_{\text{Entropie für einen Oszillator}}\\
-  &= N\cdot S
+      &= N \underbrace{
+        K_B \left[
+        \left(1+\frac{U}{\eps}\right) \ln\left(1+\frac{U}{\eps}\right) 
+        - \frac{U}{\eps}\ln\left(\frac{U}{\eps}\right)
+        \right]
+        }_{\text{Entropie für einen Oszillator}}\\
+      &= N\cdot S
 \end{align*}
-
 
 
 

@@ -1,0 +1,90 @@
+%%----------------------------------------------
+%%
+%%            Mitschrift der Vorlesung
+%%   Experimentalphysik III: Wellen und Quanten 
+%%       im WS2015/16 an der Uni Regensburg
+%%
+%% Anhang 1: Vektorableitungen
+%%
+%%
+%% gesetzt von Gesina und Hedwig
+%%
+%%----------------------------------------------
+
+\appendix
+\chapter{Vektorableitungen}\label{vektorableitungen}
+Im Folgenden wird ein Überblick über die häufig gebrauchten Operatoren 
+Gradient ($\Grad$), Rotation ($\Rot$), Divergenz ($\Div$), den Nabla-Operator
+($\vecna$) und den Laplace-Operator ($\Delta$) gegeben.
+
+\paragraph*{Nabla-Operator}
+Für 3-dimensionale Vektoren verwendet man den 
+\emph{Nabla}-Operator%
+\index{Operatoren!Nabla-Operator}%
+\index{Nabla-Operator}
+\begin{gather*}
+  \vecna = 
+  \begin{pmatrix}
+    \dif[]{x}, \dif[]{y}, \dif[]{z}
+  \end{pmatrix}
+\end{gather*}
+
+\paragraph*{Gradient}
+Der \emph{Gradient}%
+\index{Operatoren!Gradient}%
+\index{Gradient}
+einer skalaren Funktion $f=f(x,y,z)$ zeigt in die Richtung des größten Anstiegs.
+\begin{gather*}
+  \Grad f = \vecna f = 
+  \begin{pmatrix}
+    \dif[f]{x},\dif[f]{y},\dif[f]{z}
+  \end{pmatrix}
+\end{gather*}
+
+\paragraph*{Divergenz}
+Die \emph{Divergenz}%
+\index{Operatoren!Divergenz}%
+\index{Divergenz}
+einer Vektorfunktion ist
+\begin{gather*}
+  \Div\vec{f} = \vecna\vec{f}
+  = \dif[f_{x}]{x}+\dif[f_{y}]{y}+\dif[f_{z}]{z}
+\end{gather*}
+Die Divergenz ist ungleich null, wenn es Quellen oder Senken gibt
+(vgl. elektr. Ladung).
+
+\paragraph*{Laplace-Operator}
+Der \emph{Laplace-Operator}%
+\index{Operatoren!Laplace-Operator}%
+\index{Laplace-Operator}
+einer skalaren Funktion ist die \emph{Divergenz des Gradienten}.
+\begin{gather*}
+  \Delta f = \vecna^2 f= \vecna\vecna f = \vecna 
+  \begin{pmatrix}
+	\dif[f]{x},\dif[f]{y},\dif[f]{z}
+  \end{pmatrix}
+  = \diff[f]{x} + \diff[f]{y} + \diff[f]{z}
+\end{gather*}
+Der Laplace einer Vektorfunktion wir komponentenweise gebildet.
+\begin{gather*}
+  \Delta \vec{f} = \vecna^2 \vec{f}= 
+  \begin{pmatrix}
+    \diff[f_x]{x}+\diff[f_x]{y}+\diff[f_x]{z}+\dots
+  \end{pmatrix}
+\end{gather*}
+Die \emph{Rotation} einer Vektorfunktion $\vec{f}$ ist
+\begin{gather*}
+  \Rot \vec{f}= \vecna\times \vec{f}=
+  \begin{pmatrix}
+    \dif[f_z]{y}-\dif[f_y]{z},\dif[f_x]{z}-\dif[f_z]{x},\dif[f_y]{x}-\dif[f_x]{y}
+  \end{pmatrix}
+\end{gather*}
+Funktionen, die sich stark \enquote{winden}, haben eine starke Rotation.
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../OptikSkriptWS1516"
+%%% End:

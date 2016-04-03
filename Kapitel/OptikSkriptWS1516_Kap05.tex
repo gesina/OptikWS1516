@@ -1,15 +1,15 @@
-%%----------------------------------------------
-%%
-%%            Mitschrift der Vorlesung
-%%   Experimentalphysik III: Wellen und Quanten 
-%%       im WS2015/16 an der Uni Regensburg
-%%
+%% ----------------------------------------------
+%% 
+%% Mitschrift der Vorlesung
+%% Experimentalphysik III: Wellen und Quanten 
+%% im WS2015/16 an der Uni Regensburg
+%% 
 %% Kapitel 5: Polarisation
-%%
-%%
+%% 
+%% 
 %% gesetzt von Gesina und Hedwig
-%%
-%%----------------------------------------------
+%% 
+%% ----------------------------------------------
 
 \chapter{Polarisation}
 
@@ -48,19 +48,19 @@ von Interesse:
   \end{pmatrix}
 \end{gather*}
 
-\minisec{Lineare Polarisation}
+\subsection{Lineare Polarisation}
 Lineare Polarisation lässt sich wie folgt charakterisieren
 \begin{itemize}
 \item[\ang{0}:] $\frac{E_y}{E_x} = 0$
 \item[\ang{90}:] $\frac{E_y}{E_x} = \infty$, d.\,h.
-$\scriptsize\begin{pmatrix}E_x\\E_y\end{pmatrix}
-= \begin{pmatrix}0\\1\end{pmatrix}$
+  $\scriptsize\begin{pmatrix}E_x\\E_y\end{pmatrix}
+  = \begin{pmatrix}0\\1\end{pmatrix}$
 \item[\ang{45}:] $\frac{E_y}{E_x} = 1$
 \item[bel.:] 
   $\frac{E_y}{E_x} = \frac{\sin\alpha}{\cos\alpha} = \tan\alpha$
 \end{itemize}
 
-\minisec{Zirkulare und elliptische Polarisation}
+\subsection{Zirkulare und elliptische Polarisation}
 Bei \emph{zirkularer Polarisation}\index{Polarisation!zirkular}
 hat der Jones-Vektor eine rein imaginäre
 $y$-Komponente
@@ -81,9 +81,8 @@ $y$-Komponente
   \frac{E_y}{E_x} = a+bi
 \end{gather*}
 
-%----------
+% ----------
 
-%5.2
 \section{Polarisatoren}
 Ein Polarisator\index{Polarisator} ist ein optisches Element,
 das aus \enquote{unpolarisiertem} Licht einen definierten
@@ -95,18 +94,20 @@ Für die Funktionsweise ist eine \emph{optisch asymmetrische
 die Licht mit ungewünschter Polarisation absorbiert/unterbindet.
 
 Man unterscheidet vier Mechanismen von Polarisatoren:
-\begin{enumerate}
-\item \emph{Reflexion} (Brewsterfenster, Fresnel-Rhombus)
-\item \emph{Streuung} (Hertz'scher Dipol)
-\item \emph{richtungsselektive Absorption} (Dichroismus)
-\item \emph{Doppelbrechung}
-\end{enumerate}
+\begin{description}
+\item[Reflexion] z.\,B. Brewsterfenster, Fresnel-Rhombus
+\item[Streuung] z.\,B. Hertz'scher Dipol
+\item[Richtungsselektive Absorption] z.\,B. Dichroismus
+\item[Doppelbrechung] (s. \autoref{doppelbrechung})
+\end{description}
 
 Mit Hilfe eines Polarisators kann man die Polarisationseigenschaften
 von Licht bestimmen, ihn also als \emph{Analysator}\index{Analysator}
 verwenden.
 
-\paragraph{Polarisation durch Linearpolarisatoren} 
+% ---
+
+\subsection{Polarisation durch Linearpolarisatoren} 
 Selektiere den Polarisationszustand mit einem
 Linearpolarisator und analysiere mit dem Linearpolarisator
 %% IMAGE MISSING
@@ -123,7 +124,9 @@ und $|\vecE_\parallel| = |\vecE_0|\cos\alpha$.
 % --------------
 \VL{16.11.2015}
 
-\paragraph{Polarisation durch Dichroismus}
+% ---
+
+\subsection{Polarisation durch Dichroismus}
 Dichromatische Materialien sind z.\,B. Turmalin oder (preiswerter)
 gestreckte, gefärbte Polymerfolien.
 Hier gilt das Malus'sche Gesetz\index{Malus'sches Gesetz}
@@ -132,26 +135,31 @@ Hier gilt das Malus'sche Gesetz\index{Malus'sches Gesetz}
 \end{gather*}
 wobei die Stromstärke proportional zur Intensität ist.
 
+% ---
 
-\paragraph{Polarisation durch Reflexion}
+\subsection{Polarisation durch Reflexion}
 Beispiele für Polarisation durch Reflexion sind:
-\begin{itemize}
-\item Für den \emph{Brewster Winkel} gilt, dass das reflektierte Licht senkrecht
-zur Einfallsebene polarisiert ist.
-\item \emph{Fresnel-Rhombus}
-\item \emph{Polarisationsdrehung} durch Reflexion, z.\,B. Doppelspiegel
-%% IMAGE MISSING
-\end{itemize}
+\begin{description}
+\item[Brewster Winkel] Für den Brewster Winkel gilt, dass das
+  reflektierte Licht senkrecht zur Einfallsebene polarisiert ist.
+\item[Fresnel-Rhombus] Zweifache Totalreflexion erzeugt aus linear
+  polarisiertem Licht zirkular polarisiertes Licht.
+\item[Polarisationsdrehung] Drehung der Polarisation durch Reflexion, 
+  z.\,B. Doppelspiegel
+  %% IMAGE MISSING
+\end{description}
 
-%---------------
+% ---------------
 % VL 16.11.2015
-%---------------
+% ---------------
 \VL{16.11.2015}
 
-\paragraph{Polarisation durch Dichroismus}
+% ---
+
+\subsection{Polarisation durch Dichroismus}
 Bisher haben wir eine kugelsymmetrische Elektronenverteilung um den
 Atomkern betrachtet. Jetzt werden wir eine \emph{anisotrope
-Ladungsverteilung} betrachten. Der einfachste Fall ist eine
+  Ladungsverteilung} betrachten. Der einfachste Fall ist eine
 zigarrenförmige Ladungsverteilung.
 %% IMAGE MISSING
 Wir machen folgende vereinfachende Annahmen:
@@ -159,12 +167,12 @@ Wir machen folgende vereinfachende Annahmen:
 \item Die Bewegungen senkrecht und parallel zur
   Atom-/Molekülvorzugsachse sind unabhängig voneinander 
 \item zwei unabhängige harmonische Oszillatoren mit Eigenfrequenzen
-$\omega\bot$%
-\nomenclature{$\omega_\bot$}{Eigenfrequenz der harmonischen
-  Oszillation der Elektronen senkrecht zur Atom-/Molekülvorzugsachse}
-und $\omega\parallel$%
-\nomenclature{$\omega_\parallel$}{Eigenfrequenz der harmonischen
-  Oszillation der Elektronen parallel zur Atom-/Molekülvorzugsachse}
+  $\omega\bot$%
+  \nomenclature{$\omega_\bot$}{Eigenfrequenz der harmonischen
+    Oszillation der Elektronen senkrecht zur Atom-/Molekülvorzugsachse}
+  und $\omega\parallel$%
+  \nomenclature{$\omega_\parallel$}{Eigenfrequenz der harmonischen
+    Oszillation der Elektronen parallel zur Atom-/Molekülvorzugsachse}
 \end{itemize}
 In unserem \enquote{Zigarrenmodell} sind folgende zwei Fälle der
 Ausrichtung der asymmetrischen Moleküle/Atome im Material zu
@@ -190,10 +198,9 @@ sind:
 \item Drahtgitterpolarisatoren
 \end{itemize}
 
-%---------
+% ---------
 
-%5.3
-\section{Doppelbrechung} 
+\section{Doppelbrechung} \label{doppelbrechung}
 Doppelbrechung gibt es in folgenden Formen
 \begin{description}
 \item[natürlich] anisotrope Kristalle (z.\,B. Calcit)
@@ -235,7 +242,7 @@ Für die dielektrischen Eigenschaften bedeutet das, dass
   \end{gather*}%
   \nomenclature{$\teps$}{Dielektrizitätstensor; $\vecD=\epso\teps\vecE$}%
   \index{Dielektrizitätstensor}%
-\item $\vecE$ und $\vecP$ i.\,A. nicht mehr parallel sind
+\item $\vecE$ und $\vecP$ i.\,A. nicht mehr parallel sind.
 \end{enumerate}
 Wir erhalten durch orthogonale Transformation der Koordinatenachsen die
 sog. \emph{Hauptachsenform des Dielektrizitätstensors}%
@@ -321,8 +328,8 @@ Im optisch einachsigen Kristall gibt es zwei Polarisationsrichtungen
   \item Der Strahl ist in der Ebene, die durch die optische Achse und
     $\veck$ gebildet wird, polarisiert
     (Hauptschnitt\index{Hauptschnitt}).
-    \item Der Brechungsindex ist richtungsabhängig.
-    \item Das Snellius'sche Gesetz gilt nicht.
+  \item Der Brechungsindex ist richtungsabhängig.
+  \item Das Snellius'sche Gesetz gilt nicht.
   \end{itemize}
 \end{description}
 
@@ -336,38 +343,40 @@ Ellipsoid:
 \end{align*}
 Es gilt:
 \begin{description}
-\item[$v_{ao}>v_o$ ($n_{ao}<n_o$):] negativ einachsig
-\item[$v_{ao}<v_o$ ($n_{ao}>n_o$):] negativ einachsig
+\item[\normalfont $v_{ao}>v_o$ ($n_{ao}<n_o$):] negativ einachsig
+\item[\normalfont $v_{ao}<v_o$ ($n_{ao}>n_o$):] positiv einachsig
 \end{description}
 
-%---------------
+% ---------------
 % VL 19.11.2015
-%---------------
+% ---------------
 \VL{19.11.2015}
 
-\paragraph{Materialien}
 Typische Materialien sind z.\,B.
-\begin{itemize}
-\item Calzit: Für großen Unterschied zwischen außerordentlichem und
+\begin{description}
+\item[Calzit] für großen Unterschied zwischen außerordentlichem und
   ordentlichem Strahl. Wir erhalten Polarisation.
-\item Quarz: Für kleinen Unterschied zwischen außerordentlichem und
+\item[Quarz] für kleinen Unterschied zwischen außerordentlichem und
   ordentlichem Strahl. Wir erhalten $\frac{\lambda}{2}$- und
   $\frac{\lambda}{4}$-Plättchen.
-\end{itemize}
+\end{description}
 
 % ---
 
 \subsection[natürliche Doppelbrechung]%
-{Anwendungen anisotroper Materialien (natürliche Doppelbrechung)}
+{Anisotrope Materialien (natürliche Doppelbrechung)}
+\subsubsection[Anwendungen]%
+{Anwendungen anisotroper Materialien}
 Mögliche Anwendungen sind
-\begin{enumerate}
+\begin{itemize}
 \item Erzeugung von polarisiertem Licht durch Dichroismus
 \item doppelbrechende Polarisatoren für linear polarisiertes Licht
 \item Polarisationsdreher ($\frac{\lambda}{2}$-Plättchen)
 \item Zirkularpolarisatoren ($\frac{\lambda}{4}$-Plättchen)
-\end{enumerate}
+\end{itemize}
 
-\subsubsection{Gangunterschied/Phasenverschiebung}
+\subsubsection[Gangunterschied]%
+{Gangunterschied/Phasenverschiebung bei Verzögerungsplättchen}
 Wegen der unterschiedlichen Brechungsindizes von ordentlichem und
 außerordentlichem Strahl lassen sich durch geeigneten Schnitt
 (Plättchen mit best. Dicke $d$\nomenclature{$d$}{Dicke}) des
@@ -408,9 +417,9 @@ $\frac{\lambda}{4}$-, $\frac{\lambda}{2}$-Plättchen:
   Für $\theta\neq\ang{45}$ erhält man elliptisch polarisiertes Licht.
 \item[$\frac{\lambda}{2}$-Plättchen] Wie oben erhalten wir
   \begin{description}
-    \item[Wegunterschied] $\Delta l = n\lambda_o \pm \frac{\lambda_o}{2}$
-    \item[Phasenunterschied] $\Delta\varphi = \pi$
-      bzw. $(n+1)\pi$
+  \item[Wegunterschied] $\Delta l = n\lambda_o \pm \frac{\lambda_o}{2}$
+  \item[Phasenunterschied] $\Delta\varphi = \pi$
+    bzw. $(n+1)\pi$
   \end{description}
   %% IMAGE MISSING
   Der ausfallende $\vecE$-Vektor wird durch eine Phasenverschiebung
@@ -421,14 +430,14 @@ $\frac{\lambda}{4}$-, $\frac{\lambda}{2}$-Plättchen:
   rechtszirkular und umgekehrt.
 \end{description}
 
-%---
+% ---
 
 \subsection{Induzierte Doppelbrechung}
 In vielen Materialien lässt sich die optische Asymmetrie durch äußere
 Einflüsse manipulieren, z.\,B. um die Polarisation von transmittiertem
 Licht zu beeinflussen.
 
-\subsubsection{Beispiel: Kerr-Effekt}\index{Kerr-Effekt}
+\Beispiel{Kerr-Effekt}\index{Kerr-Effekt}
 Betrachte ein optisch anisotropes Material, z.\,B. Flüssigkeit mit
 zigarrenförmig angeordneten Molekülen, wobei das Molekül anisotrope
 Polarisierbarkeit $\alpha$ habe.
@@ -461,7 +470,7 @@ Anwendungen sind u.\,a.
 \item LCD-Bildschirme
 \end{itemize}
 
-\subsubsection{Beispiel: Spannungsdoppelbrechung}
+\Beispiel{Spannungsdoppelbrechung}
 Mechanische Krafteinwirkung kann zur Ausrichtung von Molekülen
 führen, bzw. zur Verzerrung von Elektronenorbitalen.
 
@@ -470,7 +479,7 @@ führen, bzw. zur Verzerrung von Elektronenorbitalen.
 % --------------
 \VL{23.11.2015}
 
-\subsubsection{Beispiel: optische Aktivität}
+\Beispiel{optische Aktivität}
 %% IMAGE MISSING (Versuch Polarimeter)
 Manche Materialien haben in Lösung einen konzentrationsabhängigen
 Drehwinkel. Teilweise tritt sogar Rotationsdispersion auf (der
@@ -488,7 +497,7 @@ Es ist \emph{rechtsdrehend}\index{rechtsdrehend} für $n_L>n_R$
 und \emph{linksdrehend}\index{linksdrehend} für $n_R>n_L$.
 Beispiele solcher Materialien sind Zucker oder Quarz.
 
-\subsubsection{Beispiel: Faraday-Effekt}\index{Faraday-Effekt}
+\Beispiel{Faraday-Effekt}\index{Faraday-Effekt}
 Manche Moleküle ohne optische Aktivität werden bei Anlegen eines
 magnetischen Felds optisch aktiv nach der Beziehung
 \begin{gather*}

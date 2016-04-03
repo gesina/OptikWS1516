@@ -1,15 +1,15 @@
-%%----------------------------------------------
-%%
-%%            Mitschrift der Vorlesung
-%%   Experimentalphysik III: Wellen und Quanten 
-%%       im WS2015/16 an der Uni Regensburg
-%%
+%% ----------------------------------------------
+%% 
+%% Mitschrift der Vorlesung
+%% Experimentalphysik III: Wellen und Quanten 
+%% im WS2015/16 an der Uni Regensburg
+%% 
 %% Kapitel 4: Elektromagnetische Wellen an Grenzflächen
-%%
-%%
+%% 
+%% 
 %% gesetzt von Gesina und Hedwig
-%%
-%%----------------------------------------------
+%% 
+%% ----------------------------------------------
 
 
 \chapter{Elektromagnetische Wellen an Grenzflächen}
@@ -19,17 +19,17 @@ Wir wollen jetzt Wellenausbreitung in inhomogenen Medien beschreiben,
 z.\,B. den Übergang von Medium~1 nach Medium~2, also einer
 Grenzfläche.
 
-\paragraph{Randbedingungen der MWGl.:}
+\minisec{Randbedingungen der MWGl.}
 Für die Ausbreitung einer elektromagnetischen Welle muss gelten:
 \begin{itemize}
 \item Die Tangentialkomponenten von $\vecE$ und
   $\vecH=\fracone{\muo\mu_r}\vecB$ sind stetig. 
 \item Die Normalkomponenten von $\vecD=\epso\eps_r\vecE$ und $\vecB$ sind
-ebenfalls stetig (Erinnerung: Für isotrope, isolierende, nicht
-magnetische Medien gilt $\mu_r\eqqcolon\mu=1$).
+  ebenfalls stetig (Erinnerung: Für isotrope, isolierende, nicht
+  magnetische Medien gilt $\mu_r\eqqcolon\mu=1$).
 \end{itemize}
 
-\paragraph{Einfachster Fall:} Wir betrachten zwei homogene Medien mit
+\minisec{Einfachster Fall (homogene Medien)} Wir betrachten zwei homogene Medien mit
 Brechungsindex $n_e$ (einfallender Strahl) und $n_t$ (transmittierte
 Welle).
 % 
@@ -91,14 +91,17 @@ Diese ist nur erfüllbar, wenn folgendes gilt
   \red{Achtung:} Es ist eine Wellenlängenänderung möglich.
 \item Die Ebenengleichungen
   \begin{align*}
+    \SwapAboveDisplaySkip  
     \veck_e\vecr &= \veck_r\vecr \quad\text{bzw.} \quad(\veck_e-\veck_r)\vecr=0\\
     \veck_e\vecr &= \veck_t\vecr \quad\text{bzw.} \quad(\veck_e-\veck_t)\vecr=0
   \end{align*}
   D.\,h. die Vektoren $(\veck_e-\veck_r)$
   und $(\veck_e-\veck_t)$ müssen senkrecht auf der Ebene $y=0$ stehen.
 \end{itemize}
-Daraus folgt, dass die Komponenten $\veck_e$ und $\veck_r$ parallel
-zur Grenzfläche gleich sein müssen:
+
+\minisec{Reflektierter Strahl}
+Aus den Bedingungen folgt, dass die Komponenten $\veck_e$ und
+$\veck_r$ parallel zur Grenzfläche gleich sein müssen:
 \begin{gather*}
   \veck_e = \veck_r
 \end{gather*}
@@ -107,23 +110,26 @@ $\veck^2 = \frac{n^2\omega^2}{c^2}$ ein, erhält man
 $k_{e_G} = \frac{\omega n_e}{c}\sin\alpha = k_{r_G} 
 = \frac{\omega n_e}{c}\sin\alpha'$, umgeschrieben das
 \emph{Reflexionsgesetz}\index{Reflexionsgesetz}
-\begin{gather*}
+\begin{gather}
+  \label{reflexionsgesetz}
   \sin\alpha = \sin\alpha'
-\end{gather*}
+\end{gather}
 Die Oberflächennormalen $\vece_y$ und $\veck_e$ spannen die
 Einfallsebene auf, in der auch $\veck_r$ liegen muss (d.\,h. keine
 Seitwärtsreflexion).
 
-\paragraph{Transmittierter Strahl} Für den transmittierten Strahl
+\minisec{Transmittierter Strahl} 
+Für den transmittierten Strahl
 erhält man analog $\veck_{e_r} = \veck_{t_G}$ und daraus wieder mit
 der Dispersionsrelation
 $k_{e_G} = \frac{\omega n_e}{c}\sin\alpha 
 = k_{t_G} =  \frac{\omega n_t}{c}\sin\beta$, also das sog.
-\emph{Snellins'sche  Brechungsgesetz}%
-\index{Brechungsgesetz!Snellins'sches Brechungsgesetz}
+\emph{Snellius'sche  Brechungsgesetz}%
+\index{Brechungsgesetz!Snellius'sches Brechungsgesetz}%
+\index{Snellius'sches Brechungsgesetz}
 \begin{gather}
   n_e\sin\alpha = n_t\sin\beta
-  \label{brechungsgesetz}
+  \label{snellius}
 \end{gather}
 %% IMAGE MISSING
 
@@ -133,7 +139,7 @@ Es gilt anschaulich
 \item[$n_e>n_t$] vom Lot weg gebrochen
 \end{description}
 und mit relativem Brechungsindex $n_{et}=\frac{n_e}{n_t}$ lässt sich
-\eqref{brechungsgesetz} umformen zu
+\eqref{snellius} umformen zu
 \begin{gather*}
   \sin\alpha = n_{et} \sin\beta
 \end{gather*}
@@ -303,9 +309,9 @@ Da die reflektierte Intensität nur proportional zu
 $|\vecE|^2$ ist, spielt der Phasenfaktor keine Rolle.
 
 \minisec{Reflexionsgrad%
-\nomenclature{$R$}{Reflexionsgrad}%
-\index{Reflexionsgrad}
-der Intensität}
+  \nomenclature{$R$}{Reflexionsgrad}%
+  \index{Reflexionsgrad}
+  der Intensität}
 \begin{gather*}
   R = \frac{I_r}{I_e}
   =\left( \frac{n_e-n_t}{n_e+n_t} \right)^2
@@ -319,7 +325,8 @@ Reflexionskoeffizient komplex und kann geschrieben werden als
 \begin{align*}
   R=\vert r\vert^2=rr^*
 \end{align*}
-\paragraph{Beispiel:}
+
+\Beispiel{}
 \begin{center}
   \begin{tabular}{lll}
     \emph{Übergang} & \emph{relativer Brechungsindex} & \emph{Reflexion in \%}\\
@@ -374,11 +381,11 @@ Multiplikation der Amplituden des emittierten $\vecE$-Felder mit den
 Reflexionskoeffizienten.
 
 \minisec{Transmittierte Leistung $P_t$%
-\nomenclature{$P_t$}{transmittierte Leistung}%
-\index{transmittierte Leistung} 
-und Intensität $I_t$%
-\nomenclature{$I_t$}{transmittierte Intensität}%
-\index{transmittierte Intensität}}
+  \nomenclature{$P_t$}{transmittierte Leistung}%
+  \index{transmittierte Leistung} 
+  und Intensität $I_t$%
+  \nomenclature{$I_t$}{transmittierte Intensität}%
+  \index{transmittierte Intensität}}
 Wenn man nicht direkt an den Amplituden sondern an der
 Leistung interessiert ist, kann man diese auch über den
 Transmissionsgrad $T^P=\frac{P_t}{P_e}$ 
@@ -414,8 +421,11 @@ Nun kann man folgende Gleichungen formulieren
          = |t|^2\frac{n_t}{n_e}
 \end{align*}
 
-\subsubsection{Diskussion der Fresnel'schen Formeln: Reflexionsgrad
+\subsubsection[Folgen der Fresnel'schen Formeln]
+{Diskussion der Fresnel'schen Formeln: Reflexionsgrad
   bei Lichteinfall aus einem optisch dünnerem Medium}
+\paragraph{Reflexionsgrad bei Lichteinfall aus optisch dünneren
+  Medien}
 Ein Beispiel hierfür ist der Übergang von Luft in Gas mit $\frac{n_t}{n_e}=1,5$.
 Betrachte nun die Winkelabhängigkeit von $R=\vert r\vert^2$ aus den
 Fresnel'schen Formeln \ref{FF1} und \ref{FF2}. 
@@ -431,16 +441,18 @@ auf Null ab. Dieser Winkel wird auch
   $\tan\alpha_B = \frac{n_t}{n_e}$}%
 \index{Brewsterwinkel} 
 genannt, danach steigt
-$R_{\parallel}$ ebenfalls auf die \SI{100}{\percent} an (siehe
-Abb.\ref{RefGrad}).
-\begin{figure}
-  \includegraphics[width=\linewidth]{Bilder/Reflexionsgrad}
-  \caption{Reflexionsgrad in Abhängigkeit des Einfallwinkels\label{RefGrad}}
-\end{figure}
+$R_{\parallel}$ ebenfalls auf die \SI{100}{\percent} an 
+% (siehe Abb.\ref{RefGrad}).
+% \begin{figure}
+%   \includegraphics[width=\linewidth]{Bilder/Reflexionsgrad}
+%   \caption{Reflexionsgrad in Abhängigkeit des Einfallwinkels\label{RefGrad}}
+% \end{figure}
+%% IMAGE MISSING
 Der Brewsterwinkel $\alpha_B$ oder auch $\alpha_P$ wird dann erreicht,
 wenn der Nenner divergiert, also $\tan(\alpha_B+\beta)=\infty$
 bzw. $\alpha+\beta=90\degree$. In diesem Fall stehen der reflektierte
 und der gebrochene Strahl aufeinander senkrecht.
+
 Dies lässt sich wie folgt erklären. Man nehme an, dass der
 reflektierte Strahl durch einen oszillierenden Dipol mit Dipolmoment
 parallel zum $\vecE$-Feld in der Grenzschicht erzeugt wird. Dabei ist
@@ -463,32 +475,28 @@ Der Brewsterwinkel ergibt sich aus der Formel
 
 %% Anmerkung letzte Vorlesung
 % \begin{align*}
-%   E_{eT} &= E_e\cos\alpha\\
-%   E_{tT} &= E_t\cos\beta\\
-%   E_{rT} &= \mathbf{-} E_r\cos\alpha
-% \end{align*}
-% \begin{align*}
-%   E_{eN} &= E_e\sin\alpha
-%   &E_{tN} &= E_t\sin\beta
-%   &E_{rN} &= E_r\sin\alpha
-% \end{align*}
-% \begin{align*}
-%   E_{eT} + E_{rT} &= E_{rT}\\
-%   \cos\alpha(E_{e}-E_t) &= E_t\cos\beta
-% \end{align*}
+    %     E_{eT} &= E_e\cos\alpha\\
+    %     E_{tT} &= E_t\cos\beta\\
+    %     E_{rT} &= \mathbf{-} E_r\cos\alpha
+                   %   \end{align*}
+                   %                    \begin{align*}
+                   %                    E_{eN} &= E_e\sin\alpha
+                                                 %                  &E_{tN} &= E_t\sin\beta
+                                                                              %                                                                     &E_{rN} &= E_r\sin\alpha
+                                                                                                                                                              %   \end{align*}
+                                                                                                                                                              %                                                                                                                                                               \begin{align*}
+                                                                                                                                                              %                                                                                                                                                               E_{eT} + E_{rT} &= E_{rT}\\
+    %     \cos\alpha(E_{e}-E_t) &= E_t\cos\beta
+                                  %   \end{align*}
 
-% --------------
-% VL 09.11.2015
-% --------------
-\VL{09.11.2015}
 
 \paragraph{Reflexionsgrad bei Lichteinfall aus optisch dichteren
   Medien}
 Wir betrachten $n_e>n_t$ und beobachten, dass ab einem
 Einfallswinkel $\alpha=\alpha_T<\ang{90}$ das Reflexionsvermögen
 100\% erreicht, d.h. \emph{Totalreflexion}\index{Totalreflexion}.
-Aus Snell erhalten wir $\sin\beta = 1$, also für den Winkel
-$\alpha_T$%
+Aus Snellius \eqref{snellius} erhalten wir $\sin\beta = 1$, 
+also für den Winkel $\alpha_T$%
 \nomenclature{$\alpha_T$}{Winkel für Totalreflexion}
 der Totalreflexion
 \begin{align*}
@@ -527,9 +535,9 @@ Anwendungen sind z.\,B.
   p-polarisierten Komponenten des $\vecE$-Feldes sich ändert.
 \end{itemize}
 
-% 3.
+             %              3.
 \paragraph{Lichtwellenleiter}\index{Lichtwellenleiter}
-(s. Folien)\\
+\sFolien\\
 Lichtwellenleiter sind wichtig für die Telekommunikation. 
 Anwendungen sind u.\,a.
 \begin{itemize}
@@ -538,7 +546,7 @@ Anwendungen sind u.\,a.
 \item Bildübertragung
 \end{itemize}
 
-%---
+    %     ---
 
 \subsection{Totalreflexion und evaneszente Welle}
 %% IMAGE MISSING
@@ -594,9 +602,9 @@ bzw. $\frac{1}{\beta}\approx\frac{\lambda}{2}$.
 D.\,h. die evaneszente Welle klingt auf der Längenskala der Wellenlänge
 ab (hier ca. $\SI{300}{\nano\meter}$).
 
-%---------------------
-% 12.11.2015
-%---------------------
+    %     ---------------------
+    %     12.11.2015
+    %     ---------------------
 \VL{12.11.2015}
 
 \subsection{Absorbierende Medien}
