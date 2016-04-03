@@ -17,7 +17,8 @@
 % 
 % Erzeugt .nlo Datei mit dem Programmaufruf (Terminal):
 % makeindex OptikSkriptWS1516.nlo -s nomencl.ist -o OptikSkriptWS1516.nls
-\usepackage[intoc]{nomencl}
+\usepackage[intoc, refpage]{nomencl}
+\setlength{\nomitemsep}{0pt}
 \makenomenclature
 \usepackage[backend=biber]{biblatex}
 \bibliography{optik.bib}
@@ -53,7 +54,7 @@ pdfauthor={Hedwig Werner}]%
 %\setcounter{tocdepth}{4}
 
 \subject{Vorlesungsmitschrift}
-\title{Experimentalphysik III\\ (Wellen und Quanten)}
+\title{Experimentalphysik III\\ Wellen und Quanten}
 \subtitle{im WS2015/16 an der Universität Regensburg}
 \date{Stand: \today}
 \author{{\Large gesetzt von}\\ Hedwig Werner und Gesina Schwalbe}
